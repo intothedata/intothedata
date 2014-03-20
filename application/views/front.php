@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Into The Data</title>
+    <title>Into The Data - Korean Data Hub</title>
 
     <!--Mobile first-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,7 +51,7 @@
             </button>
             <a href="/" class="navbar-brand">
 <!--                <img src="assets/img/logo.png" alt="">-->
-                <h4>&nbsp;IntoTheData</h4>
+                <h4>&nbsp; IntoTheData 인투 더 데이터  - 한국 데이터 허브</h4>
             </a>
         </header>
 <!--        <div class="topnav">-->
@@ -362,8 +362,7 @@
     <div class="outer">
         <div class="inner">
             <div class="col-lg-12">
-                Providing information about public open data for Data Scientist. <br />
-                We are preparing service.
+                데이터 사이언티스를 위한 오픈 데이터 정보 <br />
             </div>
 <!--            <div class="col-lg-12">-->
 <!--                <h2 id="metis-admin-template-with-twitter-bootstrap-build-status-https-travis-ci-org-onokumus-bootstrap-admin-template-png-http-travis-ci-org-onokumus-bootstrap-admin-template-">Metis Admin Template with Twitter Bootstrap-->
