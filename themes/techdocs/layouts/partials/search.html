@@ -1,0 +1,14 @@
+<div class="searchbox">
+    <label for="search-by"><i class="fa fa-search"></i></label>
+    <input data-search-input id="search-by" type="text" placeholder="{{T "Search-placeholder"}}">
+    <span data-search-clear=""><i class="fa fa-close"></i></span>
+</div>
+<script type="text/javascript" src="{{"js/lunr.min.js" | relURL}}"></script>
+<script type="text/javascript" src="{{"js/horsey.js" | relURL}}"></script>
+<!-- script type="text/javascript" src=https://cdnjs.cloudflare.com/ajax/libs/horsey/4.2.2/horsey.min.js"></script -->
+<script type="text/javascript">
+//  var baseurl = "{{.Site.BaseURL}}";
+//  for hugo server mode
+    var baseurl = "http://intothedata.com";
+</script>
+<script type="text/javascript" src="{{"js/search.js" | relURL}}"></script>

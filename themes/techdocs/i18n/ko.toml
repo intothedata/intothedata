@@ -1,0 +1,35 @@
+[create-header-md]
+other = "_header.md 를 생성하세요"
+
+[Search-placeholder]
+other = "검색..."
+
+[Clear-History]
+other = "기록 삭제"
+
+[Page]
+other = "페이지"
+
+[Next-Pages]
+other = "다음 페이지"
+
+[Previous-Pages]
+other = "이전 페이지"
+
+[pagination-on]
+other = "on"
+
+[Attachments-label]
+other = "첨부파일"
+
+[title-404]
+other = "404 에러"
+
+[message-404]
+other = "이 페이지는 존재하지 않습니다."
+
+[Go-to-homepage]
+other = "홈으로 돌아가기"
+
+[Edit-this-page]
+other = "페이지 수정"
