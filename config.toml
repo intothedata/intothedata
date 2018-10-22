@@ -1,0 +1,47 @@
+# ------------------------------
+# intothedata hugo configuration
+# ------------------------------
+
+baseURL = "http://intothedata.com/"
+languageCode = "ko"
+title = "인투더데이터"
+# theme = "ananke"
+# theme = "docdock"
+theme = "techdocs"
+
+hasCJKLanguage = false
+publishDir = "public"
+pygmentsStyle = "monokai"
+
+googleAnalytics = "UA-53664159-1"
+
+[outputs]
+	home = [ "HTML", "JSON"]
+	page = [ "HTML", "JSON"]
+
+# taxonomy
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[params]
+    subtitle = "get insights from data"
+    author = "Seonghak Hong"
+    # ordersectionsby = "title"
+    ordersectionsby = "weight"
+    # showVisitedLinks = true
+
+    themeVariant = "intothedata"
+
+[[menu.shortcuts]]
+pre = "<h3>More</h3>"
+name = "<i class='fa fa-bookmark'></i> 색인"
+identifier = "tag-list"
+url = "/taglist"
+weight = 1
+
+[[menu.shortcuts]]
+name = "<i class='fa fa-envelope'></i> Contact"
+identifier = "contact"
+url = "mailto: intothedata@gmail.com"
+weight = 2
