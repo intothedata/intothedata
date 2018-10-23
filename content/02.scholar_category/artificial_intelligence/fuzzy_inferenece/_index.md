@@ -3,11 +3,13 @@ title = "퍼지 추론 - Fuzzy Inferenece"
 alwaysopen = true
 +++
 
+#
+
 ## 개요
 
 Fuzzy는 애매한 것을 말한다. Fuzzy logic은 애매한 것을 말하는 모형이나 시스템을 말하며 보통 가전제품, 자동차와 같은 기계장치에 내장되어 있는 경우가 많다.
 기계는 애매한 것을 결정하지 못하기 때문에 애매한 것을 기계가 알아들을 수 있도록 애매한 표현을 정량화해서 알려주는 방법을 고민해야 하는 그런 것에 이용되는 것이 퍼지 추론(fuzzy inference)이다.
- 
+
 ### R코드로 된 예제
 
 #### 패키지 설치
@@ -53,7 +55,7 @@ sets_options("universe", seq(from = 0, to = 40, by = 0.1))
 variables <-  set()
 ```
 
-먼저 BMI에 대한 집합 정의를 할 것이다. BMI는 body mass index로 사람의 키를 체중으로 나눈 값이다. 
+먼저 BMI에 대한 집합 정의를 할 것이다. BMI는 body mass index로 사람의 키를 체중으로 나눈 값이다.
 
 BMI도 몇가지 연어적 변수를 사용해서 지정할 수 있을 것인데 낮음 "under", 적당함 "fit",초과 "over", 비만 "obese"를 사용한다.
 
@@ -69,7 +71,6 @@ bmi =
   sd = 3.0),
 ```
 
-
 여기의 값들은 작성자가 적당한 상식으로 넣은 값이다. 따라서 그에 대한 지식(domain knowledge)가 필요하다.
 이제 a1c 변수를 정의해야 하는데 반경을 5로 가지는 conic function(원뿔형 함수)을 사용할 것이다.
 a1c에 대한 각각의 언어적 변수 이름은 다음과 같이 축약어로 쓸 것이다.
@@ -77,7 +78,7 @@ a1c에 대한 각각의 언어적 변수 이름은 다음과 같이 축약어로
 - l: low (낮음)
 - n: normal (보통)
 - h: high (높음)
- 
+
 그래서 코드는 다음과 같이 된다.
 
 ```r
@@ -86,7 +87,7 @@ a1c = fuzzy_partition(varnames = c(l = 4, n = 5.25, h = 7),
                           radius = 5),
 ```
 
-등급(rating)변수에 대해서도 똑같이 원뿔형 함수를 사용할 것이다. 
+등급(rating)변수에 대해서도 똑같이 원뿔형 함수를 사용할 것이다.
 이 변수는 보험업자가 부여할 등급에 대한 것이다.
 거절을 1로 두고 승인을 10으로 해서 적당한 등급을 가지도록 할 것이다.
 그래서 다음과 같이 정의한다.
@@ -109,12 +110,11 @@ fuzzy_partition(varnames =
 여기서는 심장의 수축과 확장에 대한 것을 하나의 수치로 표현할 것인데 0값을 정상으로 30을 심각한 고혈합(severe hypertension)으로 할 것이다
 .
 이 예제에서는 어떻게 수치를 정규화 할 것인가는 중요하지 않아 대충했지만 필요하다면 잘 알려진 표를 참조하는 것도 좋다.
-
-http://www.mayoclinic.org/diseases-conditions/high-blood-pressure/in-depth/blood-pressure/art-20050982
+[http://www.mayoclinic.org/diseases-conditions/high-blood-pressure/in-depth/blood-pressure/art-20050982](http://www.mayoclinic.org/diseases-conditions/high-blood-pressure/in-depth/blood-pressure/art-20050982)
 
 bp 변수에 대해서는 표준편차를 2.5로 가지는 정규분포 퍼지 멤버쉽 함수를 사용할 것이다.
 다음과 같이 정의할 것이다.
- 
+
 - norm: normal
 - pre: prehypertension
 - hyp: hypertension
@@ -166,7 +166,7 @@ rules <- set(
 )
 ```
 
-첫번재 규칙은 DC 즉, 거절(deccline)에 대한 규칙인데 bmi가 under이거나 obese이거나 a1c가 low이면 등급이 거절이 되는 것이다.
+첫번째 규칙은 DC 즉, 거절(deccline)에 대한 규칙인데 bmi가 under이거나 obese이거나 a1c가 low이면 등급이 거절이 되는 것이다.
 
 "%is%" 연산자는 fuzzy에서의 is의 의미이다. 즉 “이면” 또는 “같으면” 이라는 의미로 생각하면 된다. "||"기호는 “또는 (OR)”의 의미이다.
 
@@ -191,7 +191,7 @@ print(system)
 plot(system)
 ```
 
-위의 전체 코드는 다음과 같다.
+위의 내용을 반영한 전체 코드는 다음과 같다.
 
 ```r
 sets_options("universe", seq(from = 0, to = 40, by = 0.1))
@@ -270,4 +270,3 @@ sets_options("universe", NULL)
 
 - [http://www.soa.org/news-and-publications/newsletters/forecasting-futurism/default.aspx](http://www.soa.org/news-and-publications/newsletters/forecasting-futurism/default.aspx)
 - [http://cran.r-project.org/web/packages/sets/sets.pdf](http://cran.r-project.org/web/packages/sets/sets.pdf)
-

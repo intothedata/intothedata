@@ -2,6 +2,8 @@
 title: "Generalized ESD"
 ---
 
+#
+
 ## Generalized ESD Test for Outliers
 
 조금 길에 풀어쓰면 Generalized Extreme Studentized Deviate Test이다.
@@ -16,4 +18,3 @@ Grubbs' test for outlies는 다른 이름으로 또
 
 - 정규분포
 - 단변량
-
