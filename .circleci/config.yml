@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       - image: cibuilds/hugo:latest
-    working_directory: ~/hugo
+    working_directory: ~/intothedata
     environment:
       HUGO_BUILD_DIR: ~/intothedata/public
     steps:
