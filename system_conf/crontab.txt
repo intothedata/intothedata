@@ -1,1 +1,0 @@
-0 * * * * /bin/sh /share/Qweb/system_conf/dnsever_update.sh
