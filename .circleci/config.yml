@@ -13,7 +13,7 @@ jobs:
       - run: apk update && apk add git
       - run: apk add rsync
       - checkout
-      - run: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR --config ~/intothedata/config.toml
+      - run: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
       - add_ssh_keys:
           fingerprints:
           - $SSH_FINGERPRINT
