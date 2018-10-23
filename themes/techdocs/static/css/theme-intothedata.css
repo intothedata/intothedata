@@ -2,11 +2,12 @@
 :root{
     --SIDE-MAIN-color: #d7d7d7;
     --SIDE-MAIN-TXT-color:black;
-    --MAIN-HOVER-color: rgba(99, 99, 99, 0.96);
-
+    /*--MAIN-HOVER-color: rgba(99, 99, 99, 0.96);*/
+    --MAIN-HOVER-color: #727272;
     --MAIN-LINK-color: rgba(152, 62, 68, 0.96);
 
-    --SIDE-FOCUS-BACK-color: #b1b1b1;
+    /*--SIDE-FOCUS-BACK-color: #b1b1b1;*/
+    --SIDE-FOCUS-BACK-color: #d3d3d3;
     --SIDE-FOCUS-FORE-color:black;
     --MENU-LINK-color:black;
     --MENU-ACTIVE-BACK-color: #727272;
@@ -30,11 +31,11 @@ a:hover {
 }
 #sidebar #header-wrapper {
     background: var(--SIDE-MAIN-color);
-    color: var(--BF-color)
+    /*color: var(--BF-color)*/
     border-color: var(--SIDE-FOCUS-BACK-color);
 }
 #sidebar .searchbox {
-	border-color: var(--BF-color);
+	/*border-color: var(--BF-color);*/
     background: var(--SIDE-FOCUS-BACK-color);
 }
 #sidebar ul.topics > li.parent, #sidebar ul.topics > li.active {

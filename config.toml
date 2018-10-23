@@ -26,7 +26,7 @@ googleAnalytics = "UA-53664159-1"
 
 [params]
     subtitle = "get insights from data"
-    author = "Seonghak Hong"
+    author = "IntoTheData"
     # ordersectionsby = "title"
     ordersectionsby = "weight"
     # showVisitedLinks = true
