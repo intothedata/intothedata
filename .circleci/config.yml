@@ -13,14 +13,14 @@ jobs:
       - run: apk update && apk add git
       - run: apk add rsync
       - checkout
-      - run: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
+      - run: hugo -v -d $HUGO_BUILD_DIR
       - add_ssh_keys:
           fingerprints:
           - $SSH_FINGERPRINT
       - deploy:
           name: Deploy Over SSH
           command: |
-            rsync -avz -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --progress ~/intothedata/* $SSH_USER@$SSH_HOST:/srv/sites/intothedata/
+            rsync -avz -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" ~/intothedata/* $SSH_USER@$SSH_HOST:/srv/sites/intothedata/
 #      - run: |
 #          htmlproofer $HUGO_BUILD_DIR --allow-hash-href --check-html \
 #          --empty-alt-ignore --disable-external
