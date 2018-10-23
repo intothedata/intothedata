@@ -28,15 +28,3 @@ jobs:
         name: Deploy Over SSH
         command: |
           rsync -avz -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --progress ~/intothedata/* $SSH_USER@$SSH_HOST:/srv/sites/intothedata/
-
-workflows:
-  version: 2
-  build-and-deploy:
-    jobs:
-    - build
-    - deploy:
-        requires:
-        - build
-        filters:
-          branches:
-            only: master

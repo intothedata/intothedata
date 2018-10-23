@@ -1,8 +1,10 @@
 # Into the data
 
-this is the repository of intothedata.com
+This is the repository of [http://intothedata.com](http://intothedata.com)
 
-[http://intothedata.com]() is powered by Hugo
+“IntoTheData” is the Wiki site for Total Data Science
+
+“into the data” is powered by Hugo
 
 ## Pre-requisite
 

@@ -4,7 +4,6 @@ weight = 1000
 alwaysopen = true
 +++
 
-
 {{% notice info %}}
 인투더데이터는 데이터사이언스(data science)에 대한 내용을 정리하고 공유하기 위해 만든 개인 위키입니다.
 {{% /notice %}}
