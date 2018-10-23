@@ -14,10 +14,13 @@ jobs:
       - run: apk add rsync
       - checkout
       - run: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR --config ~/intothedata/config.toml
-#      - run: |
-#          htmlproofer $HUGO_BUILD_DIR --allow-hash-href --check-html \
-#          --empty-alt-ignore --disable-external
   deploy:
+    working_directory: ~/intothedata
+    environment:
+      HUGO_BUILD_DIR: ~/intothedata/public
+      SSH_HOST: "intothedata.com"
+      SSH_USER: "root"
+      SSH_FINGERPRINT: "85:f9:8f:ee:a5:fb:4b:f1:9b:b7:49:dc:49:ab:c5:d3"
     machine:
       enabled: true
     steps:
@@ -28,3 +31,17 @@ jobs:
         name: Deploy Over SSH
         command: |
           rsync -avz -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --progress ~/intothedata/* $SSH_USER@$SSH_HOST:/srv/sites/intothedata/
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+    - build
+    - deploy:
+        requires:
+        - build
+        filters:
+          branches:
+            only: master
+#      - run: |
+#          htmlproofer $HUGO_BUILD_DIR --allow-hash-href --check-html \
+#          --empty-alt-ignore --disable-external
