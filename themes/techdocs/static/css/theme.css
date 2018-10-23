@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* Table of contents */
+@import url('//cdn.jsdelivr.net/font-kopub/1.0/kopubdotum.css');
 
 .progress ul {
   list-style: none;
@@ -672,10 +673,10 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     margin: 0;
 }
 body {
-    font-family: "Lato", "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font-family: "KoPub Dotum", "Lato", "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
     font-weight: normal;
     line-height: 1.6;
-    font-size: 18px !important;
+    font-size: 16px !important;
 }
 h2, h3, h4, h5, h6 {
     font-family: "Lato", "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
