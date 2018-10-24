@@ -1,5 +1,11 @@
-http://d2.naver.com/helloworld/711301
-cardinality(unique count)를 샘플링해서 알아내는데 사용하는 확률자료구조
++++
+title = "하이퍼로그로그 - Hyper Log Log"
++++
+
+[http://d2.naver.com/helloworld/711301](http://d2.naver.com/helloworld/711301)
+
+cardinality(unique count)를 샘플링해서 알아내는데 사용하는 확률자료구조이자 알고리즘이다.
+
 세익스피어 전 작품에서의 영어단어 세기
 http://highscalability.com/blog/2012/4/5/big-data-counting-how-to-count-a-billion-distinct-objects-us.html
  Philippe Flajolet 등이 2007년에 발표
