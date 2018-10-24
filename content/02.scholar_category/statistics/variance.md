@@ -18,15 +18,15 @@ $${s^2} = {{\sum\limits_{i = 1}^N {(x_i^2 - 2\bar x{x_i} + {{\bar x}^2})} } \ove
 
 Welford's method 라는 방식을 사용하면 수열을 한번만 반복해서 읽는 것으로 이 문제를 해결할 수 있다.
 
-\begin{equation}
+$$\begin{equation}
    (N - 1)s_N^2 - (N - 2)s_{N - 1}^2 \\
-    = \sum\limits_{i = 1}^N {{{({x_i} - {{\bar x}_N})}^2}}  - \sum\limits_{i = 1}^{N - 1} {{{({x_i} - {{\bar x}_{N - 1}})}^2}}   
+    = \sum\limits_{i = 1}^N {{{({x_i} - {{\bar x}_N})}^2}}  - \sum\limits_{i = 1}^{N - 1} {{{({x_i} - {{\bar x}_{N - 1}})}^2}}  
     = {({x_N} - {{\bar x}_N})^2} + \sum\limits_{i = 1}^{N - 1} {\left( {{{({x_i} - {{\bar x}_N})}^2} - {{({x_i} - {{\bar x}_{N - 1}})}^2}} \right)}   
     = {({x_N} - {{\bar x}_N})^2} + \sum\limits_{i = 1}^{N - 1} {({x_i} - {{\bar x}_N} + {x_i} - {{\bar x}_{N - 1}})} ({{\bar x}_{N - 1}} - {{\bar x}_N})  
     = {({x_N} - {{\bar x}_N})^2} + ({{\bar x}_N} - {x_N})({{\bar x}_{N - 1}}?{{\bar x}_N})  
     = ({x_N} - {{\bar x}_N})({x_N} - {{\bar x}_N} - {{\bar x}_{N - 1}} + {{\bar x}_N})  
     = ({x_N} - {{\bar x}_N})({x_N} - {{\bar x}_{N - 1}}) 
-\end{equation}
+\end{equation}$$
 
 복잡해 보이지만 결국 사용해야 할 것은 마지막의 수식이다.
 
