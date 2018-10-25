@@ -1574,3 +1574,9 @@ pre .copy-to-clipboard:hover {
         margin-left: 0px;
     }
 }
+
+.sey-list {
+    font-weight: 400 !important;
+    font-family: "Jeju Gothic", "Lato", "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font-size: 14px;
+}

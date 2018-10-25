@@ -10,7 +10,7 @@
   transition: left 0.1s ease-in-out;
   max-height: 70vh;
   overflow: auto;
-  width: 265px;
+  width: 565px;
 }
 .sey-show {
   display: block;
