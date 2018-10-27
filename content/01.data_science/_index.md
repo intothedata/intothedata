@@ -1,9 +1,9 @@
-+++
-title = "데이터사이언스 - Data Science"
-weight = 1001
-alwaysopen = true
-tags = ["Data Science","데이터사이언스"]
-+++
+---
+title: "데이터사이언스 - Data Science"
+weight: 1001
+alwaysopen: true
+tags: [Data Science, 데이터사이언스]
+---
 
 ## 데이터사이언스, 데이터과학 - Data Science
 

@@ -9,3 +9,7 @@ tags = ["Big data","빅데이터"]
 ## 분산 컴퓨팅 - Distributed computing
 
 오래전부터 빠른 속도로 증가하는 데이터의 양 때문에 로그 프로세싱, 데이터 집계 및 데이터 처리에 많은 시간을 소요하게 되었다.
+
+## 클라우트 컴퓨팅 - Cloud computing
+
+
