@@ -19,10 +19,8 @@ jobs:
           - $SSH_FINGERPRINT
       - deploy:
           name: Deploy Over SSH
-          command: |
+          command: |-
             rsync -avz -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" ~/intothedata/* $SSH_USER@$SSH_HOST:/srv/sites/intothedata/
-          name: Build Hugo
-          command: |
             ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null $SSH_USER@$SSH_HOST 'cd /srv/sites/intothedata; hugo -v'
     #  - run: |
     #      htmlproofer $HUGO_BUILD_DIR --allow-hash-href --check-html \
