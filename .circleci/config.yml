@@ -21,7 +21,7 @@ jobs:
           name: Deploy Over SSH
           command: |-
             rsync -avz -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" ~/intothedata/* $SSH_USER@$SSH_HOST:/srv/sites/intothedata/
-            ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null $SSH_USER@$SSH_HOST 'cd /srv/sites/intothedata; hugo -v'
+            ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null $SSH_USER@$SSH_HOST 'cd /srv/sites/intothedata; /srv/sites/_gopath/bin/hugo -v'
     #  - run: |
     #      htmlproofer $HUGO_BUILD_DIR --allow-hash-href --check-html \
     #      --empty-alt-ignore --disable-external
