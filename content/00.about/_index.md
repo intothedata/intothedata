@@ -18,3 +18,4 @@ alwaysopen = true
 ※ 내용물을 참고해서 블로그 글을 작성하시거나 출처를 밝히고 일부를 인용하시는 것은 괜찮지만 무단전제, 복제는 금지합니다.
 
 이메일: [intothedata@gmail.com](mailto:intothedata@gmail.com)
+
