@@ -2,8 +2,6 @@
 title = "인물 - People"
 +++
 
-
-
 Ashish Venugopal	 	컴퓨터공학, 기계학습	Google	현재 구글의 기계번역 책임 총괄이다.
 Rasmus Lerdorf	라스무스 레르도프	컴퓨터공학	WePAY	PHP 창시자로 Yahoo!에서 근무한적이 있다.
 Hadley Wickham	해들리 위크햄	통계학, 컴퓨터공학	Rstudio	R의 시각화 패키지인 ggplot2를 만든 뉴질랜드 대학 교수

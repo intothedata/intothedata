@@ -2,6 +2,10 @@
 title = "정보검색 - Information Retrieval"
 +++
 
-정보검색 - Information Retrieval
+## 정보검색 Information Retrieval
 
+정보검색은 정보를 효율적으로 정확하게 잘 찾아내는 방법을 연구하는 기술이다.  
+조금 더 구체화해서 말하면 검색엔진과 같은 것을 만들거나 연구하는 것이고 컴퓨터공학의 세부 기술이라고 할 수 있다. 컴퓨터와 관련이 있는 것은 정보를 찾으려면 당연히 컴퓨터를 이용해야 하기 때문이다.
+
+### 검색엔진 Search engine
 
