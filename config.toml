@@ -4,7 +4,7 @@
 
 baseURL = "http://intothedata.com/"
 languageCode = "ko"
-title = "인투더데이터"
+title = "인투더데이터 데이터과학 위키"
 # theme = "ananke"
 # theme = "docdock"
 theme = "techdocs"
@@ -25,7 +25,7 @@ googleAnalytics = "UA-53664159-1"
   tag = "tags"
 
 [params]
-    subtitle = "get insights from data"
+    subtitle = "How to get insight from the data"
     author = "IntoTheData"
     # ordersectionsby = "title"
     ordersectionsby = "weight"

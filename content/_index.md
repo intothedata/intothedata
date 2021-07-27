@@ -1,4 +1,3 @@
-+++
 title = "인투더데이터 - Into the data"
 +++
 
