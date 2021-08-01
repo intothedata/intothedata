@@ -7,7 +7,8 @@ languageCode = "ko"
 title = "인투더데이터 데이터과학 위키"
 # theme = "ananke"
 # theme = "docdock"
-theme = "techdocs"
+theme = "book"
+# theme = "techdocs"
 
 hasCJKLanguage = false
 publishDir = "public"
