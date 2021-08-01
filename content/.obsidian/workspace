@@ -1,0 +1,103 @@
+{
+  "main": {
+    "id": "1b01e64f5b3eab05",
+    "type": "split",
+    "children": [
+      {
+        "id": "f449aff2cb1e73e2",
+        "type": "leaf",
+        "active": true,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "30.bigdata/_index.md",
+            "mode": "source"
+          }
+        },
+        "group": "490699d126270058"
+      },
+      {
+        "id": "bc5659d640e2265e",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "30.bigdata/_index.md",
+            "mode": "preview"
+          }
+        },
+        "group": "490699d126270058"
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "23f1662b24c44717",
+    "type": "split",
+    "children": [
+      {
+        "id": "d03bb8c653583fc2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "03c58ff9876b91be",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "75038dcd4f84a092",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": ""
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "91cb74fbe39dff9b",
+    "type": "split",
+    "children": [
+      {
+        "id": "e6b0c6517ad97aeb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a6586e2c37c8d766",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "30.bigdata/_index.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "lastOpenFiles": [
+    "30.bigdata/_index.md",
+    "01.data_science/datascientist_skillset.md",
+    "02.scholar_category/anomaly_detection/_index.md",
+    "60.pracactical_data_processing/_index.md",
+    "02.scholar_category/timeseries_analysis/granger_causality.md",
+    "01.data_science/_index.md",
+    "20.data_platform/_index.md",
+    "빅데이터.md",
+    "09.datascience_tools/_index.md",
+    "06.data_platform/_index.md"
+  ]
+}
