@@ -1032,26 +1032,26 @@ body {
     font-size: 18px !important;
 }
 
+h1 {
+    /*font-family: "Jeju Gothic", "Novacento Sans Wide", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;*/
+    font-family: "ONE-Mobile-Regular", "NEXON Lv1 Gothic OTF", "Novacento Sans Wide", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    color: #222;
+    font-weight: 200;
+}
+
 h2,
 h3,
 h4,
 h5,
 h6 {
     /*font-family: "Jeju Gothic", "Lato", "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;*/
-    font-family: "NEXON Lv1 Gothic OTF", "Lato", "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font-family: "ONE-Mobile-Regular", "NEXON Lv1 Gothic OTF", "Lato", "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
     text-rendering: optimizeLegibility;
     color: #5e5e5e;
     font-weight: 400;
     letter-spacing: -1px;
-}
-
-h1 {
-    /*font-family: "Jeju Gothic", "Novacento Sans Wide", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;*/
-    font-family: "NEXON Lv1 Gothic OTF", "Novacento Sans Wide", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
-    text-align: center;
-    text-transform: uppercase;
-    color: #222;
-    font-weight: 200;
 }
 
 blockquote {
