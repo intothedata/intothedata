@@ -1,0 +1,1 @@
+wget -O - --http-user=euriion --http-passwd=uczke1tafh 'http://dyna.dnsever.com/update.php?host[intothedata.com]'

@@ -6,9 +6,10 @@ baseURL = "http://intothedata.com/"
 languageCode = "ko"
 title = "인투더데이터 데이터과학 위키"
 # theme = "ananke"
-# theme = "docdock"
-theme = "book"
-# theme = "techdocs"
+# theme = "docdock"  # 기본 책 테마
+# theme = "techdocs"  # 예전 테마
+# theme = "book"  # 간단한 책 테마
+theme = "hugo-theme-learn"  # 예쁜 학습 테마 2021-08-02 18:34
 
 hasCJKLanguage = false
 publishDir = "public"
@@ -16,9 +17,14 @@ pygmentsStyle = "monokai"
 
 googleAnalytics = "UA-53664159-1"
 
+[markup.goldmark.renderer]
+unsafe= true
+
 [outputs]
-	home = [ "HTML", "JSON"]
-	page = [ "HTML", "JSON"]
+	# home = [ "HTML", "JSON"]
+	# page = [ "HTML", "JSON"]
+	home = [ "HTML"]
+	page = [ "HTML"]
 
 # taxonomy
 [taxonomies]
@@ -26,13 +32,16 @@ googleAnalytics = "UA-53664159-1"
   tag = "tags"
 
 [params]
-    subtitle = "How to get insight from the data"
+    subtitle = "데이터에서 인사이트 찾아내기"
     author = "IntoTheData"
     # ordersectionsby = "title"
     ordersectionsby = "weight"
     # showVisitedLinks = true
 
-    themeVariant = "intothedata"
+    # themeVariant = "intothedata"  # techdoc에서만 쓰는 것이고
+    # Change default color scheme with a variant one. Can be "red", "blue", "green".
+    themeVariant = ""  # 테마
+    custom_css = ["css/intothedata.css"]
 
 [[menu.shortcuts]]
 pre = "<h3>More</h3>"

@@ -1,0 +1,52 @@
+baseURL: 'http://intothedata.com/'
+languageCode: ko
+title: 인투더데이터
+theme: book
+hasCJKLanguage: false
+publishDir: public
+pygmentsStyle: monokai
+googleAnalytics: UA-53664159-1
+outputs:
+  home:
+    - HTML
+    - JSON
+  page:
+    - HTML
+    - JSON
+taxonomies:
+  category: categories
+  tag: tags
+params:
+  subtitle: get insights from data
+  author: IntoTheData
+  ordersectionsby: weight
+  themeVariant: intothedata
+menu:
+  shortcuts:
+    - pre: <h3>More</h3>
+      name: <i class='fa fa-bookmark'></i> 색인
+      identifier: tag-list
+      url: /taglist
+      weight: 1
+    - name: <i class='fa fa-envelope'></i> Contact
+      identifier: contact
+      url: 'mailto: intothedata@gmail.com'
+      weight: 2
+
+markup:
+  goldmark:
+    extensions:
+      definitionList: true
+      footnote: true
+      linkify: true
+      strikethrough: true
+      table: true
+      taskList: true
+      typographer: true
+    parser:
+      autoHeadingID: true
+      autoHeadingIDType: github
+    renderer:
+      hardWraps: false
+      unsafe: true
+      xhtml: false
