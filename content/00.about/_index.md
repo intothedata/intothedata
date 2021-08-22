@@ -40,18 +40,3 @@ alwaysopen = true
 
 이메일: [intothedata@gmail.com](mailto:intothedata@gmail.com)
 카카오톡 오픈챗: [데이터과학 오픈챗](https://open.kakao.com/o/gCxMELI)
-
-**최종 수정일**
-
-<!-- Last Updated Date -->
-{{- if .Lastmod }}
-    {{- $lastmod := .Lastmod.Format "02.01.2006" }}
-    {{- if ne $lastmod $pubdate }}
-        <div class="post-info-last-mod">
-            (Updated: 
-            <time datetime="{{ .Lastmod }}" title="{{ .Lastmod }}">
-                {{ $lastmod }}
-            </time>)
-        </div>
-    {{- end }}
-{{- end }}
