@@ -43,5 +43,15 @@ alwaysopen = true
 
 **최종 수정일**
 
-<p>Last Modified: {{ .Lastmod.Format "2 January 2006" }}</p>
-
+<!-- Last Updated Date -->
+{{- if .Lastmod }}
+    {{- $lastmod := .Lastmod.Format "02.01.2006" }}
+    {{- if ne $lastmod $pubdate }}
+        <div class="post-info-last-mod">
+            (Updated: 
+            <time datetime="{{ .Lastmod }}" title="{{ .Lastmod }}">
+                {{ $lastmod }}
+            </time>)
+        </div>
+    {{- end }}
+{{- end }}
