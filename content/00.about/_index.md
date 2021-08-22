@@ -43,6 +43,4 @@ alwaysopen = true
 
 **최종 수정일**
 
-{{ $date := .Date.Format "02.01.2006" }}
-{{ $lastmod := .Lastmod.Format "02.01.2006" }}
-최종 수정일: {{ $lastmod }}
+<p>Last Modified: {{ .Lastmod.Format "2 January 2006" }}</p>
