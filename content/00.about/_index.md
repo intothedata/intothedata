@@ -43,4 +43,6 @@ alwaysopen = true
 
 **최종 수정일**
 
-최종 수정일: {{ $Lastmod }}
+{{ $date := .Date.Format "02.01.2006" }}
+{{ $lastmod := .Lastmod.Format "02.01.2006" }}
+최종 수정일: {{ $lastmod }}
