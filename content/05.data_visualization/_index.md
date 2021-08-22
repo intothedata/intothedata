@@ -43,4 +43,4 @@ weight = 1005
 선택은 하는 사람이 결정해야 한다.
 
 
-최종 수정일: {{ if ne .Lastmod .Date }}
+최종 수정일: {{ .Lastmod.Format "2006-01-02." }}
