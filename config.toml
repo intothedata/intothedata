@@ -4,7 +4,7 @@
 
 baseURL = "http://intothedata.com/"
 languageCode = "ko"
-title = "인투더데이터 데이터과학 위키"
+title = "인투더데이터 데이터과학 위키 Datascience Wiki"
 # theme = "ananke"
 # theme = "docdock"  # 기본 책 테마
 # theme = "techdocs"  # 예전 테마
