@@ -44,4 +44,3 @@ alwaysopen = true
 **최종 수정일**
 
 최종 수정일: {{ .Lastmod.Format "2006-01-02 03:04" }}
-

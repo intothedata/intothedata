@@ -17,6 +17,15 @@ pygmentsStyle = "monokai"
 
 googleAnalytics = "UA-53664159-1"
 
+# lastmod를 활성화
+enableGitInfo = true
+
+[frontmatter]
+date = ["date", "publishDate", "lastmod"]
+lastmod = ["lastmod", ":git", "date", "publishDate"]
+publishDate = ["publishDate", "date"]
+expiryDate = ["expiryDate"]
+
 [markup.goldmark.renderer]
 unsafe= true
 
