@@ -41,6 +41,7 @@ alwaysopen = true
 이메일: [intothedata@gmail.com](mailto:intothedata@gmail.com)
 카카오톡 오픈챗: [데이터과학 오픈챗](https://open.kakao.com/o/gCxMELI)
 
-**최종 수저일**
+**최종 수정일**
 
-날짜: {{ if ne .Lastmod .Date }}
+최종 수정일: {{ .Lastmod.Format "2006-01-02 03:04" }}
+
