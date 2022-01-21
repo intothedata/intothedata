@@ -4,7 +4,7 @@
 
 baseURL = "http://intothedata.com/"
 languageCode = "ko"
-title = "인투더데이터 데이터과학 위키"
+title = "인투더데이터 데이터과학 위키 Datascience Wiki"
 # theme = "ananke"
 # theme = "docdock"  # 기본 책 테마
 # theme = "techdocs"  # 예전 테마
@@ -16,6 +16,15 @@ publishDir = "public"
 pygmentsStyle = "monokai"
 
 googleAnalytics = "UA-53664159-1"
+
+# lastmod를 활성화
+enableGitInfo = true
+
+[frontmatter]
+date = ["date", "publishDate", "lastmod"]
+lastmod = ["lastmod", ":git", "date", "publishDate"]
+publishDate = ["publishDate", "date"]
+expiryDate = ["expiryDate"]
 
 [markup.goldmark.renderer]
 unsafe= true
