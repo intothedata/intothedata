@@ -1,5 +1,5 @@
 +++
-title = 인공지능 - Artificial Intelligence"
+title = "인공지능 - Artificial Intelligence"
 weight = 1030
 tags = ["Big data","빅데이터"]
 +++
