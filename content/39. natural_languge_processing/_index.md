@@ -1,5 +1,5 @@
 +++
-title = 자연어처리 - Natural Language Processing"
+title = "자연어처리 - Natural Language Processing"
 weight = 1030
 tags = ["Natural Language Processing","자연어처리"]
 +++
