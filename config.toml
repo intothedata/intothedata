@@ -9,7 +9,8 @@ title = "인투더데이터 데이터과학 위키 Datascience Wiki"
 # theme = "docdock"  # 기본 책 테마
 # theme = "techdocs"  # 예전 테마
 # theme = "book"  # 간단한 책 테마
-theme = "hugo-theme-learn"  # 예쁜 학습 테마 2021-08-02 18:34
+#theme = "hugo-theme-learn"  # 예쁜 학습 테마 2021-08-02 18:34
+theme = "hugo-book" 
 
 hasCJKLanguage = false
 publishDir = "public"
@@ -26,6 +27,12 @@ lastmod = ["lastmod", ":git", "date", "publishDate"]
 publishDate = ["publishDate", "date"]
 expiryDate = ["expiryDate"]
 
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [markup.goldmark.renderer]
 unsafe= true
 
@@ -41,7 +48,7 @@ unsafe= true
   tag = "tags"
 
 [params]
-    subtitle = "데이터에서 인사이트 찾아내기"
+    subtitle = "데이터사이언스 위키"
     author = "IntoTheData"
     # ordersectionsby = "title"
     ordersectionsby = "weight"
