@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>자연어처리 - Natural Language Processing on 인투더데이터 데이터과학</title>
+    <link>https://intothedata.com/38.natural_languge_processing/</link>
+    <description>Recent content in 자연어처리 - Natural Language Processing on 인투더데이터 데이터과학</description>
+    <generator>Hugo</generator>
+    <language>ko-KR</language>
+    <atom:link href="https://intothedata.com/38.natural_languge_processing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>한국어 형태소 분석기 - Korean pos tagger</title>
+      <link>https://intothedata.com/38.natural_languge_processing/korean_pos_tagger/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/38.natural_languge_processing/korean_pos_tagger/</guid>
+      <description>&lt;h2 id=&#34;오픈소스-한국어-형태소-분석기&#34;&gt;&#xA;  오픈소스 한국어 형태소 분석기&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%98%a4%ed%94%88%ec%86%8c%ec%8a%a4-%ed%95%9c%ea%b5%ad%ec%96%b4-%ed%98%95%ed%83%9c%ec%86%8c-%eb%b6%84%ec%84%9d%ea%b8%b0&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;한나눔-hananum&#34;&gt;&#xA;  한나눔 (Hananum)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ed%95%9c%eb%82%98%eb%88%94-hananum&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;명칭: 한나눔&lt;/li&gt;&#xA;&lt;li&gt;관리: Kaist&lt;/li&gt;&#xA;&lt;li&gt;개발언어: Java&lt;/li&gt;&#xA;&lt;li&gt;알고리즘: HMM&lt;/li&gt;&#xA;&lt;li&gt;학습사전: 세종계획 산출물&lt;/li&gt;&#xA;&lt;li&gt;소스 오픈 여부: 오픈&lt;/li&gt;&#xA;&lt;li&gt;구분분석기: 없음&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;꼬꼬마-kkma&#34;&gt;&#xA;  꼬꼬마 (KKMA)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ea%bc%ac%ea%bc%ac%eb%a7%88-kkma&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;명칭: 꼬꼬마&lt;/li&gt;&#xA;&lt;li&gt;관리: Seoul University&lt;/li&gt;&#xA;&lt;li&gt;개발언어: Java&lt;/li&gt;&#xA;&lt;li&gt;알고리즘: ?&lt;/li&gt;&#xA;&lt;li&gt;학습사전: 세종계획 산출물&lt;/li&gt;&#xA;&lt;li&gt;소스 오픈 여부: Open 별도 요청&lt;/li&gt;&#xA;&lt;li&gt;구분분석기: 일부 탑재&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;메카브-ko-mecab&#34;&gt;&#xA;  메카브 KO (Mecab)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%eb%a9%94%ec%b9%b4%eb%b8%8c-ko-mecab&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;명칭: 메카브 KO (Mecab), 은전한닢&lt;/li&gt;&#xA;&lt;li&gt;관리: 은전한닢 프로젝트 커뮤니티&lt;/li&gt;&#xA;&lt;li&gt;개발언어: C/C++&lt;/li&gt;&#xA;&lt;li&gt;알고리즘: CRF&lt;/li&gt;&#xA;&lt;li&gt;학습사전: 세종계획 산출물 (일부)&lt;/li&gt;&#xA;&lt;li&gt;소스 오픈 여부: 오픈&lt;/li&gt;&#xA;&lt;li&gt;구분분석기: 없음&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;NTT에서 사용하던 일본어 형태소 분석기를 한국어 용으로 변환한 것이다. 영문을 읽으면 “미캡”이라고 읽어야 하겠지만 일본인이 제작한 것이고 일본어 소개페이지에 카타가나로 “메카부”라고 적혀 있어 여기에도 그렇게 기재하였다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>형태소 분석기 - Pos tagger</title>
+      <link>https://intothedata.com/38.natural_languge_processing/pos_tagger/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/38.natural_languge_processing/pos_tagger/</guid>
+      <description>&lt;h2 id=&#34;형태소분석기&#34;&gt;&#xA;  형태소분석기&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ed%98%95%ed%83%9c%ec%86%8c%eb%b6%84%ec%84%9d%ea%b8%b0&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;형태소분석기는 자연어처리에 사용하는 소프트웨어 또는 모듈이다. 이름처럼 형태소를 분석하기 위한 것이다.&#xA;형태소분석기가 뭔지 이해하려면 먼저 형태소가 뭔지 알아야한다.&lt;/p&gt;&#xA;&lt;h3 id=&#34;형태소-morpheme&#34;&gt;&#xA;  형태소 Morpheme&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ed%98%95%ed%83%9c%ec%86%8c-morpheme&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;형태소는 &amp;ldquo;더 이상 쪼갤 수 없는 뜻을 가진 최소 단위&amp;quot;라고 정의하는데 일반적으로는 품사를 뜻한다고 생각하면 쉽지만&#xA;어간,접미사, 접두사, 파생접미사, 특수기호같은 것도 형태소로 포함하기 때문이 흔히 생각하는 품사보다는 갯수가 많다고 생각하면 된다.&lt;/p&gt;&#xA;&lt;h3 id=&#34;형태소분석이란&#34;&gt;&#xA;  형태소분석이란?&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ed%98%95%ed%83%9c%ec%86%8c%eb%b6%84%ec%84%9d%ec%9d%b4%eb%9e%80&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;형태소분석은 문장에서 형태소를 각각 분리하고 형태소의 종류를 알아내는 것이다.&lt;br&gt;&#xA;쉽게 얘기하면 문장에 있는 각 품사들을 쪼개고 어떤 품사인지 표시하는 것이다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

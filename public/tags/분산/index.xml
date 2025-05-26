@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>분산 on 인투더데이터 데이터과학</title>
+    <link>https://intothedata.com/tags/%EB%B6%84%EC%82%B0/</link>
+    <description>Recent content in 분산 on 인투더데이터 데이터과학</description>
+    <generator>Hugo</generator>
+    <language>ko-KR</language>
+    <atom:link href="https://intothedata.com/tags/%EB%B6%84%EC%82%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>분산 - Variance</title>
+      <link>https://intothedata.com/docs/02.scholars/statistics/variance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/02.scholars/statistics/variance/</guid>
+      <description>&lt;h2 id=&#34;개요&#34;&gt;&#xA;  개요&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ea%b0%9c%ec%9a%94&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;분산은 데이터가 평균으로 부터 얼마나 많이 떨어져 있는지를 나타내는 통계값이다.  분산은 표준편차의 제곱값과 동일하고 표준편차는 분산의 제곱근(sqrt)이다.  표준편차와 분산은 사실 동일하다고 볼 수 있는데 표준편차보다는 표준편차가 제곱된 형태의 분산이 더 많이 쓰인다.&lt;/p&gt;&#xA;&lt;h3 id=&#34;표준편차보다-분산을-더-많이-사용하는-이유&#34;&gt;&#xA;  표준편차보다 분산을 더 많이 사용하는 이유&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ed%91%9c%ec%a4%80%ed%8e%b8%ec%b0%a8%eb%b3%b4%eb%8b%a4-%eb%b6%84%ec%82%b0%ec%9d%84-%eb%8d%94-%eb%a7%8e%ec%9d%b4-%ec%82%ac%ec%9a%a9%ed%95%98%eb%8a%94-%ec%9d%b4%ec%9c%a0&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;제곱이 된 상태를 두면 후에 미분을 적용하거나 여러 계산에서 분산값을 계산할 때 편해지는 이점이 있다. 분산의 값을 재계산하는 수식들은 통계학이나 공학의 논문이나 서적에서 볼 수 있는데 그런 수식들 중에서 분산이 제곱근이 되어 있지 않아 편리하게 계산이 되는 것을 볼 수 있다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

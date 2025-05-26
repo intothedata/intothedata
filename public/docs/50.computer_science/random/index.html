@@ -1,0 +1,1851 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  랜덤 (Random, 난수)
+  #
+
+컴퓨터에서 랜덤은 매우 중요한 개념 중 하나이다. 하지만 컴퓨터가 생성하는 랜덤은 우리가 일반적으로 상상하는 완전한 랜덤과는 본질적으로 다르다는 점을 이해해야 한다.
+
+  랜덤의 정의와 특성
+  #
+
+랜덤(Random)이란 예측할 수 없고 규칙성이 없는 상태나 과정을 의미한다. 수학적으로는 각 사건이 동일한 확률로 발생하며, 이전 결과가 다음 결과에 영향을 주지 않는 독립성을 갖는 것이 특징이다.
+
+  컴퓨터에서의 랜덤 문제
+  #
+
+컴퓨터는 본질적으로 결정론적(deterministic) 기계이다. 모든 연산과 동작이 명확한 규칙과 알고리즘에 따라 수행되기 때문에, 진정한 의미의 랜덤을 생성하는 것은 원리적으로 불가능하다. 이러한 근본적인 한계로 인해 다음과 같은 문제들이 발생할 수 있다:">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:url" content="https://intothedata.com/docs/50.computer_science/random/">
+  <meta property="og:site_name" content="인투더데이터 데이터과학">
+  <meta property="og:title" content="랜덤">
+  <meta property="og:description" content="랜덤 (Random, 난수) # 컴퓨터에서 랜덤은 매우 중요한 개념 중 하나이다. 하지만 컴퓨터가 생성하는 랜덤은 우리가 일반적으로 상상하는 완전한 랜덤과는 본질적으로 다르다는 점을 이해해야 한다.
+랜덤의 정의와 특성 # 랜덤(Random)이란 예측할 수 없고 규칙성이 없는 상태나 과정을 의미한다. 수학적으로는 각 사건이 동일한 확률로 발생하며, 이전 결과가 다음 결과에 영향을 주지 않는 독립성을 갖는 것이 특징이다.
+컴퓨터에서의 랜덤 문제 # 컴퓨터는 본질적으로 결정론적(deterministic) 기계이다. 모든 연산과 동작이 명확한 규칙과 알고리즘에 따라 수행되기 때문에, 진정한 의미의 랜덤을 생성하는 것은 원리적으로 불가능하다. 이러한 근본적인 한계로 인해 다음과 같은 문제들이 발생할 수 있다:">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>랜덤 | 인투더데이터 데이터과학</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.465376614827fff60754cc9c34686b524db662a4c314668361de5db45fde6203.css" integrity="sha256-RlN2YUgn//YHVMycNGhrUk22YqTDFGaDYd5dtF/eYgM=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.d9e6ba7770f5117e21758da45184f61d5669394aa618ebdfabe1d95519d50bbf.js" integrity="sha256-2ea6d3D1EX4hdY2kUYT2HVZpOUqmGOvfq&#43;HZVRnVC78=" crossorigin="anonymous"></script>
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>인투더데이터 데이터과학</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/00.about/" class="">인투더데이터 소개 About</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/01.data_science/" class="">데이터과학</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/01.data_science/datascientist_skillset/" class="">데이터과학자 스킬셋</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/" class="">데이터과학 학술분야</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/operational_research/" class="">경영과학 - Operational Research</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/operational_research/demand_forecasting/" class="">수요예측 - Demand Forecasting</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/economics/" class="">계량경제학 - Economics</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/economics/distributed_lag_model/" class="">분산지연모델</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/data_mining/" class="">데이터마이닝</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/data_mining/clustering/" class="">군집분석 - Clustering</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/data_mining/clustering/k-means/" class="">K-means - K중심값</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/modeling/" class="">모델링 - Modeling</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/business_analysis/" class="">비즈니스 데이터 분석</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/business_analysis/behavioral_change_point_analysis/" class="">행동변화점분석</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/timeseries_analysis/" class="">시계열 분석 - Time-series Analysis</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/timeseries_analysis/granger_causality/" class="">그래인저 인과관계 - Granger Causality</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/anomaly_detection/" class="">이상감지</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/anomaly_detection/3_sigma_rule/" class="">3 sigma rule</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/anomaly_detection/generalized_esd/" class="">Generalized ESD</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/artificial_intelligence/" class="">인공지능 - Artificial Intelligence</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/artificial_intelligence/fuzzy_inferenece/" class="">퍼지 추론 - Fuzzy Inferenece</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/information_retrieval/" class="">정보검색</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/text_mining/" class="">텍스트마이닝 - Text Mining</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/text_mining/tfidf/" class="">TFIDF - Term Frequency Inverse Document Frequency</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/text_mining/cosine_similarity/" class="">코사인 유사도 - Cosine Similarity</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/" class="">통계학 - Statistics</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/central_limit_theorem/" class="">중심극한정리 - CLT; Central Limit Theorem</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/descriptive_statistics/" class="">기술통계 - Descriptive statistics</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/variance/" class="">분산 - Variance</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/survival_analysis/" class="">생존분석 - Survival Analysis</a>
+  
+
+          
+  <ul>
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/data/" class="">자료 - data</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/gaussian_distribution/" class="">정규분포, 가우시안 분포 - Normal Distribution, Gaussian Distribution</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/inferential_statistics/" class="">추론통계 - Inferential statistics</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/sampling/" class="">표본추출 - Sampling</a>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/sampling/neyman_alloction/" class="">네이만 배분법 - neyman allocation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/sampling/hyperloglog/" class="">하이퍼로그로그 - Hyper Log Log</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/correlation/" class="">피어슨 상관계수 - Pearson&#39;s product-moment correlation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/stochastic_process/" class="">확률과정 - Stochastic process</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/stochastic_process/brownian_motion/" class="">브라운 운동 - Brownian Motion</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/stochastic_process/ornstein_uhlenbeck_process/" class="">오른스타인-우렌벡 과정  Ornstein-Uhlenbeck process</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/pattern_recognition/" class="">패턴인식 - Pattern Recognition</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/pattern_recognition/neural_network/" class="">인공신경망 - Neural Network</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/" class="">데이터사이언스 - 산업별 갈래</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/adtech/" class="">온라인 광고 비즈니스 - Ad tech</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/adtech/ad_tech_terminlogy/" class="">온라인 광고 용어 - Online Ad Terminology</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/ad_tech/" class="">애드테크 - Ad Tech</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/ad_tech/ad_tech_terminlogy/" class="">온라인 광고 용어</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/online/" class="">온라인 비즈니스 - Online busines</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/online/ad_tech/" class="">온라인 광고 비즈니스 - Ad tech</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/online/ad_tech_terminlogy/" class="">온라인 광고 용어 - Online Ad Terminology</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/automobile/" class="">자동차 산업 - Automobile Industry</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/iron_mill/" class="">철강 - Iron mill</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/04.data_analysis/" class="">데이터 분석</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>데이터 수집 (Data collection)</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/06.data_collection/mobile_data_collection/" class="">데이터 수집 (Data collection)</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/05.data_visualization/" class="">데이터시각화</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/05.data_visualization/number_line_plot/" class="">넘버라인플롯</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/06.data_platform/" class="">데이터 플랫폼</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/06.data_platform/bigquery/" class="">빅쿼리 - Bigquery</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/06.data_platform/bigquery/excel_bigquery/" class="">엑셀에서 빅쿼리 데이터 가져오기</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/07.data_hub/" class="">데이터 허브</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/07.data_hub/sk_data_hub/" class="">SK 데이터 허브</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/08.reproducible_research/" class="">재현가능연구</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/09.datascience_tools/" class="">데이터사이언스 도구 - Data Science Tools</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/20.data_platform/" class="">데이터플랫폼</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/30.bigdata/" class="">빅데이터</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/36.time_series_analysis/" class="">시계열분석</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/" class="">인공지능</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/vector_search_engine/" class="">벡터검색엔진</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/faiss/" class="">Faiss - 벡터 검색 엔진</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/faiss/3_sigma_rule/" class="">3 sigma rule</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/faiss/generalized_esd/" class="">Generalized ESD</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/gpt/" class="">GPT</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/39.large_language_model/" class="">LLM</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/38.natural_languge_processing/" class="">자연어 처리</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/38.natural_languge_processing/korean_pos_tagger/" class="">한국어 형태소 분석기</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/38.natural_languge_processing/pos_tagger/" class="">형태소 분석기 - Pos tagger</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/40.r_language/" class="">R언어</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/50.computer_science/" class="">컴퓨터 공학</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/50.computer_science/random/" class=" active">랜덤</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/70.practical_data_science/" class="">실무 데이터과학</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/70.practical_data_science/quality_based_scoring/" class="">품질 기반 스코어링 - quality-based scoring</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/60.pracactical_data_processing/" class="">데이터 프로세싱</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/80.mathematics/" class="">수학 - Mathematics</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/80.mathematics/ordinary_differential_equation/" class="">상미분방정식 - Ordinary Differential Equation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/80.mathematics/mathematics_symbols/" class="">수학기호정리 - mathematics symbols</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/80.mathematics/fermats_last_theorem/" class="">페르마의 마지막 정리</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/90.metrics/" class="">지표</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/90.metrics/lorenz_curve/" class="">로렌츠 커브</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/99.materials/" class="">참고자료 - References</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/99.materials/people/" class="">인물 - People</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/99.materials/sites/" class="">참고 사이트</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/taglist/" class="">태그 목록</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>랜덤</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#랜덤-random-난수">랜덤 (Random, 난수)</a>
+      <ul>
+        <li><a href="#랜덤의-정의와-특성">랜덤의 정의와 특성</a></li>
+        <li><a href="#컴퓨터에서의-랜덤-문제">컴퓨터에서의 랜덤 문제</a></li>
+        <li><a href="#랜덤-생성-방법">랜덤 생성 방법</a></li>
+        <li><a href="#랜덤의-응용-분야">랜덤의 응용 분야</a></li>
+        <li><a href="#랜덤성-검증">랜덤성 검증</a></li>
+        <li><a href="#실제-구현-시-고려사항">실제 구현 시 고려사항</a></li>
+        <li><a href="#quasi-random-sequence">Quasi Random Sequence</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h2 id="랜덤-random-난수">
+  랜덤 (Random, 난수)
+  <a class="anchor" href="#%eb%9e%9c%eb%8d%a4-random-%eb%82%9c%ec%88%98">#</a>
+</h2>
+<p>컴퓨터에서 랜덤은 매우 중요한 개념 중 하나이다. 하지만 컴퓨터가 생성하는 랜덤은 우리가 일반적으로 상상하는 완전한 랜덤과는 본질적으로 다르다는 점을 이해해야 한다.</p>
+<h3 id="랜덤의-정의와-특성">
+  랜덤의 정의와 특성
+  <a class="anchor" href="#%eb%9e%9c%eb%8d%a4%ec%9d%98-%ec%a0%95%ec%9d%98%ec%99%80-%ed%8a%b9%ec%84%b1">#</a>
+</h3>
+<p>랜덤(Random)이란 예측할 수 없고 규칙성이 없는 상태나 과정을 의미한다. 수학적으로는 각 사건이 동일한 확률로 발생하며, 이전 결과가 다음 결과에 영향을 주지 않는 독립성을 갖는 것이 특징이다.</p>
+<h3 id="컴퓨터에서의-랜덤-문제">
+  컴퓨터에서의 랜덤 문제
+  <a class="anchor" href="#%ec%bb%b4%ed%93%a8%ed%84%b0%ec%97%90%ec%84%9c%ec%9d%98-%eb%9e%9c%eb%8d%a4-%eb%ac%b8%ec%a0%9c">#</a>
+</h3>
+<p>컴퓨터는 본질적으로 결정론적(deterministic) 기계이다. 모든 연산과 동작이 명확한 규칙과 알고리즘에 따라 수행되기 때문에, 진정한 의미의 랜덤을 생성하는 것은 원리적으로 불가능하다. 이러한 근본적인 한계로 인해 다음과 같은 문제들이 발생할 수 있다:</p>
+<h4 id="1-의사-랜덤-pseudo-random">
+  1. 의사 랜덤 (Pseudo Random)
+  <a class="anchor" href="#1-%ec%9d%98%ec%82%ac-%eb%9e%9c%eb%8d%a4-pseudo-random">#</a>
+</h4>
+<p>컴퓨터가 생성하는 대부분의 랜덤 수는 실제로는 의사 랜덤이다. 이는 수학적 알고리즘을 통해 생성되는 수열로, 충분히 복잡하고 예측하기 어렵지만 엄밀히 말하면 결정론적이다.</p>
+<h4 id="2-주기성-periodicity">
+  2. 주기성 (Periodicity)
+  <a class="anchor" href="#2-%ec%a3%bc%ea%b8%b0%ec%84%b1-periodicity">#</a>
+</h4>
+<p>의사 랜덤 생성기는 유한한 상태를 가지므로 언젠가는 반복되는 주기를 갖게 된다. 주기가 짧으면 패턴이 드러나 랜덤성이 손상될 수 있다.</p>
+<h4 id="3-편향-bias">
+  3. 편향 (Bias)
+  <a class="anchor" href="#3-%ed%8e%b8%ed%96%a5-bias">#</a>
+</h4>
+<p>잘못 설계된 랜덤 생성기는 특정 값이나 패턴에 편향을 보일 수 있어, 통계적 분석이나 시뮬레이션 결과에 왜곡을 일으킬 수 있다.</p>
+<h4 id="4-상관관계-correlation">
+  4. 상관관계 (Correlation)
+  <a class="anchor" href="#4-%ec%83%81%ea%b4%80%ea%b4%80%ea%b3%84-correlation">#</a>
+</h4>
+<p>연속적으로 생성되는 랜덤 수들 사이에 의도하지 않은 상관관계가 나타날 수 있어, 독립성 가정을 위반할 수 있다.</p>
+<h3 id="랜덤-생성-방법">
+  랜덤 생성 방법
+  <a class="anchor" href="#%eb%9e%9c%eb%8d%a4-%ec%83%9d%ec%84%b1-%eb%b0%a9%eb%b2%95">#</a>
+</h3>
+<h4 id="의사-랜덤-생성기-prng-pseudo-random-number-generator">
+  의사 랜덤 생성기 (PRNG: Pseudo Random Number Generator)
+  <a class="anchor" href="#%ec%9d%98%ec%82%ac-%eb%9e%9c%eb%8d%a4-%ec%83%9d%ec%84%b1%ea%b8%b0-prng-pseudo-random-number-generator">#</a>
+</h4>
+<ul>
+<li><strong>선형 합동 생성기 (Linear Congruential Generator)</strong>: 가장 간단하고 빠른 방법 중 하나</li>
+<li><strong>메르센 트위스터 (Mersenne Twister)</strong>: 긴 주기와 좋은 통계적 성질을 가진 널리 사용되는 알고리즘</li>
+<li><strong>Xorshift</strong>: 빠른 속도와 간단한 구현이 특징인 생성기</li>
+</ul>
+<h4 id="진정한-랜덤-생성기-trng-true-random-number-generator">
+  진정한 랜덤 생성기 (TRNG: True Random Number Generator)
+  <a class="anchor" href="#%ec%a7%84%ec%a0%95%ed%95%9c-%eb%9e%9c%eb%8d%a4-%ec%83%9d%ec%84%b1%ea%b8%b0-trng-true-random-number-generator">#</a>
+</h4>
+<ul>
+<li><strong>하드웨어 기반</strong>: CPU의 열잡음, 방사성 붕괴, 대기 잡음 등 물리적 현상을 이용</li>
+<li><strong>운영체제 엔트로피</strong>: 키보드 입력 타이밍, 마우스 움직임, 디스크 접근 패턴 등을 수집</li>
+</ul>
+<h3 id="랜덤의-응용-분야">
+  랜덤의 응용 분야
+  <a class="anchor" href="#%eb%9e%9c%eb%8d%a4%ec%9d%98-%ec%9d%91%ec%9a%a9-%eb%b6%84%ec%95%bc">#</a>
+</h3>
+<h4 id="암호학-cryptography">
+  암호학 (Cryptography)
+  <a class="anchor" href="#%ec%95%94%ed%98%b8%ed%95%99-cryptography">#</a>
+</h4>
+<p>보안 키 생성, 암호화 알고리즘에서 예측 불가능한 랜덤 수가 필수적이다. 약한 랜덤성은 보안 취약점으로 이어질 수 있다.</p>
+<h4 id="시뮬레이션-simulation">
+  시뮬레이션 (Simulation)
+  <a class="anchor" href="#%ec%8b%9c%eb%ae%ac%eb%a0%88%ec%9d%b4%ec%85%98-simulation">#</a>
+</h4>
+<p>몬테카르로 시뮬레이션, 확률적 모델링에서 정확한 결과를 얻기 위해 고품질의 랜덤 수가 필요하다.</p>
+<h4 id="게임-개발">
+  게임 개발
+  <a class="anchor" href="#%ea%b2%8c%ec%9e%84-%ea%b0%9c%eb%b0%9c">#</a>
+</h4>
+<p>게임의 재미와 공정성을 위해 예측할 수 없는 요소들을 구현할 때 랜덤이 사용된다.</p>
+<h4 id="통계-분석">
+  통계 분석
+  <a class="anchor" href="#%ed%86%b5%ea%b3%84-%eb%b6%84%ec%84%9d">#</a>
+</h4>
+<p>표본 추출, 무작위 실험 설계 등에서 편향 없는 랜덤 선택이 중요하다.</p>
+<h3 id="랜덤성-검증">
+  랜덤성 검증
+  <a class="anchor" href="#%eb%9e%9c%eb%8d%a4%ec%84%b1-%ea%b2%80%ec%a6%9d">#</a>
+</h3>
+<p>랜덤 생성기의 품질을 평가하기 위해 다양한 통계적 테스트가 개발되었다:</p>
+<ul>
+<li><strong>Diehard 테스트</strong>: 랜덤성을 검증하는 대표적인 테스트 모음</li>
+<li><strong>TestU01</strong>: 더욱 포괄적이고 엄격한 현대적 테스트 라이브러리</li>
+<li><strong>NIST 테스트</strong>: 미국 표준기술연구소에서 개발한 암호학적 랜덤성 테스트</li>
+</ul>
+<h3 id="실제-구현-시-고려사항">
+  실제 구현 시 고려사항
+  <a class="anchor" href="#%ec%8b%a4%ec%a0%9c-%ea%b5%ac%ed%98%84-%ec%8b%9c-%ea%b3%a0%eb%a0%a4%ec%82%ac%ed%95%ad">#</a>
+</h3>
+<h4 id="시드-seed-선택">
+  시드 (Seed) 선택
+  <a class="anchor" href="#%ec%8b%9c%eb%93%9c-seed-%ec%84%a0%ed%83%9d">#</a>
+</h4>
+<p>의사 랜덤 생성기는 초기값(시드)에 따라 전체 수열이 결정되므로, 시드 선택이 매우 중요하다. 현재 시간, 프로세스 ID, 메모리 주소 등을 조합하여 예측하기 어려운 시드를 만드는 것이 일반적이다.</p>
+<h4 id="성능과-품질의-균형">
+  성능과 품질의 균형
+  <a class="anchor" href="#%ec%84%b1%eb%8a%a5%ea%b3%bc-%ed%92%88%ec%a7%88%ec%9d%98-%ea%b7%a0%ed%98%95">#</a>
+</h4>
+<p>빠른 속도가 필요한 애플리케이션에서는 간단한 알고리즘을, 높은 품질이 필요한 경우에는 더 복잡하지만 우수한 통계적 성질을 가진 알고리즘을 선택해야 한다.</p>
+<h4 id="보안-요구사항">
+  보안 요구사항
+  <a class="anchor" href="#%eb%b3%b4%ec%95%88-%ec%9a%94%ea%b5%ac%ec%82%ac%ed%95%ad">#</a>
+</h4>
+<p>암호학적 용도로 사용할 경우에는 암호학적으로 안전한 랜덤 생성기(CSPRNG: Cryptographically Secure Pseudo Random Number Generator)를 사용해야 한다.</p>
+<h3 id="quasi-random-sequence">
+  Quasi Random Sequence
+  <a class="anchor" href="#quasi-random-sequence">#</a>
+</h3>
+<p><a href="http://www.johndcook.com/blog/2009/03/16/quasi-random-sequences-in-art-and-integration/">http://www.johndcook.com/blog/2009/03/16/quasi-random-sequences-in-art-and-integration/</a></p>
+<p>참고자료: <a href="http://www.phy.duke.edu/~rgb/General/dieharder.php">http://www.phy.duke.edu/~rgb/General/dieharder.php</a></p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+  
+
+
+
+  
+    
+  
+
+
+
+<div class="book-languages" tabindex="0" aria-haspopup="true">
+  <ul>
+    <li class="flex align-center">
+      <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+      
+    </li> 
+  </ul>
+
+  <ul class="book-languages-list">
+    
+    <li class="active">
+      <a href="https://intothedata.com/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#랜덤-random-난수">랜덤 (Random, 난수)</a>
+      <ul>
+        <li><a href="#랜덤의-정의와-특성">랜덤의 정의와 특성</a></li>
+        <li><a href="#컴퓨터에서의-랜덤-문제">컴퓨터에서의 랜덤 문제</a></li>
+        <li><a href="#랜덤-생성-방법">랜덤 생성 방법</a></li>
+        <li><a href="#랜덤의-응용-분야">랜덤의 응용 분야</a></li>
+        <li><a href="#랜덤성-검증">랜덤성 검증</a></li>
+        <li><a href="#실제-구현-시-고려사항">실제 구현 시 고려사항</a></li>
+        <li><a href="#quasi-random-sequence">Quasi Random Sequence</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

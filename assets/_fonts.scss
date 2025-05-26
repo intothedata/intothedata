@@ -1,0 +1,177 @@
+/*
+신규 추가. 2017-06-23 23:16
+변경. 2020-11-01 01:53
+*/
+
+/* --- 폰트 정의 시작 -- */
+@font-face {
+    font-family: 'GmarketSansLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Noto Sans KR */
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+*/
+
+@font-face {
+    font-family: 'RIDIBatang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 이롭게바탕체 */
+/* @import url('//cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css'); */
+
+/*
+@import url('https://fonts.googleapis.com/css?family=Sunflower:300');
+*/
+/* 나눔고딕 */
+/*@import url('//fonts.googleapis.com/css?family=Nanum+Gothic:700&subset=korean');*/
+/* 해바라기 */
+/*@import url('//fonts.googleapis.com/css?family=Sunflower:500&subset=korean');*/
+
+/* 구글 본고딕 */
+/*@import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');*/
+/*@import url('//fonts.googleapis.com/css?family=Noto+Sans');*/
+
+/* 나눔스퀘어  */
+/*@import url('//cdn.jsdelivr.net/nanumsquare/1.0/nanumsquare.css');*/
+/* 나눔바른고딕 */
+/*
+@import url('//cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/nanumbarungothic.css');
+*/
+/* kopub돋움 */
+/* @import url('//cdn.jsdelivr.net/font-kopub/1.0/kopubdotum.css');
+ */
+
+/* 구글 산스 */
+/* @font-face {
+font-family: 'Google Sans';
+font-style: normal;
+font-weight: 400;
+src: local('Google Sans Regular'), local('GoogleSans-Regular'), url(https://fonts.gstatic.com/s/googlesans/v6/4UaGrENHsxJlGDuGo1OIlL3Kwp5MKg.woff2) format('woff2');
+unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* greek */
+/*@font-face {
+font-family: 'Google Sans';
+font-style: normal;
+font-weight: 400;
+src: local('Google Sans Regular'), local('GoogleSans-Regular'), url(https://fonts.gstatic.com/s/googlesans/v6/4UaGrENHsxJlGDuGo1OIlL3Nwp5MKg.woff2) format('woff2');
+unicode-range: U+0370-03FF;
+}*/
+/* latin-ext */
+/*@font-face {*/
+/*font-family: 'Google Sans';
+font-style: normal;
+font-weight: 400;
+src: local('Google Sans Regular'), local('GoogleSans-Regular'), url(https://fonts.gstatic.com/s/googlesans/v6/4UaGrENHsxJlGDuGo1OIlL3Awp5MKg.woff2) format('woff2');
+unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}*/
+/* latin */
+/*@font-face {
+font-family: 'Google Sans';
+font-style: normal;
+font-weight: 400;
+src: local('Google Sans Regular'), local('GoogleSans-Regular'), url(https://fonts.gstatic.com/s/googlesans/v6/4UaGrENHsxJlGDuGo1OIlL3Owp4.woff2) format('woff2');
+unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+} */
+
+/* 블랙핏 */
+/* @font-face {
+   font-family: BlackFit77;
+   src: url(https://d3hmvhl7ru3t12.cloudfront.net/fonts/yoonblackfit77-webfont-e22667373903cb18a3736cb44df54cd50ffe9c2c83db3a31691a30d8d9b6d06162852bf412dbd0b35356d8a005d63949829ad43e762a384df6898d7dd97aeb75.woff) format("woff");
+   font-weight: 400;
+   font-style: normal
+}
+*/
+
+/* 애플민트 */
+/* 
+@font-face {
+   font-family: Applemint;
+   font-style: normal;
+   font-weight: 400;
+   src: url(https://cdn.rawgit.com/euriion/webfonts/883f7c90/applemint.woff) format("woff")
+} */
+
+/* 매터리얼 아이콘 */
+/*@font-face {
+font-family: 'Material Icons';
+font-style: normal;
+font-weight: 400;
+src: url(https://fonts.gstatic.com/s/materialicons/v38/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+}
+*/
+
+/*.material-icons {
+font-family: 'Material Icons';
+font-weight: normal;
+font-style: normal;
+font-size: 24px;
+line-height: 1;
+letter-spacing: normal;
+text-transform: none;
+display: inline-block;
+white-space: nowrap;
+word-wrap: normal;
+direction: ltr;
+-webkit-font-feature-settings: 'liga';
+-webkit-font-smoothing: antialiased;
+}*/
+
+/* @font-face {
+  font-family: 'Chinese Rocks';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/l/font?kit=mtGi4_lEIqvFqcjTsScX0whj6CWWE3xO0mcTVu8WWoQDVhk&skey=a1b19ed8cf95e7f2&v=v1) format('woff2');
+}
+ */
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 이사만루 공고딕 */
+@font-face {
+    font-family: 'GongGothicBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GongGothicMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GongGothicLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* --- 폰트 정의 끝 -- */

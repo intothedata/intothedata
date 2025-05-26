@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Faiss - 벡터 검색 엔진 on 인투더데이터 데이터과학</title>
+    <link>https://intothedata.com/37.artificial_intelligence/faiss/</link>
+    <description>Recent content in Faiss - 벡터 검색 엔진 on 인투더데이터 데이터과학</description>
+    <generator>Hugo</generator>
+    <language>ko-KR</language>
+    <atom:link href="https://intothedata.com/37.artificial_intelligence/faiss/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>3 sigma rule</title>
+      <link>https://intothedata.com/37.artificial_intelligence/faiss/3_sigma_rule/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/37.artificial_intelligence/faiss/3_sigma_rule/</guid>
+      <description>&lt;h2 id=&#34;개요&#34;&gt;&#xA;  개요&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ea%b0%9c%ec%9a%94&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://intothedata.com/images/3_sigma_rule/Standard_deviation_diagram.svg.png&#34; alt=&#34;그림&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;데이터의 분포를 정규분포로 가정하고(또는 우기고) 평균으로 부터 ±표준편차 * 시그마계수를 벗어나면 아웃라이어(outlier, 이상치)라고 판단하는 것을 말한다. 너무 단순한 것이라고 해서 최근에는 그대로 사용하는 경우는 거의 없다. 하지만 단순하면서도 상당히 그럴듯하게 작동한다.&lt;/p&gt;&#xA;&lt;p&gt;시그마계수는 표준편차에 얼마를 곱해서 아웃라이어의 지점을 결정할 것인가를 말하는데 보통 2 ~ 3의 값을 사용한다. 표준편차에 2에서 3사이의 값을 곱해서 양과 음의 범위를 신뢰구간으로 보고 그 범위를 벗어나는 것을 아웃라이어로 결정하는 것이다.&lt;br&gt;&#xA;3시그마보다는 2시그마를 사용하는 것이 일반적으로 많이 알려져 있다.  정규분포에서 3시그마의 범위는 전체의 99%를 차지하게 되며 나머지 1%가 아웃라이어가 되므로 여기에 해당하는것이 너무 적기 때문이다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Generalized ESD</title>
+      <link>https://intothedata.com/37.artificial_intelligence/faiss/generalized_esd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/37.artificial_intelligence/faiss/generalized_esd/</guid>
+      <description>&lt;h1 id=&#34;&#34;&gt;&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;generalized-esd-test-for-outliers&#34;&gt;&#xA;  Generalized ESD Test for Outliers&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#generalized-esd-test-for-outliers&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;조금 길에 풀어쓰면 “Generalized Extreme Studentized Deviate Test”이다.&#xA;하나 이상의 이상치(outlier)를 찾는 방법이며 원래 명칭은 Grubbs&amp;rsquo; test for outliers 이다.&lt;/p&gt;&#xA;&lt;p&gt;Grubbs&amp;rsquo; test for outlies는 다른 이름으로 “Maximum normed residual test” 또는&lt;br&gt;&#xA;“Extreme studentized deviate test”로도 알려져 있기도 하다.&lt;/p&gt;&#xA;&lt;p&gt;이 방법은 다음과 같은 조건이 만족되어야 한다.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;정규분포&lt;/li&gt;&#xA;&lt;li&gt;단변량&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

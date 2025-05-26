@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="http://d2.naver.com/helloworld/711301
+cardinality(unique count)를 샘플링해서 알아내는데 사용하는 확률자료구조이자 알고리즘이다.
+세익스피어 전 작품에서의 영어단어 세기
+http://highscalability.com/blog/2012/4/5/big-data-counting-how-to-count-a-billion-distinct-objects-us.html
+Philippe Flajolet 등이 2007년에 발표
+HyperLogLog는 상대오차범위 조절 가능
+상대오차는
+cardinality가 N이라면 레지스터 크기는 log_2log_2N &#43; O(1)
+Philippe Flajolet and Éric Fusy and Olivier Gandouet and Frédéric Meunier, &ldquo;HyperLoglog: the analysis of a near-optimal cardinality estimation algorithm&rdquo;, Discrete Mathematics and Theoretical Computer Science (DMTCS) Proceedings, vol AH, (2007) pp. 127&ndash;146. http://www.dmtcs.org/dmtcs-ojs/index.php/proceedings/article/view/dmAH0110
+Matt Abrams, &ldquo;Big Data Counting: How To Count A Billion Distinct Objects Using Only 1.5KB Of Memory&rdquo;, High Scalability, http://highscalability.com/blog/2012/4/5/big-data-counting-how-to-count-a-billion-distinct-objects-us.html
+Ilya Katsov, &ldquo;Probabilistic Data Structures for Web Analytics and Data Mining&rdquo;, Highly Scalable Blog, http://highlyscalable.wordpress.com/2012/05/01/probabilistic-structures-web-analytics-data-mining/
+&ldquo;stream-lib&rdquo;, https://github.com/addthis/stream-lib/
+&ldquo;Iterated logarithm&rdquo;, Wikipedia, http://en.wikipedia.org/wiki/Iterated_logarithm">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:url" content="https://intothedata.com/02.scholars/statistics/sampling/hyperloglog/">
+  <meta property="og:site_name" content="인투더데이터 데이터과학">
+  <meta property="og:title" content="하이퍼로그로그 - Hyper Log Log">
+  <meta property="og:description" content="http://d2.naver.com/helloworld/711301
+cardinality(unique count)를 샘플링해서 알아내는데 사용하는 확률자료구조이자 알고리즘이다.
+세익스피어 전 작품에서의 영어단어 세기 http://highscalability.com/blog/2012/4/5/big-data-counting-how-to-count-a-billion-distinct-objects-us.html Philippe Flajolet 등이 2007년에 발표 HyperLogLog는 상대오차범위 조절 가능 상대오차는
+cardinality가 N이라면 레지스터 크기는 log_2log_2N &#43; O(1) Philippe Flajolet and Éric Fusy and Olivier Gandouet and Frédéric Meunier, “HyperLoglog: the analysis of a near-optimal cardinality estimation algorithm”, Discrete Mathematics and Theoretical Computer Science (DMTCS) Proceedings, vol AH, (2007) pp. 127–146. http://www.dmtcs.org/dmtcs-ojs/index.php/proceedings/article/view/dmAH0110 Matt Abrams, “Big Data Counting: How To Count A Billion Distinct Objects Using Only 1.5KB Of Memory”, High Scalability, http://highscalability.com/blog/2012/4/5/big-data-counting-how-to-count-a-billion-distinct-objects-us.html Ilya Katsov, “Probabilistic Data Structures for Web Analytics and Data Mining”, Highly Scalable Blog, http://highlyscalable.wordpress.com/2012/05/01/probabilistic-structures-web-analytics-data-mining/ “stream-lib”, https://github.com/addthis/stream-lib/ “Iterated logarithm”, Wikipedia, http://en.wikipedia.org/wiki/Iterated_logarithm">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="02.scholars">
+<title>하이퍼로그로그 - Hyper Log Log | 인투더데이터 데이터과학</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.ce02ec8b4aaa4b1d9386a72d0b93e5195eac0f6feec0b00ecd36d8128e870d23.css" integrity="sha256-zgLsi0qqSx2ThqctC5PlGV6sD2/uwLAOzTbYEo6HDSM=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.69b3ef820735840b8b46619f32c5cf1d96c086c45c7a95bafacc5d95cdc0473e.js" integrity="sha256-abPvggc1hAuLRmGfMsXPHZbAhsRcepW6&#43;sxdlc3ARz4=" crossorigin="anonymous"></script>
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>인투더데이터 데이터과학</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>하이퍼로그로그 - Hyper Log Log</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents"></nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><p><a href="http://d2.naver.com/helloworld/711301">http://d2.naver.com/helloworld/711301</a></p>
+<p>cardinality(unique count)를 샘플링해서 알아내는데 사용하는 확률자료구조이자 알고리즘이다.</p>
+<p>세익스피어 전 작품에서의 영어단어 세기
+<a href="http://highscalability.com/blog/2012/4/5/big-data-counting-how-to-count-a-billion-distinct-objects-us.html">http://highscalability.com/blog/2012/4/5/big-data-counting-how-to-count-a-billion-distinct-objects-us.html</a>
+Philippe Flajolet 등이 2007년에 발표
+HyperLogLog는 상대오차범위 조절 가능
+상대오차는</p>
+<p>cardinality가 N이라면 레지스터 크기는 log_2log_2N + O(1)
+Philippe Flajolet and Éric Fusy and Olivier Gandouet and Frédéric Meunier, &ldquo;HyperLoglog: the analysis of a near-optimal cardinality estimation algorithm&rdquo;, Discrete Mathematics and Theoretical Computer Science (DMTCS) Proceedings, vol AH, (2007) pp. 127&ndash;146. <a href="http://www.dmtcs.org/dmtcs-ojs/index.php/proceedings/article/view/dmAH0110">http://www.dmtcs.org/dmtcs-ojs/index.php/proceedings/article/view/dmAH0110</a>
+Matt Abrams, &ldquo;Big Data Counting: How To Count A Billion Distinct Objects Using Only 1.5KB Of Memory&rdquo;, High Scalability, <a href="http://highscalability.com/blog/2012/4/5/big-data-counting-how-to-count-a-billion-distinct-objects-us.html">http://highscalability.com/blog/2012/4/5/big-data-counting-how-to-count-a-billion-distinct-objects-us.html</a>
+Ilya Katsov, &ldquo;Probabilistic Data Structures for Web Analytics and Data Mining&rdquo;, Highly Scalable Blog, <a href="http://highlyscalable.wordpress.com/2012/05/01/probabilistic-structures-web-analytics-data-mining/">http://highlyscalable.wordpress.com/2012/05/01/probabilistic-structures-web-analytics-data-mining/</a>
+&ldquo;stream-lib&rdquo;, <a href="https://github.com/addthis/stream-lib/">https://github.com/addthis/stream-lib/</a>
+&ldquo;Iterated logarithm&rdquo;, Wikipedia, <a href="http://en.wikipedia.org/wiki/Iterated_logarithm">http://en.wikipedia.org/wiki/Iterated_logarithm</a></p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+  
+
+
+
+  
+    
+  
+
+
+
+<div class="book-languages" tabindex="0" aria-haspopup="true">
+  <ul>
+    <li class="flex align-center">
+      <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+      
+    </li> 
+  </ul>
+
+  <ul class="book-languages-list">
+    
+    <li class="active">
+      <a href="https://intothedata.com/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents"></nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

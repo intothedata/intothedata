@@ -1,0 +1,1799 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  로렌츠 커브 (Lorenz Curve)
+  #
+
+로렌츠 커브는 소득이나 부의 분배 상태를 시각적으로 나타내는 그래프로, 사회의 불평등 정도를 측정하는 핵심적인 경제 지표이다. 1905년 미국의 경제학자 맥스 오토 로렌츠(Max Otto Lorenz)가 개발했으며, 현재까지도 소득 분배 분석의 표준 도구로 활용되고 있다.
+
+  로렌츠 커브의 정의
+  #
+
+로렌츠 커브는 누적 인구 비율(x축)과 누적 소득 비율(y축)의 관계를 나타내는 곡선이다. 완전 평등선(45도 대각선)과 실제 소득 분배를 나타내는 곡선 사이의 면적을 통해 불평등 정도를 시각화한다.
+
+  커브의 해석
+  #
+
+완전 평등선 (Perfect Equality Line)">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:url" content="https://intothedata.com/docs/90.metrics/lorenz_curve/">
+  <meta property="og:site_name" content="인투더데이터 데이터과학">
+  <meta property="og:title" content="로렌츠 커브">
+  <meta property="og:description" content="로렌츠 커브 (Lorenz Curve) # 로렌츠 커브는 소득이나 부의 분배 상태를 시각적으로 나타내는 그래프로, 사회의 불평등 정도를 측정하는 핵심적인 경제 지표이다. 1905년 미국의 경제학자 맥스 오토 로렌츠(Max Otto Lorenz)가 개발했으며, 현재까지도 소득 분배 분석의 표준 도구로 활용되고 있다.
+로렌츠 커브의 정의 # 로렌츠 커브는 누적 인구 비율(x축)과 누적 소득 비율(y축)의 관계를 나타내는 곡선이다. 완전 평등선(45도 대각선)과 실제 소득 분배를 나타내는 곡선 사이의 면적을 통해 불평등 정도를 시각화한다.
+커브의 해석 # 완전 평등선 (Perfect Equality Line)">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>로렌츠 커브 | 인투더데이터 데이터과학</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.465376614827fff60754cc9c34686b524db662a4c314668361de5db45fde6203.css" integrity="sha256-RlN2YUgn//YHVMycNGhrUk22YqTDFGaDYd5dtF/eYgM=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.d9e6ba7770f5117e21758da45184f61d5669394aa618ebdfabe1d95519d50bbf.js" integrity="sha256-2ea6d3D1EX4hdY2kUYT2HVZpOUqmGOvfq&#43;HZVRnVC78=" crossorigin="anonymous"></script>
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>인투더데이터 데이터과학</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/00.about/" class="">인투더데이터 소개 About</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/01.data_science/" class="">데이터과학</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/01.data_science/datascientist_skillset/" class="">데이터과학자 스킬셋</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/" class="">데이터과학 학술분야</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/operational_research/" class="">경영과학 - Operational Research</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/operational_research/demand_forecasting/" class="">수요예측 - Demand Forecasting</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/economics/" class="">계량경제학 - Economics</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/economics/distributed_lag_model/" class="">분산지연모델</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/data_mining/" class="">데이터마이닝</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/data_mining/clustering/" class="">군집분석 - Clustering</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/data_mining/clustering/k-means/" class="">K-means - K중심값</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/modeling/" class="">모델링 - Modeling</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/business_analysis/" class="">비즈니스 데이터 분석</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/business_analysis/behavioral_change_point_analysis/" class="">행동변화점분석</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/timeseries_analysis/" class="">시계열 분석 - Time-series Analysis</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/timeseries_analysis/granger_causality/" class="">그래인저 인과관계 - Granger Causality</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/anomaly_detection/" class="">이상감지</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/anomaly_detection/3_sigma_rule/" class="">3 sigma rule</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/anomaly_detection/generalized_esd/" class="">Generalized ESD</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/artificial_intelligence/" class="">인공지능 - Artificial Intelligence</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/artificial_intelligence/fuzzy_inferenece/" class="">퍼지 추론 - Fuzzy Inferenece</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/information_retrieval/" class="">정보검색</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/text_mining/" class="">텍스트마이닝 - Text Mining</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/text_mining/tfidf/" class="">TFIDF - Term Frequency Inverse Document Frequency</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/text_mining/cosine_similarity/" class="">코사인 유사도 - Cosine Similarity</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/" class="">통계학 - Statistics</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/central_limit_theorem/" class="">중심극한정리 - CLT; Central Limit Theorem</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/descriptive_statistics/" class="">기술통계 - Descriptive statistics</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/variance/" class="">분산 - Variance</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/survival_analysis/" class="">생존분석 - Survival Analysis</a>
+  
+
+          
+  <ul>
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/data/" class="">자료 - data</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/gaussian_distribution/" class="">정규분포, 가우시안 분포 - Normal Distribution, Gaussian Distribution</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/inferential_statistics/" class="">추론통계 - Inferential statistics</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/sampling/" class="">표본추출 - Sampling</a>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/sampling/neyman_alloction/" class="">네이만 배분법 - neyman allocation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/sampling/hyperloglog/" class="">하이퍼로그로그 - Hyper Log Log</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/correlation/" class="">피어슨 상관계수 - Pearson&#39;s product-moment correlation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/stochastic_process/" class="">확률과정 - Stochastic process</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/stochastic_process/brownian_motion/" class="">브라운 운동 - Brownian Motion</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/stochastic_process/ornstein_uhlenbeck_process/" class="">오른스타인-우렌벡 과정  Ornstein-Uhlenbeck process</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/pattern_recognition/" class="">패턴인식 - Pattern Recognition</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/pattern_recognition/neural_network/" class="">인공신경망 - Neural Network</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/" class="">데이터사이언스 - 산업별 갈래</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/adtech/" class="">온라인 광고 비즈니스 - Ad tech</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/adtech/ad_tech_terminlogy/" class="">온라인 광고 용어 - Online Ad Terminology</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/ad_tech/" class="">애드테크 - Ad Tech</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/ad_tech/ad_tech_terminlogy/" class="">온라인 광고 용어</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/online/" class="">온라인 비즈니스 - Online busines</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/online/ad_tech/" class="">온라인 광고 비즈니스 - Ad tech</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/online/ad_tech_terminlogy/" class="">온라인 광고 용어 - Online Ad Terminology</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/automobile/" class="">자동차 산업 - Automobile Industry</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/iron_mill/" class="">철강 - Iron mill</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/04.data_analysis/" class="">데이터 분석</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>데이터 수집 (Data collection)</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/06.data_collection/mobile_data_collection/" class="">데이터 수집 (Data collection)</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/05.data_visualization/" class="">데이터시각화</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/05.data_visualization/number_line_plot/" class="">넘버라인플롯</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/06.data_platform/" class="">데이터 플랫폼</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/06.data_platform/bigquery/" class="">빅쿼리 - Bigquery</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/06.data_platform/bigquery/excel_bigquery/" class="">엑셀에서 빅쿼리 데이터 가져오기</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/07.data_hub/" class="">데이터 허브</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/07.data_hub/sk_data_hub/" class="">SK 데이터 허브</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/08.reproducible_research/" class="">재현가능연구</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/09.datascience_tools/" class="">데이터사이언스 도구 - Data Science Tools</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/20.data_platform/" class="">데이터플랫폼</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/30.bigdata/" class="">빅데이터</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/36.time_series_analysis/" class="">시계열분석</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/" class="">인공지능</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/vector_search_engine/" class="">벡터검색엔진</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/faiss/" class="">Faiss - 벡터 검색 엔진</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/faiss/3_sigma_rule/" class="">3 sigma rule</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/faiss/generalized_esd/" class="">Generalized ESD</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/gpt/" class="">GPT</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/39.large_language_model/" class="">LLM</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/38.natural_languge_processing/" class="">자연어 처리</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/38.natural_languge_processing/korean_pos_tagger/" class="">한국어 형태소 분석기</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/38.natural_languge_processing/pos_tagger/" class="">형태소 분석기 - Pos tagger</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/40.r_language/" class="">R언어</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/50.computer_science/" class="">컴퓨터 공학</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/50.computer_science/random/" class="">랜덤</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/70.practical_data_science/" class="">실무 데이터과학</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/70.practical_data_science/quality_based_scoring/" class="">품질 기반 스코어링 - quality-based scoring</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/60.pracactical_data_processing/" class="">데이터 프로세싱</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/80.mathematics/" class="">수학 - Mathematics</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/80.mathematics/ordinary_differential_equation/" class="">상미분방정식 - Ordinary Differential Equation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/80.mathematics/mathematics_symbols/" class="">수학기호정리 - mathematics symbols</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/80.mathematics/fermats_last_theorem/" class="">페르마의 마지막 정리</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/90.metrics/" class="">지표</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/90.metrics/lorenz_curve/" class=" active">로렌츠 커브</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/99.materials/" class="">참고자료 - References</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/99.materials/people/" class="">인물 - People</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/99.materials/sites/" class="">참고 사이트</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/taglist/" class="">태그 목록</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>로렌츠 커브</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#로렌츠-커브-lorenz-curve">로렌츠 커브 (Lorenz Curve)</a>
+      <ul>
+        <li><a href="#로렌츠-커브의-정의">로렌츠 커브의 정의</a></li>
+        <li><a href="#커브의-해석">커브의 해석</a></li>
+        <li><a href="#지니-계수와의-관계">지니 계수와의 관계</a></li>
+        <li><a href="#활용-분야">활용 분야</a></li>
+        <li><a href="#한계점">한계점</a></li>
+      </ul>
+    </li>
+    <li><a href="#참조">참조</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h2 id="로렌츠-커브-lorenz-curve">
+  로렌츠 커브 (Lorenz Curve)
+  <a class="anchor" href="#%eb%a1%9c%eb%a0%8c%ec%b8%a0-%ec%bb%a4%eb%b8%8c-lorenz-curve">#</a>
+</h2>
+<p>로렌츠 커브는 소득이나 부의 분배 상태를 시각적으로 나타내는 그래프로, 사회의 불평등 정도를 측정하는 핵심적인 경제 지표이다. 1905년 미국의 경제학자 맥스 오토 로렌츠(Max Otto Lorenz)가 개발했으며, 현재까지도 소득 분배 분석의 표준 도구로 활용되고 있다.</p>
+<h3 id="로렌츠-커브의-정의">
+  로렌츠 커브의 정의
+  <a class="anchor" href="#%eb%a1%9c%eb%a0%8c%ec%b8%a0-%ec%bb%a4%eb%b8%8c%ec%9d%98-%ec%a0%95%ec%9d%98">#</a>
+</h3>
+<p>로렌츠 커브는 누적 인구 비율(x축)과 누적 소득 비율(y축)의 관계를 나타내는 곡선이다. 완전 평등선(45도 대각선)과 실제 소득 분배를 나타내는 곡선 사이의 면적을 통해 불평등 정도를 시각화한다.</p>
+<h3 id="커브의-해석">
+  커브의 해석
+  <a class="anchor" href="#%ec%bb%a4%eb%b8%8c%ec%9d%98-%ed%95%b4%ec%84%9d">#</a>
+</h3>
+<p><strong>완전 평등선 (Perfect Equality Line)</strong></p>
+<ul>
+<li>45도 대각선으로 표시되는 녹색선</li>
+<li>모든 개인이 동일한 소득을 가지는 이상적인 평등 상태</li>
+<li>인구의 x%가 전체 소득의 x%를 차지하는 상태</li>
+</ul>
+<p><strong>완전 불평등선 (Perfect Inequality Line)</strong></p>
+<ul>
+<li>L자 형태의 청색선</li>
+<li>한 사람이 모든 소득을 독점하는 극단적 불평등 상태</li>
+<li>인구의 99%가 소득 0%, 나머지 1%가 소득 100%를 차지</li>
+</ul>
+<p><strong>실제 로렌츠 커브</strong></p>
+<ul>
+<li>적색선으로 표시되는 실제 계산된 분배 곡선</li>
+<li>완전 평등선과 완전 불평등선 사이에 위치</li>
+<li>곡선이 완전 평등선에 가까울수록 평등한 사회</li>
+</ul>
+<h3 id="지니-계수와의-관계">
+  지니 계수와의 관계
+  <a class="anchor" href="#%ec%a7%80%eb%8b%88-%ea%b3%84%ec%88%98%ec%99%80%ec%9d%98-%ea%b4%80%ea%b3%84">#</a>
+</h3>
+<p>로렌츠 커브는 지니 계수(Gini Coefficient) 계산의 기초가 된다. 지니 계수는 완전 평등선과 로렌츠 커브 사이의 면적을 완전 평등선 아래 전체 면적으로 나눈 값으로, 0(완전 평등)에서 1(완전 불평등) 사이의 값을 가진다.</p>
+<h3 id="활용-분야">
+  활용 분야
+  <a class="anchor" href="#%ed%99%9c%ec%9a%a9-%eb%b6%84%ec%95%bc">#</a>
+</h3>
+<ul>
+<li><strong>경제 정책 수립</strong>: 소득 재분배 정책의 효과 측정</li>
+<li><strong>사회 복지</strong>: 복지 정책의 필요성과 우선순위 결정</li>
+<li><strong>국제 비교</strong>: 국가 간 소득 불평등 수준 비교</li>
+<li><strong>시계열 분석</strong>: 시간에 따른 불평등 변화 추이 분석</li>
+</ul>
+<h3 id="한계점">
+  한계점
+  <a class="anchor" href="#%ed%95%9c%ea%b3%84%ec%a0%90">#</a>
+</h3>
+<ul>
+<li>소득 외의 부(wealth) 분배는 반영하지 못함</li>
+<li>지하경제나 비공식 소득은 측정하기 어려움</li>
+<li>연령, 교육 수준 등 인구학적 요인을 고려하지 않음</li>
+</ul>
+<h2 id="참조">
+  참조
+  <a class="anchor" href="#%ec%b0%b8%ec%a1%b0">#</a>
+</h2>
+<ul>
+<li><a href="https://www.r-bloggers.com/">R-bloggers - Lorenz Curve Analysis</a></li>
+<li><a href="https://ko.wikipedia.org/wiki/%eb%a1%9c%eb%a0%8c%ec%b8%a0_%ea%b3%a1%ec%84%a0">로렌츠 곡선 - 위키피디아</a></li>
+<li><a href="https://www.oecd.org/social/income-distribution-database.htm">OECD Income Distribution Database</a></li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+  
+
+
+
+  
+    
+  
+
+
+
+<div class="book-languages" tabindex="0" aria-haspopup="true">
+  <ul>
+    <li class="flex align-center">
+      <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+      
+    </li> 
+  </ul>
+
+  <ul class="book-languages-list">
+    
+    <li class="active">
+      <a href="https://intothedata.com/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#로렌츠-커브-lorenz-curve">로렌츠 커브 (Lorenz Curve)</a>
+      <ul>
+        <li><a href="#로렌츠-커브의-정의">로렌츠 커브의 정의</a></li>
+        <li><a href="#커브의-해석">커브의 해석</a></li>
+        <li><a href="#지니-계수와의-관계">지니 계수와의 관계</a></li>
+        <li><a href="#활용-분야">활용 분야</a></li>
+        <li><a href="#한계점">한계점</a></li>
+      </ul>
+    </li>
+    <li><a href="#참조">참조</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

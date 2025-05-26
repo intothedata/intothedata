@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="자연어처리(Natural Language Processing)은 줄여서 NLP라고 쓰며 “엔엘피”라고 읽는다.
+자연어 또는 자연언어는 인간이 사용하는 언어를 말한다. 언어에는 컴퓨터가 사용하는 이진수로 변환하는 컴퓨터랭귀지도 포함되므로 구분을 명확히 하기 위해서 자연어는 인위적이 아닌 자연발생적으로 생겨난 인간이 사용하는 언어를 말한다.
+저연어처리는 인간이 사용하는 언어를 컴퓨터가 사용할 수 있게 처리하는 것을 말한다.
+애플의 시리(Siri)와 같은 음성인식이나 광학문자판독을 통해서 책에서 글자를 읽어들이거나 웹페이지에서 사람이 작성한 글을 로봇을 이용해서 크롤하고 해석한 후 어떤 것이 핵심어이고 어떤 것이 주제어인가 등을 알아내기도 하며 글쓴이의 감정이나 상태등을 알아내기도 한다.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:url" content="https://intothedata.com/38.natural_languge_processing/">
+  <meta property="og:site_name" content="인투더데이터 데이터과학">
+  <meta property="og:title" content="자연어처리 - Natural Language Processing">
+  <meta property="og:description" content="자연어처리(Natural Language Processing)은 줄여서 NLP라고 쓰며 “엔엘피”라고 읽는다.
+자연어 또는 자연언어는 인간이 사용하는 언어를 말한다. 언어에는 컴퓨터가 사용하는 이진수로 변환하는 컴퓨터랭귀지도 포함되므로 구분을 명확히 하기 위해서 자연어는 인위적이 아닌 자연발생적으로 생겨난 인간이 사용하는 언어를 말한다.
+저연어처리는 인간이 사용하는 언어를 컴퓨터가 사용할 수 있게 처리하는 것을 말한다. 애플의 시리(Siri)와 같은 음성인식이나 광학문자판독을 통해서 책에서 글자를 읽어들이거나 웹페이지에서 사람이 작성한 글을 로봇을 이용해서 크롤하고 해석한 후 어떤 것이 핵심어이고 어떤 것이 주제어인가 등을 알아내기도 하며 글쓴이의 감정이나 상태등을 알아내기도 한다.">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:type" content="website">
+<title>자연어처리 - Natural Language Processing | 인투더데이터 데이터과학</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.ce02ec8b4aaa4b1d9386a72d0b93e5195eac0f6feec0b00ecd36d8128e870d23.css" integrity="sha256-zgLsi0qqSx2ThqctC5PlGV6sD2/uwLAOzTbYEo6HDSM=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.69b3ef820735840b8b46619f32c5cf1d96c086c45c7a95bafacc5d95cdc0473e.js" integrity="sha256-abPvggc1hAuLRmGfMsXPHZbAhsRcepW6&#43;sxdlc3ARz4=" crossorigin="anonymous"></script>
+
+
+<link rel="alternate" type="application/rss+xml" href="https://intothedata.com/38.natural_languge_processing/index.xml" title="인투더데이터 데이터과학" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>인투더데이터 데이터과학</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>자연어처리 - Natural Language Processing</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#세그멘터-segmenter">세그멘터 Segmenter</a></li>
+    <li><a href="#형태소분석기-pos-tagger">형태소분석기 POS tagger</a></li>
+    <li><a href="#구문분석기-language-parsㅕr">구문분석기 Language Parsㅕr</a></li>
+    <li><a href="#개체명인식기-named-entity-recognition">개체명인식기 Named Entity Recognition</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><p>자연어처리(Natural Language Processing)은 줄여서 NLP라고 쓰며 “엔엘피”라고 읽는다.</p>
+<p>자연어 또는 자연언어는 인간이 사용하는 언어를 말한다. 언어에는 컴퓨터가 사용하는 이진수로 변환하는 컴퓨터랭귀지도 포함되므로 구분을 명확히 하기 위해서 자연어는 인위적이 아닌 자연발생적으로 생겨난 인간이 사용하는 언어를 말한다.</p>
+<p>저연어처리는 인간이 사용하는 언어를 컴퓨터가 사용할 수 있게 처리하는 것을 말한다.
+애플의 시리(Siri)와 같은 음성인식이나 광학문자판독을 통해서 책에서 글자를 읽어들이거나 웹페이지에서 사람이 작성한 글을 로봇을 이용해서 크롤하고 해석한 후 어떤 것이 핵심어이고 어떤 것이 주제어인가 등을 알아내기도 하며 글쓴이의 감정이나 상태등을 알아내기도 한다.</p>
+<p>jtllr2 자연어처리라고 말하는 것이다.</p>
+<p>자언어 처리는 더 구체적으로 말하면 형태소분석기, 구문분석기와 같은 사람이 작성한 글이나 대화를 컴퓨터를 통해 해석할 수 있게 하는 소프트웨어를 개발하거나 연구하고 그런 것들을 이용해서 실제로 작업하는 것이라고 이해하면 된다.</p>
+<p>자연어처리와 관련된 소프트웨어의 종류는 다음과 같은 것들이 있다.</p>
+<ul>
+<li>세그멘터 Segmenter</li>
+<li>형태소분석기 POS Tagger</li>
+<li>구문분석기 Language Parser</li>
+<li>개체명인식기 NER Named Entity Recognition</li>
+</ul>
+<h2 id="세그멘터-segmenter">
+  세그멘터 Segmenter
+  <a class="anchor" href="#%ec%84%b8%ea%b7%b8%eb%a9%98%ed%84%b0-segmenter">#</a>
+</h2>
+<p>세그멘터는 띄어쓰기를 해주는 것인데 문법적인 띄어쓰기보다는 검색엔진을 위해 색인어를 추출하기 위해 단어를 잘라주는 것을 말한다.
+단어를 자를 때 검색에 유리하게 할 수도 있고 문법적으로 맞도록 할 수도 있다.<br>
+영어는 세그멘터가 없고 한국어, 중국어, 일본어와 같이 띄어쓰기가 없거나 잘 지켜지지 않는 언어에는 필요하다.</p>
+<p>한국어 세그멘터는 품사를 기준으로 잘게 자르는 경향이 많다.  그렇게 해야 전문 검색에 유리하기 때문이다.<br>
+검색엔진에는 형태소분석기를 사용하거나 최소한 워드 세그멘터를 사용해서 색인을 한다.</p>
+<h2 id="형태소분석기-pos-tagger">
+  형태소분석기 POS tagger
+  <a class="anchor" href="#%ed%98%95%ed%83%9c%ec%86%8c%eb%b6%84%ec%84%9d%ea%b8%b0-pos-tagger">#</a>
+</h2>
+<p>형태소를 구분하고 무엇인지 알려주는 것을 말한다.  형태소는 정의상 설명을 하게 되면 매우 길어지는데 품사라고 생각하면 이해하기 쉬울 것이다.<br>
+명사, 동사, 조사, 형용사 등과 같은 것이고 일반적으로 알리진 품사 외에도 파생명사나 숫자, 외국어, 문장기호도 형태소에 포함된다.</p>
+<h2 id="구문분석기-language-parsㅕr">
+  구문분석기 Language Parsㅕr
+  <a class="anchor" href="#%ea%b5%ac%eb%ac%b8%eb%b6%84%ec%84%9d%ea%b8%b0-language-pars%e3%85%95r">#</a>
+</h2>
+<p>주어, 목적어, 서술어와 같은 형태로 품사보다는 단위가 더 높은 논리적 레벨까지를 처리해주는 것이다.</p>
+<h2 id="개체명인식기-named-entity-recognition">
+  개체명인식기 Named Entity Recognition
+  <a class="anchor" href="#%ea%b0%9c%ec%b2%b4%eb%aa%85%ec%9d%b8%ec%8b%9d%ea%b8%b0-named-entity-recognition">#</a>
+</h2>
+<p>개체명이라고하면 상품명, 사람이름, 주소, 건물이름, 책의 제목, 영화 제목, 노래 제목 등의 어떤 특정한 개체의 이름을 찾아내는 것이다.<br>
+고유명사를 찾아내는 것이라고 생각하면 쉽다.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+  
+
+
+
+  
+    
+  
+
+
+
+<div class="book-languages" tabindex="0" aria-haspopup="true">
+  <ul>
+    <li class="flex align-center">
+      <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+      
+    </li> 
+  </ul>
+
+  <ul class="book-languages-list">
+    
+    <li class="active">
+      <a href="https://intothedata.com/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#세그멘터-segmenter">세그멘터 Segmenter</a></li>
+    <li><a href="#형태소분석기-pos-tagger">형태소분석기 POS tagger</a></li>
+    <li><a href="#구문분석기-language-parsㅕr">구문분석기 Language Parsㅕr</a></li>
+    <li><a href="#개체명인식기-named-entity-recognition">개체명인식기 Named Entity Recognition</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

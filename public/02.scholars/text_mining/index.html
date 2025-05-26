@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  개요 - overview
+  #
+
+텍스트마이닝(Text mining)은 데이터마이닝의 일부라고 볼 수 있다. 데이터마이닝이 수치데이터와 범주형데이터를 집중적으로 보는 반면에 텍스트마이닝은 데이터마이닝 중에서도 텍스트데이터를 주로 다루는 것을 말한다.
+텍스트마이닝의 별도의 세부항목으로 따로 다루는 이유는 텍스트데이터를 다루는 것이 수치데이터를 다루는 것과는 프로세싱이나 처리방법이 많이 다르고 사용하는 방법들도 조금 다르기 때문이다. 하지만 데이터에서 통찰을 얻고 가치를 찾는다는 목적은 같다.
+텍스트마이닝을 잘 하기 위해서는 형태소분석기나 구문분석기와 같은 자연어처리 도구를 잘 사용할 수 있어야 하며 그외에 다루는 언어에 대해서도 잘 알고 있어야한다. 그래서 텍스트마이닝은 자연어처리와 함께 학습하는 경우가 많다.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:url" content="https://intothedata.com/02.scholars/text_mining/">
+  <meta property="og:site_name" content="인투더데이터 데이터과학">
+  <meta property="og:title" content="텍스트마이닝 - Text Mining">
+  <meta property="og:description" content="개요 - overview # 텍스트마이닝(Text mining)은 데이터마이닝의 일부라고 볼 수 있다. 데이터마이닝이 수치데이터와 범주형데이터를 집중적으로 보는 반면에 텍스트마이닝은 데이터마이닝 중에서도 텍스트데이터를 주로 다루는 것을 말한다.
+텍스트마이닝의 별도의 세부항목으로 따로 다루는 이유는 텍스트데이터를 다루는 것이 수치데이터를 다루는 것과는 프로세싱이나 처리방법이 많이 다르고 사용하는 방법들도 조금 다르기 때문이다. 하지만 데이터에서 통찰을 얻고 가치를 찾는다는 목적은 같다.
+텍스트마이닝을 잘 하기 위해서는 형태소분석기나 구문분석기와 같은 자연어처리 도구를 잘 사용할 수 있어야 하며 그외에 다루는 언어에 대해서도 잘 알고 있어야한다. 그래서 텍스트마이닝은 자연어처리와 함께 학습하는 경우가 많다.">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:type" content="website">
+<title>텍스트마이닝 - Text Mining | 인투더데이터 데이터과학</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.ce02ec8b4aaa4b1d9386a72d0b93e5195eac0f6feec0b00ecd36d8128e870d23.css" integrity="sha256-zgLsi0qqSx2ThqctC5PlGV6sD2/uwLAOzTbYEo6HDSM=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.69b3ef820735840b8b46619f32c5cf1d96c086c45c7a95bafacc5d95cdc0473e.js" integrity="sha256-abPvggc1hAuLRmGfMsXPHZbAhsRcepW6&#43;sxdlc3ARz4=" crossorigin="anonymous"></script>
+
+
+<link rel="alternate" type="application/rss+xml" href="https://intothedata.com/02.scholars/text_mining/index.xml" title="인투더데이터 데이터과학" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>인투더데이터 데이터과학</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>텍스트마이닝 - Text Mining</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#개요---overview">개요 - overview</a></li>
+    <li><a href="#텍스트마이닝을-위해서-필요한-것들">텍스트마이닝을 위해서 필요한 것들</a></li>
+    <li><a href="#텍스트마이닝을-위한-기술">텍스트마이닝을 위한 기술</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h2 id="개요---overview">
+  개요 - overview
+  <a class="anchor" href="#%ea%b0%9c%ec%9a%94---overview">#</a>
+</h2>
+<p>텍스트마이닝(Text mining)은 데이터마이닝의 일부라고 볼 수 있다. 데이터마이닝이 수치데이터와 범주형데이터를 집중적으로 보는 반면에 텍스트마이닝은 데이터마이닝 중에서도 텍스트데이터를 주로 다루는 것을 말한다.</p>
+<p>텍스트마이닝의 별도의 세부항목으로 따로 다루는 이유는 텍스트데이터를 다루는 것이 수치데이터를 다루는 것과는 프로세싱이나 처리방법이 많이 다르고 사용하는 방법들도 조금 다르기 때문이다. 하지만 데이터에서 통찰을 얻고 가치를 찾는다는 목적은 같다.</p>
+<p>텍스트마이닝을 잘 하기 위해서는 형태소분석기나 구문분석기와 같은 자연어처리 도구를 잘 사용할 수 있어야 하며 그외에 다루는 언어에 대해서도 잘 알고 있어야한다. 그래서 텍스트마이닝은 자연어처리와 함께 학습하는 경우가 많다.</p>
+<p>예를들어 한글 및 한국어로 된 텍스트를 잘 처리하려면 한글 및 한국어에 대한 문법이나 언어구조등에서도 알고 있는 것이 유리하다.</p>
+<h2 id="텍스트마이닝을-위해서-필요한-것들">
+  텍스트마이닝을 위해서 필요한 것들
+  <a class="anchor" href="#%ed%85%8d%ec%8a%a4%ed%8a%b8%eb%a7%88%ec%9d%b4%eb%8b%9d%ec%9d%84-%ec%9c%84%ed%95%b4%ec%84%9c-%ed%95%84%ec%9a%94%ed%95%9c-%ea%b2%83%eb%93%a4">#</a>
+</h2>
+<p>어떤 언어를 대상으로 하더라도 비슷할 것이라고 생각하지만 한글 및 한국어를 기준으로 설명하면 기본으로 2가지 것이 필요하다.</p>
+<ul>
+<li>형태소 분석기</li>
+<li>구문 분석기</li>
+<li>각종 테스트 처리 도구</li>
+<li>대용량 데이터 처리 플랫폼</li>
+</ul>
+<p>대용량 데이터 처리 플랫폼은 텍스트 데이터가 소량이면 필요하지 않는 것이 아니냐는 의문을 가질 수도 있다. 하지만 소량의 텍스트데이터에서 쓸만한 가치를 찾는 것은 매우 어려운 일이다. 텍스트마이닝은 대량의 텍스트데이터를 가지고 수행해야 쓸만한 정보를 찾아낼 수 있고 활용하기 쉽다. 그래서 텍스트 데이터는 사실상 대량이라는 전제가 필요하다.</p>
+<h2 id="텍스트마이닝을-위한-기술">
+  텍스트마이닝을 위한 기술
+  <a class="anchor" href="#%ed%85%8d%ec%8a%a4%ed%8a%b8%eb%a7%88%ec%9d%b4%eb%8b%9d%ec%9d%84-%ec%9c%84%ed%95%9c-%ea%b8%b0%ec%88%a0">#</a>
+</h2>
+<p>텍스트마이닝의 아래 3가지 학술 분야의 혼합체라고 할 수 있다.</p>
+<ul>
+<li>자연어처리 기술 (NLP)</li>
+<li>정보검색 기술(Information Retrieval)</li>
+<li>데이터마이닝 기술 (Data Mining)</li>
+</ul>
+<p>위의 것들은 모두 대학원 이상에서 다루는 하나의 세부 전공 분야이지만 서로 관련이 깊다.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+  
+
+
+
+  
+    
+  
+
+
+
+<div class="book-languages" tabindex="0" aria-haspopup="true">
+  <ul>
+    <li class="flex align-center">
+      <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+      
+    </li> 
+  </ul>
+
+  <ul class="book-languages-list">
+    
+    <li class="active">
+      <a href="https://intothedata.com/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#개요---overview">개요 - overview</a></li>
+    <li><a href="#텍스트마이닝을-위해서-필요한-것들">텍스트마이닝을 위해서 필요한 것들</a></li>
+    <li><a href="#텍스트마이닝을-위한-기술">텍스트마이닝을 위한 기술</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="데이터 분석, 데이터 마이닝, 기계 학습의 하부로 깊숙히 들어가면 갈수록 결국 수학에서 자유로울수는 없다.
+데이터과학에서도 이과라고 불리는 공학계, 이학계의 대학과정을 졸업한 사람이라면 반드시 익혀야 할 기초 대수학을 익히지 않으면 결국 고급 기술을 제대로 활용하기 어렵다.  데이터과학을 접하는 초기 단계에서는 수학이 크게 중요하지 않은 것 처럼 보일 수도 있지만 고급 기술이나 정밀도가 높고 섬세한 작업을 하기 위해서는 대수학에 대한 학습이 중급 수준까지 되어야 한다.
+데이터 마이닝, 기계 학습에 필요한 수학은 익히 잘 알려진 것처럼 공학에서 기본적으로 배워야 하는 미분적분, 선형대수학, 미분방정식이다. 이 대수학들은 대수학에서 가장 쉬운 것들이라고 알려졌지만 현실적으로 아직까지는 수학과나 수학과 밀접한 관련이 있는 학과가 아닌 이상은 다 익히기 어렵고 개인의 노력이 많이 필요하다.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:url" content="https://intothedata.com/80.mathematics/">
+  <meta property="og:site_name" content="인투더데이터 데이터과학">
+  <meta property="og:title" content="수학 - Mathematics">
+  <meta property="og:description" content="데이터 분석, 데이터 마이닝, 기계 학습의 하부로 깊숙히 들어가면 갈수록 결국 수학에서 자유로울수는 없다. 데이터과학에서도 이과라고 불리는 공학계, 이학계의 대학과정을 졸업한 사람이라면 반드시 익혀야 할 기초 대수학을 익히지 않으면 결국 고급 기술을 제대로 활용하기 어렵다. 데이터과학을 접하는 초기 단계에서는 수학이 크게 중요하지 않은 것 처럼 보일 수도 있지만 고급 기술이나 정밀도가 높고 섬세한 작업을 하기 위해서는 대수학에 대한 학습이 중급 수준까지 되어야 한다.
+데이터 마이닝, 기계 학습에 필요한 수학은 익히 잘 알려진 것처럼 공학에서 기본적으로 배워야 하는 미분적분, 선형대수학, 미분방정식이다. 이 대수학들은 대수학에서 가장 쉬운 것들이라고 알려졌지만 현실적으로 아직까지는 수학과나 수학과 밀접한 관련이 있는 학과가 아닌 이상은 다 익히기 어렵고 개인의 노력이 많이 필요하다.">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:type" content="website">
+<title>수학 - Mathematics | 인투더데이터 데이터과학</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.ce02ec8b4aaa4b1d9386a72d0b93e5195eac0f6feec0b00ecd36d8128e870d23.css" integrity="sha256-zgLsi0qqSx2ThqctC5PlGV6sD2/uwLAOzTbYEo6HDSM=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.69b3ef820735840b8b46619f32c5cf1d96c086c45c7a95bafacc5d95cdc0473e.js" integrity="sha256-abPvggc1hAuLRmGfMsXPHZbAhsRcepW6&#43;sxdlc3ARz4=" crossorigin="anonymous"></script>
+
+
+<link rel="alternate" type="application/rss+xml" href="https://intothedata.com/80.mathematics/index.xml" title="인투더데이터 데이터과학" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>인투더데이터 데이터과학</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>수학 - Mathematics</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#행렬-matrix">행렬 Matrix</a></li>
+    <li><a href="#미적분-calculus">미적분 Calculus</a>
+      <ul>
+        <li><a href="#수학과-데이터과학에-대한-가상의-질문과-답변-목록">수학과 데이터과학에 대한 가상의 질문과 답변 목록</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><p>데이터 분석, 데이터 마이닝, 기계 학습의 하부로 깊숙히 들어가면 갈수록 결국 수학에서 자유로울수는 없다.
+데이터과학에서도 이과라고 불리는 공학계, 이학계의 대학과정을 졸업한 사람이라면 반드시 익혀야 할 기초 대수학을 익히지 않으면 결국 고급 기술을 제대로 활용하기 어렵다.  데이터과학을 접하는 초기 단계에서는 수학이 크게 중요하지 않은 것 처럼 보일 수도 있지만 고급 기술이나 정밀도가 높고 섬세한 작업을 하기 위해서는 대수학에 대한 학습이 중급 수준까지 되어야 한다.</p>
+<p>데이터 마이닝, 기계 학습에 필요한 수학은 익히 잘 알려진 것처럼 공학에서 기본적으로 배워야 하는 미분적분, 선형대수학, 미분방정식이다. 이 대수학들은 대수학에서 가장 쉬운 것들이라고 알려졌지만 현실적으로 아직까지는 수학과나 수학과 밀접한 관련이 있는 학과가 아닌 이상은 다 익히기 어렵고 개인의 노력이 많이 필요하다.</p>
+<p>데이터과학을 하는 동안 대수학은 꾸준히 공부해야 하며 일정 수준까지 도달하지 못하면 일정 단계 이상의 데이터과학자가 되는 것은 어렵다.</p>
+<h2 id="행렬-matrix">
+  행렬 Matrix
+  <a class="anchor" href="#%ed%96%89%eb%a0%ac-matrix">#</a>
+</h2>
+<p>벡터와 선형공간을 다루는 수학을 선형대수학이라고 한다. 만약 행렬을 본적이 있고 행렬이 있는 수식을 본적이 있다면 틀림없이 선형대수학에 관련된 것이다.  선형대수학은 행렬을 다루는 수학이다.</p>
+<p>선형대수학은 행렬대수학이라고 부르기도 하는데 선형대수학으로 부르는 이유는 벡터공간에서 벡터를 선형으로 이동하는 것으로 문제를 해결하기 때문이다. 선형이동은 벡터에 숫자를 가감승제하는 사칙연산으로 공간에서의 위치를 바꾸는 것으로 문제를 해결하기 때문이다. 벡터에 덧셈, 뺄셈, 곱셈, 나눗셈을 하면 벡터가 선형으로 이동한다.  즉 직선으로 움직인다.</p>
+<h2 id="미적분-calculus">
+  미적분 Calculus
+  <a class="anchor" href="#%eb%af%b8%ec%a0%81%eb%b6%84-calculus">#</a>
+</h2>
+<p>기계학습이나 선형최적화, 딥러닝들은 모두 실제로는 최적화 문제이다.  수학에서 최적화 문제를 푸는 방법은 여러가지가 있지만 가장 쉬운 것이 미분이다.  그리고 확률과 고급 통계학을 익히기 위해서는 적분이 필요하다.</p>
+<p>대부분의 유명한 알고리즘은 깊이 파들어가면 끝에 거의 항상 편미분이 나온다.  미분과 적분을 모두 익히고 싶지 않더라도 편미분까지는 필수라고 할 수 있다.</p>
+<h3 id="수학과-데이터과학에-대한-가상의-질문과-답변-목록">
+  수학과 데이터과학에 대한 가상의 질문과 답변 목록
+  <a class="anchor" href="#%ec%88%98%ed%95%99%ea%b3%bc-%eb%8d%b0%ec%9d%b4%ed%84%b0%ea%b3%bc%ed%95%99%ec%97%90-%eb%8c%80%ed%95%9c-%ea%b0%80%ec%83%81%ec%9d%98-%ec%a7%88%eb%ac%b8%ea%b3%bc-%eb%8b%b5%eb%b3%80-%eb%aa%a9%eb%a1%9d">#</a>
+</h3>
+<ul>
+<li>Q: 편미분을 모르면 기계학습 모델을 만들 수 없는가? A: 있다.</li>
+<li></li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+  
+
+
+
+  
+    
+  
+
+
+
+<div class="book-languages" tabindex="0" aria-haspopup="true">
+  <ul>
+    <li class="flex align-center">
+      <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+      
+    </li> 
+  </ul>
+
+  <ul class="book-languages-list">
+    
+    <li class="active">
+      <a href="https://intothedata.com/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#행렬-matrix">행렬 Matrix</a></li>
+    <li><a href="#미적분-calculus">미적분 Calculus</a>
+      <ul>
+        <li><a href="#수학과-데이터과학에-대한-가상의-질문과-답변-목록">수학과 데이터과학에 대한 가상의 질문과 답변 목록</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>데이터마이닝 on 인투더데이터 데이터과학</title>
+    <link>https://intothedata.com/categories/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A7%88%EC%9D%B4%EB%8B%9D/</link>
+    <description>Recent content in 데이터마이닝 on 인투더데이터 데이터과학</description>
+    <generator>Hugo</generator>
+    <language>ko-KR</language>
+    <atom:link href="https://intothedata.com/categories/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A7%88%EC%9D%B4%EB%8B%9D/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>데이터마이닝</title>
+      <link>https://intothedata.com/docs/02.scholars/data_mining/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/02.scholars/data_mining/</guid>
+      <description>&lt;h2 id=&#34;데이터마이닝-개요---data-mining-overview&#34;&gt;&#xA;  데이터마이닝 개요 - Data mining overview&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%eb%8d%b0%ec%9d%b4%ed%84%b0%eb%a7%88%ec%9d%b4%eb%8b%9d-%ea%b0%9c%ec%9a%94---data-mining-overview&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;금광에서 귀금속을 채광하는 것과 같이 데이터로부터 가치 있는 정보를 찾는 일을 데이터마이닝이라고 한다. 채광이 영어로 &amp;ldquo;Mining&amp;quot;이며 데이터에서 가치 있는 것을 찾아내기 때문에 &amp;ldquo;Data Mining&amp;quot;이라고 조합하여 용어를 만들었으며, &amp;ldquo;자료채굴&amp;rdquo; 또는 &amp;ldquo;가치채굴&amp;quot;이라고 하지 않고 흔히 영어 표현 그대로 데이터마이닝이라고 부른다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;가치---value&#34;&gt;&#xA;  가치 - value&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ea%b0%80%ec%b9%98---value&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;데이터마이닝에서의 &amp;ldquo;가치&amp;quot;라는 단어는 정의가 매우 중요한데, 가치라는 단어는 그 자체로는 의미가 매우 광범위하여 확대 해석하거나 곡해할 여지가 매우 많다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>온라인 비즈니스 - Online busines on 인투더데이터 데이터과학</title>
+    <link>https://intothedata.com/03.business/online/</link>
+    <description>Recent content in 온라인 비즈니스 - Online busines on 인투더데이터 데이터과학</description>
+    <generator>Hugo</generator>
+    <language>ko-KR</language>
+    <atom:link href="https://intothedata.com/03.business/online/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>온라인 광고 비즈니스 - Ad tech</title>
+      <link>https://intothedata.com/03.business/online/ad_tech/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/03.business/online/ad_tech/</guid>
+      <description>&lt;h2 id=&#34;애드테크---ad-tech&#34;&gt;&#xA;  애드테크 - Ad tech&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%95%a0%eb%93%9c%ed%85%8c%ed%81%ac---ad-tech&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;앞서 말했듯이 온라인 광고와 관련된 기술을 애드 테크놀로지(Ad technology)라고 하고 줄여서 애드테크(Ad tech)라고 말한다. 이런 기술을 주 사업으로 하는 회사들을 애드테크 컴퍼니(Ad tech company)라고 하며 구글, 페이스북과 같은 회사들도 본래의 주된 서비스는 다르지만 실제 대부분의 수익을 광고로 얻고 있으므로 애드테크회사라고 볼 수 있다.&lt;/p&gt;&#xA;&lt;h3 id=&#34;애드테크-비즈니스&#34;&gt;&#xA;  애드테크 비즈니스&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%95%a0%eb%93%9c%ed%85%8c%ed%81%ac-%eb%b9%84%ec%a6%88%eb%8b%88%ec%8a%a4&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;우선 이 비즈니스를 잘 모르면 광고 배너를 화면에 보여주는 것이 무슨 특별한 기술이 필요하며 데이터과학과 무슨 관계가 있는지 이해하기 어려울 것이다. 하지만 배너가 보여지기 위해서 거치는 단계를 이해하게 되면 얼마나 정교한 기술이 필요한지 이해할 수 있을 것이다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>온라인 광고 용어 - Online Ad Terminology</title>
+      <link>https://intothedata.com/03.business/online/ad_tech_terminlogy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/03.business/online/ad_tech_terminlogy/</guid>
+      <description>&lt;h2 id=&#34;디지털-광고-산업-용어&#34;&gt;&#xA;  디지털 광고 산업 용어&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%eb%94%94%ec%a7%80%ed%84%b8-%ea%b4%91%ea%b3%a0-%ec%82%b0%ec%97%85-%ec%9a%a9%ec%96%b4&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;디지털 광고 산업 용어라고 적어놓기는 했지만 상당수가 마켓팅, 세일즈 용어가 섞여 있다. 근래에는 온라인 마케팅을 전통적인 마켓팅과 분리해서 사용할 수 없는 상황이 되었다.  디지털 광고는 현대에 있어서 가장 강력한 마켓팅 수단중의 하나이고 디지털 마케팅 시장과 산업도 아직 급성정하고 있다.&lt;/p&gt;&#xA;&lt;p&gt;따라서 이 용어들이 디지털마켓팅(온라인 마켓팅)에만 사용되는 용어가 아니라는 것을 알아두자.&lt;/p&gt;&#xA;&lt;h3 id=&#34;cpm---cost-per-mille&#34;&gt;&#xA;  CPM - Cost per Mille.&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#cpm---cost-per-mille&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;광고 1000번을 노출하는데 지불되는 금액을 말한다.&lt;/p&gt;&#xA;&lt;h3 id=&#34;cpc---cost-per-click&#34;&gt;&#xA;  CPC - Cost per click&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#cpc---cost-per-click&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;배너 광고를 클릭하는 횟수로 과금을 하는 것을 말한다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

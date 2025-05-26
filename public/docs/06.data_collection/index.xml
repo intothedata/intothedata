@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>데이터 수집 (Data collection) on 인투더데이터 데이터과학</title>
+    <link>https://intothedata.com/docs/06.data_collection/</link>
+    <description>Recent content in 데이터 수집 (Data collection) on 인투더데이터 데이터과학</description>
+    <generator>Hugo</generator>
+    <language>ko-KR</language>
+    <atom:link href="https://intothedata.com/docs/06.data_collection/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>데이터 수집 (Data collection)</title>
+      <link>https://intothedata.com/docs/06.data_collection/mobile_data_collection/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/06.data_collection/mobile_data_collection/</guid>
+      <description>&lt;h1 id=&#34;모바일앱-데이터-수집의-주요-문제점&#34;&gt;&#xA;  모바일앱 데이터 수집의 주요 문제점&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%eb%aa%a8%eb%b0%94%ec%9d%bc%ec%95%b1-%eb%8d%b0%ec%9d%b4%ed%84%b0-%ec%88%98%ec%a7%91%ec%9d%98-%ec%a3%bc%ec%9a%94-%eb%ac%b8%ec%a0%9c%ec%a0%90&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;1-모바일-네트워크의-불안정성&#34;&gt;&#xA;  1. 모바일 네트워크의 불안정성&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#1-%eb%aa%a8%eb%b0%94%ec%9d%bc-%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac%ec%9d%98-%eb%b6%88%ec%95%88%ec%a0%95%ec%84%b1&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;모바일 망의 빈번한 단절로 인해 오프라인 데이터 수집 후 온라인에서 동기화하는 기능 필요&lt;/li&gt;&#xA;&lt;li&gt;대량의 데이터를 주고 받을 때 데이터 사용량 부담 발생&lt;/li&gt;&#xA;&lt;li&gt;네트워크 지연 시간(latency)으로 인한 실시간 데이터 처리 어려움&lt;/li&gt;&#xA;&lt;li&gt;지역별 네트워크 품질 차이로 인한 데이터 수집 불균형 발생&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;2-다양한-행동-데이터-관리&#34;&gt;&#xA;  2. 다양한 행동 데이터 관리&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#2-%eb%8b%a4%ec%96%91%ed%95%9c-%ed%96%89%eb%8f%99-%eb%8d%b0%ec%9d%b4%ed%84%b0-%ea%b4%80%eb%a6%ac&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;문항 선택, 답변 선택, 카테고리 선택, 정보서핑 액션 외 다양한 종류의 행동이 불규칙하게 발생되어 데이터 관리가 어려움&lt;/li&gt;&#xA;&lt;li&gt;사용자별 행동 패턴의 다양성으로 인한 데이터 정규화 문제&lt;/li&gt;&#xA;&lt;li&gt;행동 데이터의 맥락(context) 유지 및 연관성 분석 복잡성&lt;/li&gt;&#xA;&lt;li&gt;멀티 세션에 걸친 사용자 행동 추적의 어려움&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;3-불규칙적인-트래픽-관리&#34;&gt;&#xA;  3. 불규칙적인 트래픽 관리&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#3-%eb%b6%88%ea%b7%9c%ec%b9%99%ec%a0%81%ec%9d%b8-%ed%8a%b8%eb%9e%98%ed%94%bd-%ea%b4%80%eb%a6%ac&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;접속 사용자의 접속 시간대와 사용 패턴이 일정하지 않아 트래픽 관리가 어려움&lt;/li&gt;&#xA;&lt;li&gt;특정 이벤트나 프로모션 시 급증하는 트래픽으로 인한 서버 부하 발생&lt;/li&gt;&#xA;&lt;li&gt;시간대별, 요일별 트래픽 변동성에 따른 리소스 할당 최적화 문제&lt;/li&gt;&#xA;&lt;li&gt;글로벌 사용자 대응 시 시차로 인한 24시간 트래픽 모니터링 필요성&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;4-디바이스-다양성-문제&#34;&gt;&#xA;  4. 디바이스 다양성 문제&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#4-%eb%94%94%eb%b0%94%ec%9d%b4%ec%8a%a4-%eb%8b%a4%ec%96%91%ec%84%b1-%eb%ac%b8%ec%a0%9c&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;다양한 스마트폰 기종과 OS 버전에 따른 데이터 수집 일관성 유지 어려움&lt;/li&gt;&#xA;&lt;li&gt;디바이스별 성능 차이로 인한 데이터 수집 품질 편차 발생&lt;/li&gt;&#xA;&lt;li&gt;화면 크기와 해상도 차이로 인한 UI 상호작용 데이터의 정규화 문제&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

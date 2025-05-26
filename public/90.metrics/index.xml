@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>지표 - Metrics on 인투더데이터 데이터과학</title>
+    <link>https://intothedata.com/90.metrics/</link>
+    <description>Recent content in 지표 - Metrics on 인투더데이터 데이터과학</description>
+    <generator>Hugo</generator>
+    <language>ko-KR</language>
+    <atom:link href="https://intothedata.com/90.metrics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>로렌츠 커브</title>
+      <link>https://intothedata.com/90.metrics/lorenz_curve/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/90.metrics/lorenz_curve/</guid>
+      <description>&lt;p&gt;사회불평등 정도를 나타내기 위해 부의 분배에 대해 확률 분포를 나타낸 곡선이다.&#xA;맥스 O 로렌츠가 만들었다.&lt;/p&gt;&#xA;&lt;p&gt;위키피디아의 플롯을 보고 이해를 돕기 위해 적어보면 다음과 같다.&#xA;녹색선은 완전한 평등 상태를 말한다.&#xA;청색선은 완전한 불평등 상태를 말한다.&#xA;적색선이 계산된 로렌츠 커브이다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;참조&#34;&gt;&#xA;  참조&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%b0%b8%ec%a1%b0&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;참조: R-bloggers&lt;/li&gt;&#xA;&lt;li&gt;참조: 로렌츠 곡선 - 위키피디아&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

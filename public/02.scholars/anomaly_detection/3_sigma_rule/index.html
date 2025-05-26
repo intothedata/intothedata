@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  개요
+  #
+
+
+데이터의 분포를 정규분포로 가정하고(또는 우기고) 평균으로 부터 ±표준편차 * 시그마계수를 벗어나면 아웃라이어(outlier, 이상치)라고 판단하는 것을 말한다. 너무 단순한 것이라고 해서 최근에는 그대로 사용하는 경우는 거의 없다. 하지만 단순하면서도 꽤 괜찮은 결과를 보여준다.
+시그마계수는 표준편차에 얼마를 곱해서 아웃라이어의 지점을 결정할 것인가를 말하는데 보통 2 ~ 3의 값을 사용한다. 표준편차에 2에서 3사이의 값을 곱해서 양과 음의 범위를 신뢰구간으로 보고 그 범위를 벗어나는 것을 아웃라이어로 결정하는 것이다.
+3시그마보다는 2시그마를 사용하는 것이 일반적으로 많이 알려져 있다.  정규분포에서 3시그마의 범위는 전체의 99%를 차지하게 되며 나머지 1%가 아웃라이어가 되므로 여기에 해당하는것이 너무 적기 때문이다.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:url" content="https://intothedata.com/02.scholars/anomaly_detection/3_sigma_rule/">
+  <meta property="og:site_name" content="인투더데이터 데이터과학">
+  <meta property="og:title" content="3 sigma rule">
+  <meta property="og:description" content="개요 # 데이터의 분포를 정규분포로 가정하고(또는 우기고) 평균으로 부터 ±표준편차 * 시그마계수를 벗어나면 아웃라이어(outlier, 이상치)라고 판단하는 것을 말한다. 너무 단순한 것이라고 해서 최근에는 그대로 사용하는 경우는 거의 없다. 하지만 단순하면서도 꽤 괜찮은 결과를 보여준다.
+시그마계수는 표준편차에 얼마를 곱해서 아웃라이어의 지점을 결정할 것인가를 말하는데 보통 2 ~ 3의 값을 사용한다. 표준편차에 2에서 3사이의 값을 곱해서 양과 음의 범위를 신뢰구간으로 보고 그 범위를 벗어나는 것을 아웃라이어로 결정하는 것이다.
+3시그마보다는 2시그마를 사용하는 것이 일반적으로 많이 알려져 있다. 정규분포에서 3시그마의 범위는 전체의 99%를 차지하게 되며 나머지 1%가 아웃라이어가 되므로 여기에 해당하는것이 너무 적기 때문이다.">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="02.scholars">
+    <meta property="article:tag" content="3SD">
+    <meta property="article:tag" content="3 Sigma 3시그마">
+    <meta property="article:tag" content="3표준편차">
+    <meta property="article:tag" content="2시그마">
+    <meta property="article:tag" content="2SD">
+    <meta property="article:tag" content="2 Sigma">
+<title>3 sigma rule | 인투더데이터 데이터과학</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.ce02ec8b4aaa4b1d9386a72d0b93e5195eac0f6feec0b00ecd36d8128e870d23.css" integrity="sha256-zgLsi0qqSx2ThqctC5PlGV6sD2/uwLAOzTbYEo6HDSM=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.69b3ef820735840b8b46619f32c5cf1d96c086c45c7a95bafacc5d95cdc0473e.js" integrity="sha256-abPvggc1hAuLRmGfMsXPHZbAhsRcepW6&#43;sxdlc3ARz4=" crossorigin="anonymous"></script>
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>인투더데이터 데이터과학</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>3 sigma rule</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#개요">개요</a>
+      <ul>
+        <li><a href="#시그마-방식의-응용">시그마 방식의 응용</a></li>
+        <li><a href="#6시그마와의-관련">6시그마와의 관련</a></li>
+      </ul>
+    </li>
+    <li><a href="#이상감지와의-관계">이상감지와의 관계</a></li>
+    <li><a href="#참고정보">참고정보</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h2 id="개요">
+  개요
+  <a class="anchor" href="#%ea%b0%9c%ec%9a%94">#</a>
+</h2>
+<p><img src="/images/3_sigma_rule/Standard_deviation_diagram.svg.png" alt="그림" /></p>
+<p>데이터의 분포를 정규분포로 가정하고(또는 우기고) 평균으로 부터 ±표준편차 * 시그마계수를 벗어나면 아웃라이어(outlier, 이상치)라고 판단하는 것을 말한다. 너무 단순한 것이라고 해서 최근에는 그대로 사용하는 경우는 거의 없다. 하지만 단순하면서도 꽤 괜찮은 결과를 보여준다.</p>
+<p>시그마계수는 표준편차에 얼마를 곱해서 아웃라이어의 지점을 결정할 것인가를 말하는데 보통 2 ~ 3의 값을 사용한다. 표준편차에 2에서 3사이의 값을 곱해서 양과 음의 범위를 신뢰구간으로 보고 그 범위를 벗어나는 것을 아웃라이어로 결정하는 것이다.<br>
+3시그마보다는 2시그마를 사용하는 것이 일반적으로 많이 알려져 있다.  정규분포에서 3시그마의 범위는 전체의 99%를 차지하게 되며 나머지 1%가 아웃라이어가 되므로 여기에 해당하는것이 너무 적기 때문이다.</p>
+<p>이 범위에 대한 신뢰도는 다음과 같이 기억하면 쉽다.</p>
+<ul>
+<li>2SD, 2시그마: 약 95% 신뢰도</li>
+<li>3SD, 3시그마: 약 99% 신뢰도</li>
+<li>6SD, 6시그마: 약 99.999999% 신뢰도</li>
+</ul>
+<p>이와 관련된 것은 위키피디아의 <a href="https://ko.wikipedia.org/wiki/68-95-99.7_%ea%b7%9c%ec%b9%99">68-95-99.7_규칙</a>을 참고하기 바란다.</p>
+<h3 id="시그마-방식의-응용">
+  시그마 방식의 응용
+  <a class="anchor" href="#%ec%8b%9c%ea%b7%b8%eb%a7%88-%eb%b0%a9%ec%8b%9d%ec%9d%98-%ec%9d%91%ec%9a%a9">#</a>
+</h3>
+<p>시그마 값을 활용할 때는 대상의 데이터가 정규분포라는 가정을 두는 경우가 많다.  단봉(unimodal)의 좌우 대칭형의 분포일 때를 말한다. 정규분포 처럼 생긴 분포를 서양식의 종처럼 생겼다고 해서 벨커브(bell curve)라고 부르는데 종모양의 분포 일 때 봉우리가 가장 높은 지점의 x축이 종모양의 정중앙이다.</p>
+<p>정중앙으로부터 좌우의 일정 부분까지를 평균에 가깝기 때문에 보편성에 가깝다고 보고 신뢰구간으로 정하는데 이때 신뢰구간의 범위는 정하기 나름이지만 흔히 정중앙의 x축으로부터 좌우 2시그마 까지의 범위를 신뢰구간으로 사용하고 더 엄격하게 하고 싶으면 배수를 늘려서 2.5시그마, 3시그마 등으로 사용하며 3시그마가 넘는 것을 사용하는 것은 흔치 않다.</p>
+<p>흔히 쓰는 신뢰구간은 2시그마인데 평균에서 2시그마 만큼까지의 좌위 범위내에 있는 것들의 비율이 전체의 95%가 포함되게 된다.</p>
+<p>※ 그림 (그림 유실)</p>
+<p>위 그림에서는 -2시그마와 2시그마 사이를 말한다.</p>
+<p>이것을 응용해서 위의 범위를 벗어난 양쪽 꼬리 부분에 들어 있다면 아웃라이어(outlier), 즉 이상치라고 간주해서 간단한 이상치 감지 모형을 만들어서 사용할 수 있다.</p>
+<p>2시그마(2<em>표준편차)를 사용할 것인지 3시그마(3ㅡ 것은</em>표준편차)를 사용할 것인지는 하는 사람이 경험적으로 선택하지만 보통 2.5시그마 정도에서 시작해서 경험적 또는 실험적으로 값을 바꿔나가면서 이상치(outlier)를 찾는다.</p>
+<h3 id="6시그마와의-관련">
+  6시그마와의 관련
+  <a class="anchor" href="#6%ec%8b%9c%ea%b7%b8%eb%a7%88%ec%99%80%ec%9d%98-%ea%b4%80%eb%a0%a8">#</a>
+</h3>
+<p>6 sigma는 “식스시그마”로 많이 발음하며 제조업의 공정관리에서 흔히 들을 수 있는 용어이다. 불량률을 제로에 가깝게 관리하겠다는 기조로 관리한다는 뜻에서 출발했다고 한다.</p>
+<p>6시그마는 분포표에서 볼때 표준편차에서 6을 x축을 기준으로 좌우를 펼쳤을 때 전체 중의  99.9999998027%의 범위가 되는 것을 말한다. 신뢰도와 수율에 흔히 이상적인 기준으로 말하는 것이며 수율을 저만큼 높이겠다는 의지의 표현이자 완벽하다는 의미이다. 완전한 제품을 만들기 위한 관리 방법을 <strong>6시그마</strong>라고 부른다.</p>
+<h2 id="이상감지와의-관계">
+  이상감지와의 관계
+  <a class="anchor" href="#%ec%9d%b4%ec%83%81%ea%b0%90%ec%a7%80%ec%99%80%ec%9d%98-%ea%b4%80%ea%b3%84">#</a>
+</h2>
+<p>이상감지는 아웃라이어 감지의 일종이라고 볼 수 있다. 아웃라이어 감지를 시간의 흐름이 있는 데이터에서 평소에는 나타나지 않던 아웃라이어가 보일 때 이상한 것으로 감지하겠다고 한다면 그것이 이상감지의 문제로 본다.</p>
+<p>하지만 모든 문제에서 아웃라이어가 이상함을 뜻하지는 않으므로 아웃라이어 감지와 이상감지가 반드시 일치하는 개념이라고 생각해서는 안된다.</p>
+<h2 id="참고정보">
+  참고정보
+  <a class="anchor" href="#%ec%b0%b8%ea%b3%a0%ec%a0%95%eb%b3%b4">#</a>
+</h2>
+<ul>
+<li><a href="https://ko.wikipedia.org/wiki/68-95-99.7_%EA%B7%9C%EC%B9%99">위키피디아</a>의 시그마 룰 관련 페이지</li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+  
+
+
+
+  
+    
+  
+
+
+
+<div class="book-languages" tabindex="0" aria-haspopup="true">
+  <ul>
+    <li class="flex align-center">
+      <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+      
+    </li> 
+  </ul>
+
+  <ul class="book-languages-list">
+    
+    <li class="active">
+      <a href="https://intothedata.com/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#개요">개요</a>
+      <ul>
+        <li><a href="#시그마-방식의-응용">시그마 방식의 응용</a></li>
+        <li><a href="#6시그마와의-관련">6시그마와의 관련</a></li>
+      </ul>
+    </li>
+    <li><a href="#이상감지와의-관계">이상감지와의 관계</a></li>
+    <li><a href="#참고정보">참고정보</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

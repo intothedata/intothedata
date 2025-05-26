@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  오픈소스 한국어 형태소 분석기
+  #
+
+
+  한나눔 (Hananum)
+  #
+
+
+명칭: 한나눔
+관리: Kaist
+개발언어: Java
+알고리즘: HMM
+학습사전: 세종계획 산출물
+소스 오픈 여부: 오픈
+구분분석기: 없음
+
+
+  꼬꼬마 (KKMA)
+  #
+
+
+명칭: 꼬꼬마
+관리: Seoul University
+개발언어: Java
+알고리즘: ?
+학습사전: 세종계획 산출물
+소스 오픈 여부: Open 별도 요청
+구분분석기: 일부 탑재
+
+
+  메카브 KO (Mecab)
+  #
+
+
+명칭: 메카브 KO (Mecab), 은전한닢
+관리: 은전한닢 프로젝트 커뮤니티
+개발언어: C/C&#43;&#43;
+알고리즘: CRF
+학습사전: 세종계획 산출물 (일부)
+소스 오픈 여부: 오픈
+구분분석기: 없음
+
+NTT에서 사용하던 일본어 형태소 분석기를 한국어 용으로 변환한 것이다. 영문을 읽으면 “미캡”이라고 읽어야 하겠지만 일본인이 제작한 것이고 일본어 소개페이지에 카타가나로 “메카부”라고 적혀 있어 여기에도 그렇게 기재하였다.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:url" content="https://intothedata.com/38.natural_languge_processing/korean_pos_tagger/">
+  <meta property="og:site_name" content="인투더데이터 데이터과학">
+  <meta property="og:title" content="한국어 형태소 분석기 - Korean pos tagger">
+  <meta property="og:description" content="오픈소스 한국어 형태소 분석기 # 한나눔 (Hananum) # 명칭: 한나눔 관리: Kaist 개발언어: Java 알고리즘: HMM 학습사전: 세종계획 산출물 소스 오픈 여부: 오픈 구분분석기: 없음 꼬꼬마 (KKMA) # 명칭: 꼬꼬마 관리: Seoul University 개발언어: Java 알고리즘: ? 학습사전: 세종계획 산출물 소스 오픈 여부: Open 별도 요청 구분분석기: 일부 탑재 메카브 KO (Mecab) # 명칭: 메카브 KO (Mecab), 은전한닢 관리: 은전한닢 프로젝트 커뮤니티 개발언어: C/C&#43;&#43; 알고리즘: CRF 학습사전: 세종계획 산출물 (일부) 소스 오픈 여부: 오픈 구분분석기: 없음 NTT에서 사용하던 일본어 형태소 분석기를 한국어 용으로 변환한 것이다. 영문을 읽으면 “미캡”이라고 읽어야 하겠지만 일본인이 제작한 것이고 일본어 소개페이지에 카타가나로 “메카부”라고 적혀 있어 여기에도 그렇게 기재하였다.">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="38.natural_languge_processing">
+    <meta property="article:tag" content="형태소분석기">
+    <meta property="article:tag" content="POS Tagger">
+    <meta property="article:tag" content="NLP">
+<title>한국어 형태소 분석기 - Korean pos tagger | 인투더데이터 데이터과학</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.ce02ec8b4aaa4b1d9386a72d0b93e5195eac0f6feec0b00ecd36d8128e870d23.css" integrity="sha256-zgLsi0qqSx2ThqctC5PlGV6sD2/uwLAOzTbYEo6HDSM=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.69b3ef820735840b8b46619f32c5cf1d96c086c45c7a95bafacc5d95cdc0473e.js" integrity="sha256-abPvggc1hAuLRmGfMsXPHZbAhsRcepW6&#43;sxdlc3ARz4=" crossorigin="anonymous"></script>
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>인투더데이터 데이터과학</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>한국어 형태소 분석기 - Korean pos tagger</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#오픈소스-한국어-형태소-분석기">오픈소스 한국어 형태소 분석기</a>
+      <ul>
+        <li><a href="#한나눔-hananum">한나눔 (Hananum)</a></li>
+        <li><a href="#꼬꼬마-kkma">꼬꼬마 (KKMA)</a></li>
+        <li><a href="#메카브-ko-mecab">메카브 KO (Mecab)</a></li>
+        <li><a href="#utagger">UTagger</a></li>
+      </ul>
+    </li>
+    <li><a href="#상용-한글한국어-형태소-분석기">상용 한글/한국어 형태소 분석기</a>
+      <ul>
+        <li><a href="#klt">KLT</a></li>
+        <li><a href="#koma">KOMA</a></li>
+        <li><a href="#basis">BASIS</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h2 id="오픈소스-한국어-형태소-분석기">
+  오픈소스 한국어 형태소 분석기
+  <a class="anchor" href="#%ec%98%a4%ed%94%88%ec%86%8c%ec%8a%a4-%ed%95%9c%ea%b5%ad%ec%96%b4-%ed%98%95%ed%83%9c%ec%86%8c-%eb%b6%84%ec%84%9d%ea%b8%b0">#</a>
+</h2>
+<h3 id="한나눔-hananum">
+  한나눔 (Hananum)
+  <a class="anchor" href="#%ed%95%9c%eb%82%98%eb%88%94-hananum">#</a>
+</h3>
+<ul>
+<li>명칭: 한나눔</li>
+<li>관리: Kaist</li>
+<li>개발언어: Java</li>
+<li>알고리즘: HMM</li>
+<li>학습사전: 세종계획 산출물</li>
+<li>소스 오픈 여부: 오픈</li>
+<li>구분분석기: 없음</li>
+</ul>
+<h3 id="꼬꼬마-kkma">
+  꼬꼬마 (KKMA)
+  <a class="anchor" href="#%ea%bc%ac%ea%bc%ac%eb%a7%88-kkma">#</a>
+</h3>
+<ul>
+<li>명칭: 꼬꼬마</li>
+<li>관리: Seoul University</li>
+<li>개발언어: Java</li>
+<li>알고리즘: ?</li>
+<li>학습사전: 세종계획 산출물</li>
+<li>소스 오픈 여부: Open 별도 요청</li>
+<li>구분분석기: 일부 탑재</li>
+</ul>
+<h3 id="메카브-ko-mecab">
+  메카브 KO (Mecab)
+  <a class="anchor" href="#%eb%a9%94%ec%b9%b4%eb%b8%8c-ko-mecab">#</a>
+</h3>
+<ul>
+<li>명칭: 메카브 KO (Mecab), 은전한닢</li>
+<li>관리: 은전한닢 프로젝트 커뮤니티</li>
+<li>개발언어: C/C++</li>
+<li>알고리즘: CRF</li>
+<li>학습사전: 세종계획 산출물 (일부)</li>
+<li>소스 오픈 여부: 오픈</li>
+<li>구분분석기: 없음</li>
+</ul>
+<p>NTT에서 사용하던 일본어 형태소 분석기를 한국어 용으로 변환한 것이다. 영문을 읽으면 “미캡”이라고 읽어야 하겠지만 일본인이 제작한 것이고 일본어 소개페이지에 카타가나로 “메카부”라고 적혀 있어 여기에도 그렇게 기재하였다.</p>
+<h3 id="utagger">
+  UTagger
+  <a class="anchor" href="#utagger">#</a>
+</h3>
+<ul>
+<li>명칭: UTagger</li>
+<li>관리: 울산대학교 한국어처리연구실</li>
+<li>소스 오픈 여부: 오픈</li>
+<li>바로가기: <a href="http://nlplab.ulsan.ac.kr/doku.php?id=utagger">http://nlplab.ulsan.ac.kr/doku.php?id=utagger</a></li>
+</ul>
+<h2 id="상용-한글한국어-형태소-분석기">
+  상용 한글/한국어 형태소 분석기
+  <a class="anchor" href="#%ec%83%81%ec%9a%a9-%ed%95%9c%ea%b8%80%ed%95%9c%ea%b5%ad%ec%96%b4-%ed%98%95%ed%83%9c%ec%86%8c-%eb%b6%84%ec%84%9d%ea%b8%b0">#</a>
+</h2>
+<h3 id="klt">
+  KLT
+  <a class="anchor" href="#klt">#</a>
+</h3>
+<ul>
+<li>명칭: KLT200(구 HAM)</li>
+<li>관리: 국민대학교</li>
+<li>개발언어: 강승식 교수님 랩</li>
+<li>알고리즘: C</li>
+<li>학습사전: 모름</li>
+<li>소스 오픈 여부: 아님</li>
+<li>구분분석기: 없음</li>
+</ul>
+<h3 id="koma">
+  KOMA
+  <a class="anchor" href="#koma">#</a>
+</h3>
+<ul>
+<li>명칭: KOMA</li>
+<li>관리: 고려대학교 임해창 교수님 NLP랩</li>
+<li>개발언어: C/C++</li>
+<li>알고리즘: HMM?</li>
+<li>학습사전: 세종계획 산출물</li>
+<li>소스 오픈 여부: 아님</li>
+<li>구분분석기: 없음</li>
+</ul>
+<p>현재 다음소프트 형태소분석기의 원형으로 알려져 있지만 많이 다르다.</p>
+<h3 id="basis">
+  BASIS
+  <a class="anchor" href="#basis">#</a>
+</h3>
+<ul>
+<li>명칭: Basis</li>
+<li>관리: Basis</li>
+<li>개발언어: C</li>
+<li>알고리즘: 모름</li>
+<li>학습사전: 모름</li>
+<li>소스 오픈 여부: No</li>
+<li>구분분석기: No</li>
+</ul>
+<p>한국어의 경우 국민대 강승식교수님의 형태소분석기가 OEM으로 내장되어 있었으나 현재의 상태는 알 수 없다.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+  
+
+
+
+  
+    
+  
+
+
+
+<div class="book-languages" tabindex="0" aria-haspopup="true">
+  <ul>
+    <li class="flex align-center">
+      <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+      
+    </li> 
+  </ul>
+
+  <ul class="book-languages-list">
+    
+    <li class="active">
+      <a href="https://intothedata.com/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#오픈소스-한국어-형태소-분석기">오픈소스 한국어 형태소 분석기</a>
+      <ul>
+        <li><a href="#한나눔-hananum">한나눔 (Hananum)</a></li>
+        <li><a href="#꼬꼬마-kkma">꼬꼬마 (KKMA)</a></li>
+        <li><a href="#메카브-ko-mecab">메카브 KO (Mecab)</a></li>
+        <li><a href="#utagger">UTagger</a></li>
+      </ul>
+    </li>
+    <li><a href="#상용-한글한국어-형태소-분석기">상용 한글/한국어 형태소 분석기</a>
+      <ul>
+        <li><a href="#klt">KLT</a></li>
+        <li><a href="#koma">KOMA</a></li>
+        <li><a href="#basis">BASIS</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

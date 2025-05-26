@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reproducible Research on 인투더데이터 데이터과학</title>
+    <link>https://intothedata.com/tags/reproducible-research/</link>
+    <description>Recent content in Reproducible Research on 인투더데이터 데이터과학</description>
+    <generator>Hugo</generator>
+    <language>ko-KR</language>
+    <atom:link href="https://intothedata.com/tags/reproducible-research/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>재현가능연구</title>
+      <link>https://intothedata.com/docs/08.reproducible_research/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/08.reproducible_research/</guid>
+      <description>&lt;h2 id=&#34;재현가능연구-reproducible-research&#34;&gt;&#xA;  재현가능연구 (Reproducible Research)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%9e%ac%ed%98%84%ea%b0%80%eb%8a%a5%ec%97%b0%ea%b5%ac-reproducible-research&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;재현가능연구는 영어 &amp;ldquo;Reproducible Research&amp;quot;를 번역한 용어로, 한국어로는 적당한 용어가 정착되지 않아 보통 영어를 그대로 읽어 &amp;ldquo;리프로듀서블 리서치&amp;quot;라고 부르기도 한다. 본 문서에서는 &amp;ldquo;재현가능연구&amp;quot;로 통일하여 표현한다.&lt;/p&gt;&#xA;&lt;h3 id=&#34;재현가능연구의-정의와-개념&#34;&gt;&#xA;  재현가능연구의 정의와 개념&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%9e%ac%ed%98%84%ea%b0%80%eb%8a%a5%ec%97%b0%ea%b5%ac%ec%9d%98-%ec%a0%95%ec%9d%98%ec%99%80-%ea%b0%9c%eb%85%90&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;재현가능연구란 &lt;strong&gt;과학연구의 전 과정과 결과를 투명하게 공개하여 누구나 동일한 결과를 재현할 수 있도록 하는 연구 방법론&lt;/strong&gt;이다. 이는 단순히 연구 결과만을 공개하는 것이 아니라, 연구에 사용된 원시 데이터, 분석 코드, 연구 방법론, 그리고 결과 도출 과정을 모두 체계적으로 문서화하고 공개하는 것을 의미한다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

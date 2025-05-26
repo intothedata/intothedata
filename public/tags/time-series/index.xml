@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Time Series on 인투더데이터 데이터과학</title>
+    <link>https://intothedata.com/tags/time-series/</link>
+    <description>Recent content in Time Series on 인투더데이터 데이터과학</description>
+    <generator>Hugo</generator>
+    <language>ko-KR</language>
+    <atom:link href="https://intothedata.com/tags/time-series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>시계열분석</title>
+      <link>https://intothedata.com/docs/36.time_series_analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/36.time_series_analysis/</guid>
+      <description>&lt;h1 id=&#34;시계열분석-time-series-analysis&#34;&gt;&#xA;  시계열분석 (Time Series Analysis)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%8b%9c%ea%b3%84%ec%97%b4%eb%b6%84%ec%84%9d-time-series-analysis&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;시계열분석은 시간의 흐름에 따라 순차적으로 관측된 데이터를 분석하여 패턴을 파악하고 미래 값을 예측하는 통계적 방법론입니다. 시계열 데이터는 주식 가격, 기온, 매출액, 웹사이트 방문자 수 등 시간에 따라 변화하는 모든 현상에서 나타나며, 현대 데이터 사이언스에서 매우 중요한 분석 영역입니다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;시계열-데이터의-특성&#34;&gt;&#xA;  시계열 데이터의 특성&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%8b%9c%ea%b3%84%ec%97%b4-%eb%8d%b0%ec%9d%b4%ed%84%b0%ec%9d%98-%ed%8a%b9%ec%84%b1&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-시계열-데이터의-정의&#34;&gt;&#xA;  1. 시계열 데이터의 정의&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#1-%ec%8b%9c%ea%b3%84%ec%97%b4-%eb%8d%b0%ec%9d%b4%ed%84%b0%ec%9d%98-%ec%a0%95%ec%9d%98&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;시계열 데이터는 &lt;strong&gt;동일한 대상에 대해 시간 순서대로 관측된 데이터&lt;/strong&gt;를 의미합니다. 일반적인 횡단면 데이터와 달리 시간적 순서가 중요한 의미를 가지며, 과거의 값이 현재와 미래의 값에 영향을 미치는 **시간적 의존성(temporal dependency)**을 가집니다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

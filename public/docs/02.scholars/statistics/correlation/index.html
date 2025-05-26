@@ -1,0 +1,1885 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  개요
+  #
+
+연속형 변수 2개의 상관 관계를 확인하기 위한 가장 기본적인 방법이다.
+정확히 말해서 두개의 수치값들의 집합이 있을 때 이 두개의 수치값들은 각각의 순서쌍에 대해서 연결관계가 있다고 할 때 두 수치값이 서로 관련이 있는지를 확인하는 방법이다.
+흔한 예로 있는 것이 고등학생 한 학급에 50명이 있다고 할 때 이 학생들의 수학과목의 성적과 물리과목의 성정이 관련이 있는지 확인하는 것이 있다.  즉 수학과목과 물리과목은 서로 수리적 또는 과학적 능력과 관련이 있어 두 과목은 서로 관련이 있을 것이라는 가설을 어느 정도 두고 있으며 실제로 그런지 확인한다.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:url" content="https://intothedata.com/docs/02.scholars/statistics/correlation/">
+  <meta property="og:site_name" content="인투더데이터 데이터과학">
+  <meta property="og:title" content="피어슨 상관계수 - Pearson&#39;s product-moment correlation">
+  <meta property="og:description" content="개요 # 연속형 변수 2개의 상관 관계를 확인하기 위한 가장 기본적인 방법이다.
+정확히 말해서 두개의 수치값들의 집합이 있을 때 이 두개의 수치값들은 각각의 순서쌍에 대해서 연결관계가 있다고 할 때 두 수치값이 서로 관련이 있는지를 확인하는 방법이다.
+흔한 예로 있는 것이 고등학생 한 학급에 50명이 있다고 할 때 이 학생들의 수학과목의 성적과 물리과목의 성정이 관련이 있는지 확인하는 것이 있다. 즉 수학과목과 물리과목은 서로 수리적 또는 과학적 능력과 관련이 있어 두 과목은 서로 관련이 있을 것이라는 가설을 어느 정도 두고 있으며 실제로 그런지 확인한다.">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>피어슨 상관계수 - Pearson&#39;s product-moment correlation | 인투더데이터 데이터과학</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.465376614827fff60754cc9c34686b524db662a4c314668361de5db45fde6203.css" integrity="sha256-RlN2YUgn//YHVMycNGhrUk22YqTDFGaDYd5dtF/eYgM=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.d9e6ba7770f5117e21758da45184f61d5669394aa618ebdfabe1d95519d50bbf.js" integrity="sha256-2ea6d3D1EX4hdY2kUYT2HVZpOUqmGOvfq&#43;HZVRnVC78=" crossorigin="anonymous"></script>
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>인투더데이터 데이터과학</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/00.about/" class="">인투더데이터 소개 About</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/01.data_science/" class="">데이터과학</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/01.data_science/datascientist_skillset/" class="">데이터과학자 스킬셋</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/" class="">데이터과학 학술분야</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/operational_research/" class="">경영과학 - Operational Research</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/operational_research/demand_forecasting/" class="">수요예측 - Demand Forecasting</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/economics/" class="">계량경제학 - Economics</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/economics/distributed_lag_model/" class="">분산지연모델</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/data_mining/" class="">데이터마이닝</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/data_mining/clustering/" class="">군집분석 - Clustering</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/data_mining/clustering/k-means/" class="">K-means - K중심값</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/modeling/" class="">모델링 - Modeling</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/business_analysis/" class="">비즈니스 데이터 분석</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/business_analysis/behavioral_change_point_analysis/" class="">행동변화점분석</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/timeseries_analysis/" class="">시계열 분석 - Time-series Analysis</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/timeseries_analysis/granger_causality/" class="">그래인저 인과관계 - Granger Causality</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/anomaly_detection/" class="">이상감지</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/anomaly_detection/3_sigma_rule/" class="">3 sigma rule</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/anomaly_detection/generalized_esd/" class="">Generalized ESD</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/artificial_intelligence/" class="">인공지능 - Artificial Intelligence</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/artificial_intelligence/fuzzy_inferenece/" class="">퍼지 추론 - Fuzzy Inferenece</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/information_retrieval/" class="">정보검색</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/text_mining/" class="">텍스트마이닝 - Text Mining</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/text_mining/tfidf/" class="">TFIDF - Term Frequency Inverse Document Frequency</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/text_mining/cosine_similarity/" class="">코사인 유사도 - Cosine Similarity</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/" class="">통계학 - Statistics</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/central_limit_theorem/" class="">중심극한정리 - CLT; Central Limit Theorem</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/descriptive_statistics/" class="">기술통계 - Descriptive statistics</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/variance/" class="">분산 - Variance</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/survival_analysis/" class="">생존분석 - Survival Analysis</a>
+  
+
+          
+  <ul>
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/data/" class="">자료 - data</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/gaussian_distribution/" class="">정규분포, 가우시안 분포 - Normal Distribution, Gaussian Distribution</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/inferential_statistics/" class="">추론통계 - Inferential statistics</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/sampling/" class="">표본추출 - Sampling</a>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/sampling/neyman_alloction/" class="">네이만 배분법 - neyman allocation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/sampling/hyperloglog/" class="">하이퍼로그로그 - Hyper Log Log</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/correlation/" class=" active">피어슨 상관계수 - Pearson&#39;s product-moment correlation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/stochastic_process/" class="">확률과정 - Stochastic process</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/stochastic_process/brownian_motion/" class="">브라운 운동 - Brownian Motion</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/stochastic_process/ornstein_uhlenbeck_process/" class="">오른스타인-우렌벡 과정  Ornstein-Uhlenbeck process</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/pattern_recognition/" class="">패턴인식 - Pattern Recognition</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/pattern_recognition/neural_network/" class="">인공신경망 - Neural Network</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/" class="">데이터사이언스 - 산업별 갈래</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/adtech/" class="">온라인 광고 비즈니스 - Ad tech</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/adtech/ad_tech_terminlogy/" class="">온라인 광고 용어 - Online Ad Terminology</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/ad_tech/" class="">애드테크 - Ad Tech</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/ad_tech/ad_tech_terminlogy/" class="">온라인 광고 용어</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/online/" class="">온라인 비즈니스 - Online busines</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/online/ad_tech/" class="">온라인 광고 비즈니스 - Ad tech</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/online/ad_tech_terminlogy/" class="">온라인 광고 용어 - Online Ad Terminology</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/automobile/" class="">자동차 산업 - Automobile Industry</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/iron_mill/" class="">철강 - Iron mill</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/04.data_analysis/" class="">데이터 분석</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>데이터 수집 (Data collection)</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/06.data_collection/mobile_data_collection/" class="">데이터 수집 (Data collection)</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/05.data_visualization/" class="">데이터시각화</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/05.data_visualization/number_line_plot/" class="">넘버라인플롯</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/06.data_platform/" class="">데이터 플랫폼</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/06.data_platform/bigquery/" class="">빅쿼리 - Bigquery</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/06.data_platform/bigquery/excel_bigquery/" class="">엑셀에서 빅쿼리 데이터 가져오기</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/07.data_hub/" class="">데이터 허브</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/07.data_hub/sk_data_hub/" class="">SK 데이터 허브</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/08.reproducible_research/" class="">재현가능연구</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/09.datascience_tools/" class="">데이터사이언스 도구 - Data Science Tools</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/20.data_platform/" class="">데이터플랫폼</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/30.bigdata/" class="">빅데이터</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/36.time_series_analysis/" class="">시계열분석</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/" class="">인공지능</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/vector_search_engine/" class="">벡터검색엔진</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/faiss/" class="">Faiss - 벡터 검색 엔진</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/faiss/3_sigma_rule/" class="">3 sigma rule</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/faiss/generalized_esd/" class="">Generalized ESD</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/gpt/" class="">GPT</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/39.large_language_model/" class="">LLM</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/38.natural_languge_processing/" class="">자연어 처리</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/38.natural_languge_processing/korean_pos_tagger/" class="">한국어 형태소 분석기</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/38.natural_languge_processing/pos_tagger/" class="">형태소 분석기 - Pos tagger</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/40.r_language/" class="">R언어</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/50.computer_science/" class="">컴퓨터 공학</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/50.computer_science/random/" class="">랜덤</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/70.practical_data_science/" class="">실무 데이터과학</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/70.practical_data_science/quality_based_scoring/" class="">품질 기반 스코어링 - quality-based scoring</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/60.pracactical_data_processing/" class="">데이터 프로세싱</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/80.mathematics/" class="">수학 - Mathematics</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/80.mathematics/ordinary_differential_equation/" class="">상미분방정식 - Ordinary Differential Equation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/80.mathematics/mathematics_symbols/" class="">수학기호정리 - mathematics symbols</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/80.mathematics/fermats_last_theorem/" class="">페르마의 마지막 정리</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/90.metrics/" class="">지표</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/90.metrics/lorenz_curve/" class="">로렌츠 커브</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/99.materials/" class="">참고자료 - References</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/99.materials/people/" class="">인물 - People</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/99.materials/sites/" class="">참고 사이트</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/taglist/" class="">태그 목록</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>피어슨 상관계수 - Pearson&#39;s product-moment correlation</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#개요">개요</a></li>
+    <li><a href="#사용시-주의점">사용시 주의점</a>
+      <ul>
+        <li><a href="#정규분포-문제">정규분포 문제</a></li>
+        <li><a href="#오해석-문제">오해석 문제</a></li>
+      </ul>
+    </li>
+    <li><a href="#부연-설명">부연 설명</a></li>
+    <li><a href="#관련-기법">관련 기법</a>
+      <ul>
+        <li><a href="#참조-코드">참조 코드</a></li>
+      </ul>
+    </li>
+    <li><a href="#참고자료">참고자료</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h2 id="개요">
+  개요
+  <a class="anchor" href="#%ea%b0%9c%ec%9a%94">#</a>
+</h2>
+<p>연속형 변수 2개의 상관 관계를 확인하기 위한 가장 기본적인 방법이다.</p>
+<p>정확히 말해서 두개의 수치값들의 집합이 있을 때 이 두개의 수치값들은 각각의 순서쌍에 대해서 연결관계가 있다고 할 때 두 수치값이 서로 관련이 있는지를 확인하는 방법이다.</p>
+<p>흔한 예로 있는 것이 고등학생 한 학급에 50명이 있다고 할 때 이 학생들의 수학과목의 성적과 물리과목의 성정이 관련이 있는지 확인하는 것이 있다.  즉 수학과목과 물리과목은 서로 수리적 또는 과학적 능력과 관련이 있어 두 과목은 서로 관련이 있을 것이라는 가설을 어느 정도 두고 있으며 실제로 그런지 확인한다.</p>
+<p>피어슨의 상관계수는 그런 방법중에 가장 기본적인 방법이며 그 외에도 여러가지 상관방법이 있다.</p>
+<p>피어슨 상관계수는 두 변수의 결합은 정규분포일 것이라는 가정이 포함되어 있으며 구조적으로 볼 때 이상치(outlier)에 매우 민감한 편이다.</p>
+<p>주의할 것은 결과를 보고 상관관계가 인과관계와 관련이 있을 것이라는 확대해석을 하지 말아야하며 단순하게 두 변수가 연관성이 있다로만 결론을 내려야 한다는 것이다.</p>
+<h2 id="사용시-주의점">
+  사용시 주의점
+  <a class="anchor" href="#%ec%82%ac%ec%9a%a9%ec%8b%9c-%ec%a3%bc%ec%9d%98%ec%a0%90">#</a>
+</h2>
+<h3 id="정규분포-문제">
+  정규분포 문제
+  <a class="anchor" href="#%ec%a0%95%ea%b7%9c%eb%b6%84%ed%8f%ac-%eb%ac%b8%ec%a0%9c">#</a>
+</h3>
+<p>두 변량(변수, variable, variance)이 정규성(normality)을 따를 때 대해 최적화된 방법이므로 정규성 문제에서 자유롭지는 않다. 쉽게 예를 통해 말해보면 피어슨 상관계수는 두 변수가 정규분포여야 한다는 전제를 두지는 않지만 피어슨 상관계수는 정규분포에서 가장 잘 작동하도록 설계되었다고 한다. 위의 예에서 수학성적과 물리성적은 모두 정규분포여야 더 정확한 결과를 얻을 수 있다.</p>
+<p>즉, 상관계수를 계산할 두 세트의 데이터가 각기 정규분포를 반드시 따를 필요는 없지만 두 데이터 세트의 데이터 포인트의 평균에서 편차의 곱은 정규분포를 따라야 한다고 알려져 있다.</p>
+<h3 id="오해석-문제">
+  오해석 문제
+  <a class="anchor" href="#%ec%98%a4%ed%95%b4%ec%84%9d-%eb%ac%b8%ec%a0%9c">#</a>
+</h3>
+<p>변량이 정규분포가 아닌 경우에도 사용할 수는 있으나 결과값이 달라질 가능성이 커서 오해석을 할 수 있다.</p>
+<p>편차의 곱들이 정규분포를 따르지 않으면 오해석을 만드는 이상치(outlier)에 예민한 문제가 있다.</p>
+<p>인과관계를 증명하지 않으므로 결과를 인과관계로 확대해석하는 것을 항상 경계해야한다.</p>
+<p>가설검정을 수행해서 반드시 p-value를 확인해야 한다. 하지만, 그 결과를 무조건 신뢰하지는 않아야 한다.</p>
+<p>이상치(outlier)에 매우 민감하므로 데이터를 트랜스폼 하거나 다른 기술을 보조방법으로 확인해야 할 수 있다.</p>
+<p>20개 이상의 데이터 포인트에 대해서 수행한다면 데이터가 정규분포를 따르게 만들거나 아웃라이어를 확실하게 처리해야한다.</p>
+<p>후속 작업(인과 관계 증명)이 필요하면 regression test를 수행해야 한다.</p>
+<p>희박성(Intermittent) 문제에서 매우 자유롭지 않다.  즉, 데이터에 0이 많으면 쓸 수가 없다.</p>
+<p>결측치가 많거나 0이 많은 데이터에 대해서는 바로 사용하기 어렵다.</p>
+<p>결측치를 어떤 값으로 채워야하고 0인 값이 정말 0인지 찾아서 보정하는 문제를 해결해 주어야 하는데 그렇게 하기 어렵다면 사용하지 않아야 한다.</p>
+<p>쉽게 사용할 수 있으나 쉽게 해석하지는 않아야 한다.</p>
+<p>횡단면 데이터(cross-sectional) 또는 시계열 데이터(time-series)에 대해서 모두 사용할 수 있지만 시계열 데이터에는 해석을 매우 주의해야 하거나 사용하지 않아야 한다.</p>
+<h2 id="부연-설명">
+  부연 설명
+  <a class="anchor" href="#%eb%b6%80%ec%97%b0-%ec%84%a4%eb%aa%85">#</a>
+</h2>
+<p>피어슨 상관관계의 기본은 두 확률 변수(variable)가 서로 독립인지 아닌지를 확인하는 것인데 각각의 변수의 평균에서의 분산의 방향과 양을 서로 곱하고 합산하여(product) 적률(moment)로 독립성을 검정하는 것이다. 아웃라이어에 굉장히 예민하며 계산에 대한 최적(optimum)이 정규분포를 가정으로 되어 있어 결국 두 변수가 정규분포가 아닌 경우 또는 두 변수의 편차의 곱이 정규분포를 따르지 않으면 제대로 해석을 할 수 없다고 알려져 있다. 가장 기본이 되는 유사도 검정 방법이긴 하지만 여러가지 위험성 때문에 최근에는 많은 데이터 사이언티스트들은 직접 사용하는 것을 기피하는 경향이 강해지고 있다.</p>
+<p>상관관계를 확인하는 것 보다는 인과관계까지 바로 확인할 수 있게 회귀로 바로 진입하는 경우가 많아지고 있다.</p>
+<h2 id="관련-기법">
+  관련 기법
+  <a class="anchor" href="#%ea%b4%80%eb%a0%a8-%ea%b8%b0%eb%b2%95">#</a>
+</h2>
+<ul>
+<li>Data Transformation: 정규분포로 변환</li>
+<li>0값 또는 NULL값에 대한 보정</li>
+<li>Outlier reduction or Influential reduction: outlier 제거 또는 무력화, 0값 보정 및 무력화</li>
+<li>Bootstrapping: 편추정에 대한 방지</li>
+<li>Cook&rsquo;s distance: outlier 무력화</li>
+</ul>
+<h3 id="참조-코드">
+  참조 코드
+  <a class="anchor" href="#%ec%b0%b8%ec%a1%b0-%ec%bd%94%eb%93%9c">#</a>
+</h3>
+<p>비율 데이터와 양적 데이터에 대한 correlation의 반응 결과 시뮬레이션이다.</p>
+<p>※ outlier의 존재 및 영향력에 따라 correlation의 결과가 크게 차이가 발생함을 확인한 것이다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>a <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rnorm</span>(<span style="color:#ae81ff">100</span>, mean<span style="color:#f92672">=</span> <span style="color:#ae81ff">50</span>, sd <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>b <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rnorm</span>(<span style="color:#ae81ff">100</span>, mean<span style="color:#f92672">=</span> <span style="color:#ae81ff">2000</span>, sd <span style="color:#f92672">=</span> <span style="color:#ae81ff">500</span>)
+</span></span><span style="display:flex;"><span>c <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rnorm</span>(<span style="color:#ae81ff">100</span>, mean<span style="color:#f92672">=</span> <span style="color:#ae81ff">120000</span>, sd <span style="color:#f92672">=</span> <span style="color:#ae81ff">1500</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 위의 세 변수는 정규분포에 의한 랜덤으로 서로 연관성이 없어야 함</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">paste</span>(a, sep <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>, collapse <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;, &#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">paste</span>(b, sep <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>, collapse <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;, &#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">paste</span>(c, sep <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>, collapse <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;, &#34;</span>)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 변수가 랜덤이므로 재현을 위해서 값을 기록해 둔다</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># &gt; paste(a, sep = &#34;&#34;, collapse = &#34;, &#34;)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># [1] &#34;43.5352862922437, 26.1142486253874, 83.0310075589865, 52.6120387834526, 79.0516784036759, 78.4067982054003, 49.062183315655, 33.9101133704574, 52.6453876117853, 22.5639577719374, 28.0566952588897, 58.3170898964112, 79.7531506969863, 16.4651442095427, 21.8266199445677, 84.7613164971811, 22.9314362586294, 57.2546573845694, 70.1072978856087, 69.5434626894672, 30.0281312105167, 51.331326846718, 37.7918517827927, 31.2858007434158, 16.1322596624448, 75.2985738809986, 12.5749486008556, 35.7921600656511, 64.806317406061, 62.977130791631, 47.3643715031428, 59.9356881188637, 21.6271869042728, 62.7203715153795, 65.4173808852516, 45.6678158936037, 65.4652627799009, 64.8256029810552, 59.5570284027551, 69.6764444112485, 58.5164575206365, 62.004266803614, 97.706433122476, 64.1470814021714, 41.8597076539052, 43.5156462394562, 14.5280461758878, 39.2917202512866, 80.7933545904295, 38.6129906668388, 40.3837831017038, 35.2616689131153, 34.003282142012, 68.7359333785656, 55.0633600450313, 54.1745798049531, 69.0118780703161, 53.4504373550242, 60.2301640760341, 9.7890658404699, 63.6178737287274, 29.5732275213378, 48.7588587666721, 40.5156753816904, 54.9906332676469, 32.4814706691121, 56.7982092746807, 55.1773169970468, 27.9953889016393, 35.4516456284645, 63.5454475487725, 75.9599618444786, 65.2507265886765, 33.9459834762341, 61.321763995156, 89.8059423687934, 84.6565172745663, 0.974251609395807, 35.1188518010291, 17.8961452288911, 84.213912723524, 33.9900156697055, 42.4386576418562, 59.4614633600509, 59.0355532878133, 51.9481361012289, 68.0797928653874, 72.1110911014688, 41.1499727814911, 75.2279481537229, 49.0997788926431, 63.3516617832293, 61.1487670634223, 27.6280479420989, 48.7997440672988, 82.448020715588, 65.9171002410758, 55.0521463374323, 68.8948953658392, 69.3871761692264&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># &gt; paste(b, sep = &#34;&#34;, collapse = &#34;, &#34;)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># [1] &#34;1251.43332438274, 2342.37972353621, 2220.80372569032, 1895.67202861517, 2014.5484405777, 2376.00314439979, 2336.35697930541, 1654.00823520994, 1888.83098639829, 1181.60965560807, 1863.61920533526, 1481.15256643624, 1932.44372641792, 3055.92690257731, 1840.26793824745, 2208.60973931844, 1956.12542134589, 1631.76325719419, 2697.95727176067, 2429.20779820604, 2044.27327059926, 2371.31062184623, 2220.10184966659, 2139.39804535137, 1756.26740295561, 2259.86757217339, 1848.86774247112, 2463.81430642305, 2624.75885609224, 1778.54253932097, 1489.35179681014, 2891.55868135022, 1872.90871459947, 2399.44865358388, 2456.8524870807, 2741.75205825754, 3582.09350773464, 2900.74890621652, 2255.54297302259, 2667.33190357123, 1861.96324722154, 1884.02035899016, 3100.01143764508, 2022.4206226856, 2225.53778549019, 2635.82735842111, 1392.77415237051, 1305.97461470831, 1819.42159875603, 546.128677126583, 1457.97600776047, 2038.04094488796, 1652.43305615482, 1811.76409711056, 2611.6019475432, 2047.23886211447, 2202.41466500911, 1938.12732690756, 3018.09112950321, 2298.85390764845, 1371.98741043772, 1632.41914032878, 1512.07582044162, 2223.24185250764, 2823.81014669429, 1398.71033086321, 2440.25530481094, 1697.44725081322, 2529.9849209169, 1274.26673394536, 2538.96781338355, 2331.50749699991, 2531.01232864703, 2220.65705963555, 2436.36788346162, 2242.26168556345, 1684.61342059638, 2329.11879273551, 1794.99394056369, 1919.0816337302, 2063.6757595704, 3062.90035919268, 1754.96734557443, 1619.4821990434, 2726.76973077111, 2250.17607892164, 1864.44859264195, 2189.37654054184, 2512.62977050847, 1720.94990563809, 2088.27335020036, 2140.7877964509, 2210.3252937194, 1498.67647300586, 2900.34433448942, 2063.12406537933, 2567.97957458864, 1715.31375194128, 2962.83772029732, 2063.67912368279&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># &gt; paste(c, sep = &#34;&#34;, collapse = &#34;, &#34;)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># [1] &#34;119251.740829297, 121454.749783168, 119322.863576464, 119625.053964249, 118777.133824213, 118886.263077579, 119452.106801154, 120852.422342105, 119878.777784741, 118744.994769308, 120485.993860488, 120900.993782886, 120029.694154418, 121873.759886909, 120103.095492903, 120464.566449077, 120413.950098949, 117675.521438293, 119369.593090079, 120240.848827266, 117719.926402129, 119937.608402987, 122204.395391432, 120046.437974128, 122030.752192869, 121758.319405922, 117695.944113387, 123573.943065106, 118291.406750377, 121223.526386357, 118517.552204085, 120807.901347187, 120621.001457778, 119475.47666331, 120242.292401057, 118921.238554979, 117521.086798667, 119578.721701939, 120911.304811968, 118703.778719702, 118788.362258785, 121556.481938474, 121028.947546723, 120985.485978974, 119249.785631828, 119058.080743588, 119660.567571029, 120534.219899411, 117111.884018716, 123267.794308878, 119786.970340605, 118413.811192198, 119009.253977222, 121819.638219391, 119700.137016435, 118591.023956261, 122084.292027088, 119312.936762931, 121054.04369525, 120441.609939599, 121026.397702518, 116540.245700406, 119952.566365456, 120310.313070646, 119499.52373053, 120397.564444098, 117148.951314992, 120480.029627339, 117264.617694825, 119973.696770688, 119083.964353884, 121199.805482649, 119799.284366371, 118761.546380338, 120774.208993894, 119938.635449809, 119953.469476303, 120705.658029756, 120433.900638267, 122404.092031616, 119370.262687362, 121592.496711847, 118925.505900191, 120272.407880099, 117654.657686838, 121295.025688249, 120741.271142659, 119270.308179925, 119029.993677834, 120957.591449431, 119201.571359284, 118571.767581187, 119661.859738992, 116945.538167552, 119312.891068774, 117398.409506805, 119068.847553957, 118553.244590584, 121318.583080948, 119410.618012882&#34;</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3번째 변수로 1번째, 2번째 변수를 나눠서 비율값으로 만든다.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 분모가 같으므로 a와 b 그리고 a.rate와 b.rate는 상관계수가 거의 비슷해야 한다.</span>
+</span></span><span style="display:flex;"><span>a.rate <span style="color:#f92672">&lt;-</span> a<span style="color:#f92672">/</span>c
+</span></span><span style="display:flex;"><span>b.rate <span style="color:#f92672">&lt;-</span> b<span style="color:#f92672">/</span>c
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># plotting</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>))
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">plot</span>(a, b, pch<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">plot</span>(a.rate, b.rate, pch<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">dev.off</span>()
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># install.packages(&#34;asbio&#34;)</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(asbio)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">cor</span>(a, b)  <span style="color:#75715e"># correlation</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">cor</span>(a.rate, b.rate)  <span style="color:#75715e"># correlation with transformed variables</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">r.pb</span>(a, b, beta <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.2</span>)  <span style="color:#75715e"># percentage-bend correlation</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">r.pb</span>(a.rate, b.rate, beta <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.2</span>)  <span style="color:#75715e"># percentage-bend correlation with transformed variables</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">cor</span>(a, b, method <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;spearman&#34;</span>)  <span style="color:#75715e"># Spearman&#39;s correlation</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># hypothesis test</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">cor.test</span>(a, b)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">cor.test</span>(a.rate, b.rate)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">cor.test</span>(a, b, method <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;spearman&#34;</span>)  <span style="color:#75715e"># hypothesis tset</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># bootstrapping</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(boot)
+</span></span><span style="display:flex;"><span>cor.stat <span style="color:#f92672">&lt;-</span> <span style="color:#66d9ef">function</span>(data, indices) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">cor</span>(data[indices, <span style="color:#ae81ff">1</span>], data[indices, <span style="color:#ae81ff">2</span>])
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>boot.output <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">boot</span>(data<span style="color:#f92672">=</span><span style="color:#a6e22e">cbind</span>(a, b), cor.stat, R<span style="color:#f92672">=</span><span style="color:#ae81ff">100000</span>)
+</span></span><span style="display:flex;"><span>(boot.output)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>))
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">hist</span>(boot.output<span style="color:#f92672">$</span>t, nclass<span style="color:#f92672">=</span><span style="color:#ae81ff">32</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">dev.off</span>()
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># responsibility test on outliers</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 정규분포에서의 랜덤으로 element가 10개인 변수 3개를 만들되 하나의 element는 outlier를 강제로 넣어준다.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 첫번째 element에 outlier를 넣었으므로 outlier에 영향을 받는다면 상관계수가 매우 높게 나타날 것이다.</span>
+</span></span><span style="display:flex;"><span>a1 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">100</span>, <span style="color:#a6e22e">rnorm</span>(<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">9</span>))
+</span></span><span style="display:flex;"><span>b1 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">200</span>, <span style="color:#a6e22e">rnorm</span>(<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">9</span>))
+</span></span><span style="display:flex;"><span>c1 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">500</span>, <span style="color:#a6e22e">rnorm</span>(<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">9</span>))
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">paste</span>(a1, sep <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>, collapse <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;, &#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># [1] &#34;100, -17.8877517498719, 1.65010536316145, 10.8981253085614, -0.536608019252361, 0.368470776596632, 14.6682762969186, -10.6227685949784, 7.03189390859778, 14.9138302131459&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">paste</span>(b1, sep <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>, collapse <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;, &#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># [1] &#34;200, -3.42021229405049, 0.877706007815157, -4.52919961063207, 19.5994542345915, 11.9415248662197, 10.7128587235155, 9.79371410533467, 22.8992163078861, -2.04341531240663&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">paste</span>(c1, sep <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>, collapse <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;, &#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># &#34;200, -3.42021229405049, 0.877706007815157, -4.52919961063207, 19.5994542345915, 11.9415248662197, 10.7128587235155, 9.79371410533467, 22.8992163078861, -2.04341531240663&#34;</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">cor</span>(a1, b1)  <span style="color:#75715e"># 상관계수가 클 것이다.</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">cor</span>(a1<span style="color:#f92672">/</span><span style="color:#ae81ff">300</span>, b1<span style="color:#f92672">/</span><span style="color:#ae81ff">300</span>)  <span style="color:#75715e"># 하나마나 한 짓이다.</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">cor</span>(a1[2<span style="color:#f92672">:</span><span style="color:#ae81ff">10</span>], b1[2<span style="color:#f92672">:</span><span style="color:#ae81ff">10</span>]) <span style="color:#75715e"># 상관계수가 낮을 것이다. outlier를 제거했으므로</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">cor</span>(a1<span style="color:#f92672">/</span>c1, b1<span style="color:#f92672">/</span>c1)  <span style="color:#75715e"># 상관계수가 작을 것이다. outlier를 무력화 했으므로</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 위의 결과를 각각 확인해 보면 비율인 경우 outlier의 영향을 줄이는 것을 볼 수 있지만 그렇지 않은 경우 outlier에 의해서 상관관계가 매우 높게 나타난다.</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Et cetera</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">cor</span>(a1<span style="color:#f92672">/</span>b1, b1<span style="color:#f92672">/</span>b1)  <span style="color:#75715e"># 하나마나한 것</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">cor</span>(a1<span style="color:#f92672">/</span>(a1<span style="color:#f92672">+</span>b1), b1<span style="color:#f92672">/</span>(a1<span style="color:#f92672">+</span>b1))  <span style="color:#75715e"># 하나마나한 것</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># outlier checking with Cook&#39;s distance</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(MASS)
+</span></span><span style="display:flex;"><span>m1 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">lm</span>(a <span style="color:#f92672">~</span> b)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">plot</span>(<span style="color:#a6e22e">cooks.distance</span>(m1))
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># cook&#39;s distance로 outlier를 찾아낼 수 있다.</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>m1 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">lm</span>(a1 <span style="color:#f92672">~</span> b1)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">plot</span>(<span style="color:#a6e22e">cooks.distance</span>(m1))
+</span></span></code></pre></div><h2 id="참고자료">
+  참고자료
+  <a class="anchor" href="#%ec%b0%b8%ea%b3%a0%ec%9e%90%eb%a3%8c">#</a>
+</h2>
+<p><a href="https://ko.wikipedia.org/wiki/%EC%83%81%EA%B4%80%EB%B6%84%EC%84%9D">https://ko.wikipedia.org/wiki/%EC%83%81%EA%B4%80%EB%B6%84%EC%84%9D</a></p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+  
+
+
+
+  
+    
+  
+
+
+
+<div class="book-languages" tabindex="0" aria-haspopup="true">
+  <ul>
+    <li class="flex align-center">
+      <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+      
+    </li> 
+  </ul>
+
+  <ul class="book-languages-list">
+    
+    <li class="active">
+      <a href="https://intothedata.com/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#개요">개요</a></li>
+    <li><a href="#사용시-주의점">사용시 주의점</a>
+      <ul>
+        <li><a href="#정규분포-문제">정규분포 문제</a></li>
+        <li><a href="#오해석-문제">오해석 문제</a></li>
+      </ul>
+    </li>
+    <li><a href="#부연-설명">부연 설명</a></li>
+    <li><a href="#관련-기법">관련 기법</a>
+      <ul>
+        <li><a href="#참조-코드">참조 코드</a></li>
+      </ul>
+    </li>
+    <li><a href="#참고자료">참고자료</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

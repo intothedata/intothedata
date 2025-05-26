@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>수학 - Mathematics on 인투더데이터 데이터과학</title>
+    <link>https://intothedata.com/docs/80.mathematics/</link>
+    <description>Recent content in 수학 - Mathematics on 인투더데이터 데이터과학</description>
+    <generator>Hugo</generator>
+    <language>ko-KR</language>
+    <atom:link href="https://intothedata.com/docs/80.mathematics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>상미분방정식 - Ordinary Differential Equation</title>
+      <link>https://intothedata.com/docs/80.mathematics/ordinary_differential_equation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/80.mathematics/ordinary_differential_equation/</guid>
+      <description>&lt;p&gt;Ordinary Differential Equation의 약어이며 미지함수의 일계 또는 고계도함수가 방정식에 포함된 것이다.&#xA;가장 단순한 형태로 함수 y(x) 가 있을 때 다음과 같은 것이 미분방정식이다.&#xA;아래와 같은 것이 상미분방정식이다.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;y&amp;rsquo; = cos x&lt;/li&gt;&#xA;&lt;li&gt;y&amp;rsquo;&amp;rsquo; + 9y = = e^-2x&lt;/li&gt;&#xA;&lt;li&gt;y&amp;rsquo;y&amp;rsquo;&amp;rsquo;&amp;rsquo; = 3/2y&#39;2 = 0&#xA;상미분방정식은 편미분방정식과 구분하기 위한 것으로 상미분은 1개의 미지수를 가지고 있으며 편미분방정식은 2개 이상의 미지수가 포함되어 있다.&#xA;어떤 미지함수 y가 있을 때 이 함수의 n계 도함수가 가장 높은 계수라면 이 상미분방정식을 n계 상미분방정식이라고 한다.&#xA;위의 상미분방정식에서 1)은 1계, 2)는 2계, 3)은 3계 방정식이된다.&#xA;1계 상미분방정식은 F(x, y, z&amp;rsquo;) = 0&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
+    </item>
+    <item>
+      <title>수학기호정리 - mathematics symbols</title>
+      <link>https://intothedata.com/docs/80.mathematics/mathematics_symbols/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/80.mathematics/mathematics_symbols/</guid>
+      <description>&lt;p&gt;참조: &lt;a href=&#34;http://www.rapidtables.com/math/symbols/Basic_Math_Symbols.htm&#34;&gt;Basic_Math_Symbols&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>페르마의 마지막 정리</title>
+      <link>https://intothedata.com/docs/80.mathematics/fermats_last_theorem/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/80.mathematics/fermats_last_theorem/</guid>
+      <description>&lt;p&gt;정수론에서 페르마의 마지막 정리(영어: Fermat’s last theorem)는 3 이상 지수의 거듭제곱수는 같은 지수의 두 거듭제곱수의 합으로 나타낼 수 없다는 정리이다. 즉, a,b,c가 양의 정수이고, n이 3 이상의 정수일 때, 항상 이다.&#xA;자체로는 데이터 분석과는 상관이 없다. 다만 해석학과 수학의 여러 방면의 발전을 가져왔다는데 있어 그 의의가 크다고 할 수 있다.&#xA;인용 및 참조: 위키피디아&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

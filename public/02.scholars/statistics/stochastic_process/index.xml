@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>확률과정 - Stochastic process on 인투더데이터 데이터과학</title>
+    <link>https://intothedata.com/02.scholars/statistics/stochastic_process/</link>
+    <description>Recent content in 확률과정 - Stochastic process on 인투더데이터 데이터과학</description>
+    <generator>Hugo</generator>
+    <language>ko-KR</language>
+    <atom:link href="https://intothedata.com/02.scholars/statistics/stochastic_process/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>브라운 운동 - Brownian Motion</title>
+      <link>https://intothedata.com/02.scholars/statistics/stochastic_process/brownian_motion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/02.scholars/statistics/stochastic_process/brownian_motion/</guid>
+      <description>&lt;h2 id=&#34;참고자료&#34;&gt;&#xA;  참고자료&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%b0%b8%ea%b3%a0%ec%9e%90%eb%a3%8c&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://ko.wikipedia.org/wiki/%EB%B8%8C%EB%9D%BC%EC%9A%B4_%EC%9A%B4%EB%8F%99&#34;&gt;https://ko.wikipedia.org/wiki/%EB%B8%8C%EB%9D%BC%EC%9A%B4_%EC%9A%B4%EB%8F%99&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>오른스타인-우렌벡 과정  Ornstein-Uhlenbeck process</title>
+      <link>https://intothedata.com/02.scholars/statistics/stochastic_process/ornstein_uhlenbeck_process/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/02.scholars/statistics/stochastic_process/ornstein_uhlenbeck_process/</guid>
+      <description>&lt;p&gt;내용 작성 중&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

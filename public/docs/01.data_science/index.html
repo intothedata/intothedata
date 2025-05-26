@@ -1,0 +1,1842 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  데이터과학 (Data science)
+  #
+
+데이터과학은 다양한 데이터로부터 의미 있는 정보를 추출하고, 이를 바탕으로 문제를 해결하거나 의사결정을 지원하는 학문이다. 컴퓨터공학, 통계학, 수학, 인공지능 등 여러 분야의 지식이 융합되어 있으며, 실제 데이터를 분석하고 해석하는 과정에서 실무적인 기술과 이론이 모두 필요하다. 데이터과학은 단순히 데이터를 다루는 것을 넘어서, 데이터로부터 가치를 창출하고 새로운 인사이트를 발견하는 데 중점을 둔다.
+
+  데이터과학이라는 용어
+  #
+
+데이터과학 또는 **데이터 사이언스(Data Science)**는 컴퓨팅 기술, 분산 컴퓨팅 기술, 데이터 마이닝, 기계학습, 인공지능, 데이터 분석, 통계학, 수학, 시각화 등 다양한 학술 분야를 융합하여 실무에 활용할 수 있도록 응용한 종합적인 학문 영역을 지칭하는 용어이다.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:url" content="https://intothedata.com/docs/01.data_science/">
+  <meta property="og:site_name" content="인투더데이터 데이터과학">
+  <meta property="og:title" content="데이터과학">
+  <meta property="og:description" content="데이터과학 (Data science) # 데이터과학은 다양한 데이터로부터 의미 있는 정보를 추출하고, 이를 바탕으로 문제를 해결하거나 의사결정을 지원하는 학문이다. 컴퓨터공학, 통계학, 수학, 인공지능 등 여러 분야의 지식이 융합되어 있으며, 실제 데이터를 분석하고 해석하는 과정에서 실무적인 기술과 이론이 모두 필요하다. 데이터과학은 단순히 데이터를 다루는 것을 넘어서, 데이터로부터 가치를 창출하고 새로운 인사이트를 발견하는 데 중점을 둔다.
+데이터과학이라는 용어 # 데이터과학 또는 **데이터 사이언스(Data Science)**는 컴퓨팅 기술, 분산 컴퓨팅 기술, 데이터 마이닝, 기계학습, 인공지능, 데이터 분석, 통계학, 수학, 시각화 등 다양한 학술 분야를 융합하여 실무에 활용할 수 있도록 응용한 종합적인 학문 영역을 지칭하는 용어이다.">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:type" content="website">
+<title>데이터과학 | 인투더데이터 데이터과학</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.465376614827fff60754cc9c34686b524db662a4c314668361de5db45fde6203.css" integrity="sha256-RlN2YUgn//YHVMycNGhrUk22YqTDFGaDYd5dtF/eYgM=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.d9e6ba7770f5117e21758da45184f61d5669394aa618ebdfabe1d95519d50bbf.js" integrity="sha256-2ea6d3D1EX4hdY2kUYT2HVZpOUqmGOvfq&#43;HZVRnVC78=" crossorigin="anonymous"></script>
+
+
+<link rel="alternate" type="application/rss+xml" href="https://intothedata.com/docs/01.data_science/index.xml" title="인투더데이터 데이터과학" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>인투더데이터 데이터과학</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/00.about/" class="">인투더데이터 소개 About</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/01.data_science/" class=" active">데이터과학</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/01.data_science/datascientist_skillset/" class="">데이터과학자 스킬셋</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/" class="">데이터과학 학술분야</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/operational_research/" class="">경영과학 - Operational Research</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/operational_research/demand_forecasting/" class="">수요예측 - Demand Forecasting</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/economics/" class="">계량경제학 - Economics</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/economics/distributed_lag_model/" class="">분산지연모델</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/data_mining/" class="">데이터마이닝</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/data_mining/clustering/" class="">군집분석 - Clustering</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/data_mining/clustering/k-means/" class="">K-means - K중심값</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/modeling/" class="">모델링 - Modeling</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/business_analysis/" class="">비즈니스 데이터 분석</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/business_analysis/behavioral_change_point_analysis/" class="">행동변화점분석</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/timeseries_analysis/" class="">시계열 분석 - Time-series Analysis</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/timeseries_analysis/granger_causality/" class="">그래인저 인과관계 - Granger Causality</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/anomaly_detection/" class="">이상감지</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/anomaly_detection/3_sigma_rule/" class="">3 sigma rule</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/anomaly_detection/generalized_esd/" class="">Generalized ESD</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/artificial_intelligence/" class="">인공지능 - Artificial Intelligence</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/artificial_intelligence/fuzzy_inferenece/" class="">퍼지 추론 - Fuzzy Inferenece</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/information_retrieval/" class="">정보검색</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/text_mining/" class="">텍스트마이닝 - Text Mining</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/text_mining/tfidf/" class="">TFIDF - Term Frequency Inverse Document Frequency</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/text_mining/cosine_similarity/" class="">코사인 유사도 - Cosine Similarity</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/" class="">통계학 - Statistics</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/central_limit_theorem/" class="">중심극한정리 - CLT; Central Limit Theorem</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/descriptive_statistics/" class="">기술통계 - Descriptive statistics</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/variance/" class="">분산 - Variance</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/survival_analysis/" class="">생존분석 - Survival Analysis</a>
+  
+
+          
+  <ul>
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/data/" class="">자료 - data</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/gaussian_distribution/" class="">정규분포, 가우시안 분포 - Normal Distribution, Gaussian Distribution</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/inferential_statistics/" class="">추론통계 - Inferential statistics</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/sampling/" class="">표본추출 - Sampling</a>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/sampling/neyman_alloction/" class="">네이만 배분법 - neyman allocation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/sampling/hyperloglog/" class="">하이퍼로그로그 - Hyper Log Log</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/correlation/" class="">피어슨 상관계수 - Pearson&#39;s product-moment correlation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/stochastic_process/" class="">확률과정 - Stochastic process</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/stochastic_process/brownian_motion/" class="">브라운 운동 - Brownian Motion</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/stochastic_process/ornstein_uhlenbeck_process/" class="">오른스타인-우렌벡 과정  Ornstein-Uhlenbeck process</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/pattern_recognition/" class="">패턴인식 - Pattern Recognition</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/pattern_recognition/neural_network/" class="">인공신경망 - Neural Network</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/" class="">데이터사이언스 - 산업별 갈래</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/adtech/" class="">온라인 광고 비즈니스 - Ad tech</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/adtech/ad_tech_terminlogy/" class="">온라인 광고 용어 - Online Ad Terminology</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/ad_tech/" class="">애드테크 - Ad Tech</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/ad_tech/ad_tech_terminlogy/" class="">온라인 광고 용어</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/online/" class="">온라인 비즈니스 - Online busines</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/online/ad_tech/" class="">온라인 광고 비즈니스 - Ad tech</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/online/ad_tech_terminlogy/" class="">온라인 광고 용어 - Online Ad Terminology</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/automobile/" class="">자동차 산업 - Automobile Industry</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/iron_mill/" class="">철강 - Iron mill</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/04.data_analysis/" class="">데이터 분석</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>데이터 수집 (Data collection)</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/06.data_collection/mobile_data_collection/" class="">데이터 수집 (Data collection)</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/05.data_visualization/" class="">데이터시각화</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/05.data_visualization/number_line_plot/" class="">넘버라인플롯</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/06.data_platform/" class="">데이터 플랫폼</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/06.data_platform/bigquery/" class="">빅쿼리 - Bigquery</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/06.data_platform/bigquery/excel_bigquery/" class="">엑셀에서 빅쿼리 데이터 가져오기</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/07.data_hub/" class="">데이터 허브</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/07.data_hub/sk_data_hub/" class="">SK 데이터 허브</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/08.reproducible_research/" class="">재현가능연구</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/09.datascience_tools/" class="">데이터사이언스 도구 - Data Science Tools</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/20.data_platform/" class="">데이터플랫폼</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/30.bigdata/" class="">빅데이터</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/36.time_series_analysis/" class="">시계열분석</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/" class="">인공지능</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/vector_search_engine/" class="">벡터검색엔진</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/faiss/" class="">Faiss - 벡터 검색 엔진</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/faiss/3_sigma_rule/" class="">3 sigma rule</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/faiss/generalized_esd/" class="">Generalized ESD</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/gpt/" class="">GPT</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/39.large_language_model/" class="">LLM</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/38.natural_languge_processing/" class="">자연어 처리</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/38.natural_languge_processing/korean_pos_tagger/" class="">한국어 형태소 분석기</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/38.natural_languge_processing/pos_tagger/" class="">형태소 분석기 - Pos tagger</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/40.r_language/" class="">R언어</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/50.computer_science/" class="">컴퓨터 공학</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/50.computer_science/random/" class="">랜덤</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/70.practical_data_science/" class="">실무 데이터과학</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/70.practical_data_science/quality_based_scoring/" class="">품질 기반 스코어링 - quality-based scoring</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/60.pracactical_data_processing/" class="">데이터 프로세싱</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/80.mathematics/" class="">수학 - Mathematics</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/80.mathematics/ordinary_differential_equation/" class="">상미분방정식 - Ordinary Differential Equation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/80.mathematics/mathematics_symbols/" class="">수학기호정리 - mathematics symbols</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/80.mathematics/fermats_last_theorem/" class="">페르마의 마지막 정리</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/90.metrics/" class="">지표</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/90.metrics/lorenz_curve/" class="">로렌츠 커브</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/99.materials/" class="">참고자료 - References</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/99.materials/people/" class="">인물 - People</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/99.materials/sites/" class="">참고 사이트</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/taglist/" class="">태그 목록</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>데이터과학</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#데이터과학-data-science">데이터과학 (Data science)</a>
+      <ul>
+        <li><a href="#데이터과학이라는-용어">데이터과학이라는 용어</a></li>
+        <li><a href="#데이터분석과의-차이">데이터분석과의 차이</a></li>
+      </ul>
+    </li>
+    <li><a href="#데이터사이언스와-빅데이터---data-science-and-big-data">데이터사이언스와 빅데이터 - Data science and Big data</a>
+      <ul>
+        <li><a href="#빅데이터의-출발과-데이터사이언스의-출현---begining-of-bigdata">빅데이터의 출발과 데이터사이언스의 출현 - Begining of Bigdata</a></li>
+      </ul>
+    </li>
+    <li><a href="#데이터사이언스에-필요한-스킬---data-scientist-skill-set">데이터사이언스에 필요한 스킬 - Data scientist skill set</a>
+      <ul>
+        <li><a href="#통계-statistics">통계 (statistics)</a></li>
+        <li><a href="#ict기술-information-and-communication-technology">ICT기술 (Information and Communication technology)</a></li>
+        <li><a href="#빅데이터와-분산컴퓨팅-기술-big-data-nd-distributed-computing-technology">빅데이터와 분산컴퓨팅 기술 (Big data nd Distributed computing technology)</a></li>
+        <li><a href="#기계학습-및-데이터마이닝-기술---machine-learning-and-data-mining">기계학습 및 데이터마이닝 기술 - Machine learning and Data mining</a></li>
+        <li><a href="#데이터시각화---data-visualization">데이터시각화 - Data visualization</a></li>
+        <li><a href="#수학---mathematics">수학 - Mathematics</a></li>
+        <li><a href="#비즈니스-지식---domain-knowledge">비즈니스 지식 - Domain Knowledge</a></li>
+        <li><a href="#여러-지식과-기술의-융합">여러 지식과 기술의 융합</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h2 id="데이터과학-data-science">
+  데이터과학 (Data science)
+  <a class="anchor" href="#%eb%8d%b0%ec%9d%b4%ed%84%b0%ea%b3%bc%ed%95%99-data-science">#</a>
+</h2>
+<p>데이터과학은 다양한 데이터로부터 의미 있는 정보를 추출하고, 이를 바탕으로 문제를 해결하거나 의사결정을 지원하는 학문이다. 컴퓨터공학, 통계학, 수학, 인공지능 등 여러 분야의 지식이 융합되어 있으며, 실제 데이터를 분석하고 해석하는 과정에서 실무적인 기술과 이론이 모두 필요하다. 데이터과학은 단순히 데이터를 다루는 것을 넘어서, 데이터로부터 가치를 창출하고 새로운 인사이트를 발견하는 데 중점을 둔다.</p>
+<h3 id="데이터과학이라는-용어">
+  데이터과학이라는 용어
+  <a class="anchor" href="#%eb%8d%b0%ec%9d%b4%ed%84%b0%ea%b3%bc%ed%95%99%ec%9d%b4%eb%9d%bc%eb%8a%94-%ec%9a%a9%ec%96%b4">#</a>
+</h3>
+<p><strong>데이터과학</strong> 또는 **데이터 사이언스(Data Science)**는 컴퓨팅 기술, 분산 컴퓨팅 기술, 데이터 마이닝, 기계학습, 인공지능, 데이터 분석, 통계학, 수학, 시각화 등 다양한 학술 분야를 융합하여 실무에 활용할 수 있도록 응용한 종합적인 학문 영역을 지칭하는 용어이다.</p>
+<p>이 용어는 실리콘밸리의 IT 산업계에서 주목을 끌기 위한 상업적 의도로 만들어진 마케팅 용어라는 비판을 받기도 한다. 실제로 데이터과학이라는 개념 자체는 완전히 새로운 것이 아니라, 기존의 데이터 분석과 데이터 해석을 보다 체계적이고 과학적으로 수행해야 한다는 필요성에서 <strong>과학</strong>이라는 단어를 추가한 것이며, 동시에 해당 분야를 더욱 전문적이고 학술적으로 보이게 하려는 의도가 있었다는 지적도 있다.</p>
+<p>이러한 비판이 완전히 틀린 것은 아니다. 하지만 컴퓨터공학을 미국의 실리콘밸리나 대학교에서 컴퓨터 사이언스(Computer Science)라고 부르는 것처럼, 데이터과학이라는 용어에 &lsquo;과학&rsquo;이라는 단어를 붙인 것이 지나치게 무리한 명명이라고 할 수는 없다. 오히려 이 용어는 여러 학문 분야의 융합적 특성과 체계적인 방법론의 중요성을 강조하는 의미로 받아들여질 수 있다.</p>
+<h3 id="데이터분석과의-차이">
+  데이터분석과의 차이
+  <a class="anchor" href="#%eb%8d%b0%ec%9d%b4%ed%84%b0%eb%b6%84%ec%84%9d%ea%b3%bc%ec%9d%98-%ec%b0%a8%ec%9d%b4">#</a>
+</h3>
+<p>앞서 언급했듯이 데이터과학이라는 용어가 생겨난 것은 전통적인 데이터 분석과의 차별화를 위한 의도가 있다. 전통적인 데이터 분석, 즉 통계학을 중심으로 한 응용 수학과 수치 분석(numerical analysis)은 주로 표집된 샘플 데이터(sample data)를 다룬다. 이러한 샘플 데이터는 대부분 IT 자원(컴퓨터의 메모리나 디스크)에 저장되는 용량이 상대적으로 적다.</p>
+<p>물론 통계학은 이런 작은 데이터를 통해 모집단을 추정하고 복잡한 의사결정 문제를 해결하는 데 가장 적합한 학문이다. 하지만 많은 데이터를 다루지 못한다는 한계로 인해 부정확할 것이라는 의심과 우려의 시선을 받아왔다.</p>
+<p>그런데 대량의 데이터를 다뤄야 하는 문제는 통계학에만 국한된 것이 아니라 컴퓨터공학에서도 현실적으로 큰 장벽이 되었다. 2010년 즈음을 기준으로 생성되고 저장되는 데이터의 양이 급격히 증가했고, 이런 대량의 데이터를 처리하는 것은 많은 컴퓨팅 연산(computation power)과 처리 시간을 필요로 했다. 빅데이터 기술이 등장하기 전에는 이런 데이터를 처리하기 위해 슈퍼컴퓨터와 같은 고성능 컴퓨터를 사용하거나, 하나의 처리 작업을 완료하여 결과를 얻기까지 긴 시간을 소모해야 했다. 이렇게 긴 처리 과정이 필요하다면 반복 작업이 많은 데이터 분석이나 기계학습에서 만족할 만한 결과를 찾을 때까지 너무 많은 시간이 걸려 사실상 불가능했다.</p>
+<p>하지만 [[30.bigdata/_index|빅데이터]] 기술과 함께 분산컴퓨팅이 고도화되고 일반화되면서, 비교적 저렴한 비용으로 대량의 데이터를 처리할 수 있는 방법이 등장하여 이런 제약이 점차 사라지게 되었다. 데이터 증가량과 활용 욕구 또한 함께 증가하고 있기 때문에 이 문제가 완전히 해결된 것은 아니지만, 데이터를 처리하는 속도가 데이터양이 증가하는 속도보다 더 빨라지고 있다. 이런 분산컴퓨팅 환경에서의 데이터 분석과 현대 비즈니스는 완전히 새로운 것은 아니지만, 기존에 분리되어 수행되던 작업들을 통합적으로 융합하여 처리하는 작업을 요구하게 되었고, 이를 데이터과학(data science)이라고 부를 수 있다.</p>
+<p>즉, 전통적인 분석이 통계학을 중심으로 샘플 기반의 추론에 중점을 둔다면, 데이터과학은 대량의 데이터를 처리하고 실시간으로 활용하며 기계학습과 같은 기법을 함께 사용하는 것이 특징이다.</p>
+<h2 id="데이터사이언스와-빅데이터---data-science-and-big-data">
+  데이터사이언스와 빅데이터 - Data science and Big data
+  <a class="anchor" href="#%eb%8d%b0%ec%9d%b4%ed%84%b0%ec%82%ac%ec%9d%b4%ec%96%b8%ec%8a%a4%ec%99%80-%eb%b9%85%eb%8d%b0%ec%9d%b4%ed%84%b0---data-science-and-big-data">#</a>
+</h2>
+<p>데이터사이언스라는 용어가 출현한 것은 빅데이터(Big data)라는 용어가 출현한 시기와 비슷한 시기이다.  빅데이터와 함께 유행이 된 이유는 데이터사이언스가 빅데이터와 밀접한 관련이 있기 때문이다. 빅데이터는 분산컴퓨팅, 기계학습, 데이터마이닝, 대용량 데이터프로세싱을 함께 다루는 기술, 플랫폼, 방식을 통칭하는 것인데 빅데이터를 잘하기 위해서는 다양한 능력이 요구된다. 프로그래밍 능력, 분산컴퓨팅 활용을 위한 컴퓨터 공학기술, 데이터분석을 위한 통계학, 기계학습을 위한 수학과 같은 것들이다. 이런 작업을 동시에 할 수 있는 사람은 당시에 상당히 드물었으며 그런 사람들을 가르키는 용어는 기계학습 엔지니어, 컴퓨터 과학자와 다소 협소한 의미로 오해받을 용어로 불렀지만 그런 개념을 재정돈해서 새로 만든 용어가 데이터사이언티스와 데이터사이언티스트(Data scientist)라고 할 수 있다.</p>
+<h3 id="빅데이터의-출발과-데이터사이언스의-출현---begining-of-bigdata">
+  빅데이터의 출발과 데이터사이언스의 출현 - Begining of Bigdata
+  <a class="anchor" href="#%eb%b9%85%eb%8d%b0%ec%9d%b4%ed%84%b0%ec%9d%98-%ec%b6%9c%eb%b0%9c%ea%b3%bc-%eb%8d%b0%ec%9d%b4%ed%84%b0%ec%82%ac%ec%9d%b4%ec%96%b8%ec%8a%a4%ec%9d%98-%ec%b6%9c%ed%98%84---begining-of-bigdata">#</a>
+</h3>
+<p>빅데이터가 출현한 것은 과거를 회고해서 생각하면 당연한 것이라고 볼 수 있다. 초기의 인터넷은 온라인으로 네트워크를 통해 공간제약이 없이 여러사람이 만든 콘텐츠를 조회하고 공유할 수 있는 것으로 출발했지만 인터넷이 발전하면서 사용자들이 인터넷에서 많은 행동을 하게 되었고 여러 인터넷을 기반으로 한 여러 서비스와 사업모델이 개발되었다.</p>
+<p>인터넷 서비스들은 서비스운영과 디버깅을 위해서 사용자의 행동에 대한 데이터를 기록해 둘 수 밖에 없는데 인터넷 사용이 증가하면 서비스에 접속한 사용자의 행동으로 부터 나오는 로그데이터와 사용자들이 생산해내는 컨텐츠 등이 쌓이면서 엄청나게 많은 양의 데이터가 축적되었다..  처음에 인터넷 서비스를 하던 업체들은 초창이게 이렇게 많은 데이터를 사용하지 않고 그대로 휘발시켰다.</p>
+<p>그러던 중 이 데이터로부터 쓸만한 것들을 찾아서 활용하는 시도가 생겼고 효과를 보는 곳이 생겼고 그런 것이 퍼져 사용자가 남긴 로그 데이터를 활용하는 시도와 활용에 대한 여러 시도들이 이어졌다.  하지만 양적으로도 종류도 다양한 이런 많은 데이터를 사용해서 쓸만한 사실을 찾고 가치를 찾기 위해서는 대량의 데이터를 빠른 시간안에 처리할 수 있는 분산컴퓨팅기술이 필요하게 되었다. 그리고 기계학습, 인공지능, 통계학을 활용해서 이 많은 데이터를 가치화(Monetization)하고 직접 또는 간접적으로 비즈니스에 변화를 주기도 하고 새로운 비즈니스를 만들어서 돈을 벌기 위한 시도가 지속적으로 진행됐다.</p>
+<p>이런 작업들을 현재는 모두 통칭해서 데이터사이언스라고 부른다.  그리고 그런일을 하는 사람들을 데이터사이언티스트라고 새로 부르게 되었다.</p>
+<h2 id="데이터사이언스에-필요한-스킬---data-scientist-skill-set">
+  데이터사이언스에 필요한 스킬 - Data scientist skill set
+  <a class="anchor" href="#%eb%8d%b0%ec%9d%b4%ed%84%b0%ec%82%ac%ec%9d%b4%ec%96%b8%ec%8a%a4%ec%97%90-%ed%95%84%ec%9a%94%ed%95%9c-%ec%8a%a4%ed%82%ac---data-scientist-skill-set">#</a>
+</h2>
+<p>데이터사이언스을 하기 위해서는 다양한 스킬들이 필요이다. 다음과 같은 것들이 주로 필요한 스킬이다.</p>
+<h3 id="통계-statistics">
+  통계 (statistics)
+  <a class="anchor" href="#%ed%86%b5%ea%b3%84-statistics">#</a>
+</h3>
+<p>통계학은 오랜 전통을 가지고 있으며 통계학이 바로 데이터를 분석하기 위한 학문이라고 할 수 있다.  데이터사이언스라는 일에서 가장 중요한 것은 데이터를 분석하는 작업이며 분석에 필요한 많은 기법과 과거에 축적된 지혜를 통계학을 통해서 얻을 수 있다.  때문에 데이터사이언티스트는 통계학에 대한 지식이 많이 필요하다.  하지만 통계학은 배우기 어려운 학문 중에 하나이며 관련된 것과 다루는 분량이 매우 방대하고 오랫동안 공부하지 않으면 쉽게 이해할 수 없는 난해한 것들도 많다.  처음에는 기초지식을 익힌 후에 필요한 것들을 확장해서 배우고 꾸준히 익혀야 한다.  통계학의 모든 것을 한 사람이 다 아는 것은 매우 어려운 일이다.</p>
+<p>추가로 빅데이터가 대량의 데이터를 다루고 통계학이 소량의 샘플을 통해 추론하는 것을 중점적으로 둔다고 해서 통계학이 빅데이터에 쓰이지 않거나 빅데이터와 데이터사이언스 보다 구세대적이고 좋지 않다고 생각해서는 안된다.  대부분의 기계학습 기법은 통계학에서 출발했으며 데이터를 다루는 많은 방법과 연구는 통계학에서 다뤄왔으며 아직까지도 그 중심은 통계학이라고 할 수 있다.</p>
+<h3 id="ict기술-information-and-communication-technology">
+  ICT기술 (Information and Communication technology)
+  <a class="anchor" href="#ict%ea%b8%b0%ec%88%a0-information-and-communication-technology">#</a>
+</h3>
+<p>컴퓨터 자원 활용 능력을 말한다. Linux, Windows server를 잘 다룰 수 있고, 터미널(Terminal)에서 명령어를 통해 Linux/Unix 환경에서 원할하게 작업을 할 수 있어야 한다. 당연히 몇개의 스크립트 언어(Script language)를 잘 다룰 수 있어야 하고 때로는 소프트웨어 개발이나 플랫폼에 관련된 개발 업무도 어느 정도 할 수 있어야 한다. 그리고 데이터 분석과 설명을 위해 Excel, Powerpoint와 같은 사무용 소프트웨어도 잘 다룰 수 있어야한다.</p>
+<p>컴퓨터 활용 능력은 데이터사이언스에 있어서는 실행능력과 같은 것이다. 자신의 생각이나 아이디어, 가설등을 확인하기 위해서는 스스로 컴퓨팅 자원을 구성하고 활용해서 데이터를 입수하고 처리를 해서 목표를 달성해야 하는데 큰 무리가 없어야 한다.</p>
+<h3 id="빅데이터와-분산컴퓨팅-기술-big-data-nd-distributed-computing-technology">
+  빅데이터와 분산컴퓨팅 기술 (Big data nd Distributed computing technology)
+  <a class="anchor" href="#%eb%b9%85%eb%8d%b0%ec%9d%b4%ed%84%b0%ec%99%80-%eb%b6%84%ec%82%b0%ec%bb%b4%ed%93%a8%ed%8c%85-%ea%b8%b0%ec%88%a0-big-data-nd-distributed-computing-technology">#</a>
+</h3>
+<p>앞에서 말했듯이 대용량 데이터 처리를 위한 기술은 현대의 데이터 처리에서 필수적으로 필요하다. 현대의 데이터는 이미 대용량이 된지 오래이다. 1대의 컴퓨터에 장착된 연산 자원과 저장 장치로는 분석의 대상이 되는 데이터를 모두 저장하고 분석을 할 수 있는 환경이 되었다.  여러 대의 컴퓨터를 연결해서 데이터를 분산해서 저장하고 데이터 처리 및 계산도 분산해서 처리해야 하는 시대가 된 것이다.</p>
+<p>분산 컴퓨팅은 과거에는 사용하기 매우 어려운 기술이었고 설비를 갖추기 위해서 비용도 많이 필요했지만 Hadoop과 그 에코시스템(Echo system; Hadoop과 관련된 분산컴퓨팅 관련 소프트웨어들) 및 유사 소프트웨어들이 많이 생겨나고 각광을 받기 시작했고 그와 더불어 하드웨어의 가격이 낮아지고 성능이 점점 높아지게 되었다. 그 결과로 모두가 어렵지 않게 분산컴퓨팅을 사용할 수 있도록 일반화가 많이 되었다. 하지만 여전히 분산컴퓨팅을 사용하기 위해서는 역시 많은 연습과 활용에 필요한 제반 지식이 필요한 것이 문제이다.</p>
+<p>이제 분산컴퓨팅 환경에서 작업을 할 수 없다면 현실에서 데이터 분석이 어려운 상황에 맞닥드리는 경우가 많아질 것이다.</p>
+<p>Hadoop, Hive, Spark, Storm, Kafka와 같은 분산 컴퓨팅과 BigQuery, RedShift와 같은 클라우드컴퓨팅에서 제공하는 관리형 솔루션도 가리지 않고 잘 사용할 수 있어야 한다.</p>
+<p>분산컴퓨팅에 관련된 모든 소프트웨어 플랫폼을 다 배우고 활용할 수는 없겠지만 상황에 맞게 적절한 것을 빨리 도입해서 사용하고 문제를 해결할 수 있는 능력이 필요하다.  그리고 그 중에 몇가지는 자신의 주력 플랫폼으로 사용할 수 있어야 한다.</p>
+<h3 id="기계학습-및-데이터마이닝-기술---machine-learning-and-data-mining">
+  기계학습 및 데이터마이닝 기술 - Machine learning and Data mining
+  <a class="anchor" href="#%ea%b8%b0%ea%b3%84%ed%95%99%ec%8a%b5-%eb%b0%8f-%eb%8d%b0%ec%9d%b4%ed%84%b0%eb%a7%88%ec%9d%b4%eb%8b%9d-%ea%b8%b0%ec%88%a0---machine-learning-and-data-mining">#</a>
+</h3>
+<p>컴퓨터를 활용해서 어떤 가치를 찾는 작업이 분표을 통해서 통찰(insight)를 찾는 것에서 추가로 뭔가를 해야 한다면 자동화(automation)가 필요하다.  기계학습도 자동화의 일종이다. 데이터마이닝 또한 데이터에서 가치를 찾는 작업을 일부 자동화한 것이라고 볼 수 있다.  자동화 기술은 구현된 이후에는 편하게 사용할 수 있지만 구현 작업 자체는 매우 어렵다.  기계학습은 빅데이터와 데이터사이언스에 있어서는 필수라고 할 수 있으며 기계학습 기술이 포함된 데이터마이닝 기술 역시 필수라고 할 수 있다.</p>
+<h3 id="데이터시각화---data-visualization">
+  데이터시각화 - Data visualization
+  <a class="anchor" href="#%eb%8d%b0%ec%9d%b4%ed%84%b0%ec%8b%9c%ea%b0%81%ed%99%94---data-visualization">#</a>
+</h3>
+<p>분석 결과의 적절한 표현이 필요하다.  무엇을 하던지 시각적으로 표현해 주지 않으면 사람이 빨리 이해하는 것은 어려운 일이다.  연구 또는 실행한 결과 검증한 가설등을 누군가에게 설명하는 것은 반드시 필요한 과정이 되는데 이때 시각화 만큼 주목을 빨리 끌고 설명을 쉽게 할 수 있는 것은 없다. 설명 이외에도 데이터 분석 결과나 기계학습의 모형에 대한 성능 확인, 시뮬레이션 등을 하기 위해서는 데이터의 상태와 모형의 결과를 눈으로 확인하기 위한 시각화가 사람에게는 매우 유용하다.  더불어 동적인 시각화를 위해서 Javascript를 이용한 웹개발 기술도 습득이 필요하다.</p>
+<h3 id="수학---mathematics">
+  수학 - Mathematics
+  <a class="anchor" href="#%ec%88%98%ed%95%99---mathematics">#</a>
+</h3>
+<p>데이터과학을 배우는 것은 수학에서 시작해서 기계학습과 분산컴퓨팅을 거치고 통계학을 관통해서 다시 수학으로 돌아가서 끝을 맺는다고 할 수 있다.  데이터 사이언스의 시작과 끝은 사실상 수학이다.</p>
+<p>데이터사이언스에 관련된 일을 오래하다고 보면 알고리즘이나 모형의 깊숙한 부분을 보거나 수리적 모형을 고민해야 할 때 항상 마지막에 부딪히는 것은 수학이다.  수학은 모든 과학과 공학의 기본이라고 할 수 있다. 특히 선형대수학, 미적분, 미분방정식까지는 어느 정도의 지식을 쌓아두어야 하며 위상수학과 해석학을 비롯한 다른 대수들도 경우에 따라 알아야 할 수 있다.</p>
+<h3 id="비즈니스-지식---domain-knowledge">
+  비즈니스 지식 - Domain Knowledge
+  <a class="anchor" href="#%eb%b9%84%ec%a6%88%eb%8b%88%ec%8a%a4-%ec%a7%80%ec%8b%9d---domain-knowledge">#</a>
+</h3>
+<p>관련된 비즈니스에 대한 상당한 수준의 전문 지식이 있어야 한다.  보통의 직장이라면 회사의 주력 비즈니스에 따른 전문 업무 지식이라는 것이 필요하게 된다. 예를들어 통신회사에 근무하고 있다면 통신 비즈니스와 통신 설비, 통신 프로토콜, 통신 상품에 관해서 알아야 하며 학습을 통해 고급 지식도 습득해야 한다. 자동차 회사에 근무하고 있다면 자동차의 부품, 조립, 생산 및 각종 유닛, 역학 기술, 엔지니어링 등에 대해서 알아야 할 것이다.  업무 지식이라고 할 수 있는 도메인 지식이 없다면 데이터 사이언스는 실제로 사상누각이 되며 기술을 활용해서 성취를 얻기 어렵다.</p>
+<p>도메인 지식은 자신이 근무하는 회사의 주력 사업이나 연구소의 주력 연구 분야 또는 창업을 준비하고 있다면 그 사업 분야와 관련된 지식이 되기 마련이다.  각 도메인과 관련된 일을 실제로 하지 않는다면 학습을 해서 배우기는 매우 어려우므로 각자의 상황에 따라 달라질 것이다. 즉 자신의 환경에서 얻을 수 있는 도메인 지식을 최대한 얻은 상태여야 데이터 사이언스도 잘 할 수 있다.</p>
+<h3 id="여러-지식과-기술의-융합">
+  여러 지식과 기술의 융합
+  <a class="anchor" href="#%ec%97%ac%eb%9f%ac-%ec%a7%80%ec%8b%9d%ea%b3%bc-%ea%b8%b0%ec%88%a0%ec%9d%98-%ec%9c%b5%ed%95%a9">#</a>
+</h3>
+<p>위에서 나열한 기술, 한묵, 지식들을 한 사람이 익히는 것은 매우 힘든 일이다. 학습에 시간도 많이 소요되며 학습량도 매우 많다. 그래서 데이터사이언티스트의 수는 아직까지도 적은 편이다.  물론 데이터사이언티스트에게 필요한 스킬을 갖추지 못하고 스스로 데이터사이언티스트라고 주장하는 사람들도 있다.  하지만 그런 사람들은 실제 업무 환경에서 문제해결을 할 수 없는 경우가 많다. 즉 현실에서 데이터사이언티스트가 풀어야 할 문제는 복합적이고 어렵고 결과를 장담할 수 없는 것들이 많다. 단순히 기계학습 모델을 만들고 정확도를 평가하고 모델을 실제로 전개하는 것 만으로 데이터사이언티스트 업무의 전체라고 말할 수 없다.</p>
+<p>이 모든 것을 한꺼번에 다 익힐 수는 없겠지만 차근차근 익히고 연습한다면 모두가 데이터사이언티스트가 될 수 있을 것이라고 믿는다. 시간이 필요한 것들은 시간을 들여서 천천히 익혀야 하고 쉽게 배울 수 있고 쉽게 활용할 수 있는 것은 쉽게 하면서 점차적으로 데이터사이언티스트가 될 수 있도로 노력하는 것이 바람직한 방향일 것이다.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+  
+
+
+
+  
+    
+  
+
+
+
+<div class="book-languages" tabindex="0" aria-haspopup="true">
+  <ul>
+    <li class="flex align-center">
+      <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+      
+    </li> 
+  </ul>
+
+  <ul class="book-languages-list">
+    
+    <li class="active">
+      <a href="https://intothedata.com/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#데이터과학-data-science">데이터과학 (Data science)</a>
+      <ul>
+        <li><a href="#데이터과학이라는-용어">데이터과학이라는 용어</a></li>
+        <li><a href="#데이터분석과의-차이">데이터분석과의 차이</a></li>
+      </ul>
+    </li>
+    <li><a href="#데이터사이언스와-빅데이터---data-science-and-big-data">데이터사이언스와 빅데이터 - Data science and Big data</a>
+      <ul>
+        <li><a href="#빅데이터의-출발과-데이터사이언스의-출현---begining-of-bigdata">빅데이터의 출발과 데이터사이언스의 출현 - Begining of Bigdata</a></li>
+      </ul>
+    </li>
+    <li><a href="#데이터사이언스에-필요한-스킬---data-scientist-skill-set">데이터사이언스에 필요한 스킬 - Data scientist skill set</a>
+      <ul>
+        <li><a href="#통계-statistics">통계 (statistics)</a></li>
+        <li><a href="#ict기술-information-and-communication-technology">ICT기술 (Information and Communication technology)</a></li>
+        <li><a href="#빅데이터와-분산컴퓨팅-기술-big-data-nd-distributed-computing-technology">빅데이터와 분산컴퓨팅 기술 (Big data nd Distributed computing technology)</a></li>
+        <li><a href="#기계학습-및-데이터마이닝-기술---machine-learning-and-data-mining">기계학습 및 데이터마이닝 기술 - Machine learning and Data mining</a></li>
+        <li><a href="#데이터시각화---data-visualization">데이터시각화 - Data visualization</a></li>
+        <li><a href="#수학---mathematics">수학 - Mathematics</a></li>
+        <li><a href="#비즈니스-지식---domain-knowledge">비즈니스 지식 - Domain Knowledge</a></li>
+        <li><a href="#여러-지식과-기술의-융합">여러 지식과 기술의 융합</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

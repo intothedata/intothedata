@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>지표 on 인투더데이터 데이터과학</title>
+    <link>https://intothedata.com/docs/90.metrics/</link>
+    <description>Recent content in 지표 on 인투더데이터 데이터과학</description>
+    <generator>Hugo</generator>
+    <language>ko-KR</language>
+    <atom:link href="https://intothedata.com/docs/90.metrics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>로렌츠 커브</title>
+      <link>https://intothedata.com/docs/90.metrics/lorenz_curve/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/90.metrics/lorenz_curve/</guid>
+      <description>&lt;h2 id=&#34;로렌츠-커브-lorenz-curve&#34;&gt;&#xA;  로렌츠 커브 (Lorenz Curve)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%eb%a1%9c%eb%a0%8c%ec%b8%a0-%ec%bb%a4%eb%b8%8c-lorenz-curve&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;로렌츠 커브는 소득이나 부의 분배 상태를 시각적으로 나타내는 그래프로, 사회의 불평등 정도를 측정하는 핵심적인 경제 지표이다. 1905년 미국의 경제학자 맥스 오토 로렌츠(Max Otto Lorenz)가 개발했으며, 현재까지도 소득 분배 분석의 표준 도구로 활용되고 있다.&lt;/p&gt;&#xA;&lt;h3 id=&#34;로렌츠-커브의-정의&#34;&gt;&#xA;  로렌츠 커브의 정의&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%eb%a1%9c%eb%a0%8c%ec%b8%a0-%ec%bb%a4%eb%b8%8c%ec%9d%98-%ec%a0%95%ec%9d%98&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;로렌츠 커브는 누적 인구 비율(x축)과 누적 소득 비율(y축)의 관계를 나타내는 곡선이다. 완전 평등선(45도 대각선)과 실제 소득 분배를 나타내는 곡선 사이의 면적을 통해 불평등 정도를 시각화한다.&lt;/p&gt;&#xA;&lt;h3 id=&#34;커브의-해석&#34;&gt;&#xA;  커브의 해석&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%bb%a4%eb%b8%8c%ec%9d%98-%ed%95%b4%ec%84%9d&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;완전 평등선 (Perfect Equality Line)&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Big Data on 인투더데이터 데이터과학</title>
+    <link>https://intothedata.com/tags/big-data/</link>
+    <description>Recent content in Big Data on 인투더데이터 데이터과학</description>
+    <generator>Hugo</generator>
+    <language>ko-KR</language>
+    <atom:link href="https://intothedata.com/tags/big-data/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>벡터검색엔진</title>
+      <link>https://intothedata.com/docs/37.artificial_intelligence/vector_search_engine/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/37.artificial_intelligence/vector_search_engine/</guid>
+      <description>&lt;h2 id=&#34;백터검색엔진-vector-search-engine&#34;&gt;&#xA;  백터검색엔진 (Vector Search Engine)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%eb%b0%b1%ed%84%b0%ea%b2%80%ec%83%89%ec%97%94%ec%a7%84-vector-search-engine&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;벡터검색엔진은 전통적인 키워드 기반 검색과 달리 벡터 공간에서 의미적 유사성을 기반으로 정보를 검색하는 시스템이다. 텍스트, 이미지, 음성 등의 데이터를 고차원 벡터로 변환하여 저장하고, 쿼리와 가장 유사한 벡터를 찾아 관련 정보를 반환한다.&lt;/p&gt;&#xA;&lt;h3 id=&#34;벡터검색엔진의-핵심-개념&#34;&gt;&#xA;  벡터검색엔진의 핵심 개념&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%eb%b2%a1%ed%84%b0%ea%b2%80%ec%83%89%ec%97%94%ec%a7%84%ec%9d%98-%ed%95%b5%ec%8b%ac-%ea%b0%9c%eb%85%90&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;h4 id=&#34;임베딩-embedding&#34;&gt;&#xA;  임베딩 (Embedding)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%9e%84%eb%b2%a0%eb%94%a9-embedding&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h4&gt;&#xA;&lt;p&gt;데이터를 고차원 벡터 공간의 점으로 표현하는 과정이다. 텍스트의 경우 단어나 문장의 의미를 수치 벡터로 변환하며, 의미적으로 유사한 데이터는 벡터 공간에서 가까운 위치에 배치된다.&lt;/p&gt;&#xA;&lt;h4 id=&#34;벡터-유사도-vector-similarity&#34;&gt;&#xA;  벡터 유사도 (Vector Similarity)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%eb%b2%a1%ed%84%b0-%ec%9c%a0%ec%82%ac%eb%8f%84-vector-similarity&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h4&gt;&#xA;&lt;p&gt;두 벡터 간의 유사성을 측정하는 방법으로, 주로 다음과 같은 메트릭이 사용된다:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>빅데이터</title>
+      <link>https://intothedata.com/docs/30.bigdata/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/30.bigdata/</guid>
+      <description>&lt;h2 id=&#34;빅데이터-big-data&#34;&gt;&#xA;  빅데이터 (Big Data)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%eb%b9%85%eb%8d%b0%ec%9d%b4%ed%84%b0-big-data&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;현대의 데이터 분석은 더 이상 소규모 데이터에 국한되지 않는다. 대용량 데이터를 신속하고 효율적으로 처리해야 하는 시대가 되면서, 빅데이터 플랫폼과의 연계는 필수적인 요소가 되었다. 과거에는 인적·물적 자원의 한계로 인해 삭제하거나 버려야 했던 데이터들을 이제는 체계적으로 보관하고 활용할 수 있게 되었다. 이렇게 축적된 대량의 데이터를 통해 기존 분석 작업을 고도화하고, 새로운 비즈니스 모델 개발이나 혁신적인 분석 모델 구축이 일반화되고 있다.&lt;/p&gt;&#xA;&lt;p&gt;빅데이터는 그 용어의 광범위함에 비해 개념을 명확히 이해하기 어려운 측면이 있다. 따라서 체계적인 이해를 위해 다음과 같이 구분하여 접근하는 것이 효과적이다:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>인공지능</title>
+      <link>https://intothedata.com/docs/37.artificial_intelligence/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/37.artificial_intelligence/</guid>
+      <description>&lt;h2 id=&#34;인공지능-artificial-intelligence&#34;&gt;&#xA;  인공지능 (Artificial Intelligence)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%9d%b8%ea%b3%b5%ec%a7%80%eb%8a%a5-artificial-intelligence&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;현대 사회는 &lt;strong&gt;인공지능 시대&lt;/strong&gt;로 접어들었습니다. 이는 단순히 기술의 발전을 의미하는 것이 아니라, 우리의 일상과 업무 환경에서 지능형 자동화가 필수적인 요소가 되었음을 뜻합니다. 인공지능 기술을 통해 복잡한 문제 해결, 의사결정 지원, 창작 활동까지 자동화할 수 있는 시대가 도래한 것입니다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;인공지능의-정의와-개념&#34;&gt;&#xA;  인공지능의 정의와 개념&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%9d%b8%ea%b3%b5%ec%a7%80%eb%8a%a5%ec%9d%98-%ec%a0%95%ec%9d%98%ec%99%80-%ea%b0%9c%eb%85%90&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;넓은-의미의-인공지능&#34;&gt;&#xA;  넓은 의미의 인공지능&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%eb%84%93%ec%9d%80-%ec%9d%98%eb%af%b8%ec%9d%98-%ec%9d%b8%ea%b3%b5%ec%a7%80%eb%8a%a5&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;넓은 의미에서 인공지능은 **&amp;ldquo;인간의 지능적 행동을 모방하거나 그와 유사한 결과를 도출할 수 있는 인공적으로 구현된 시스템&amp;rdquo;**을 의미합니다. 여기서 중요한 점은 인공지능이 반드시 인간과 동일한 사고 과정을 거쳐야 한다는 것이 아니라, &lt;strong&gt;결과적으로 지능적인 행동을 보여주는 것&lt;/strong&gt;이 핵심이라는 것입니다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

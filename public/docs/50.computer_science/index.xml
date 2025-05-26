@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>컴퓨터 공학 on 인투더데이터 데이터과학</title>
+    <link>https://intothedata.com/docs/50.computer_science/</link>
+    <description>Recent content in 컴퓨터 공학 on 인투더데이터 데이터과학</description>
+    <generator>Hugo</generator>
+    <language>ko-KR</language>
+    <atom:link href="https://intothedata.com/docs/50.computer_science/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>랜덤</title>
+      <link>https://intothedata.com/docs/50.computer_science/random/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/50.computer_science/random/</guid>
+      <description>&lt;h2 id=&#34;랜덤-random-난수&#34;&gt;&#xA;  랜덤 (Random, 난수)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%eb%9e%9c%eb%8d%a4-random-%eb%82%9c%ec%88%98&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;컴퓨터에서 랜덤은 매우 중요한 개념 중 하나이다. 하지만 컴퓨터가 생성하는 랜덤은 우리가 일반적으로 상상하는 완전한 랜덤과는 본질적으로 다르다는 점을 이해해야 한다.&lt;/p&gt;&#xA;&lt;h3 id=&#34;랜덤의-정의와-특성&#34;&gt;&#xA;  랜덤의 정의와 특성&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%eb%9e%9c%eb%8d%a4%ec%9d%98-%ec%a0%95%ec%9d%98%ec%99%80-%ed%8a%b9%ec%84%b1&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;랜덤(Random)이란 예측할 수 없고 규칙성이 없는 상태나 과정을 의미한다. 수학적으로는 각 사건이 동일한 확률로 발생하며, 이전 결과가 다음 결과에 영향을 주지 않는 독립성을 갖는 것이 특징이다.&lt;/p&gt;&#xA;&lt;h3 id=&#34;컴퓨터에서의-랜덤-문제&#34;&gt;&#xA;  컴퓨터에서의 랜덤 문제&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%bb%b4%ed%93%a8%ed%84%b0%ec%97%90%ec%84%9c%ec%9d%98-%eb%9e%9c%eb%8d%a4-%eb%ac%b8%ec%a0%9c&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;컴퓨터는 본질적으로 결정론적(deterministic) 기계이다. 모든 연산과 동작이 명확한 규칙과 알고리즘에 따라 수행되기 때문에, 진정한 의미의 랜덤을 생성하는 것은 원리적으로 불가능하다. 이러한 근본적인 한계로 인해 다음과 같은 문제들이 발생할 수 있다:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

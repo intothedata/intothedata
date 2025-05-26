@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>데이터시각화 on 인투더데이터 데이터과학</title>
+    <link>https://intothedata.com/docs/05.data_visualization/</link>
+    <description>Recent content in 데이터시각화 on 인투더데이터 데이터과학</description>
+    <generator>Hugo</generator>
+    <language>ko-KR</language>
+    <atom:link href="https://intothedata.com/docs/05.data_visualization/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>넘버라인플롯</title>
+      <link>https://intothedata.com/docs/05.data_visualization/number_line_plot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/05.data_visualization/number_line_plot/</guid>
+      <description>&lt;h2 id=&#34;넘버라인플롯-number-line-plot&#34;&gt;&#xA;  넘버라인플롯 (Number Line Plot)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%eb%84%98%eb%b2%84%eb%9d%bc%ec%9d%b8%ed%94%8c%eb%a1%af-number-line-plot&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;넘버라인플롯은 수치 데이터의 분포를 직선 축 위에 점으로 표현하는 간단하면서도 효과적인 데이터 시각화 방법이다. 라인플롯(Line Plot) 또는 닷플롯(Dot Plot)이라고도 불린다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://www.varsitytutors.com/assets/vt-hotmath-legacy/images/gt/lessons/genericalg1/line_plot.gif&#34; alt=&#34;라인플롯예제1&#34; /&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;넘버라인플롯의-정의와-구조&#34;&gt;&#xA;  넘버라인플롯의 정의와 구조&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%eb%84%98%eb%b2%84%eb%9d%bc%ec%9d%b8%ed%94%8c%eb%a1%af%ec%9d%98-%ec%a0%95%ec%9d%98%ec%99%80-%ea%b5%ac%ec%a1%b0&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;넘버라인플롯은 다음과 같은 구조로 이루어져 있다:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;1. 수평축 (Number Line)&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;연속적인 수치 범위를 나타내는 직선&lt;/li&gt;&#xA;&lt;li&gt;등간격으로 눈금이 표시됨&lt;/li&gt;&#xA;&lt;li&gt;데이터의 최솟값부터 최댓값까지의 범위를 포함&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;2. 데이터 점 (Data Points)&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;각 값에 해당하는 위치에 점(dot) 또는 X 표시&lt;/li&gt;&#xA;&lt;li&gt;동일한 값이 여러 개 있을 경우 수직으로 쌓아서 표현&lt;/li&gt;&#xA;&lt;li&gt;각 점은 하나의 관측값을 의미&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;3. 빈도 표현&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

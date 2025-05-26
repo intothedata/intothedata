@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>비즈니스 데이터 분석 on 인투더데이터 데이터과학</title>
+    <link>https://intothedata.com/docs/02.scholars/business_analysis/</link>
+    <description>Recent content in 비즈니스 데이터 분석 on 인투더데이터 데이터과학</description>
+    <generator>Hugo</generator>
+    <language>ko-KR</language>
+    <atom:link href="https://intothedata.com/docs/02.scholars/business_analysis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>행동변화점분석</title>
+      <link>https://intothedata.com/docs/02.scholars/business_analysis/behavioral_change_point_analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/02.scholars/business_analysis/behavioral_change_point_analysis/</guid>
+      <description>&lt;h2 id=&#34;행동변화점분석-behavioral-change-point-analysis&#34;&gt;&#xA;  행동변화점분석 (Behavioral Change Point Analysis)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ed%96%89%eb%8f%99%eb%b3%80%ed%99%94%ec%a0%90%eb%b6%84%ec%84%9d-behavioral-change-point-analysis&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;작성중&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

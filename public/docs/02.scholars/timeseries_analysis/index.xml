@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>시계열 분석 - Time-series Analysis on 인투더데이터 데이터과학</title>
+    <link>https://intothedata.com/docs/02.scholars/timeseries_analysis/</link>
+    <description>Recent content in 시계열 분석 - Time-series Analysis on 인투더데이터 데이터과학</description>
+    <generator>Hugo</generator>
+    <language>ko-KR</language>
+    <atom:link href="https://intothedata.com/docs/02.scholars/timeseries_analysis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>그래인저 인과관계 - Granger Causality</title>
+      <link>https://intothedata.com/docs/02.scholars/timeseries_analysis/granger_causality/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/02.scholars/timeseries_analysis/granger_causality/</guid>
+      <description>&lt;h2 id=&#34;개요&#34;&gt;&#xA;  개요&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ea%b0%9c%ec%9a%94&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;닭이 먼저인가 달걀이 먼저인가?&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;실없는 유머나 말장난 같지만 과학적으로 닭이 먼저인가 달걀이 먼저인가?와 같은 인과관계를 파악하는 것은 매우 어려운 일이다.  닭이 먼저인지 달걀이 먼저인지 인과관계를 확인하기 위한 통계적인 방법으로 그래인저 인과관계(Granger causality)라는 것이 있다.&#xA;그래인저 인과관계는 일반적으로 사람들이 생각하는 원인을 바로 찾아주고 관련이 있는지를 알려주는 인과관계를 말하는 것은 아니다. 사람들이 생각하는 인과는 매우 추상적이고 포괄적이기 때문에 사실 이런 것을 과학적인 방법으로 알아내는 것은 매우 어렵다.  하지만 그렇다고 해서 포기할 수는 없고 이런 사람들이 알고자 하는 그런 인과관계가 있는지 확인하는 것을 시도할 수 있는 단순하고 잘 알려진 방법 중에 가장 많이 쓰이는 것이 그래인저 인과관계이다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

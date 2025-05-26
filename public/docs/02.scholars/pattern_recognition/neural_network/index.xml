@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>인공신경망 - Neural Network on 인투더데이터 데이터과학</title>
+    <link>https://intothedata.com/docs/02.scholars/pattern_recognition/neural_network/</link>
+    <description>Recent content in 인공신경망 - Neural Network on 인투더데이터 데이터과학</description>
+    <generator>Hugo</generator>
+    <language>ko-KR</language>
+    <atom:link href="https://intothedata.com/docs/02.scholars/pattern_recognition/neural_network/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="온라인 광고라고 하면 PC 또는 스마트폰이나 태블릿PC등에서 웹서핑을 할 때 웹사이트에서 보여지는 배너광고를 생각하면 된다.
+이와 관련된 기술을 애드 테크놀로지(Ad technology)라고 하고 줄여서 애드테크(Ad tech)라고 말한다.
+이런 기술을 주 사업으로 하는 회사들을 애드테크 컴퍼니(Ad tech company)라고 한다.
+우선 이 비즈니스를 잘 모르는 사람들은 광고 배너를 화면에 보여주는 것이 무슨 특별한 기술이 필요하며 데이터과학과 무슨 관계가 있는지 이해하기 어려울 수 있다. 하지만 이 배너가 보여지기 위해서 거치는 단계를 이해하게 되면 얼마나 정교한 기술이 필요한지 이해할 수 있을 것이다.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:url" content="https://intothedata.com/03.business/ad_tech/">
+  <meta property="og:site_name" content="인투더데이터 데이터과학">
+  <meta property="og:title" content="온라인광고 - Ad Tech">
+  <meta property="og:description" content="온라인 광고라고 하면 PC 또는 스마트폰이나 태블릿PC등에서 웹서핑을 할 때 웹사이트에서 보여지는 배너광고를 생각하면 된다.
+이와 관련된 기술을 애드 테크놀로지(Ad technology)라고 하고 줄여서 애드테크(Ad tech)라고 말한다. 이런 기술을 주 사업으로 하는 회사들을 애드테크 컴퍼니(Ad tech company)라고 한다.
+우선 이 비즈니스를 잘 모르는 사람들은 광고 배너를 화면에 보여주는 것이 무슨 특별한 기술이 필요하며 데이터과학과 무슨 관계가 있는지 이해하기 어려울 수 있다. 하지만 이 배너가 보여지기 위해서 거치는 단계를 이해하게 되면 얼마나 정교한 기술이 필요한지 이해할 수 있을 것이다.">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:type" content="website">
+<title>온라인광고 - Ad Tech | 인투더데이터 데이터과학</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.ce02ec8b4aaa4b1d9386a72d0b93e5195eac0f6feec0b00ecd36d8128e870d23.css" integrity="sha256-zgLsi0qqSx2ThqctC5PlGV6sD2/uwLAOzTbYEo6HDSM=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.69b3ef820735840b8b46619f32c5cf1d96c086c45c7a95bafacc5d95cdc0473e.js" integrity="sha256-abPvggc1hAuLRmGfMsXPHZbAhsRcepW6&#43;sxdlc3ARz4=" crossorigin="anonymous"></script>
+
+
+<link rel="alternate" type="application/rss+xml" href="https://intothedata.com/03.business/ad_tech/index.xml" title="인투더데이터 데이터과학" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>인투더데이터 데이터과학</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>온라인광고 - Ad Tech</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#광고-노출-방법의-종류">광고 노출 방법의 종류</a>
+      <ul>
+        <li><a href="#무작위-광고---random-banner">무작위 광고 - Random banner</a></li>
+        <li><a href="#리타겟팅-광고---retargeting-ad">리타겟팅 광고 - Retargeting Ad</a></li>
+        <li><a href="#세그먼트-광고---segment-targeting-ad">세그먼트 광고 - Segment Targeting Ad</a></li>
+        <li><a href="#문맥-광고---contextual-targeting-ad">문맥 광고 - Contextual Targeting Ad</a></li>
+        <li><a href="#네이티브-광고---native-ad">네이티브 광고 - Native ad</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><p>온라인 광고라고 하면 PC 또는 스마트폰이나 태블릿PC등에서 웹서핑을 할 때 웹사이트에서 보여지는 배너광고를 생각하면 된다.</p>
+<p>이와 관련된 기술을 애드 테크놀로지(Ad technology)라고 하고 줄여서 애드테크(Ad tech)라고 말한다.
+이런 기술을 주 사업으로 하는 회사들을 애드테크 컴퍼니(Ad tech company)라고 한다.</p>
+<p>우선 이 비즈니스를 잘 모르는 사람들은 광고 배너를 화면에 보여주는 것이 무슨 특별한 기술이 필요하며 데이터과학과 무슨 관계가 있는지 이해하기 어려울 수 있다. 하지만 이 배너가 보여지기 위해서 거치는 단계를 이해하게 되면 얼마나 정교한 기술이 필요한지 이해할 수 있을 것이다.</p>
+<h2 id="광고-노출-방법의-종류">
+  광고 노출 방법의 종류
+  <a class="anchor" href="#%ea%b4%91%ea%b3%a0-%eb%85%b8%ec%b6%9c-%eb%b0%a9%eb%b2%95%ec%9d%98-%ec%a2%85%eb%a5%98">#</a>
+</h2>
+<p>광고의 노출 방법이라고 했지만 사실 광고가 어떤 사람에게 어떤 광고를 노출할 것인가의 방법에 대한 것이다.</p>
+<h3 id="무작위-광고---random-banner">
+  무작위 광고 - Random banner
+  <a class="anchor" href="#%eb%ac%b4%ec%9e%91%ec%9c%84-%ea%b4%91%ea%b3%a0---random-banner">#</a>
+</h3>
+<p>무작위로 광고를 노출하는 가장 기본적인 형태의 광고 노출 방법을 말합니다. 특별한 기술이 필요하지 않고 의뢰받은 광고를 랜덤으로 선택해서 보여주는 것이 전부입니다.
+특별한 기술이 필요하지 않지만 광고의 효율이 매우 떨어집니다.  최근에는 많이 사용하지 않는 방법입니다.</p>
+<h3 id="리타겟팅-광고---retargeting-ad">
+  리타겟팅 광고 - Retargeting Ad
+  <a class="anchor" href="#%eb%a6%ac%ed%83%80%ea%b2%9f%ed%8c%85-%ea%b4%91%ea%b3%a0---retargeting-ad">#</a>
+</h3>
+<p>리타겟팅(Retargeting) 또는 리마켓팅(Remarketing)이라는 광고는 웹서퍼에게 같은 광고를 지속적으로 반복해서 노출하는 광고를 말합니다.</p>
+<h3 id="세그먼트-광고---segment-targeting-ad">
+  세그먼트 광고 - Segment Targeting Ad
+  <a class="anchor" href="#%ec%84%b8%ea%b7%b8%eb%a8%bc%ed%8a%b8-%ea%b4%91%ea%b3%a0---segment-targeting-ad">#</a>
+</h3>
+<p>웹서퍼의 세그먼트를 분류하고 그 세그먼트에 맞게 광고를 노출하는 것을 말합니다.</p>
+<h3 id="문맥-광고---contextual-targeting-ad">
+  문맥 광고 - Contextual Targeting Ad
+  <a class="anchor" href="#%eb%ac%b8%eb%a7%a5-%ea%b4%91%ea%b3%a0---contextual-targeting-ad">#</a>
+</h3>
+<p>웹서퍼가 지금 보고 있는 페이지에 어울리는 내용의 배너 광고를 보여주는 것을 말합니다.</p>
+<p>예를들어 요리와 관련된 커뮤니티의 글을 웹서퍼가 열었다면 그 페이지의 가장자리에 요리기구에 대한 광고를 보여주는 것과 같은 것입니다.</p>
+<h3 id="네이티브-광고---native-ad">
+  네이티브 광고 - Native ad
+  <a class="anchor" href="#%eb%84%a4%ec%9d%b4%ed%8b%b0%eb%b8%8c-%ea%b4%91%ea%b3%a0---native-ad">#</a>
+</h3>
+<p>네이티브 광고는 광고가 노출되는 페이지에 마치 광고가 아닌 것처럼 노출하는 것을 말합니다. 주로 텍스트 형태의 광고가 많습니다.</p>
+<p>뉴스의 관련기사처럼 광고를 기재한다거나 마치 리뷰글인 것처럼 글을 게제했지만 사실상 광고인 것을 말합니다.</p>
+<p>웹서퍼에게 광고가 아닌 것 처럼 혼동을 주기 때문에 광고에 대한 거부감을 줄일 수 있다는 장점이 있지만 사람을 속이는 것이기 때문에
+윤리적인 문제가 있습니다.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+  
+
+
+
+  
+    
+  
+
+
+
+<div class="book-languages" tabindex="0" aria-haspopup="true">
+  <ul>
+    <li class="flex align-center">
+      <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+      
+    </li> 
+  </ul>
+
+  <ul class="book-languages-list">
+    
+    <li class="active">
+      <a href="https://intothedata.com/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#광고-노출-방법의-종류">광고 노출 방법의 종류</a>
+      <ul>
+        <li><a href="#무작위-광고---random-banner">무작위 광고 - Random banner</a></li>
+        <li><a href="#리타겟팅-광고---retargeting-ad">리타겟팅 광고 - Retargeting Ad</a></li>
+        <li><a href="#세그먼트-광고---segment-targeting-ad">세그먼트 광고 - Segment Targeting Ad</a></li>
+        <li><a href="#문맥-광고---contextual-targeting-ad">문맥 광고 - Contextual Targeting Ad</a></li>
+        <li><a href="#네이티브-광고---native-ad">네이티브 광고 - Native ad</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

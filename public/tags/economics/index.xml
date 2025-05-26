@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Economics on 인투더데이터 데이터과학</title>
+    <link>https://intothedata.com/tags/economics/</link>
+    <description>Recent content in Economics on 인투더데이터 데이터과학</description>
+    <generator>Hugo</generator>
+    <language>ko-KR</language>
+    <atom:link href="https://intothedata.com/tags/economics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>계량경제학 - Economics</title>
+      <link>https://intothedata.com/docs/02.scholars/economics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/02.scholars/economics/</guid>
+      <description>&lt;h2 id=&#34;계량경제학---economics&#34;&gt;&#xA;  계량경제학 - Economics&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ea%b3%84%eb%9f%89%ea%b2%bd%ec%a0%9c%ed%95%99---economics&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;계량경제학은 경제학에서 주로 수치데이터를 통해 미시경제 문제를 해결하는 경제학 갈래를 말한다.&#xA;경제학이라는 이름을 가지고 있긴하지만 상상하는 것과는 달리 수리적인 지식이 많이 필요한 분야로 금융공학과도 깊은 관련이 있다.&lt;/p&gt;&#xA;&lt;p&gt;계량경제학에서 주로 다루는 것은 시계열 문제이다. 그래서 시계열에 대한 학습이 잘 되어 있어야하며 관련된 기술 또한 난해한 것이 많으므로 접근할 때 질리지 않도록 주의해야 할 필요가 있다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

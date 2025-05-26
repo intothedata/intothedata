@@ -1,0 +1,1944 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  백터검색엔진 (Vector Search Engine)
+  #
+
+벡터검색엔진은 전통적인 키워드 기반 검색과 달리 벡터 공간에서 의미적 유사성을 기반으로 정보를 검색하는 시스템이다. 텍스트, 이미지, 음성 등의 데이터를 고차원 벡터로 변환하여 저장하고, 쿼리와 가장 유사한 벡터를 찾아 관련 정보를 반환한다.
+
+  벡터검색엔진의 핵심 개념
+  #
+
+
+  임베딩 (Embedding)
+  #
+
+데이터를 고차원 벡터 공간의 점으로 표현하는 과정이다. 텍스트의 경우 단어나 문장의 의미를 수치 벡터로 변환하며, 의미적으로 유사한 데이터는 벡터 공간에서 가까운 위치에 배치된다.
+
+  벡터 유사도 (Vector Similarity)
+  #
+
+두 벡터 간의 유사성을 측정하는 방법으로, 주로 다음과 같은 메트릭이 사용된다:">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:url" content="https://intothedata.com/docs/37.artificial_intelligence/vector_search_engine/">
+  <meta property="og:site_name" content="인투더데이터 데이터과학">
+  <meta property="og:title" content="벡터검색엔진">
+  <meta property="og:description" content="백터검색엔진 (Vector Search Engine) # 벡터검색엔진은 전통적인 키워드 기반 검색과 달리 벡터 공간에서 의미적 유사성을 기반으로 정보를 검색하는 시스템이다. 텍스트, 이미지, 음성 등의 데이터를 고차원 벡터로 변환하여 저장하고, 쿼리와 가장 유사한 벡터를 찾아 관련 정보를 반환한다.
+벡터검색엔진의 핵심 개념 # 임베딩 (Embedding) # 데이터를 고차원 벡터 공간의 점으로 표현하는 과정이다. 텍스트의 경우 단어나 문장의 의미를 수치 벡터로 변환하며, 의미적으로 유사한 데이터는 벡터 공간에서 가까운 위치에 배치된다.
+벡터 유사도 (Vector Similarity) # 두 벡터 간의 유사성을 측정하는 방법으로, 주로 다음과 같은 메트릭이 사용된다:">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+    <meta property="article:tag" content="Big Data">
+    <meta property="article:tag" content="빅데이터">
+<title>벡터검색엔진 | 인투더데이터 데이터과학</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.465376614827fff60754cc9c34686b524db662a4c314668361de5db45fde6203.css" integrity="sha256-RlN2YUgn//YHVMycNGhrUk22YqTDFGaDYd5dtF/eYgM=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.d9e6ba7770f5117e21758da45184f61d5669394aa618ebdfabe1d95519d50bbf.js" integrity="sha256-2ea6d3D1EX4hdY2kUYT2HVZpOUqmGOvfq&#43;HZVRnVC78=" crossorigin="anonymous"></script>
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>인투더데이터 데이터과학</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/00.about/" class="">인투더데이터 소개 About</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/01.data_science/" class="">데이터과학</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/01.data_science/datascientist_skillset/" class="">데이터과학자 스킬셋</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/" class="">데이터과학 학술분야</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/operational_research/" class="">경영과학 - Operational Research</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/operational_research/demand_forecasting/" class="">수요예측 - Demand Forecasting</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/economics/" class="">계량경제학 - Economics</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/economics/distributed_lag_model/" class="">분산지연모델</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/data_mining/" class="">데이터마이닝</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/data_mining/clustering/" class="">군집분석 - Clustering</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/data_mining/clustering/k-means/" class="">K-means - K중심값</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/modeling/" class="">모델링 - Modeling</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/business_analysis/" class="">비즈니스 데이터 분석</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/business_analysis/behavioral_change_point_analysis/" class="">행동변화점분석</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/timeseries_analysis/" class="">시계열 분석 - Time-series Analysis</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/timeseries_analysis/granger_causality/" class="">그래인저 인과관계 - Granger Causality</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/anomaly_detection/" class="">이상감지</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/anomaly_detection/3_sigma_rule/" class="">3 sigma rule</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/anomaly_detection/generalized_esd/" class="">Generalized ESD</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/artificial_intelligence/" class="">인공지능 - Artificial Intelligence</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/artificial_intelligence/fuzzy_inferenece/" class="">퍼지 추론 - Fuzzy Inferenece</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/information_retrieval/" class="">정보검색</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/text_mining/" class="">텍스트마이닝 - Text Mining</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/text_mining/tfidf/" class="">TFIDF - Term Frequency Inverse Document Frequency</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/text_mining/cosine_similarity/" class="">코사인 유사도 - Cosine Similarity</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/" class="">통계학 - Statistics</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/central_limit_theorem/" class="">중심극한정리 - CLT; Central Limit Theorem</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/descriptive_statistics/" class="">기술통계 - Descriptive statistics</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/variance/" class="">분산 - Variance</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/survival_analysis/" class="">생존분석 - Survival Analysis</a>
+  
+
+          
+  <ul>
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/data/" class="">자료 - data</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/gaussian_distribution/" class="">정규분포, 가우시안 분포 - Normal Distribution, Gaussian Distribution</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/inferential_statistics/" class="">추론통계 - Inferential statistics</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/sampling/" class="">표본추출 - Sampling</a>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/sampling/neyman_alloction/" class="">네이만 배분법 - neyman allocation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/sampling/hyperloglog/" class="">하이퍼로그로그 - Hyper Log Log</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/correlation/" class="">피어슨 상관계수 - Pearson&#39;s product-moment correlation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/stochastic_process/" class="">확률과정 - Stochastic process</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/stochastic_process/brownian_motion/" class="">브라운 운동 - Brownian Motion</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/stochastic_process/ornstein_uhlenbeck_process/" class="">오른스타인-우렌벡 과정  Ornstein-Uhlenbeck process</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/pattern_recognition/" class="">패턴인식 - Pattern Recognition</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/pattern_recognition/neural_network/" class="">인공신경망 - Neural Network</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/" class="">데이터사이언스 - 산업별 갈래</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/adtech/" class="">온라인 광고 비즈니스 - Ad tech</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/adtech/ad_tech_terminlogy/" class="">온라인 광고 용어 - Online Ad Terminology</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/ad_tech/" class="">애드테크 - Ad Tech</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/ad_tech/ad_tech_terminlogy/" class="">온라인 광고 용어</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/online/" class="">온라인 비즈니스 - Online busines</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/online/ad_tech/" class="">온라인 광고 비즈니스 - Ad tech</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/online/ad_tech_terminlogy/" class="">온라인 광고 용어 - Online Ad Terminology</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/automobile/" class="">자동차 산업 - Automobile Industry</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/iron_mill/" class="">철강 - Iron mill</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/04.data_analysis/" class="">데이터 분석</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>데이터 수집 (Data collection)</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/06.data_collection/mobile_data_collection/" class="">데이터 수집 (Data collection)</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/05.data_visualization/" class="">데이터시각화</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/05.data_visualization/number_line_plot/" class="">넘버라인플롯</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/06.data_platform/" class="">데이터 플랫폼</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/06.data_platform/bigquery/" class="">빅쿼리 - Bigquery</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/06.data_platform/bigquery/excel_bigquery/" class="">엑셀에서 빅쿼리 데이터 가져오기</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/07.data_hub/" class="">데이터 허브</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/07.data_hub/sk_data_hub/" class="">SK 데이터 허브</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/08.reproducible_research/" class="">재현가능연구</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/09.datascience_tools/" class="">데이터사이언스 도구 - Data Science Tools</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/20.data_platform/" class="">데이터플랫폼</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/30.bigdata/" class="">빅데이터</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/36.time_series_analysis/" class="">시계열분석</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/" class="">인공지능</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/vector_search_engine/" class=" active">벡터검색엔진</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/faiss/" class="">Faiss - 벡터 검색 엔진</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/faiss/3_sigma_rule/" class="">3 sigma rule</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/faiss/generalized_esd/" class="">Generalized ESD</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/gpt/" class="">GPT</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/39.large_language_model/" class="">LLM</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/38.natural_languge_processing/" class="">자연어 처리</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/38.natural_languge_processing/korean_pos_tagger/" class="">한국어 형태소 분석기</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/38.natural_languge_processing/pos_tagger/" class="">형태소 분석기 - Pos tagger</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/40.r_language/" class="">R언어</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/50.computer_science/" class="">컴퓨터 공학</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/50.computer_science/random/" class="">랜덤</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/70.practical_data_science/" class="">실무 데이터과학</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/70.practical_data_science/quality_based_scoring/" class="">품질 기반 스코어링 - quality-based scoring</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/60.pracactical_data_processing/" class="">데이터 프로세싱</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/80.mathematics/" class="">수학 - Mathematics</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/80.mathematics/ordinary_differential_equation/" class="">상미분방정식 - Ordinary Differential Equation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/80.mathematics/mathematics_symbols/" class="">수학기호정리 - mathematics symbols</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/80.mathematics/fermats_last_theorem/" class="">페르마의 마지막 정리</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/90.metrics/" class="">지표</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/90.metrics/lorenz_curve/" class="">로렌츠 커브</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/99.materials/" class="">참고자료 - References</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/99.materials/people/" class="">인물 - People</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/99.materials/sites/" class="">참고 사이트</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/taglist/" class="">태그 목록</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>벡터검색엔진</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#백터검색엔진-vector-search-engine">백터검색엔진 (Vector Search Engine)</a>
+      <ul>
+        <li><a href="#벡터검색엔진의-핵심-개념">벡터검색엔진의 핵심 개념</a></li>
+        <li><a href="#주요-벡터검색-라이브러리-및-도구">주요 벡터검색 라이브러리 및 도구</a></li>
+        <li><a href="#벡터검색엔진의-작동-원리">벡터검색엔진의 작동 원리</a></li>
+        <li><a href="#벡터검색엔진의-장점">벡터검색엔진의 장점</a></li>
+        <li><a href="#벡터검색엔진의-응용-분야">벡터검색엔진의 응용 분야</a></li>
+        <li><a href="#성능-최적화-방법">성능 최적화 방법</a></li>
+        <li><a href="#한계-및-고려사항">한계 및 고려사항</a></li>
+        <li><a href="#미래-전망">미래 전망</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h2 id="백터검색엔진-vector-search-engine">
+  백터검색엔진 (Vector Search Engine)
+  <a class="anchor" href="#%eb%b0%b1%ed%84%b0%ea%b2%80%ec%83%89%ec%97%94%ec%a7%84-vector-search-engine">#</a>
+</h2>
+<p>벡터검색엔진은 전통적인 키워드 기반 검색과 달리 벡터 공간에서 의미적 유사성을 기반으로 정보를 검색하는 시스템이다. 텍스트, 이미지, 음성 등의 데이터를 고차원 벡터로 변환하여 저장하고, 쿼리와 가장 유사한 벡터를 찾아 관련 정보를 반환한다.</p>
+<h3 id="벡터검색엔진의-핵심-개념">
+  벡터검색엔진의 핵심 개념
+  <a class="anchor" href="#%eb%b2%a1%ed%84%b0%ea%b2%80%ec%83%89%ec%97%94%ec%a7%84%ec%9d%98-%ed%95%b5%ec%8b%ac-%ea%b0%9c%eb%85%90">#</a>
+</h3>
+<h4 id="임베딩-embedding">
+  임베딩 (Embedding)
+  <a class="anchor" href="#%ec%9e%84%eb%b2%a0%eb%94%a9-embedding">#</a>
+</h4>
+<p>데이터를 고차원 벡터 공간의 점으로 표현하는 과정이다. 텍스트의 경우 단어나 문장의 의미를 수치 벡터로 변환하며, 의미적으로 유사한 데이터는 벡터 공간에서 가까운 위치에 배치된다.</p>
+<h4 id="벡터-유사도-vector-similarity">
+  벡터 유사도 (Vector Similarity)
+  <a class="anchor" href="#%eb%b2%a1%ed%84%b0-%ec%9c%a0%ec%82%ac%eb%8f%84-vector-similarity">#</a>
+</h4>
+<p>두 벡터 간의 유사성을 측정하는 방법으로, 주로 다음과 같은 메트릭이 사용된다:</p>
+<ul>
+<li><strong>코사인 유사도 (Cosine Similarity)</strong>: 벡터 간의 각도를 기반으로 유사도 계산</li>
+<li><strong>유클리드 거리 (Euclidean Distance)</strong>: 벡터 간의 직선 거리</li>
+<li><strong>내적 (Dot Product)</strong>: 벡터의 내적값을 이용한 유사도</li>
+</ul>
+<h4 id="근사-최근접-이웃-approximate-nearest-neighbor-ann">
+  근사 최근접 이웃 (Approximate Nearest Neighbor, ANN)
+  <a class="anchor" href="#%ea%b7%bc%ec%82%ac-%ec%b5%9c%ea%b7%bc%ec%a0%91-%ec%9d%b4%ec%9b%83-approximate-nearest-neighbor-ann">#</a>
+</h4>
+<p>고차원 벡터 공간에서 정확한 최근접 이웃을 찾는 것은 계산 비용이 매우 크기 때문에, 근사적으로 가장 유사한 벡터들을 빠르게 찾는 알고리즘을 사용한다.</p>
+<h3 id="주요-벡터검색-라이브러리-및-도구">
+  주요 벡터검색 라이브러리 및 도구
+  <a class="anchor" href="#%ec%a3%bc%ec%9a%94-%eb%b2%a1%ed%84%b0%ea%b2%80%ec%83%89-%eb%9d%bc%ec%9d%b4%eb%b8%8c%eb%9f%ac%eb%a6%ac-%eb%b0%8f-%eb%8f%84%ea%b5%ac">#</a>
+</h3>
+<h4 id="faiss-facebook-ai-similarity-search">
+  FAISS (Facebook AI Similarity Search)
+  <a class="anchor" href="#faiss-facebook-ai-similarity-search">#</a>
+</h4>
+<p>Meta(구 Facebook)에서 개발한 고성능 벡터 검색 라이브러리이다. 대규모 벡터 데이터베이스에서 효율적인 유사도 검색을 지원하며, GPU 가속을 통해 빠른 검색 속도를 제공한다.</p>
+<h4 id="pinecone">
+  Pinecone
+  <a class="anchor" href="#pinecone">#</a>
+</h4>
+<p>클라우드 기반의 벡터 데이터베이스 서비스로, 확장성과 사용 편의성에 중점을 둔 상용 솔루션이다. API를 통해 쉽게 벡터 검색 기능을 구현할 수 있다.</p>
+<h4 id="weaviate">
+  Weaviate
+  <a class="anchor" href="#weaviate">#</a>
+</h4>
+<p>오픈소스 벡터 데이터베이스로, GraphQL API를 제공하며 다양한 머신러닝 모델과 통합이 가능하다.</p>
+<h4 id="chroma">
+  Chroma
+  <a class="anchor" href="#chroma">#</a>
+</h4>
+<p>경량화된 오픈소스 벡터 데이터베이스로, 개발자 친화적인 인터페이스를 제공하며 LLM 애플리케이션 개발에 특화되어 있다.</p>
+<h4 id="qdrant">
+  Qdrant
+  <a class="anchor" href="#qdrant">#</a>
+</h4>
+<p>Rust로 개발된 고성능 벡터 검색 엔진으로, 필터링과 페이로드 기능을 지원하여 복합적인 검색 조건을 처리할 수 있다.</p>
+<h3 id="벡터검색엔진의-작동-원리">
+  벡터검색엔진의 작동 원리
+  <a class="anchor" href="#%eb%b2%a1%ed%84%b0%ea%b2%80%ec%83%89%ec%97%94%ec%a7%84%ec%9d%98-%ec%9e%91%eb%8f%99-%ec%9b%90%eb%a6%ac">#</a>
+</h3>
+<h4 id="1-데이터-전처리-및-임베딩">
+  1. 데이터 전처리 및 임베딩
+  <a class="anchor" href="#1-%eb%8d%b0%ec%9d%b4%ed%84%b0-%ec%a0%84%ec%b2%98%eb%a6%ac-%eb%b0%8f-%ec%9e%84%eb%b2%a0%eb%94%a9">#</a>
+</h4>
+<p>원본 데이터(텍스트, 이미지 등)를 사전 훈련된 모델을 사용하여 벡터로 변환한다. 텍스트의 경우 BERT, Sentence-BERT, OpenAI의 임베딩 모델 등을 사용한다.</p>
+<h4 id="2-벡터-인덱싱">
+  2. 벡터 인덱싱
+  <a class="anchor" href="#2-%eb%b2%a1%ed%84%b0-%ec%9d%b8%eb%8d%b1%ec%8b%b1">#</a>
+</h4>
+<p>변환된 벡터들을 효율적인 검색을 위해 인덱스 구조에 저장한다. 주요 인덱싱 방법으로는:</p>
+<ul>
+<li><strong>IVF (Inverted File)</strong>: 벡터 공간을 클러스터로 나누어 검색 범위를 제한</li>
+<li><strong>HNSW (Hierarchical Navigable Small World)</strong>: 그래프 기반의 계층적 구조</li>
+<li><strong>LSH (Locality Sensitive Hashing)</strong>: 해시 함수를 이용한 근사 검색</li>
+</ul>
+<h4 id="3-쿼리-처리">
+  3. 쿼리 처리
+  <a class="anchor" href="#3-%ec%bf%bc%eb%a6%ac-%ec%b2%98%eb%a6%ac">#</a>
+</h4>
+<p>사용자의 검색 쿼리를 동일한 임베딩 모델을 사용하여 벡터로 변환한다.</p>
+<h4 id="4-유사도-검색">
+  4. 유사도 검색
+  <a class="anchor" href="#4-%ec%9c%a0%ec%82%ac%eb%8f%84-%ea%b2%80%ec%83%89">#</a>
+</h4>
+<p>쿼리 벡터와 인덱스에 저장된 벡터들 간의 유사도를 계산하여 가장 유사한 k개의 결과를 반환한다.</p>
+<h3 id="벡터검색엔진의-장점">
+  벡터검색엔진의 장점
+  <a class="anchor" href="#%eb%b2%a1%ed%84%b0%ea%b2%80%ec%83%89%ec%97%94%ec%a7%84%ec%9d%98-%ec%9e%a5%ec%a0%90">#</a>
+</h3>
+<h4 id="의미적-검색">
+  의미적 검색
+  <a class="anchor" href="#%ec%9d%98%eb%af%b8%ec%a0%81-%ea%b2%80%ec%83%89">#</a>
+</h4>
+<p>키워드가 정확히 일치하지 않아도 의미적으로 유사한 내용을 찾을 수 있다. 예를 들어 &ldquo;자동차&quot;로 검색해도 &ldquo;차량&rdquo;, &ldquo;승용차&rdquo; 등의 관련 내용을 찾을 수 있다.</p>
+<h4 id="다국어-지원">
+  다국어 지원
+  <a class="anchor" href="#%eb%8b%a4%ea%b5%ad%ec%96%b4-%ec%a7%80%ec%9b%90">#</a>
+</h4>
+<p>다국어 임베딩 모델을 사용하면 언어 간 의미적 유사성을 기반으로 검색할 수 있다.</p>
+<h4 id="멀티모달-검색">
+  멀티모달 검색
+  <a class="anchor" href="#%eb%a9%80%ed%8b%b0%eb%aa%a8%eb%8b%ac-%ea%b2%80%ec%83%89">#</a>
+</h4>
+<p>텍스트, 이미지, 음성 등 다양한 형태의 데이터를 통합하여 검색할 수 있다.</p>
+<h4 id="개인화">
+  개인화
+  <a class="anchor" href="#%ea%b0%9c%ec%9d%b8%ed%99%94">#</a>
+</h4>
+<p>사용자의 선호도나 컨텍스트를 벡터로 표현하여 개인화된 검색 결과를 제공할 수 있다.</p>
+<h3 id="벡터검색엔진의-응용-분야">
+  벡터검색엔진의 응용 분야
+  <a class="anchor" href="#%eb%b2%a1%ed%84%b0%ea%b2%80%ec%83%89%ec%97%94%ec%a7%84%ec%9d%98-%ec%9d%91%ec%9a%a9-%eb%b6%84%ec%95%bc">#</a>
+</h3>
+<h4 id="rag-retrieval-augmented-generation">
+  RAG (Retrieval-Augmented Generation)
+  <a class="anchor" href="#rag-retrieval-augmented-generation">#</a>
+</h4>
+<p>LLM과 결합하여 외부 지식베이스에서 관련 정보를 검색하고 이를 바탕으로 더 정확한 답변을 생성하는 시스템이다.</p>
+<h4 id="추천-시스템">
+  추천 시스템
+  <a class="anchor" href="#%ec%b6%94%ec%b2%9c-%ec%8b%9c%ec%8a%a4%ed%85%9c">#</a>
+</h4>
+<p>사용자의 선호도와 아이템의 특성을 벡터로 표현하여 개인화된 추천을 제공한다.</p>
+<h4 id="이미지-검색">
+  이미지 검색
+  <a class="anchor" href="#%ec%9d%b4%eb%af%b8%ec%a7%80-%ea%b2%80%ec%83%89">#</a>
+</h4>
+<p>이미지의 시각적 특성을 벡터로 변환하여 유사한 이미지를 찾는 서비스이다.</p>
+<h4 id="문서-검색">
+  문서 검색
+  <a class="anchor" href="#%eb%ac%b8%ec%84%9c-%ea%b2%80%ec%83%89">#</a>
+</h4>
+<p>기업 내부 문서나 법률 문서 등에서 의미적으로 관련된 내용을 빠르게 찾는 시스템이다.</p>
+<h4 id="챗봇-및-질의응답-시스템">
+  챗봇 및 질의응답 시스템
+  <a class="anchor" href="#%ec%b1%97%eb%b4%87-%eb%b0%8f-%ec%a7%88%ec%9d%98%ec%9d%91%eb%8b%b5-%ec%8b%9c%ec%8a%a4%ed%85%9c">#</a>
+</h4>
+<p>사용자의 질문과 가장 관련성이 높은 답변이나 문서를 찾아 제공하는 시스템이다.</p>
+<h3 id="성능-최적화-방법">
+  성능 최적화 방법
+  <a class="anchor" href="#%ec%84%b1%eb%8a%a5-%ec%b5%9c%ec%a0%81%ed%99%94-%eb%b0%a9%eb%b2%95">#</a>
+</h3>
+<h4 id="임베딩-모델-선택">
+  임베딩 모델 선택
+  <a class="anchor" href="#%ec%9e%84%eb%b2%a0%eb%94%a9-%eb%aa%a8%eb%8d%b8-%ec%84%a0%ed%83%9d">#</a>
+</h4>
+<p>도메인과 언어에 적합한 임베딩 모델을 선택하는 것이 중요하다. 일반적인 용도에는 Sentence-BERT, 다국어 지원에는 multilingual models를 사용한다.</p>
+<h4 id="인덱스-튜닝">
+  인덱스 튜닝
+  <a class="anchor" href="#%ec%9d%b8%eb%8d%b1%ec%8a%a4-%ed%8a%9c%eb%8b%9d">#</a>
+</h4>
+<p>데이터 크기와 검색 요구사항에 맞는 인덱스 파라미터를 설정한다. 정확도와 속도 간의 트레이드오프를 고려해야 한다.</p>
+<h4 id="하이브리드-검색">
+  하이브리드 검색
+  <a class="anchor" href="#%ed%95%98%ec%9d%b4%eb%b8%8c%eb%a6%ac%eb%93%9c-%ea%b2%80%ec%83%89">#</a>
+</h4>
+<p>벡터 검색과 전통적인 키워드 검색을 결합하여 더 나은 검색 결과를 얻을 수 있다.</p>
+<h4 id="캐싱-및-배치-처리">
+  캐싱 및 배치 처리
+  <a class="anchor" href="#%ec%ba%90%ec%8b%b1-%eb%b0%8f-%eb%b0%b0%ec%b9%98-%ec%b2%98%eb%a6%ac">#</a>
+</h4>
+<p>자주 검색되는 쿼리의 결과를 캐싱하고, 여러 쿼리를 배치로 처리하여 성능을 향상시킬 수 있다.</p>
+<h3 id="한계-및-고려사항">
+  한계 및 고려사항
+  <a class="anchor" href="#%ed%95%9c%ea%b3%84-%eb%b0%8f-%ea%b3%a0%eb%a0%a4%ec%82%ac%ed%95%ad">#</a>
+</h3>
+<h4 id="계산-비용">
+  계산 비용
+  <a class="anchor" href="#%ea%b3%84%ec%82%b0-%eb%b9%84%ec%9a%a9">#</a>
+</h4>
+<p>고차원 벡터의 유사도 계산과 인덱싱에는 상당한 계산 자원이 필요하다.</p>
+<h4 id="임베딩-품질-의존성">
+  임베딩 품질 의존성
+  <a class="anchor" href="#%ec%9e%84%eb%b2%a0%eb%94%a9-%ed%92%88%ec%a7%88-%ec%9d%98%ec%a1%b4%ec%84%b1">#</a>
+</h4>
+<p>검색 성능은 사용하는 임베딩 모델의 품질에 크게 의존한다. 도메인에 특화된 모델이 필요할 수 있다.</p>
+<h4 id="해석-가능성">
+  해석 가능성
+  <a class="anchor" href="#%ed%95%b4%ec%84%9d-%ea%b0%80%eb%8a%a5%ec%84%b1">#</a>
+</h4>
+<p>왜 특정 결과가 반환되었는지 설명하기 어려울 수 있다.</p>
+<h4 id="데이터-업데이트">
+  데이터 업데이트
+  <a class="anchor" href="#%eb%8d%b0%ec%9d%b4%ed%84%b0-%ec%97%85%eb%8d%b0%ec%9d%b4%ed%8a%b8">#</a>
+</h4>
+<p>새로운 데이터가 추가될 때마다 임베딩과 인덱싱을 다시 수행해야 할 수 있다.</p>
+<h3 id="미래-전망">
+  미래 전망
+  <a class="anchor" href="#%eb%af%b8%eb%9e%98-%ec%a0%84%eb%a7%9d">#</a>
+</h3>
+<p>벡터검색엔진은 AI와 머신러닝 기술의 발전과 함께 계속해서 진화하고 있다. 특히 LLM의 발전과 함께 RAG 시스템의 핵심 구성요소로서 중요성이 더욱 커지고 있으며, 다음과 같은 방향으로 발전할 것으로 예상된다:</p>
+<ul>
+<li><strong>실시간 업데이트</strong>: 동적으로 변화하는 데이터에 대한 실시간 검색 지원</li>
+<li><strong>멀티모달 통합</strong>: 텍스트, 이미지, 음성, 비디오를 통합한 검색 시스템</li>
+<li><strong>효율성 개선</strong>: 더 적은 자원으로 더 빠른 검색을 가능하게 하는 알고리즘 개발</li>
+<li><strong>개인화 강화</strong>: 사용자의 컨텍스트와 선호도를 더 정교하게 반영하는 검색</li>
+</ul>
+<p>벡터검색엔진은 전통적인 정보검색의 한계를 극복하고 AI 시대에 맞는 지능적인 검색 경험을 제공하는 핵심 기술로 자리잡고 있다.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+  
+
+
+
+  
+    
+  
+
+
+
+<div class="book-languages" tabindex="0" aria-haspopup="true">
+  <ul>
+    <li class="flex align-center">
+      <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+      
+    </li> 
+  </ul>
+
+  <ul class="book-languages-list">
+    
+    <li class="active">
+      <a href="https://intothedata.com/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#백터검색엔진-vector-search-engine">백터검색엔진 (Vector Search Engine)</a>
+      <ul>
+        <li><a href="#벡터검색엔진의-핵심-개념">벡터검색엔진의 핵심 개념</a></li>
+        <li><a href="#주요-벡터검색-라이브러리-및-도구">주요 벡터검색 라이브러리 및 도구</a></li>
+        <li><a href="#벡터검색엔진의-작동-원리">벡터검색엔진의 작동 원리</a></li>
+        <li><a href="#벡터검색엔진의-장점">벡터검색엔진의 장점</a></li>
+        <li><a href="#벡터검색엔진의-응용-분야">벡터검색엔진의 응용 분야</a></li>
+        <li><a href="#성능-최적화-방법">성능 최적화 방법</a></li>
+        <li><a href="#한계-및-고려사항">한계 및 고려사항</a></li>
+        <li><a href="#미래-전망">미래 전망</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

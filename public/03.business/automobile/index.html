@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="자동차 산업은 전통적인 제조업이기 때문에 데이터분석이나 데이터사이언스와는 큰 관계가 없다고 생각하기 쉽다. 하지만 실제로는 깊은 관련이 있으며 데이터사이언스가 가장 필요한 분야 중 하나이기도 하다.
+
+  자동차내의 데이터사이언스
+  #
+
+
+  CAN - Control Area Network
+  #
+
+자동차내에는 많은 유닛(Unit)들이 있고 이 유닛들은 센서와 간단한 계산장치들을 가지고 있다. 이 유닛들은 서로 통신을 통해서 데이터를 주고 받아야 하는데 이때 사용하는 네트워크방식이 CAN이다.
+즉 사람들이 타고다니는 최신의 자동차는 자동차내의 유닛들이 모두 CAN을 통해서 데이터를 주고 받고 있다.  이 CAN으로 굉장히 많은 데이터를 매우 빠른 속도로 주고 받으며 이 데이터를 분석해서 자동차의 고장여부등을 파악하기도 하며 운전자의 행동패턴을 인지하기도 한다.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:url" content="https://intothedata.com/03.business/automobile/">
+  <meta property="og:site_name" content="인투더데이터 데이터과학">
+  <meta property="og:title" content="자동차 산업 - Automobile Industry">
+  <meta property="og:description" content="자동차 산업은 전통적인 제조업이기 때문에 데이터분석이나 데이터사이언스와는 큰 관계가 없다고 생각하기 쉽다. 하지만 실제로는 깊은 관련이 있으며 데이터사이언스가 가장 필요한 분야 중 하나이기도 하다.
+자동차내의 데이터사이언스 # CAN - Control Area Network # 자동차내에는 많은 유닛(Unit)들이 있고 이 유닛들은 센서와 간단한 계산장치들을 가지고 있다. 이 유닛들은 서로 통신을 통해서 데이터를 주고 받아야 하는데 이때 사용하는 네트워크방식이 CAN이다.
+즉 사람들이 타고다니는 최신의 자동차는 자동차내의 유닛들이 모두 CAN을 통해서 데이터를 주고 받고 있다. 이 CAN으로 굉장히 많은 데이터를 매우 빠른 속도로 주고 받으며 이 데이터를 분석해서 자동차의 고장여부등을 파악하기도 하며 운전자의 행동패턴을 인지하기도 한다.">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:type" content="website">
+<title>자동차 산업 - Automobile Industry | 인투더데이터 데이터과학</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.ce02ec8b4aaa4b1d9386a72d0b93e5195eac0f6feec0b00ecd36d8128e870d23.css" integrity="sha256-zgLsi0qqSx2ThqctC5PlGV6sD2/uwLAOzTbYEo6HDSM=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.69b3ef820735840b8b46619f32c5cf1d96c086c45c7a95bafacc5d95cdc0473e.js" integrity="sha256-abPvggc1hAuLRmGfMsXPHZbAhsRcepW6&#43;sxdlc3ARz4=" crossorigin="anonymous"></script>
+
+
+<link rel="alternate" type="application/rss+xml" href="https://intothedata.com/03.business/automobile/index.xml" title="인투더데이터 데이터과학" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>인투더데이터 데이터과학</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>자동차 산업 - Automobile Industry</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#자동차내의-데이터사이언스">자동차내의 데이터사이언스</a>
+      <ul>
+        <li><a href="#can---control-area-network">CAN - Control Area Network</a></li>
+        <li><a href="#텔레메틱스---telemetics">텔레메틱스 - Telemetics</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><p>자동차 산업은 전통적인 제조업이기 때문에 데이터분석이나 데이터사이언스와는 큰 관계가 없다고 생각하기 쉽다. 하지만 실제로는 깊은 관련이 있으며 데이터사이언스가 가장 필요한 분야 중 하나이기도 하다.</p>
+<h2 id="자동차내의-데이터사이언스">
+  자동차내의 데이터사이언스
+  <a class="anchor" href="#%ec%9e%90%eb%8f%99%ec%b0%a8%eb%82%b4%ec%9d%98-%eb%8d%b0%ec%9d%b4%ed%84%b0%ec%82%ac%ec%9d%b4%ec%96%b8%ec%8a%a4">#</a>
+</h2>
+<h3 id="can---control-area-network">
+  CAN - Control Area Network
+  <a class="anchor" href="#can---control-area-network">#</a>
+</h3>
+<p>자동차내에는 많은 유닛(Unit)들이 있고 이 유닛들은 센서와 간단한 계산장치들을 가지고 있다. 이 유닛들은 서로 통신을 통해서 데이터를 주고 받아야 하는데 이때 사용하는 네트워크방식이 CAN이다.</p>
+<p>즉 사람들이 타고다니는 최신의 자동차는 자동차내의 유닛들이 모두 CAN을 통해서 데이터를 주고 받고 있다.  이 CAN으로 굉장히 많은 데이터를 매우 빠른 속도로 주고 받으며 이 데이터를 분석해서 자동차의 고장여부등을 파악하기도 하며 운전자의 행동패턴을 인지하기도 한다.</p>
+<h4 id="mm-can-multimedia-can">
+  MM-CAN (MultiMedia CAN)
+  <a class="anchor" href="#mm-can-multimedia-can">#</a>
+</h4>
+<p>멀티미티어는 라디오, 스피커, 네비게이션과 같은 멀티미디어 장치들간의 네트워크이다.  스티어링에 붙어있는 라디오 볼륨 버튼과 같은 것이 이 네트워크를 통해 데이터가 전달되고 라디오와 네비게이션들을 조절한다.</p>
+<h4 id="chassi-can">
+  Chassi CAN
+  <a class="anchor" href="#chassi-can">#</a>
+</h4>
+<p>섀시 CAN은 자동차의 주행, 구동과 관련된 것들이다. 엔진을 포함하여 브레이크, 엑셀 등과 관련이 있는 매우 중요한 정보가 이 네트워크 안에서 데이터를 서로 교환한다.</p>
+<h4 id="body-can">
+  Body CAN
+  <a class="anchor" href="#body-can">#</a>
+</h4>
+<p>문, 창문, 의자, 와이퍼와 같이 자동차의 구동에 실제 상관이 없는 부분을 바디라고 한다. 바디안에서의 데이터 교환을 하는 네트워크가 body CAN 이다.</p>
+<h3 id="텔레메틱스---telemetics">
+  텔레메틱스 - Telemetics
+  <a class="anchor" href="#%ed%85%94%eb%a0%88%eb%a9%94%ed%8b%b1%ec%8a%a4---telemetics">#</a>
+</h3>
+<p>최근의 자동차는 모두 모바일 전화망을 이용해서 원격통신을 하는데 원격문잠금, 도난방지등과 같은 기능을 위해서 자동차가 원격으로 통신하는 것을 텔레메틱스라고 한다.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+  
+
+
+
+  
+    
+  
+
+
+
+<div class="book-languages" tabindex="0" aria-haspopup="true">
+  <ul>
+    <li class="flex align-center">
+      <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+      
+    </li> 
+  </ul>
+
+  <ul class="book-languages-list">
+    
+    <li class="active">
+      <a href="https://intothedata.com/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#자동차내의-데이터사이언스">자동차내의 데이터사이언스</a>
+      <ul>
+        <li><a href="#can---control-area-network">CAN - Control Area Network</a></li>
+        <li><a href="#텔레메틱스---telemetics">텔레메틱스 - Telemetics</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

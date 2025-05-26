@@ -1,0 +1,1949 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  R언어 (R language)
+  #
+
+R은 원래 한국어의 외래어 발음으로 “아르”라고 읽어야 한다. 때문에 “R은 컴퓨터언어다&quot;와 같이 R을 “알”로 발음해서 표기한 것은 맞춤법상 틀린 것이고 “R는 컴퓨터언어다”와 같이 표기해야 하는 것이 옳다. 하지만 너무 많은 사람들이 R을 “알”이라고 발음하고 있으며 “아르”라고 발음해서 표기하면 오히려 더 이상하다는 느낌이 들 정도이다. 필자 또한 발음을 “알”로 하고 있어 여기서도 R을 “알”이라고 발음하는 형식으로 작성한다.  틀린 맞춤법을 사용하는 것에 대해 유감의 뜻을 표한다.
+
+  R의 시작
+  #
+
+R언어는 로스 이하카와 로버트 젠틀맨이 만든 과학계산 및 통계, 수리계산에 촛점을 맞춰 만든 컴퓨터 랭귀지이다.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:url" content="https://intothedata.com/docs/40.r_language/">
+  <meta property="og:site_name" content="인투더데이터 데이터과학">
+  <meta property="og:title" content="R언어">
+  <meta property="og:description" content="R언어 (R language) # R은 원래 한국어의 외래어 발음으로 “아르”라고 읽어야 한다. 때문에 “R은 컴퓨터언어다&#34;와 같이 R을 “알”로 발음해서 표기한 것은 맞춤법상 틀린 것이고 “R는 컴퓨터언어다”와 같이 표기해야 하는 것이 옳다. 하지만 너무 많은 사람들이 R을 “알”이라고 발음하고 있으며 “아르”라고 발음해서 표기하면 오히려 더 이상하다는 느낌이 들 정도이다. 필자 또한 발음을 “알”로 하고 있어 여기서도 R을 “알”이라고 발음하는 형식으로 작성한다. 틀린 맞춤법을 사용하는 것에 대해 유감의 뜻을 표한다.
+R의 시작 # R언어는 로스 이하카와 로버트 젠틀맨이 만든 과학계산 및 통계, 수리계산에 촛점을 맞춰 만든 컴퓨터 랭귀지이다.">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:type" content="website">
+<title>R언어 | 인투더데이터 데이터과학</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.465376614827fff60754cc9c34686b524db662a4c314668361de5db45fde6203.css" integrity="sha256-RlN2YUgn//YHVMycNGhrUk22YqTDFGaDYd5dtF/eYgM=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.d9e6ba7770f5117e21758da45184f61d5669394aa618ebdfabe1d95519d50bbf.js" integrity="sha256-2ea6d3D1EX4hdY2kUYT2HVZpOUqmGOvfq&#43;HZVRnVC78=" crossorigin="anonymous"></script>
+
+
+<link rel="alternate" type="application/rss+xml" href="https://intothedata.com/docs/40.r_language/index.xml" title="인투더데이터 데이터과학" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>인투더데이터 데이터과학</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/00.about/" class="">인투더데이터 소개 About</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/01.data_science/" class="">데이터과학</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/01.data_science/datascientist_skillset/" class="">데이터과학자 스킬셋</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/" class="">데이터과학 학술분야</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/operational_research/" class="">경영과학 - Operational Research</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/operational_research/demand_forecasting/" class="">수요예측 - Demand Forecasting</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/economics/" class="">계량경제학 - Economics</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/economics/distributed_lag_model/" class="">분산지연모델</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/data_mining/" class="">데이터마이닝</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/data_mining/clustering/" class="">군집분석 - Clustering</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/data_mining/clustering/k-means/" class="">K-means - K중심값</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/modeling/" class="">모델링 - Modeling</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/business_analysis/" class="">비즈니스 데이터 분석</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/business_analysis/behavioral_change_point_analysis/" class="">행동변화점분석</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/timeseries_analysis/" class="">시계열 분석 - Time-series Analysis</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/timeseries_analysis/granger_causality/" class="">그래인저 인과관계 - Granger Causality</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/anomaly_detection/" class="">이상감지</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/anomaly_detection/3_sigma_rule/" class="">3 sigma rule</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/anomaly_detection/generalized_esd/" class="">Generalized ESD</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/artificial_intelligence/" class="">인공지능 - Artificial Intelligence</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/artificial_intelligence/fuzzy_inferenece/" class="">퍼지 추론 - Fuzzy Inferenece</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/information_retrieval/" class="">정보검색</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/text_mining/" class="">텍스트마이닝 - Text Mining</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/text_mining/tfidf/" class="">TFIDF - Term Frequency Inverse Document Frequency</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/text_mining/cosine_similarity/" class="">코사인 유사도 - Cosine Similarity</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/" class="">통계학 - Statistics</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/central_limit_theorem/" class="">중심극한정리 - CLT; Central Limit Theorem</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/descriptive_statistics/" class="">기술통계 - Descriptive statistics</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/variance/" class="">분산 - Variance</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/survival_analysis/" class="">생존분석 - Survival Analysis</a>
+  
+
+          
+  <ul>
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/data/" class="">자료 - data</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/gaussian_distribution/" class="">정규분포, 가우시안 분포 - Normal Distribution, Gaussian Distribution</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/inferential_statistics/" class="">추론통계 - Inferential statistics</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/sampling/" class="">표본추출 - Sampling</a>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/sampling/neyman_alloction/" class="">네이만 배분법 - neyman allocation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/sampling/hyperloglog/" class="">하이퍼로그로그 - Hyper Log Log</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/correlation/" class="">피어슨 상관계수 - Pearson&#39;s product-moment correlation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/stochastic_process/" class="">확률과정 - Stochastic process</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/stochastic_process/brownian_motion/" class="">브라운 운동 - Brownian Motion</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/stochastic_process/ornstein_uhlenbeck_process/" class="">오른스타인-우렌벡 과정  Ornstein-Uhlenbeck process</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/pattern_recognition/" class="">패턴인식 - Pattern Recognition</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/pattern_recognition/neural_network/" class="">인공신경망 - Neural Network</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/" class="">데이터사이언스 - 산업별 갈래</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/adtech/" class="">온라인 광고 비즈니스 - Ad tech</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/adtech/ad_tech_terminlogy/" class="">온라인 광고 용어 - Online Ad Terminology</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/ad_tech/" class="">애드테크 - Ad Tech</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/ad_tech/ad_tech_terminlogy/" class="">온라인 광고 용어</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/online/" class="">온라인 비즈니스 - Online busines</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/online/ad_tech/" class="">온라인 광고 비즈니스 - Ad tech</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/online/ad_tech_terminlogy/" class="">온라인 광고 용어 - Online Ad Terminology</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/automobile/" class="">자동차 산업 - Automobile Industry</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/iron_mill/" class="">철강 - Iron mill</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/04.data_analysis/" class="">데이터 분석</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>데이터 수집 (Data collection)</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/06.data_collection/mobile_data_collection/" class="">데이터 수집 (Data collection)</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/05.data_visualization/" class="">데이터시각화</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/05.data_visualization/number_line_plot/" class="">넘버라인플롯</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/06.data_platform/" class="">데이터 플랫폼</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/06.data_platform/bigquery/" class="">빅쿼리 - Bigquery</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/06.data_platform/bigquery/excel_bigquery/" class="">엑셀에서 빅쿼리 데이터 가져오기</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/07.data_hub/" class="">데이터 허브</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/07.data_hub/sk_data_hub/" class="">SK 데이터 허브</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/08.reproducible_research/" class="">재현가능연구</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/09.datascience_tools/" class="">데이터사이언스 도구 - Data Science Tools</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/20.data_platform/" class="">데이터플랫폼</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/30.bigdata/" class="">빅데이터</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/36.time_series_analysis/" class="">시계열분석</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/" class="">인공지능</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/vector_search_engine/" class="">벡터검색엔진</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/faiss/" class="">Faiss - 벡터 검색 엔진</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/faiss/3_sigma_rule/" class="">3 sigma rule</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/faiss/generalized_esd/" class="">Generalized ESD</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/gpt/" class="">GPT</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/39.large_language_model/" class="">LLM</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/38.natural_languge_processing/" class="">자연어 처리</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/38.natural_languge_processing/korean_pos_tagger/" class="">한국어 형태소 분석기</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/38.natural_languge_processing/pos_tagger/" class="">형태소 분석기 - Pos tagger</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/40.r_language/" class=" active">R언어</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/50.computer_science/" class="">컴퓨터 공학</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/50.computer_science/random/" class="">랜덤</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/70.practical_data_science/" class="">실무 데이터과학</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/70.practical_data_science/quality_based_scoring/" class="">품질 기반 스코어링 - quality-based scoring</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/60.pracactical_data_processing/" class="">데이터 프로세싱</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/80.mathematics/" class="">수학 - Mathematics</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/80.mathematics/ordinary_differential_equation/" class="">상미분방정식 - Ordinary Differential Equation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/80.mathematics/mathematics_symbols/" class="">수학기호정리 - mathematics symbols</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/80.mathematics/fermats_last_theorem/" class="">페르마의 마지막 정리</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/90.metrics/" class="">지표</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/90.metrics/lorenz_curve/" class="">로렌츠 커브</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/99.materials/" class="">참고자료 - References</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/99.materials/people/" class="">인물 - People</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/99.materials/sites/" class="">참고 사이트</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/taglist/" class="">태그 목록</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>R언어</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#r언어-r-language">R언어 (R language)</a></li>
+    <li><a href="#r의-시작">R의 시작</a></li>
+    <li><a href="#r의-특징">R의 특징</a>
+      <ul>
+        <li><a href="#r의-정체성">R의 정체성</a></li>
+        <li><a href="#r의-의존성과-라이센스">R의 의존성과 라이센스</a></li>
+        <li><a href="#r과-일반적인-컴퓨터-언어">R과 일반적인 컴퓨터 언어</a></li>
+        <li><a href="#r의-장점">R의 장점</a></li>
+        <li><a href="#r의-단점">R의 단점</a></li>
+        <li><a href="#r의-주요-활용-분야">R의 주요 활용 분야</a></li>
+        <li><a href="#r-개발-환경">R 개발 환경</a></li>
+        <li><a href="#r과-다른-언어의-비교">R과 다른 언어의 비교</a></li>
+        <li><a href="#r의-미래-전망">R의 미래 전망</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h2 id="r언어-r-language">
+  R언어 (R language)
+  <a class="anchor" href="#r%ec%96%b8%ec%96%b4-r-language">#</a>
+</h2>
+<p>R은 원래 한국어의 외래어 발음으로 “아르”라고 읽어야 한다. 때문에 “R은 컴퓨터언어다&quot;와 같이 R을 “알”로 발음해서 표기한 것은 맞춤법상 틀린 것이고 “R는 컴퓨터언어다”와 같이 표기해야 하는 것이 옳다. 하지만 너무 많은 사람들이 R을 “알”이라고 발음하고 있으며 “아르”라고 발음해서 표기하면 오히려 더 이상하다는 느낌이 들 정도이다. 필자 또한 발음을 “알”로 하고 있어 여기서도 R을 “알”이라고 발음하는 형식으로 작성한다.  틀린 맞춤법을 사용하는 것에 대해 유감의 뜻을 표한다.</p>
+<h2 id="r의-시작">
+  R의 시작
+  <a class="anchor" href="#r%ec%9d%98-%ec%8b%9c%ec%9e%91">#</a>
+</h2>
+<p>R언어는 로스 이하카와 로버트 젠틀맨이 만든 과학계산 및 통계, 수리계산에 촛점을 맞춰 만든 컴퓨터 랭귀지이다.</p>
+<p>R은 원래 AT&amp;T 벨연구소에서 만든 S언어의 계보를 따른다. S언어가 버전업 되면 S-PLUS로 개량되었고 R은 그 S-PLUS의 상당 부분을 따르고 문법도 대부분 호환된다. 즉, R은 S-PLUS를 오픈 소스로 다시 만든 것이라고 할 수 있다.</p>
+<p>R의 이름이 R이 된 것은 다음과 같은 중의적인 의미가 있다.</p>
+<ol>
+<li>S언어보다 알파벳의 순서로 볼 때 더 앞이서 S보다 진보된 것이라는 의미</li>
+<li>“Research”의 첫글자를 뜻하는 R</li>
+<li>창시자인 로스 이하카와 로버트 젠틀맨의 이름의 첫글자가 모두 R</li>
+</ol>
+<h2 id="r의-특징">
+  R의 특징
+  <a class="anchor" href="#r%ec%9d%98-%ed%8a%b9%ec%a7%95">#</a>
+</h2>
+<h3 id="r의-정체성">
+  R의 정체성
+  <a class="anchor" href="#r%ec%9d%98-%ec%a0%95%ec%b2%b4%ec%84%b1">#</a>
+</h3>
+<p>특징을 알기 위해서는 정체성을 알아두는 것이 좋고 정체성을 알려면 탄생과 관련된 역사를 아는 것이 가장 단순하고 좋은 방법 중 하나이다.</p>
+<p>앞에서 말했듯이 R은 S/S-PLUS언어를 오픈소스로 다시 만든 것인데 S언어의 S는 &ldquo;statistics&quot;의 첫글자를 뜻한다. 단어의 뜻 그대로 통계이다. 통계를 위해 특화된 컴퓨터랭귀지라고 할 수 있다.  통계를 위한 도구라는 것은 거의 모든 대수연산이나 연구, 분석과 같은 과학분야에 전반적으로 활용할 수 있다는 뜻이 된다.</p>
+<h3 id="r의-의존성과-라이센스">
+  R의 의존성과 라이센스
+  <a class="anchor" href="#r%ec%9d%98-%ec%9d%98%ec%a1%b4%ec%84%b1%ea%b3%bc-%eb%9d%bc%ec%9d%b4%ec%84%bc%ec%8a%a4">#</a>
+</h3>
+<p>R은 GNU의 여러 라이브러리에 의존성이 강하다. 특히 선형대수학과 관련된 패키지들은 GNU의 라이브러리를 그대로 연동해서 사용하는데 이 라이브러리들이 모두 GNU 라이센스를 따르므로 R도 모두 GNU 라이센스를 따른다. R이 GNU 라이센스를 따르기 때문에 R로 작성된 R의 패키지들도 모두 파생되어서 GNU 라이센스를 따르게 된다. 간단히 설명하면 R과 관련된 것은 거의 모두 오픈소스로 개방되어 있다.</p>
+<h3 id="r과-일반적인-컴퓨터-언어">
+  R과 일반적인 컴퓨터 언어
+  <a class="anchor" href="#r%ea%b3%bc-%ec%9d%bc%eb%b0%98%ec%a0%81%ec%9d%b8-%ec%bb%b4%ed%93%a8%ed%84%b0-%ec%96%b8%ec%96%b4">#</a>
+</h3>
+<p>R을 소개하는 R project 페이지를 방문해서 소개글을 읽어 보면 R은 범용컴퓨터랭귀지라고 설명하고 있다. R은 범용컴퓨터언어가 맞다. 하지만 범용으로 사용하기에는 어려운점이 많다. 소프트웨어 개발, 고성능 구현체, 웹서비스와 같은 것을 작성하지 못하는 것은 아니다. 하지만 느린 연산 속도, 인메모리 방식의 한계, 확장을 위해서 C++언어로 개발해야 하는 등 일반적인 범용컴퓨터언어가 하는 작업을 R로 하기 위해서는 높은 난이도의 작업을 해야 한다. 하지만 분석을 위한 계산이나 과학기술연구는 편하게 사용할 수 있도록 되어있다.</p>
+<p>R은 범용컴퓨터언어가 맞지만 통계, 분석, 과학계산을 위한 특화된 랭귀지로 생각하는 것이 R로 하기에 유리한 일의 범위를 가늠하는데 유리할 것이다.</p>
+<h3 id="r의-장점">
+  R의 장점
+  <a class="anchor" href="#r%ec%9d%98-%ec%9e%a5%ec%a0%90">#</a>
+</h3>
+<h4 id="통계-분석에-특화">
+  통계 분석에 특화
+  <a class="anchor" href="#%ed%86%b5%ea%b3%84-%eb%b6%84%ec%84%9d%ec%97%90-%ed%8a%b9%ed%99%94">#</a>
+</h4>
+<p>R은 통계학자들이 만든 언어답게 통계 분석을 위한 다양한 함수와 패키지가 기본적으로 제공된다. 기술통계, 추론통계, 회귀분석, 시계열 분석 등 거의 모든 통계 기법을 지원한다.</p>
+<h4 id="풍부한-패키지-생태계">
+  풍부한 패키지 생태계
+  <a class="anchor" href="#%ed%92%8d%eb%b6%80%ed%95%9c-%ed%8c%a8%ed%82%a4%ec%a7%80-%ec%83%9d%ed%83%9c%ea%b3%84">#</a>
+</h4>
+<p>CRAN(Comprehensive R Archive Network)을 통해 18,000개 이상의 패키지가 제공되며, 이를 통해 다양한 분야의 전문적인 분석이 가능하다. 생물정보학, 경제학, 심리학 등 각 분야별 특화된 패키지들이 활발히 개발되고 있다.</p>
+<h4 id="뛰어난-시각화-기능">
+  뛰어난 시각화 기능
+  <a class="anchor" href="#%eb%9b%b0%ec%96%b4%eb%82%9c-%ec%8b%9c%ea%b0%81%ed%99%94-%ea%b8%b0%eb%8a%a5">#</a>
+</h4>
+<p>ggplot2, lattice 등의 패키지를 통해 고품질의 그래프와 차트를 생성할 수 있다. 특히 ggplot2는 Grammar of Graphics 개념을 구현하여 직관적이고 아름다운 시각화를 제공한다.</p>
+<h4 id="무료-오픈소스">
+  무료 오픈소스
+  <a class="anchor" href="#%eb%ac%b4%eb%a3%8c-%ec%98%a4%ed%94%88%ec%86%8c%ec%8a%a4">#</a>
+</h4>
+<p>GNU 라이센스를 따르는 완전 무료 소프트웨어로, 상업적 통계 소프트웨어에 비해 비용 부담이 없다.</p>
+<h4 id="활발한-커뮤니티">
+  활발한 커뮤니티
+  <a class="anchor" href="#%ed%99%9c%eb%b0%9c%ed%95%9c-%ec%bb%a4%eb%ae%a4%eb%8b%88%ed%8b%b0">#</a>
+</h4>
+<p>전 세계의 통계학자, 데이터 과학자들이 활발히 참여하는 커뮤니티가 형성되어 있어 지속적인 발전과 지원이 이루어진다.</p>
+<h3 id="r의-단점">
+  R의 단점
+  <a class="anchor" href="#r%ec%9d%98-%eb%8b%a8%ec%a0%90">#</a>
+</h3>
+<h4 id="느린-실행-속도">
+  느린 실행 속도
+  <a class="anchor" href="#%eb%8a%90%eb%a6%b0-%ec%8b%a4%ed%96%89-%ec%86%8d%eb%8f%84">#</a>
+</h4>
+<p>인터프리터 언어의 특성상 컴파일 언어에 비해 실행 속도가 느리다. 특히 반복문이 많은 작업에서는 성능 저하가 두드러진다.</p>
+<h4 id="메모리-사용량">
+  메모리 사용량
+  <a class="anchor" href="#%eb%a9%94%eb%aa%a8%eb%a6%ac-%ec%82%ac%ec%9a%a9%eb%9f%89">#</a>
+</h4>
+<p>모든 데이터를 메모리에 로드하는 방식으로 작동하기 때문에, 대용량 데이터 처리 시 메모리 부족 문제가 발생할 수 있다.</p>
+<h4 id="가파른-학습-곡선">
+  가파른 학습 곡선
+  <a class="anchor" href="#%ea%b0%80%ed%8c%8c%eb%a5%b8-%ed%95%99%ec%8a%b5-%ea%b3%a1%ec%84%a0">#</a>
+</h4>
+<p>다른 프로그래밍 언어와 문법이 다르고, 통계학적 배경 지식이 필요한 경우가 많아 초보자에게는 진입 장벽이 높다.</p>
+<h4 id="패키지-의존성-문제">
+  패키지 의존성 문제
+  <a class="anchor" href="#%ed%8c%a8%ed%82%a4%ec%a7%80-%ec%9d%98%ec%a1%b4%ec%84%b1-%eb%ac%b8%ec%a0%9c">#</a>
+</h4>
+<p>수많은 패키지들 간의 의존성으로 인해 버전 충돌이나 호환성 문제가 발생할 수 있다.</p>
+<h3 id="r의-주요-활용-분야">
+  R의 주요 활용 분야
+  <a class="anchor" href="#r%ec%9d%98-%ec%a3%bc%ec%9a%94-%ed%99%9c%ec%9a%a9-%eb%b6%84%ec%95%bc">#</a>
+</h3>
+<h4 id="데이터-분석-및-통계">
+  데이터 분석 및 통계
+  <a class="anchor" href="#%eb%8d%b0%ec%9d%b4%ed%84%b0-%eb%b6%84%ec%84%9d-%eb%b0%8f-%ed%86%b5%ea%b3%84">#</a>
+</h4>
+<ul>
+<li>기술통계 분석</li>
+<li>가설 검정</li>
+<li>회귀 분석</li>
+<li>분산 분석 (ANOVA)</li>
+<li>시계열 분석</li>
+<li>다변량 분석</li>
+</ul>
+<h4 id="데이터-과학">
+  데이터 과학
+  <a class="anchor" href="#%eb%8d%b0%ec%9d%b4%ed%84%b0-%ea%b3%bc%ed%95%99">#</a>
+</h4>
+<ul>
+<li>데이터 마이닝</li>
+<li>머신러닝</li>
+<li>예측 모델링</li>
+<li>텍스트 마이닝</li>
+<li>소셜 네트워크 분석</li>
+</ul>
+<h4 id="생물정보학">
+  생물정보학
+  <a class="anchor" href="#%ec%83%9d%eb%ac%bc%ec%a0%95%eb%b3%b4%ed%95%99">#</a>
+</h4>
+<ul>
+<li>유전체 분석</li>
+<li>단백질 구조 분석</li>
+<li>계통발생학적 분석</li>
+<li>바이오마커 발견</li>
+</ul>
+<h4 id="금융-분석">
+  금융 분석
+  <a class="anchor" href="#%ea%b8%88%ec%9c%b5-%eb%b6%84%ec%84%9d">#</a>
+</h4>
+<ul>
+<li>리스크 관리</li>
+<li>포트폴리오 최적화</li>
+<li>파생상품 가격 결정</li>
+<li>알고리즘 트레이딩</li>
+</ul>
+<h4 id="품질-관리">
+  품질 관리
+  <a class="anchor" href="#%ed%92%88%ec%a7%88-%ea%b4%80%eb%a6%ac">#</a>
+</h4>
+<ul>
+<li>통계적 공정 관리</li>
+<li>실험 계획법</li>
+<li>신뢰성 분석</li>
+</ul>
+<h3 id="r-개발-환경">
+  R 개발 환경
+  <a class="anchor" href="#r-%ea%b0%9c%eb%b0%9c-%ed%99%98%ea%b2%bd">#</a>
+</h3>
+<h4 id="r-console">
+  R Console
+  <a class="anchor" href="#r-console">#</a>
+</h4>
+<p>기본적으로 제공되는 명령행 인터페이스로, 간단한 계산이나 테스트에 적합하다.</p>
+<h4 id="rstudio">
+  RStudio
+  <a class="anchor" href="#rstudio">#</a>
+</h4>
+<p>가장 인기 있는 R 통합 개발 환경(IDE)으로, 코드 편집, 디버깅, 패키지 관리, 시각화 등을 통합적으로 지원한다.</p>
+<h4 id="jupyter-notebook">
+  Jupyter Notebook
+  <a class="anchor" href="#jupyter-notebook">#</a>
+</h4>
+<p>웹 기반 대화형 개발 환경으로, R 커널을 통해 R 코드를 실행할 수 있다. 데이터 분석 과정을 문서화하기에 적합하다.</p>
+<h4 id="visual-studio-code">
+  Visual Studio Code
+  <a class="anchor" href="#visual-studio-code">#</a>
+</h4>
+<p>Microsoft에서 개발한 코드 에디터로, R 확장 프로그램을 통해 R 개발을 지원한다.</p>
+<h3 id="r과-다른-언어의-비교">
+  R과 다른 언어의 비교
+  <a class="anchor" href="#r%ea%b3%bc-%eb%8b%a4%eb%a5%b8-%ec%96%b8%ec%96%b4%ec%9d%98-%eb%b9%84%ea%b5%90">#</a>
+</h3>
+<h4 id="r-vs-python">
+  R vs Python
+  <a class="anchor" href="#r-vs-python">#</a>
+</h4>
+<ul>
+<li><strong>R</strong>: 통계 분석에 특화, 풍부한 통계 패키지, 뛰어난 시각화</li>
+<li><strong>Python</strong>: 범용성, 빠른 실행 속도, 웹 개발 및 시스템 프로그래밍 가능</li>
+</ul>
+<h4 id="r-vs-sas">
+  R vs SAS
+  <a class="anchor" href="#r-vs-sas">#</a>
+</h4>
+<ul>
+<li><strong>R</strong>: 무료 오픈소스, 활발한 커뮤니티, 최신 통계 기법 빠른 도입</li>
+<li><strong>SAS</strong>: 상업적 지원, 안정성, 대기업에서의 검증된 사용 실적</li>
+</ul>
+<h4 id="r-vs-spss">
+  R vs SPSS
+  <a class="anchor" href="#r-vs-spss">#</a>
+</h4>
+<ul>
+<li><strong>R</strong>: 프로그래밍 기반, 무제한 확장성, 고급 분석 기능</li>
+<li><strong>SPSS</strong>: GUI 기반, 사용 편의성, 초보자 친화적</li>
+</ul>
+<h3 id="r의-미래-전망">
+  R의 미래 전망
+  <a class="anchor" href="#r%ec%9d%98-%eb%af%b8%eb%9e%98-%ec%a0%84%eb%a7%9d">#</a>
+</h3>
+<p>R은 데이터 과학과 통계 분야에서 계속해서 중요한 역할을 할 것으로 예상된다. 특히 다음과 같은 발전 방향이 주목받고 있다:</p>
+<ul>
+<li><strong>성능 개선</strong>: Rcpp, data.table 등을 통한 속도 향상</li>
+<li><strong>빅데이터 지원</strong>: Spark, Hadoop과의 연동 강화</li>
+<li><strong>클라우드 통합</strong>: AWS, Azure, GCP 등 클라우드 플랫폼과의 연계</li>
+<li><strong>실시간 분석</strong>: Shiny를 통한 대화형 웹 애플리케이션 개발</li>
+<li><strong>AI/ML 통합</strong>: TensorFlow, Keras 등 딥러닝 프레임워크와의 연동</li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+  
+
+
+
+  
+    
+  
+
+
+
+<div class="book-languages" tabindex="0" aria-haspopup="true">
+  <ul>
+    <li class="flex align-center">
+      <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+      
+    </li> 
+  </ul>
+
+  <ul class="book-languages-list">
+    
+    <li class="active">
+      <a href="https://intothedata.com/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#r언어-r-language">R언어 (R language)</a></li>
+    <li><a href="#r의-시작">R의 시작</a></li>
+    <li><a href="#r의-특징">R의 특징</a>
+      <ul>
+        <li><a href="#r의-정체성">R의 정체성</a></li>
+        <li><a href="#r의-의존성과-라이센스">R의 의존성과 라이센스</a></li>
+        <li><a href="#r과-일반적인-컴퓨터-언어">R과 일반적인 컴퓨터 언어</a></li>
+        <li><a href="#r의-장점">R의 장점</a></li>
+        <li><a href="#r의-단점">R의 단점</a></li>
+        <li><a href="#r의-주요-활용-분야">R의 주요 활용 분야</a></li>
+        <li><a href="#r-개발-환경">R 개발 환경</a></li>
+        <li><a href="#r과-다른-언어의-비교">R과 다른 언어의 비교</a></li>
+        <li><a href="#r의-미래-전망">R의 미래 전망</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

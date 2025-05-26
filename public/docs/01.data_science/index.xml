@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>데이터과학 on 인투더데이터 데이터과학</title>
+    <link>https://intothedata.com/docs/01.data_science/</link>
+    <description>Recent content in 데이터과학 on 인투더데이터 데이터과학</description>
+    <generator>Hugo</generator>
+    <language>ko-KR</language>
+    <atom:link href="https://intothedata.com/docs/01.data_science/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>데이터과학자 스킬셋</title>
+      <link>https://intothedata.com/docs/01.data_science/datascientist_skillset/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/01.data_science/datascientist_skillset/</guid>
+      <description>&lt;h2 id=&#34;데이터과학자-스킬셋-data-scientist-skill-set&#34;&gt;&#xA;  데이터과학자 스킬셋 (Data scientist skill-set)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%eb%8d%b0%ec%9d%b4%ed%84%b0%ea%b3%bc%ed%95%99%ec%9e%90-%ec%8a%a4%ed%82%ac%ec%85%8b-data-scientist-skill-set&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;데이터과학자가 되려면 데이터과학자에게 필요한 스킬셋을 갖춰야 한다.&#xA;간단하게 정리하기는 어렵지만 크게 3개의 분류로 나눌 수 있다.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;컴퓨터 엔지니어링: 코딩, 프로그래밍&lt;/li&gt;&#xA;&lt;li&gt;데이터 분석: 통계, 수학, 알고리즘, 확률, 논리&lt;/li&gt;&#xA;&lt;li&gt;설득 및 설명: 프리젠테이션, 글쓰기, 데이터시각화&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;각각을 자세히 알아보자.&lt;/p&gt;&#xA;&lt;h2 id=&#34;컴퓨터-엔지니어링&#34;&gt;&#xA;  컴퓨터 엔지니어링&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%bb%b4%ed%93%a8%ed%84%b0-%ec%97%94%ec%a7%80%eb%8b%88%ec%96%b4%eb%a7%81&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;컴퓨터 엔지니어링은 코딩만을 뜻하는 것이 아니다. 컴퓨터를 활용할 수 있는 전반적인 능력을 말한다. 소프트웨어 사용법 같은 것도 포함된다.&#xA;마이크로소프트 엑셀에서는 코딩을 하지 않아도 되지만, 데이터 분석을 할 때 엑셀도 빈번하게 사용한다.&#xA;활용 능력 중에서 가장 중요한 것은 프로그래밍 능력이다. 과거에는 수학이나 통계학을 하기 위해서 프로그래밍 능력이 꼭 필요하지는 않았다. 하지만 지금은 데이터를 처리하기 위해서는 프로그래밍 기술 활용이 필수이다. Excel과 다른 통계분석툴로도 데이터과학을 할 수 있지만, 변화가 많은 상황에 유연하게 대처하면서도 빠른 작업 진행이 필요하기 때문에 결국 자동화가 필요하다.&#xA;자동화를 위해서는 프로그래밍 능력이 반드시 필요하고, 데이터과학자는 자동화 기술을 잘 활용할 수 있어야 한다. 능숙한 컴퓨터 언어가 최소 1개 이상은 있어야 한다. 그리고 활용 범위가 넓은 범용 언어인 것이 좋다.&#xA;Python과 R이 데이터과학을 위한 언어로 많이 쓰이는 것은 프로그래밍을 하면서 데이터과학의 근본에 더 집중할 수 있기 때문이다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

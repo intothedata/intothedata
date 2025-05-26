@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>데이터 플랫폼 on 인투더데이터 데이터과학</title>
+    <link>https://intothedata.com/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%94%8C%EB%9E%AB%ED%8F%BC/</link>
+    <description>Recent content in 데이터 플랫폼 on 인투더데이터 데이터과학</description>
+    <generator>Hugo</generator>
+    <language>ko-KR</language>
+    <atom:link href="https://intothedata.com/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%94%8C%EB%9E%AB%ED%8F%BC/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>데이터플랫폼</title>
+      <link>https://intothedata.com/docs/20.data_platform/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/20.data_platform/</guid>
+      <description>&lt;h1 id=&#34;데이터-플랫폼-data-platform&#34;&gt;&#xA;  데이터 플랫폼 (Data Platform)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%eb%8d%b0%ec%9d%b4%ed%84%b0-%ed%94%8c%eb%9e%ab%ed%8f%bc-data-platform&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;데이터 플랫폼은 다양한 원천에서 생성되는 데이터를 수집, 저장, 처리, 분석, 시각화, 배포까지 전 주기를 지원하는 통합 시스템을 의미합니다. 데이터 플랫폼은 단순한 데이터베이스를 넘어, 대용량 데이터(빅데이터) 처리, 실시간 분석, 데이터 거버넌스, 보안, 확장성 등 현대 데이터 환경의 다양한 요구를 충족시키는 핵심 인프라입니다.&lt;/p&gt;&#xA;&lt;p&gt;데이터 플랫폼의 주요 목적은 다음과 같습니다.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;데이터를 안전하게 저장하고 효율적으로 관리&lt;/li&gt;&#xA;&lt;li&gt;다양한 데이터 소스(내부/외부, 정형/비정형) 통합&lt;/li&gt;&#xA;&lt;li&gt;대규모 데이터의 신속한 처리 및 분석 지원&lt;/li&gt;&#xA;&lt;li&gt;데이터 기반 의사결정 및 비즈니스 인사이트 도출&lt;/li&gt;&#xA;&lt;li&gt;데이터 접근성, 품질, 보안, 거버넌스 보장&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;데이터-플랫폼의-주요-유형&#34;&gt;&#xA;  데이터 플랫폼의 주요 유형&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%eb%8d%b0%ec%9d%b4%ed%84%b0-%ed%94%8c%eb%9e%ab%ed%8f%bc%ec%9d%98-%ec%a3%bc%ec%9a%94-%ec%9c%a0%ed%98%95&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-빅데이터-기반-데이터-플랫폼&#34;&gt;&#xA;  1. 빅데이터 기반 데이터 플랫폼&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#1-%eb%b9%85%eb%8d%b0%ec%9d%b4%ed%84%b0-%ea%b8%b0%eb%b0%98-%eb%8d%b0%ec%9d%b4%ed%84%b0-%ed%94%8c%eb%9e%ab%ed%8f%bc&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;대용량 데이터의 저장과 분산처리, 대규모 분석을 지원하는 플랫폼입니다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

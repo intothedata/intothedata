@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>자연어처리 on 인투더데이터 데이터과학</title>
+    <link>https://intothedata.com/tags/%EC%9E%90%EC%97%B0%EC%96%B4%EC%B2%98%EB%A6%AC/</link>
+    <description>Recent content in 자연어처리 on 인투더데이터 데이터과학</description>
+    <generator>Hugo</generator>
+    <language>ko-KR</language>
+    <atom:link href="https://intothedata.com/tags/%EC%9E%90%EC%97%B0%EC%96%B4%EC%B2%98%EB%A6%AC/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>자연어 처리</title>
+      <link>https://intothedata.com/docs/38.natural_languge_processing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/38.natural_languge_processing/</guid>
+      <description>&lt;h2 id=&#34;자연어-처리-natural-language-processing&#34;&gt;&#xA;  자연어 처리 (Natural Language Processing)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%9e%90%ec%97%b0%ec%96%b4-%ec%b2%98%eb%a6%ac-natural-language-processing&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;자연어처리(Natural Language Processing)은 줄여서 NLP라고 쓰며 “엔엘피”라고 읽는다.&lt;/p&gt;&#xA;&lt;p&gt;자연어 또는 자연언어는 인간이 사용하는 언어를 말한다. 언어에는 컴퓨터가 사용하는 이진수로 변환하는 컴퓨터랭귀지도 포함되므로 구분을 명확히 하기 위해서 자연어는 인위적이 아닌 자연발생적으로 생겨난 인간이 사용하는 언어를 말한다.&lt;/p&gt;&#xA;&lt;p&gt;저연어처리는 인간이 사용하는 언어를 컴퓨터가 사용할 수 있게 처리하는 것을 말한다.&#xA;애플의 시리(Siri)와 같은 음성인식이나 광학문자판독을 통해서 책에서 글자를 읽어들이거나 웹페이지에서 사람이 작성한 글을 로봇을 이용해서 크롤하고 해석한 후 어떤 것이 핵심어이고 어떤 것이 주제어인가 등을 알아내기도 하며 글쓴이의 감정이나 상태등을 알아내기도 한다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

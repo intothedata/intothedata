@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CLT on 인투더데이터 데이터과학</title>
+    <link>https://intothedata.com/tags/clt/</link>
+    <description>Recent content in CLT on 인투더데이터 데이터과학</description>
+    <generator>Hugo</generator>
+    <language>ko-KR</language>
+    <atom:link href="https://intothedata.com/tags/clt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>중심극한정리 - CLT; Central Limit Theorem</title>
+      <link>https://intothedata.com/docs/02.scholars/statistics/central_limit_theorem/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/02.scholars/statistics/central_limit_theorem/</guid>
+      <description>&lt;h2 id=&#34;중심극한정리---central-limit-theorem&#34;&gt;&#xA;  중심극한정리 - Central Limit Theorem&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%a4%91%ec%8b%ac%ea%b7%b9%ed%95%9c%ec%a0%95%eb%a6%ac---central-limit-theorem&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;통계학을 처음 접하게 될 때 가장 초기에 듣는 것이 “중심극한정리”이다.&lt;/p&gt;&#xA;&lt;p&gt;중심극한정리가 문헌에 나타난 것은 대략 1700년 경으로 알려져 있지만 정확히 언제부터 사람들이 이것을 알게 되었는지는 알려진 것이 없다고 한다. 하지만 중심극한정리는 통계학 역사상 가장 중요한 발견이라고 한다.&lt;/p&gt;&#xA;&lt;p&gt;중심극한정리는 쉬워 보이지만 대충 개념을 확실히 이해하지 않고 넘어가면 후에 큰 실수하기 쉽다.&lt;br&gt;&#xA;사실 근원(prime)까지 이해하기에는 중심극한정리는 매우 난해하고 현실에서 중심극한정리를 이용할 일이 많지 않기 때문에 간단하게 무엇인지만 알고 넘어가는 경우가 많다. 하지만 정확하게 알지 못하는 것으로 인해 통계분석을 진행하다가 틀린 논리를 근거로 내세우는 실수를 저지르기도 한다.&lt;br&gt;&#xA;심지어 통계학을 전공한 사람들도 중심극한정리를 제대로 이해하지 못한 경우가 많다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

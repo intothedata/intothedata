@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>텍스트마이닝 - Text Mining on 인투더데이터 데이터과학</title>
+    <link>https://intothedata.com/docs/02.scholars/text_mining/</link>
+    <description>Recent content in 텍스트마이닝 - Text Mining on 인투더데이터 데이터과학</description>
+    <generator>Hugo</generator>
+    <language>ko-KR</language>
+    <atom:link href="https://intothedata.com/docs/02.scholars/text_mining/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TFIDF - Term Frequency Inverse Document Frequency</title>
+      <link>https://intothedata.com/docs/02.scholars/text_mining/tfidf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/02.scholars/text_mining/tfidf/</guid>
+      <description>&lt;p&gt;TF-IDF는 문서를 벡터화 할 때 문서내의 텀(term)들에 수치를 가중치가 적용된 형태로 부여하는 방법 중의 하나이다.&lt;/p&gt;&#xA;&lt;p&gt;TF-IDF는 정확한 용어로 TF-IDF weighting scheme이라고 부르는데 이중에 weighting은 가중치를 고려한다는 뜻이고 scheme의 뜻이 방법 또는 방안이라는 뜻이다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>코사인 유사도 - Cosine Similarity</title>
+      <link>https://intothedata.com/docs/02.scholars/text_mining/cosine_similarity/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/02.scholars/text_mining/cosine_similarity/</guid>
+      <description>&lt;p&gt;데이터 포인트들 간의 유사도를 코사인(으로 계산한 것을 말한다. 정확히는 두 벡터의 사잇각을 코사인값으로 나타낸 것이다.&lt;/p&gt;&#xA;&lt;p&gt;데이터마이닝, 기계학습, 통계학등에서 유사한 데이터를 찾을 때 기본적으로 접근하는 것이 두 데이터 포인트의 거리를 계산하는 것부터 시작한다. 데이터 포인트 간의 거리를 측정하는 방법을 distance measurement라고 하며 매우 많은 것들이 있다.  가장 일반적인 것이 벡터 공간에서의 두 포인트의 직선거리를 구하는 것으로 유클리디안 거리(Eucledean distance)가 있고 원점을 기준은로 두 포인트간의 각을 구하는 것으로 코사인 유사도가 있다.&lt;/p&gt;&#xA;&lt;p&gt;코사인 유사도는 그 공식이 매우 간단하고 중등수학(고등학교 수준의 수학)으로 쓸 수 있다는 점에서 간단하고 좋다.  그래서 공식보다는 어떤 경우에 코사인 유사도를 사용해야 하는지를 이해하는 것이 더 중요하다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

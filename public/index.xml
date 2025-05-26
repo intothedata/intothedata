@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>데이터과학 위키 - 인투더데이터 on 인투더데이터 데이터과학</title>
+    <link>https://intothedata.com/</link>
+    <description>Recent content in 데이터과학 위키 - 인투더데이터 on 인투더데이터 데이터과학</description>
+    <generator>Hugo</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Tue, 28 Mar 2017 00:02:24 +0100</lastBuildDate>
+    <atom:link href="https://intothedata.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>데이터과학자 스킬셋</title>
+      <link>https://intothedata.com/docs/01.data_science/datascientist_skillset/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/01.data_science/datascientist_skillset/</guid>
+      <description>&lt;h2 id=&#34;데이터과학자-스킬셋-data-scientist-skill-set&#34;&gt;&#xA;  데이터과학자 스킬셋 (Data scientist skill-set)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%eb%8d%b0%ec%9d%b4%ed%84%b0%ea%b3%bc%ed%95%99%ec%9e%90-%ec%8a%a4%ed%82%ac%ec%85%8b-data-scientist-skill-set&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;데이터과학자가 되려면 데이터과학자에게 필요한 스킬셋을 갖춰야 한다.&#xA;간단하게 정리하기는 어렵지만 크게 3개의 분류로 나눌 수 있다.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;컴퓨터 엔지니어링: 코딩, 프로그래밍&lt;/li&gt;&#xA;&lt;li&gt;데이터 분석: 통계, 수학, 알고리즘, 확률, 논리&lt;/li&gt;&#xA;&lt;li&gt;설득 및 설명: 프리젠테이션, 글쓰기, 데이터시각화&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;각각을 자세히 알아보자.&lt;/p&gt;&#xA;&lt;h2 id=&#34;컴퓨터-엔지니어링&#34;&gt;&#xA;  컴퓨터 엔지니어링&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%bb%b4%ed%93%a8%ed%84%b0-%ec%97%94%ec%a7%80%eb%8b%88%ec%96%b4%eb%a7%81&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;컴퓨터 엔지니어링은 코딩만을 뜻하는 것이 아니다. 컴퓨터를 활용할 수 있는 전반적인 능력을 말한다. 소프트웨어 사용법 같은 것도 포함된다.&#xA;마이크로소프트 엑셀에서는 코딩을 하지 않아도 되지만, 데이터 분석을 할 때 엑셀도 빈번하게 사용한다.&#xA;활용 능력 중에서 가장 중요한 것은 프로그래밍 능력이다. 과거에는 수학이나 통계학을 하기 위해서 프로그래밍 능력이 꼭 필요하지는 않았다. 하지만 지금은 데이터를 처리하기 위해서는 프로그래밍 기술 활용이 필수이다. Excel과 다른 통계분석툴로도 데이터과학을 할 수 있지만, 변화가 많은 상황에 유연하게 대처하면서도 빠른 작업 진행이 필요하기 때문에 결국 자동화가 필요하다.&#xA;자동화를 위해서는 프로그래밍 능력이 반드시 필요하고, 데이터과학자는 자동화 기술을 잘 활용할 수 있어야 한다. 능숙한 컴퓨터 언어가 최소 1개 이상은 있어야 한다. 그리고 활용 범위가 넓은 범용 언어인 것이 좋다.&#xA;Python과 R이 데이터과학을 위한 언어로 많이 쓰이는 것은 프로그래밍을 하면서 데이터과학의 근본에 더 집중할 수 있기 때문이다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>중심극한정리 - CLT; Central Limit Theorem</title>
+      <link>https://intothedata.com/docs/02.scholars/statistics/central_limit_theorem/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/02.scholars/statistics/central_limit_theorem/</guid>
+      <description>&lt;h2 id=&#34;중심극한정리---central-limit-theorem&#34;&gt;&#xA;  중심극한정리 - Central Limit Theorem&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%a4%91%ec%8b%ac%ea%b7%b9%ed%95%9c%ec%a0%95%eb%a6%ac---central-limit-theorem&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;통계학을 처음 접하게 될 때 가장 초기에 듣는 것이 “중심극한정리”이다.&lt;/p&gt;&#xA;&lt;p&gt;중심극한정리가 문헌에 나타난 것은 대략 1700년 경으로 알려져 있지만 정확히 언제부터 사람들이 이것을 알게 되었는지는 알려진 것이 없다고 한다. 하지만 중심극한정리는 통계학 역사상 가장 중요한 발견이라고 한다.&lt;/p&gt;&#xA;&lt;p&gt;중심극한정리는 쉬워 보이지만 대충 개념을 확실히 이해하지 않고 넘어가면 후에 큰 실수하기 쉽다.&lt;br&gt;&#xA;사실 근원(prime)까지 이해하기에는 중심극한정리는 매우 난해하고 현실에서 중심극한정리를 이용할 일이 많지 않기 때문에 간단하게 무엇인지만 알고 넘어가는 경우가 많다. 하지만 정확하게 알지 못하는 것으로 인해 통계분석을 진행하다가 틀린 논리를 근거로 내세우는 실수를 저지르기도 한다.&lt;br&gt;&#xA;심지어 통계학을 전공한 사람들도 중심극한정리를 제대로 이해하지 못한 경우가 많다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>넘버라인플롯 - Number line plot</title>
+      <link>https://intothedata.com/docs/05.data_visualization/number_line_plot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/05.data_visualization/number_line_plot/</guid>
+      <description>&lt;h2 id=&#34;넘버라인플롯-number-line-plot&#34;&gt;&#xA;  넘버라인플롯 Number line plot&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%eb%84%98%eb%b2%84%eb%9d%bc%ec%9d%b8%ed%94%8c%eb%a1%af-number-line-plot&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;다음과 같이 생긴 것이 넘버라인플롯이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://www.varsitytutors.com/assets/vt-hotmath-legacy/images/gt/lessons/genericalg1/line_plot.gif&#34; alt=&#34;라인플롯예제1&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;라인플롯, 닷플롯이라고 부르며, 직선으로 된 축 위에 점을 찍어서 카운트를 표현한 것이 특징이다.&lt;br&gt;&#xA;수량을 명료하게 표현하기 때문에 단순하지만 매우 효과적으로 의미를 전달할 수 있다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;특징&#34;&gt;&#xA;  특징&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ed%8a%b9%ec%a7%95&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;숫자를 순서대로 정렬하고 숫자별로 카운트를 점으로 표현해서 알아보기 쉽게 한다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;참고자료&#34;&gt;&#xA;  참고자료&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%b0%b8%ea%b3%a0%ec%9e%90%eb%a3%8c&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.khanacademy.org/math/cc-third-grade-math/represent-and-interpret-data/imp-line-plots/a/line-plots-review&#34;&gt;&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://intothedata.com/index.json</link>
+      <pubDate>Tue, 28 Mar 2017 00:02:24 +0100</pubDate>
+      <guid>https://intothedata.com/index.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://intothedata.com/_header/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/_header/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://intothedata.com/docs/02.scholars/statistics/sampling/loglogbeta/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/02.scholars/statistics/sampling/loglogbeta/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://intothedata.com/docs/06.data_collection/mobile_data_collection/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/06.data_collection/mobile_data_collection/</guid>
+      <description>&lt;h1 id=&#34;모바일앱-데이터-수집의-주요-문제점&#34;&gt;&#xA;  모바일앱 데이터 수집의 주요 문제점&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%eb%aa%a8%eb%b0%94%ec%9d%bc%ec%95%b1-%eb%8d%b0%ec%9d%b4%ed%84%b0-%ec%88%98%ec%a7%91%ec%9d%98-%ec%a3%bc%ec%9a%94-%eb%ac%b8%ec%a0%9c%ec%a0%90&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;type: &amp;ldquo;docs&amp;rdquo;&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-모바일-네트워크의-불안정성&#34;&gt;&#xA;  1. 모바일 네트워크의 불안정성&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#1-%eb%aa%a8%eb%b0%94%ec%9d%bc-%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac%ec%9d%98-%eb%b6%88%ec%95%88%ec%a0%95%ec%84%b1&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;모바일 망의 빈번한 단절로 인해 오프라인 데이터 수집 후 온라인에서 동기화하는 기능 필요&lt;/li&gt;&#xA;&lt;li&gt;대량의 데이터를 주고 받을 때 데이터 사용량 부담 발생&lt;/li&gt;&#xA;&lt;li&gt;네트워크 지연 시간(latency)으로 인한 실시간 데이터 처리 어려움&lt;/li&gt;&#xA;&lt;li&gt;지역별 네트워크 품질 차이로 인한 데이터 수집 불균형 발생&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;2-다양한-행동-데이터-관리&#34;&gt;&#xA;  2. 다양한 행동 데이터 관리&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#2-%eb%8b%a4%ec%96%91%ed%95%9c-%ed%96%89%eb%8f%99-%eb%8d%b0%ec%9d%b4%ed%84%b0-%ea%b4%80%eb%a6%ac&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;문항 선택, 답변 선택, 카테고리 선택, 정보서핑 액션 외 다양한 종류의 행동이 불규칙하게 발생되어 데이터 관리가 어려움&lt;/li&gt;&#xA;&lt;li&gt;사용자별 행동 패턴의 다양성으로 인한 데이터 정규화 문제&lt;/li&gt;&#xA;&lt;li&gt;행동 데이터의 맥락(context) 유지 및 연관성 분석 복잡성&lt;/li&gt;&#xA;&lt;li&gt;멀티 세션에 걸친 사용자 행동 추적의 어려움&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;3-불규칙적인-트래픽-관리&#34;&gt;&#xA;  3. 불규칙적인 트래픽 관리&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#3-%eb%b6%88%ea%b7%9c%ec%b9%99%ec%a0%81%ec%9d%b8-%ed%8a%b8%eb%9e%98%ed%94%bd-%ea%b4%80%eb%a6%ac&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;접속 사용자의 접속 시간대와 사용 패턴이 일정하지 않아 트래픽 관리가 어려움&lt;/li&gt;&#xA;&lt;li&gt;특정 이벤트나 프로모션 시 급증하는 트래픽으로 인한 서버 부하 발생&lt;/li&gt;&#xA;&lt;li&gt;시간대별, 요일별 트래픽 변동성에 따른 리소스 할당 최적화 문제&lt;/li&gt;&#xA;&lt;li&gt;글로벌 사용자 대응 시 시차로 인한 24시간 트래픽 모니터링 필요성&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;4-디바이스-다양성-문제&#34;&gt;&#xA;  4. 디바이스 다양성 문제&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#4-%eb%94%94%eb%b0%94%ec%9d%b4%ec%8a%a4-%eb%8b%a4%ec%96%91%ec%84%b1-%eb%ac%b8%ec%a0%9c&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;다양한 스마트폰 기종과 OS 버전에 따른 데이터 수집 일관성 유지 어려움&lt;/li&gt;&#xA;&lt;li&gt;디바이스별 성능 차이로 인한 데이터 수집 품질 편차 발생&lt;/li&gt;&#xA;&lt;li&gt;화면 크기와 해상도 차이로 인한 UI 상호작용 데이터의 정규화 문제&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://intothedata.com/docs/37.artificial_intelligence/%EB%B2%A1%ED%84%B0-%EA%B2%80%EC%83%89-%EC%97%94%EC%A7%84/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/37.artificial_intelligence/%EB%B2%A1%ED%84%B0-%EA%B2%80%EC%83%89-%EC%97%94%EC%A7%84/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>3 sigma rule</title>
+      <link>https://intothedata.com/docs/02.scholars/anomaly_detection/3_sigma_rule/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/02.scholars/anomaly_detection/3_sigma_rule/</guid>
+      <description>&lt;h2 id=&#34;개요&#34;&gt;&#xA;  개요&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ea%b0%9c%ec%9a%94&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://intothedata.com/images/3_sigma_rule/Standard_deviation_diagram.svg.png&#34; alt=&#34;그림&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;데이터의 분포를 정규분포로 가정하고(또는 우기고) 평균으로 부터 ±표준편차 * 시그마계수를 벗어나면 아웃라이어(outlier, 이상치)라고 판단하는 것을 말한다. 너무 단순한 것이라고 해서 최근에는 그대로 사용하는 경우는 거의 없다. 하지만 단순하면서도 꽤 괜찮은 결과를 보여준다.&lt;/p&gt;&#xA;&lt;p&gt;시그마계수는 표준편차에 얼마를 곱해서 아웃라이어의 지점을 결정할 것인가를 말하는데 보통 2 ~ 3의 값을 사용한다. 표준편차에 2에서 3사이의 값을 곱해서 양과 음의 범위를 신뢰구간으로 보고 그 범위를 벗어나는 것을 아웃라이어로 결정하는 것이다.&lt;br&gt;&#xA;3시그마보다는 2시그마를 사용하는 것이 일반적으로 많이 알려져 있다.  정규분포에서 3시그마의 범위는 전체의 99%를 차지하게 되며 나머지 1%가 아웃라이어가 되므로 여기에 해당하는것이 너무 적기 때문이다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>3 sigma rule</title>
+      <link>https://intothedata.com/docs/37.artificial_intelligence/faiss/3_sigma_rule/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/37.artificial_intelligence/faiss/3_sigma_rule/</guid>
+      <description>&lt;h2 id=&#34;개요&#34;&gt;&#xA;  개요&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ea%b0%9c%ec%9a%94&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://intothedata.com/images/3_sigma_rule/Standard_deviation_diagram.svg.png&#34; alt=&#34;그림&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;데이터의 분포를 정규분포로 가정하고(또는 우기고) 평균으로 부터 ±표준편차 * 시그마계수를 벗어나면 아웃라이어(outlier, 이상치)라고 판단하는 것을 말한다. 너무 단순한 것이라고 해서 최근에는 그대로 사용하는 경우는 거의 없다. 하지만 단순하면서도 상당히 그럴듯하게 작동한다.&lt;/p&gt;&#xA;&lt;p&gt;시그마계수는 표준편차에 얼마를 곱해서 아웃라이어의 지점을 결정할 것인가를 말하는데 보통 2 ~ 3의 값을 사용한다. 표준편차에 2에서 3사이의 값을 곱해서 양과 음의 범위를 신뢰구간으로 보고 그 범위를 벗어나는 것을 아웃라이어로 결정하는 것이다.&lt;br&gt;&#xA;3시그마보다는 2시그마를 사용하는 것이 일반적으로 많이 알려져 있다.  정규분포에서 3시그마의 범위는 전체의 99%를 차지하게 되며 나머지 1%가 아웃라이어가 되므로 여기에 해당하는것이 너무 적기 때문이다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Behavioral Change Point Analysis - 행동변화점분석</title>
+      <link>https://intothedata.com/docs/02.scholars/business_analysis/behavioral_change_point_analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/02.scholars/business_analysis/behavioral_change_point_analysis/</guid>
+      <description>&lt;h2 id=&#34;behavioral-change-point-analysis&#34;&gt;&#xA;  Behavioral Change Point Analysis&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#behavioral-change-point-analysis&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;작성중&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Distributed Lag Model</title>
+      <link>https://intothedata.com/docs/02.scholars/economics/distributed_lag_model/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/02.scholars/economics/distributed_lag_model/</guid>
+      <description>&lt;h2 id=&#34;distributed-lag-model&#34;&gt;&#xA;  Distributed Lag Model&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#distributed-lag-model&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;</description>
+    </item>
+    <item>
+      <title>Generalized ESD</title>
+      <link>https://intothedata.com/docs/02.scholars/anomaly_detection/generalized_esd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/02.scholars/anomaly_detection/generalized_esd/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Generalized ESD Test for Outliers&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;이 기법은 이상감기 기법이다. 원래 명칭을 조금 길에 풀어쓰면 “Generalized Extreme Studentized Deviate Test”이다.&#xA;하나 이상의 이상치(outlier)를 찾는 방법이며 원래 명칭은 “Grubbs&amp;rsquo; test for outliers” 이다.&lt;/p&gt;&#xA;&lt;p&gt;“Grubbs&amp;rsquo; test for outlies”는 다른 이름으로 “Maximum normed residual test” 또는 “Extreme studentized deviate test”로 표기 되기도 한다.&lt;/p&gt;&#xA;&lt;p&gt;이 방법은 다음과 같은 조건이 만족되어야 한다.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;정규분포&lt;/li&gt;&#xA;&lt;li&gt;단변량&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;이상값-outlier&#34;&gt;&#xA;  이상값 outlier&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%9d%b4%ec%83%81%ea%b0%92-outlier&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;통계적 접근 방식에서는 일반적인 대부분의 데이터가 어떤 통계 모델을 따르고, 그 모델을 따르지 않는 데이터는 이상값이라고 가정한다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Generalized ESD</title>
+      <link>https://intothedata.com/docs/37.artificial_intelligence/faiss/generalized_esd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/37.artificial_intelligence/faiss/generalized_esd/</guid>
+      <description>&lt;h1 id=&#34;&#34;&gt;&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;generalized-esd-test-for-outliers&#34;&gt;&#xA;  Generalized ESD Test for Outliers&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#generalized-esd-test-for-outliers&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;조금 길에 풀어쓰면 “Generalized Extreme Studentized Deviate Test”이다.&#xA;하나 이상의 이상치(outlier)를 찾는 방법이며 원래 명칭은 Grubbs&amp;rsquo; test for outliers 이다.&lt;/p&gt;&#xA;&lt;p&gt;Grubbs&amp;rsquo; test for outlies는 다른 이름으로 “Maximum normed residual test” 또는&lt;br&gt;&#xA;“Extreme studentized deviate test”로도 알려져 있기도 하다.&lt;/p&gt;&#xA;&lt;p&gt;이 방법은 다음과 같은 조건이 만족되어야 한다.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;정규분포&lt;/li&gt;&#xA;&lt;li&gt;단변량&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>K-means - K중심값</title>
+      <link>https://intothedata.com/docs/02.scholars/data_mining/clustering/k-means/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/02.scholars/data_mining/clustering/k-means/</guid>
+      <description>&lt;h2 id=&#34;정의&#34;&gt;&#xA;  정의&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%a0%95%ec%9d%98&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;K-means는 한국어로 &lt;strong&gt;K중심값&lt;/strong&gt;으로 번역을 하곤한다.  K-means에서 mean이 평균 즉, 중심값을 뜻하기 때문이다.&#xA;평균이 항상 중심값을 뜻하는 것은 아니므로 유의한다. K-means에서 &amp;ldquo;mean&amp;quot;이 뜻하는 것은 더 엄밀히 말하면 중심값이라기 보다는 대푯값을 말하는 것이다. 하지만 대부분 중심값을 대푯값으로 사용하는 경우가 때문에 크게 이상한 것은 아니다.&lt;/p&gt;&#xA;&lt;p&gt;현업에서는 &amp;ldquo;케이민즈&amp;quot;로 원어를 그대로 발음하는 것이 통상적이다.  이 글에서는 현실과의 차이를 만들지 않기 위해서 앞으로 계속 K-means라고 표기한다.&lt;/p&gt;&#xA;&lt;p&gt;K-means의 말을 분리해서 해석하면 다음과 같다.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;K: 분할할 군집의 갯수. 사용하는 사람이 정해줘야 하는 값&lt;/li&gt;&#xA;&lt;li&gt;means: 찾고 싶은 중심값들&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;위에서 말한 것 처럼 K-means에서 K는 사람이 입력을 해주어야 하며 알고리즘에서 자동으로 정해주지 않는다.&lt;br&gt;&#xA;다만 적당히 반복 수행을 통해서 적절한 값을 찾는 방법들이 있긴하지만 활용을 위한 편법일 뿐이며 이 값은 결국 사람이 풀려는 문제와 문제를 풀기 위한 접근 방법에 따라 결정을 해줘야 한다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SK data hub</title>
+      <link>https://intothedata.com/docs/07.data_hub/sk_data_hub/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/07.data_hub/sk_data_hub/</guid>
+      <description>&lt;h2 id=&#34;개요&#34;&gt;&#xA;  개요&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ea%b0%9c%ec%9a%94&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;SK플래닛(SK planet, 이하 SK플래닛)에서 운영하는 데이터를 제공하는 서비스이다.  계열사인 SK텔레콤으로 부터 얻을 수 있는 것을 포함해서 자체에서 제공하는 데이터와 제3자가 제공하는 데이터가 제공되고 있으며 일부는 유료로 제공된다.&lt;/p&gt;&#xA;&lt;h3 id=&#34;이용방식&#34;&gt;&#xA;  이용방식&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%9d%b4%ec%9a%a9%eb%b0%a9%ec%8b%9d&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;API 방식으로도 데이터를 가져올 수 있도록 하고 있으나 모든 데이터를 API이용해서 접근할 수 있는 것은 아니다.  일부는 파일을 다운로드 받아야 할 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;서비스 형태로 보면 DaaS(data as a service)라고 볼 수 있으며, 데이터를 제공하고 구매하는 마켓의 형태로 운영한지 조금되었지만 사업성이나 자체 수익, 비즈니스의 발전 등에 대해서는 알 수 없다. 국내는 아직도 정보를 독점하려는 경향이 있어 매우 다양한 데이터가 제공되지 않지만 유용한 데이터도 많이 제공하고 있다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>TFIDF - Term Frequency Inverse Document Frequency</title>
+      <link>https://intothedata.com/docs/02.scholars/text_mining/tfidf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/02.scholars/text_mining/tfidf/</guid>
+      <description>&lt;p&gt;TF-IDF는 문서를 벡터화 할 때 문서내의 텀(term)들에 수치를 가중치가 적용된 형태로 부여하는 방법 중의 하나이다.&lt;/p&gt;&#xA;&lt;p&gt;TF-IDF는 정확한 용어로 TF-IDF weighting scheme이라고 부르는데 이중에 weighting은 가중치를 고려한다는 뜻이고 scheme의 뜻이 방법 또는 방안이라는 뜻이다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>그래인저 인과관계 - Granger Causality</title>
+      <link>https://intothedata.com/docs/02.scholars/timeseries_analysis/granger_causality/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/02.scholars/timeseries_analysis/granger_causality/</guid>
+      <description>&lt;h2 id=&#34;개요&#34;&gt;&#xA;  개요&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ea%b0%9c%ec%9a%94&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;닭이 먼저인가 달걀이 먼저인가?&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;실없는 유머나 말장난 같지만 과학적으로 닭이 먼저인가 달걀이 먼저인가?와 같은 인과관계를 파악하는 것은 매우 어려운 일이다.  닭이 먼저인지 달걀이 먼저인지 인과관계를 확인하기 위한 통계적인 방법으로 그래인저 인과관계(Granger causality)라는 것이 있다.&#xA;그래인저 인과관계는 일반적으로 사람들이 생각하는 원인을 바로 찾아주고 관련이 있는지를 알려주는 인과관계를 말하는 것은 아니다. 사람들이 생각하는 인과는 매우 추상적이고 포괄적이기 때문에 사실 이런 것을 과학적인 방법으로 알아내는 것은 매우 어렵다.  하지만 그렇다고 해서 포기할 수는 없고 이런 사람들이 알고자 하는 그런 인과관계가 있는지 확인하는 것을 시도할 수 있는 단순하고 잘 알려진 방법 중에 가장 많이 쓰이는 것이 그래인저 인과관계이다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>기술통계 - Descriptive statistics</title>
+      <link>https://intothedata.com/docs/02.scholars/statistics/descriptive_statistics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/02.scholars/statistics/descriptive_statistics/</guid>
+      <description>&lt;p&gt;자료를 그래프나 숫자등으로 요약하는 통계적 행위 및 관련 방법을 기술 통계라고 한다.&lt;/p&gt;&#xA;&lt;p&gt;“어떤 것을 문서에 기술한다”할 때의 그 기술이다. 일반적인 기술(technique)을 말하는 것이 아니므로 주의한다. 통계에 대한 기초 이해가 없는 사람들은 기술 통계라고 하면 기술 기반의 통계라고 이해하기 쉬운데 모든 통계는 기술(techinique) 기반이다.&lt;/p&gt;&#xA;&lt;p&gt;기술통계는 데이터를 요약하고 시각화해서 잘 설명하는 것이 중점을 두며 데이터에 대해서 쉽게 설명하기 위해서 시각화를 많이 활용한다. 기술 통계에서 기본적으로 사용하는 것은 도수분포표와 히스토그램, 박스플롯등이 있으며 이를 기반으로 사실을 객관적으로 확인하는 것을 중점으로 한다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>난수 - Random</title>
+      <link>https://intothedata.com/docs/50.computer_science/random/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/50.computer_science/random/</guid>
+      <description>&lt;p&gt;컴퓨터에서 랜덤은 매우 중요한 것중의 하나이다. 실제로 컴퓨터의 랜덤이 우리가 상상하는 완전한 랜덤이 아니기 때문이다.  랜덤은 규칙이 없게 수를 고르거나 행동하는 것을 말하는데 컴퓨터는 사실 모든 행동을 규칙에 기반해서 하기 때문에 이것에 원천적으로 위배된다.  그래서 컴퓨터에서 생성하는 랜덤은 간혹 편향이 생기거나 랜덤성을 만족하지 못해서 문제를 일으키거나 한다.&lt;/p&gt;&#xA;&lt;h3 id=&#34;quasi-random-sequence&#34;&gt;&#xA;  Quasi Random Sequence&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#quasi-random-sequence&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.johndcook.com/blog/2009/03/16/quasi-random-sequences-in-art-and-integration/&#34;&gt;http://www.johndcook.com/blog/2009/03/16/quasi-random-sequences-in-art-and-integration/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;참고자료: &lt;a href=&#34;http://www.phy.duke.edu/~rgb/General/dieharder.php&#34;&gt;http://www.phy.duke.edu/~rgb/General/dieharder.php&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>네이만 배분법 - neyman allocation</title>
+      <link>https://intothedata.com/docs/02.scholars/statistics/sampling/neyman_alloction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/02.scholars/statistics/sampling/neyman_alloction/</guid>
+      <description>&lt;h2 id=&#34;참고&#34;&gt;&#xA;  참고&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%b0%b8%ea%b3%a0&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.google.co.kr/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=9&amp;amp;cad=rja&amp;amp;uact=8&amp;amp;ved=0ahUKEwiQ9u2SqtfVAhXEabwKHX4SB70QFghSMAg&amp;amp;url=http%3A%2F%2Fwww.5365.co.kr%2Fbbs_download.php%3Ftmp_name%3D20101116142614.2960.3.0%26name%3D%25BB%25F9%25C7%25C3%25C7%25A5%25BA%25BB%25C3%25DF%25C3%25E2%25B9%25E6%25B9%25FD%25B9%25E6%25B9%25FD4.hwp&amp;amp;usg=AFQjCNEqSdirh1eEFIgLNgD-NHBDEjSVOA&#34;&gt;https://www.google.co.kr/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=9&amp;amp;cad=rja&amp;amp;uact=8&amp;amp;ved=0ahUKEwiQ9u2SqtfVAhXEabwKHX4SB70QFghSMAg&amp;amp;url=http%3A%2F%2Fwww.5365.co.kr%2Fbbs_download.php%3Ftmp_name%3D20101116142614.2960.3.0%26name%3D%25BB%25F9%25C7%25C3%25C7%25A5%25BA%25BB%25C3%25DF%25C3%25E2%25B9%25E6%25B9%25FD%25B9%25E6%25B9%25FD4.hwp&amp;amp;usg=AFQjCNEqSdirh1eEFIgLNgD-NHBDEjSVOA&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.google.co.kr/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=8&amp;amp;cad=rja&amp;amp;uact=8&amp;amp;ved=0ahUKEwiQ9u2SqtfVAhXEabwKHX4SB70QFghMMAc&amp;amp;url=http%3A%2F%2Flunchbreak.tistory.com%2F26&amp;amp;usg=AFQjCNHQg_P6jC6ybqOi_bnHmbuE2VXCNg&#34;&gt;https://www.google.co.kr/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=8&amp;amp;cad=rja&amp;amp;uact=8&amp;amp;ved=0ahUKEwiQ9u2SqtfVAhXEabwKHX4SB70QFghMMAc&amp;amp;url=http%3A%2F%2Flunchbreak.tistory.com%2F26&amp;amp;usg=AFQjCNHQg_P6jC6ybqOi_bnHmbuE2VXCNg&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;수정절사법&#34;&gt;&#xA;  수정절사법&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%88%98%ec%a0%95%ec%a0%88%ec%82%ac%eb%b2%95&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;내용 정리중&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>뉴스 - News</title>
+      <link>https://intothedata.com/news/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/news/</guid>
+      <description>&lt;p&gt;이제는 ‘광고분석2.0’ 시대 - &lt;a href=&#34;http://www.hbrkorea.com/magazine/article/view/3_1/page/1/article_no/114&#34;&gt;http://www.hbrkorea.com/magazine/article/view/3_1/page/1/article_no/114&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>로그랭크검정 - Log Rank Test</title>
+      <link>https://intothedata.com/docs/02.scholars/statistics/survival_analysis/log_rank_test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/02.scholars/statistics/survival_analysis/log_rank_test/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>로렌츠 커브</title>
+      <link>https://intothedata.com/docs/90.metrics/lorenz_curve/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/90.metrics/lorenz_curve/</guid>
+      <description>&lt;p&gt;사회불평등 정도를 나타내기 위해 부의 분배에 대해 확률 분포를 나타낸 곡선이다.&#xA;맥스 O 로렌츠가 만들었다.&lt;/p&gt;&#xA;&lt;p&gt;위키피디아의 플롯을 보고 이해를 돕기 위해 적어보면 다음과 같다.&#xA;녹색선은 완전한 평등 상태를 말한다.&#xA;청색선은 완전한 불평등 상태를 말한다.&#xA;적색선이 계산된 로렌츠 커브이다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;참조&#34;&gt;&#xA;  참조&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%b0%b8%ec%a1%b0&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;참조: R-bloggers&lt;/li&gt;&#xA;&lt;li&gt;참조: 로렌츠 곡선 - 위키피디아&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>분산 - Variance</title>
+      <link>https://intothedata.com/docs/02.scholars/statistics/variance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/02.scholars/statistics/variance/</guid>
+      <description>&lt;h2 id=&#34;개요&#34;&gt;&#xA;  개요&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ea%b0%9c%ec%9a%94&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;분산은 데이터가 평균으로 부터 얼마나 많이 떨어져 있는지를 나타내는 통계값이다.  분산은 표준편차의 제곱값과 동일하고 표준편차는 분산의 제곱근(sqrt)이다.  표준편차와 분산은 사실 동일하다고 볼 수 있는데 표준편차보다는 표준편차가 제곱된 형태의 분산이 더 많이 쓰인다.&lt;/p&gt;&#xA;&lt;h3 id=&#34;표준편차보다-분산을-더-많이-사용하는-이유&#34;&gt;&#xA;  표준편차보다 분산을 더 많이 사용하는 이유&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ed%91%9c%ec%a4%80%ed%8e%b8%ec%b0%a8%eb%b3%b4%eb%8b%a4-%eb%b6%84%ec%82%b0%ec%9d%84-%eb%8d%94-%eb%a7%8e%ec%9d%b4-%ec%82%ac%ec%9a%a9%ed%95%98%eb%8a%94-%ec%9d%b4%ec%9c%a0&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;제곱이 된 상태를 두면 후에 미분을 적용하거나 여러 계산에서 분산값을 계산할 때 편해지는 이점이 있다. 분산의 값을 재계산하는 수식들은 통계학이나 공학의 논문이나 서적에서 볼 수 있는데 그런 수식들 중에서 분산이 제곱근이 되어 있지 않아 편리하게 계산이 되는 것을 볼 수 있다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>브라운 운동 - Brownian Motion</title>
+      <link>https://intothedata.com/docs/02.scholars/statistics/stochastic_process/brownian_motion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/02.scholars/statistics/stochastic_process/brownian_motion/</guid>
+      <description>&lt;h2 id=&#34;참고자료&#34;&gt;&#xA;  참고자료&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%b0%b8%ea%b3%a0%ec%9e%90%eb%a3%8c&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://ko.wikipedia.org/wiki/%EB%B8%8C%EB%9D%BC%EC%9A%B4_%EC%9A%B4%EB%8F%99&#34;&gt;https://ko.wikipedia.org/wiki/%EB%B8%8C%EB%9D%BC%EC%9A%B4_%EC%9A%B4%EB%8F%99&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>상미분방정식 - Ordinary Differential Equation</title>
+      <link>https://intothedata.com/docs/80.mathematics/ordinary_differential_equation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/80.mathematics/ordinary_differential_equation/</guid>
+      <description>&lt;p&gt;Ordinary Differential Equation의 약어이며 미지함수의 일계 또는 고계도함수가 방정식에 포함된 것이다.&#xA;가장 단순한 형태로 함수 y(x) 가 있을 때 다음과 같은 것이 미분방정식이다.&#xA;아래와 같은 것이 상미분방정식이다.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;y&amp;rsquo; = cos x&lt;/li&gt;&#xA;&lt;li&gt;y&amp;rsquo;&amp;rsquo; + 9y = = e^-2x&lt;/li&gt;&#xA;&lt;li&gt;y&amp;rsquo;y&amp;rsquo;&amp;rsquo;&amp;rsquo; = 3/2y&#39;2 = 0&#xA;상미분방정식은 편미분방정식과 구분하기 위한 것으로 상미분은 1개의 미지수를 가지고 있으며 편미분방정식은 2개 이상의 미지수가 포함되어 있다.&#xA;어떤 미지함수 y가 있을 때 이 함수의 n계 도함수가 가장 높은 계수라면 이 상미분방정식을 n계 상미분방정식이라고 한다.&#xA;위의 상미분방정식에서 1)은 1계, 2)는 2계, 3)은 3계 방정식이된다.&#xA;1계 상미분방정식은 F(x, y, z&amp;rsquo;) = 0&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
+    </item>
+    <item>
+      <title>수학기호정리 - mathematics symbols</title>
+      <link>https://intothedata.com/docs/80.mathematics/mathematics_symbols/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/80.mathematics/mathematics_symbols/</guid>
+      <description>&lt;p&gt;참조: &lt;a href=&#34;http://www.rapidtables.com/math/symbols/Basic_Math_Symbols.htm&#34;&gt;Basic_Math_Symbols&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>엑셀에서 빅쿼리 데이터 가져오기</title>
+      <link>https://intothedata.com/docs/06.data_platform/bigquery/excel_bigquery/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/06.data_platform/bigquery/excel_bigquery/</guid>
+      <description>&lt;p&gt;Windows용 Excel을 기준으로 했고 Mac에서는 확인하지 않았다.&#xA;Windows용 Excel의 파워피봇(Powerpivot)에서 연결할 것이다.&#xA;파워피봇은 Excel에 내장된 데이터베이스 및 빅데이터 플랫폼, 클라우드 플랫폼에 연동을 쉽게 할 수 있도록 도와주는 도구인데&#xA;Office 365 ProPlus 이상의 버전에서만 활성화되는 기능이다.&#xA;파워피봇이 아니어도 데이터를 불어 올 수는 있지만 그냥 편하게 살기 위해서 파워피봇을 쓰기로 한다.&#xA;진행&#xA;ODBC 드라이버 설치&#xA;먼저 ODBC를 다운로드 받는다. Google Bigquery는 자체 제작한 ODBC 드라이버가 없고 Simba(ODBC, JDBC를 전문으로 만드는 회사)에서 제작한 ODBC를 라이센싱해서 제공하고 있다.&#xA;구글 클라우드로 가서 Bigquery용 Simba ODBC 드라이버를 다운로드 받아서 설치한다.&#xA;주의할 것은 사용하고 있는 Windows OS가 64bit라고 해도 ODBC 64bit, 32bit 2개를 모두 받아서 설치해야 한다는 점이다.&#xA;그렇지 않으면 엑셀에서 연결할 때 아키텍쳐 불일치 오류가 발생하는 경우가 많다.&#xA;&lt;a href=&#34;https://cloud.google.com/bigquery/partners/simba-drivers/&#34;&gt;https://cloud.google.com/bigquery/partners/simba-drivers/&lt;/a&gt;&#xA;위의 URL에 접속해서 ODBC driver 2개를 받아서 모두 설치한다.&#xA;Bigquery 접속용 키 가져오기&#xA;Bigquery에 접속하기 위해서 Key 다운로드 받아서 저장해 두어야 한다.&#xA;Key는 Google cloud console에서 다운로드 받을 수 있다.&#xA;Google cloud 대시보드 접속&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>오른스타인-우렌벡 과정  Ornstein-Uhlenbeck process</title>
+      <link>https://intothedata.com/docs/02.scholars/statistics/stochastic_process/ornstein_uhlenbeck_process/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/02.scholars/statistics/stochastic_process/ornstein_uhlenbeck_process/</guid>
+      <description>&lt;p&gt;내용 작성 중&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>온라인 광고 비즈니스 - Ad tech</title>
+      <link>https://intothedata.com/docs/03.business/online/ad_tech/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/03.business/online/ad_tech/</guid>
+      <description>&lt;h2 id=&#34;애드테크---ad-tech&#34;&gt;&#xA;  애드테크 - Ad tech&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%95%a0%eb%93%9c%ed%85%8c%ed%81%ac---ad-tech&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;앞서 말했듯이 온라인 광고와 관련된 기술을 애드 테크놀로지(Ad technology)라고 하고 줄여서 애드테크(Ad tech)라고 말한다. 이런 기술을 주 사업으로 하는 회사들을 애드테크 컴퍼니(Ad tech company)라고 하며 구글, 페이스북과 같은 회사들도 본래의 주된 서비스는 다르지만 실제 대부분의 수익을 광고로 얻고 있으므로 애드테크회사라고 볼 수 있다.&lt;/p&gt;&#xA;&lt;h3 id=&#34;애드테크-비즈니스&#34;&gt;&#xA;  애드테크 비즈니스&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%95%a0%eb%93%9c%ed%85%8c%ed%81%ac-%eb%b9%84%ec%a6%88%eb%8b%88%ec%8a%a4&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;우선 이 비즈니스를 잘 모르면 광고 배너를 화면에 보여주는 것이 무슨 특별한 기술이 필요하며 데이터과학과 무슨 관계가 있는지 이해하기 어려울 것이다. 하지만 배너가 보여지기 위해서 거치는 단계를 이해하게 되면 얼마나 정교한 기술이 필요한지 이해할 수 있을 것이다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>온라인 광고 용어 - Online Ad Terminology</title>
+      <link>https://intothedata.com/docs/03.business/ad_tech/ad_tech_terminlogy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/03.business/ad_tech/ad_tech_terminlogy/</guid>
+      <description>&lt;h2 id=&#34;디지털-광고-산업-용어&#34;&gt;&#xA;  디지털 광고 산업 용어&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%eb%94%94%ec%a7%80%ed%84%b8-%ea%b4%91%ea%b3%a0-%ec%82%b0%ec%97%85-%ec%9a%a9%ec%96%b4&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;디지털 광고 산업 용어라고 적어놓기는 했지만 상당수가 마켓팅, 세일즈 용어가 섞여 있다. 근래에는 온라인 마케팅을 전통적인 마켓팅과 분리해서 사용할 수 없는 상황이 되었다.  디지털 광고는 현대에 있어서 가장 강력한 마켓팅 수단중의 하나이고 디지털 마케팅 시장과 산업도 아직 급성정하고 있다.&lt;/p&gt;&#xA;&lt;p&gt;따라서 이 용어들이 디지털마켓팅(온라인 마켓팅)에만 사용되는 용어가 아니라는 것을 알아두자.&lt;/p&gt;&#xA;&lt;h3 id=&#34;cpm---cost-per-mille&#34;&gt;&#xA;  CPM - Cost per Mille.&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#cpm---cost-per-mille&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;광고 1000번을 노출하는데 지불되는 금액을 말한다.&lt;/p&gt;&#xA;&lt;h3 id=&#34;cpc---cost-per-click&#34;&gt;&#xA;  CPC - Cost per click&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#cpc---cost-per-click&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;배너 광고를 클릭하는 횟수로 과금을 하는 것을 말한다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>온라인 광고 용어 - Online Ad Terminology</title>
+      <link>https://intothedata.com/docs/03.business/adtech/ad_tech_terminlogy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/03.business/adtech/ad_tech_terminlogy/</guid>
+      <description>&lt;h2 id=&#34;디지털-광고-산업-용어&#34;&gt;&#xA;  디지털 광고 산업 용어&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%eb%94%94%ec%a7%80%ed%84%b8-%ea%b4%91%ea%b3%a0-%ec%82%b0%ec%97%85-%ec%9a%a9%ec%96%b4&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;디지털 광고 산업 용어라고 적어놓기는 했지만 상당수가 마켓팅, 세일즈 용어가 섞여 있다. 근래에는 온라인 마케팅을 전통적인 마켓팅과 분리해서 사용할 수 없는 상황이 되었다.  디지털 광고는 현대에 있어서 가장 강력한 마켓팅 수단중의 하나이고 디지털 마케팅 시장과 산업도 아직 급성정하고 있다.&lt;/p&gt;&#xA;&lt;p&gt;따라서 이 용어들이 디지털마켓팅(온라인 마켓팅)에만 사용되는 용어가 아니라는 것을 알아두자.&lt;/p&gt;&#xA;&lt;h3 id=&#34;cpm---cost-per-mille&#34;&gt;&#xA;  CPM - Cost per Mille.&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#cpm---cost-per-mille&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;광고 1000번을 노출하는데 지불되는 금액을 말한다.&lt;/p&gt;&#xA;&lt;h3 id=&#34;cpc---cost-per-click&#34;&gt;&#xA;  CPC - Cost per click&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#cpc---cost-per-click&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;배너 광고를 클릭하는 횟수로 과금을 하는 것을 말한다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>온라인 광고 용어 - Online Ad Terminology</title>
+      <link>https://intothedata.com/docs/03.business/online/ad_tech_terminlogy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/03.business/online/ad_tech_terminlogy/</guid>
+      <description>&lt;h2 id=&#34;디지털-광고-산업-용어&#34;&gt;&#xA;  디지털 광고 산업 용어&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%eb%94%94%ec%a7%80%ed%84%b8-%ea%b4%91%ea%b3%a0-%ec%82%b0%ec%97%85-%ec%9a%a9%ec%96%b4&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;디지털 광고 산업 용어라고 적어놓기는 했지만 상당수가 마켓팅, 세일즈 용어가 섞여 있다. 근래에는 온라인 마케팅을 전통적인 마켓팅과 분리해서 사용할 수 없는 상황이 되었다.  디지털 광고는 현대에 있어서 가장 강력한 마켓팅 수단중의 하나이고 디지털 마케팅 시장과 산업도 아직 급성정하고 있다.&lt;/p&gt;&#xA;&lt;p&gt;따라서 이 용어들이 디지털마켓팅(온라인 마켓팅)에만 사용되는 용어가 아니라는 것을 알아두자.&lt;/p&gt;&#xA;&lt;h3 id=&#34;cpm---cost-per-mille&#34;&gt;&#xA;  CPM - Cost per Mille.&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#cpm---cost-per-mille&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;광고 1000번을 노출하는데 지불되는 금액을 말한다.&lt;/p&gt;&#xA;&lt;h3 id=&#34;cpc---cost-per-click&#34;&gt;&#xA;  CPC - Cost per click&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#cpc---cost-per-click&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;배너 광고를 클릭하는 횟수로 과금을 하는 것을 말한다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>인물 - People</title>
+      <link>https://intothedata.com/people/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/people/</guid>
+      <description>&lt;p&gt;Ashish Venugopal&#x9; &#x9;컴퓨터공학, 기계학습&#x9;Google&#x9;현재 구글의 기계번역 책임 총괄이다.&#xA;Rasmus Lerdorf&#x9;라스무스 레르도프&#x9;컴퓨터공학&#x9;WePAY&#x9;PHP 창시자로 Yahoo!에서 근무한적이 있다.&#xA;Hadley Wickham&#x9;해들리 위크햄&#x9;통계학, 컴퓨터공학&#x9;Rstudio&#x9;R의 시각화 패키지인 ggplot2를 만든 뉴질랜드 대학 교수&#xA;Andrew Ng&#x9;앤드류 응&#x9;컴퓨터공학, 기계학습&#x9;Stanford&#x9;Coursera의 공통창업자이며 기계학습 전문가.&#xA;스탠포드 대학(Stanford University)의 교수이자 Baidu의 수석과학자이다.&#xA;Doug Cutting&#x9;더그 커팅&#x9;컴퓨터공학&#x9;Cloudera&#x9;Lucene, Hadoop, Nutch의 창시자이 Yahoo!에서 근무한적이 있다.&#xA;Max O. Lorenz&#x9;맥스 오 로렌츠&#x9;통계학, 경제학&#x9;사망&#x9;맥스 O 로렌츠 - Max O. Lorenz&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>자료 - data</title>
+      <link>https://intothedata.com/docs/02.scholars/statistics/data/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/02.scholars/statistics/data/</guid>
+      <description>&lt;h2 id=&#34;자료---data&#34;&gt;&#xA;  자료 - data&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%9e%90%eb%a3%8c---data&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;원소(element)는 자료의 수집대상이 되는 것을 말한다.&#xA;변수(variable)는 원소에서 관심의 대상이 되는 구체적인 특성을 말한다. 기계학습에서는 자질(feature)이라고 한다.&#xA;모든 원소들에 대해서 각각의 변수들을 측정한 것을 관측치(observation)이라고 한다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;측정단위&#34;&gt;&#xA;  측정단위&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%b8%a1%ec%a0%95%eb%8b%a8%ec%9c%84&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;이름이나 기호를 이용해 표기한 변수값은 명목척도(nominal scale)가 측정단위이며 명목자료라고 한다.&#xA;자료가 명목자료이고 순서도 있다면 측정단위를 순서측도(ordinal scale)이라고 하며 순서자료라고 한다.&#xA;자료가 순서자료의 특성을 가지고 값들의 차이가 고정된 측정단위로 표현된다면 구간척도(interval scale)이라고 한다.&#xA;자료가 순서특성을 가지고 있으며 두 값의 비율이 의미가 있다면 측정단위는 비율척도(ratio scale)이라고 한다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>정규분포, 가우시안 분포 - Normal Distribution, Gaussian Distribution</title>
+      <link>https://intothedata.com/docs/02.scholars/statistics/gaussian_distribution/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/02.scholars/statistics/gaussian_distribution/</guid>
+      <description>&lt;p&gt;위키피디아의 &lt;a href=&#34;https://ko.wikipedia.org/wiki/%EC%A0%95%EA%B7%9C%EB%B6%84%ED%8F%AC&#34;&gt;정규분포&lt;/a&gt;를 보면 설명이 잘 되어있다.&lt;/p&gt;&#xA;&lt;p&gt;보통 정규분포를 따른다고 하는 표현을 다음과 같이 표기한다.&lt;/p&gt;&#xA;&lt;p&gt;$$X \sim \mathcal{N}(\mu,,\sigma^{2}),.$$&lt;/p&gt;&#xA;&lt;p&gt;정규분포 함수 공식은 다음과 같다.&lt;/p&gt;&#xA;&lt;p&gt;$$f(x) = \frac 1 {\sigma\sqrt{2\pi}} e^{-\frac{(x-\mu)^2} {2\sigma^2}}$$&lt;/p&gt;&#xA;&lt;p&gt;또는&lt;/p&gt;&#xA;&lt;p&gt;\[P(x) = \frac{1}{{\sigma \sqrt {2\pi } }}{e^{{{ - {{\left( {x - \mu } \right)}^2}} \mathord{\left/&#xA;{\vphantom {{ - {{\left( {x - \mu } \right)}^2}} {2{\sigma ^2}}}} \right.&#xA;} {2{\sigma ^2}}}}}\]&lt;/p&gt;&#xA;&lt;p&gt;위의 공식은 정규분포에서의 \(x\)의 밀도를 알려주는 함수를 만드는 공식이다. 즉 x값을 입력할 때 그 x값에 해당하는 확률 밀도를 리턴하는 함수이다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>참고 사이트 - Sites</title>
+      <link>https://intothedata.com/sites/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/sites/</guid>
+      <description>&lt;h2 id=&#34;국내-기관&#34;&gt;&#xA;  국내 기관&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ea%b5%ad%eb%82%b4-%ea%b8%b0%ea%b4%80&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://spri.kr/&#34;&gt;http://spri.kr/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;외국-커뮤니티&#34;&gt;&#xA;  외국 커뮤니티&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%99%b8%ea%b5%ad-%ec%bb%a4%eb%ae%a4%eb%8b%88%ed%8b%b0&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://functionspace.org/&#34;&gt;http://functionspace.org/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://mathoverflow.net/&#34;&gt;http://mathoverflow.net/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://stackexchange.com/&#34;&gt;http://stackexchange.com/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>추론통계 - Inferential statistics</title>
+      <link>https://intothedata.com/docs/02.scholars/statistics/inferential_statistics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/02.scholars/statistics/inferential_statistics/</guid>
+      <description>&lt;h2 id=&#34;개요&#34;&gt;&#xA;  개요&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ea%b0%9c%ec%9a%94&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;특정 원소를 다 조사하거나 실험할 수 없는 경우 일부만을 취한 뒤 전체 대상에 대해 유추하거나 그에 관련된 내용을 연구하는 것을 추론통계라고 한다.&lt;/p&gt;&#xA;&lt;h3 id=&#34;모집단population&#34;&gt;&#xA;  모집단(population)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%eb%aa%a8%ec%a7%91%eb%8b%a8population&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;특정한 연구의 대상이 되는 원소의 모든 전체집합을 모집단이라고 한다.&lt;/p&gt;&#xA;&lt;h3 id=&#34;표본sample&#34;&gt;&#xA;  표본(sample)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ed%91%9c%eb%b3%b8sample&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;모집단의 작은 부분을 표본이라고 한다.&#xA;모집단에 대해서 모든 자료를 모으는 조사를 센서스(census)라고 한다.&#xA;표본으로 자료를 모으는 것을 표본조사(sample survey)라고 한다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>코사인 유사도 - Cosine Similarity</title>
+      <link>https://intothedata.com/docs/02.scholars/text_mining/cosine_similarity/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/02.scholars/text_mining/cosine_similarity/</guid>
+      <description>&lt;p&gt;데이터 포인트들 간의 유사도를 코사인(으로 계산한 것을 말한다. 정확히는 두 벡터의 사잇각을 코사인값으로 나타낸 것이다.&lt;/p&gt;&#xA;&lt;p&gt;데이터마이닝, 기계학습, 통계학등에서 유사한 데이터를 찾을 때 기본적으로 접근하는 것이 두 데이터 포인트의 거리를 계산하는 것부터 시작한다. 데이터 포인트 간의 거리를 측정하는 방법을 distance measurement라고 하며 매우 많은 것들이 있다.  가장 일반적인 것이 벡터 공간에서의 두 포인트의 직선거리를 구하는 것으로 유클리디안 거리(Eucledean distance)가 있고 원점을 기준은로 두 포인트간의 각을 구하는 것으로 코사인 유사도가 있다.&lt;/p&gt;&#xA;&lt;p&gt;코사인 유사도는 그 공식이 매우 간단하고 중등수학(고등학교 수준의 수학)으로 쓸 수 있다는 점에서 간단하고 좋다.  그래서 공식보다는 어떤 경우에 코사인 유사도를 사용해야 하는지를 이해하는 것이 더 중요하다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>태그 목록</title>
+      <link>https://intothedata.com/taglist/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/taglist/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>페르마의 마지막 정리</title>
+      <link>https://intothedata.com/docs/80.mathematics/fermats_last_theorem/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/80.mathematics/fermats_last_theorem/</guid>
+      <description>&lt;p&gt;정수론에서 페르마의 마지막 정리(영어: Fermat’s last theorem)는 3 이상 지수의 거듭제곱수는 같은 지수의 두 거듭제곱수의 합으로 나타낼 수 없다는 정리이다. 즉, a,b,c가 양의 정수이고, n이 3 이상의 정수일 때, 항상 이다.&#xA;자체로는 데이터 분석과는 상관이 없다. 다만 해석학과 수학의 여러 방면의 발전을 가져왔다는데 있어 그 의의가 크다고 할 수 있다.&#xA;인용 및 참조: 위키피디아&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>피어슨 상관계수 - Pearson&#39;s product-moment correlation</title>
+      <link>https://intothedata.com/docs/02.scholars/statistics/correlation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/02.scholars/statistics/correlation/</guid>
+      <description>&lt;h2 id=&#34;개요&#34;&gt;&#xA;  개요&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ea%b0%9c%ec%9a%94&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;연속형 변수 2개의 상관 관계를 확인하기 위한 가장 기본적인 방법이다.&lt;/p&gt;&#xA;&lt;p&gt;정확히 말해서 두개의 수치값들의 집합이 있을 때 이 두개의 수치값들은 각각의 순서쌍에 대해서 연결관계가 있다고 할 때 두 수치값이 서로 관련이 있는지를 확인하는 방법이다.&lt;/p&gt;&#xA;&lt;p&gt;흔한 예로 있는 것이 고등학생 한 학급에 50명이 있다고 할 때 이 학생들의 수학과목의 성적과 물리과목의 성정이 관련이 있는지 확인하는 것이 있다.  즉 수학과목과 물리과목은 서로 수리적 또는 과학적 능력과 관련이 있어 두 과목은 서로 관련이 있을 것이라는 가설을 어느 정도 두고 있으며 실제로 그런지 확인한다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>하이퍼로그로그 - Hyper Log Log</title>
+      <link>https://intothedata.com/docs/02.scholars/statistics/sampling/hyperloglog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/02.scholars/statistics/sampling/hyperloglog/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://d2.naver.com/helloworld/711301&#34;&gt;http://d2.naver.com/helloworld/711301&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;cardinality(unique count)를 샘플링해서 알아내는데 사용하는 확률자료구조이자 알고리즘이다.&lt;/p&gt;&#xA;&lt;p&gt;세익스피어 전 작품에서의 영어단어 세기&#xA;&lt;a href=&#34;http://highscalability.com/blog/2012/4/5/big-data-counting-how-to-count-a-billion-distinct-objects-us.html&#34;&gt;http://highscalability.com/blog/2012/4/5/big-data-counting-how-to-count-a-billion-distinct-objects-us.html&lt;/a&gt;&#xA;Philippe Flajolet 등이 2007년에 발표&#xA;HyperLogLog는 상대오차범위 조절 가능&#xA;상대오차는&lt;/p&gt;&#xA;&lt;p&gt;cardinality가 N이라면 레지스터 크기는 log_2log_2N + O(1)&#xA;Philippe Flajolet and Éric Fusy and Olivier Gandouet and Frédéric Meunier, &amp;ldquo;HyperLoglog: the analysis of a near-optimal cardinality estimation algorithm&amp;rdquo;, Discrete Mathematics and Theoretical Computer Science (DMTCS) Proceedings, vol AH, (2007) pp. 127&amp;ndash;146. &lt;a href=&#34;http://www.dmtcs.org/dmtcs-ojs/index.php/proceedings/article/view/dmAH0110&#34;&gt;http://www.dmtcs.org/dmtcs-ojs/index.php/proceedings/article/view/dmAH0110&lt;/a&gt;&#xA;Matt Abrams, &amp;ldquo;Big Data Counting: How To Count A Billion Distinct Objects Using Only 1.5KB Of Memory&amp;rdquo;, High Scalability, &lt;a href=&#34;http://highscalability.com/blog/2012/4/5/big-data-counting-how-to-count-a-billion-distinct-objects-us.html&#34;&gt;http://highscalability.com/blog/2012/4/5/big-data-counting-how-to-count-a-billion-distinct-objects-us.html&lt;/a&gt;&#xA;Ilya Katsov, &amp;ldquo;Probabilistic Data Structures for Web Analytics and Data Mining&amp;rdquo;, Highly Scalable Blog, &lt;a href=&#34;http://highlyscalable.wordpress.com/2012/05/01/probabilistic-structures-web-analytics-data-mining/&#34;&gt;http://highlyscalable.wordpress.com/2012/05/01/probabilistic-structures-web-analytics-data-mining/&lt;/a&gt;&#xA;&amp;ldquo;stream-lib&amp;rdquo;, &lt;a href=&#34;https://github.com/addthis/stream-lib/&#34;&gt;https://github.com/addthis/stream-lib/&lt;/a&gt;&#xA;&amp;ldquo;Iterated logarithm&amp;rdquo;, Wikipedia, &lt;a href=&#34;http://en.wikipedia.org/wiki/Iterated_logarithm&#34;&gt;http://en.wikipedia.org/wiki/Iterated_logarithm&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>한국어 형태소 분석기 - Korean pos tagger</title>
+      <link>https://intothedata.com/docs/38.natural_languge_processing/korean_pos_tagger/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/38.natural_languge_processing/korean_pos_tagger/</guid>
+      <description>&lt;h2 id=&#34;오픈소스-한국어-형태소-분석기&#34;&gt;&#xA;  오픈소스 한국어 형태소 분석기&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%98%a4%ed%94%88%ec%86%8c%ec%8a%a4-%ed%95%9c%ea%b5%ad%ec%96%b4-%ed%98%95%ed%83%9c%ec%86%8c-%eb%b6%84%ec%84%9d%ea%b8%b0&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;한나눔-hananum&#34;&gt;&#xA;  한나눔 (Hananum)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ed%95%9c%eb%82%98%eb%88%94-hananum&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;명칭: 한나눔&lt;/li&gt;&#xA;&lt;li&gt;관리: Kaist&lt;/li&gt;&#xA;&lt;li&gt;개발언어: Java&lt;/li&gt;&#xA;&lt;li&gt;알고리즘: HMM&lt;/li&gt;&#xA;&lt;li&gt;학습사전: 세종계획 산출물&lt;/li&gt;&#xA;&lt;li&gt;소스 오픈 여부: 오픈&lt;/li&gt;&#xA;&lt;li&gt;구분분석기: 없음&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;꼬꼬마-kkma&#34;&gt;&#xA;  꼬꼬마 (KKMA)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ea%bc%ac%ea%bc%ac%eb%a7%88-kkma&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;명칭: 꼬꼬마&lt;/li&gt;&#xA;&lt;li&gt;관리: Seoul University&lt;/li&gt;&#xA;&lt;li&gt;개발언어: Java&lt;/li&gt;&#xA;&lt;li&gt;알고리즘: ?&lt;/li&gt;&#xA;&lt;li&gt;학습사전: 세종계획 산출물&lt;/li&gt;&#xA;&lt;li&gt;소스 오픈 여부: Open 별도 요청&lt;/li&gt;&#xA;&lt;li&gt;구분분석기: 일부 탑재&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;메카브-ko-mecab&#34;&gt;&#xA;  메카브 KO (Mecab)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%eb%a9%94%ec%b9%b4%eb%b8%8c-ko-mecab&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;명칭: 메카브 KO (Mecab), 은전한닢&lt;/li&gt;&#xA;&lt;li&gt;관리: 은전한닢 프로젝트 커뮤니티&lt;/li&gt;&#xA;&lt;li&gt;개발언어: C/C++&lt;/li&gt;&#xA;&lt;li&gt;알고리즘: CRF&lt;/li&gt;&#xA;&lt;li&gt;학습사전: 세종계획 산출물 (일부)&lt;/li&gt;&#xA;&lt;li&gt;소스 오픈 여부: 오픈&lt;/li&gt;&#xA;&lt;li&gt;구분분석기: 없음&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;NTT에서 사용하던 일본어 형태소 분석기를 한국어 용으로 변환한 것이다. 영문을 읽으면 “미캡”이라고 읽어야 하겠지만 일본인이 제작한 것이고 일본어 소개페이지에 카타가나로 “메카부”라고 적혀 있어 여기에도 그렇게 기재하였다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>형태소 분석기 - Pos tagger</title>
+      <link>https://intothedata.com/docs/38.natural_languge_processing/pos_tagger/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/38.natural_languge_processing/pos_tagger/</guid>
+      <description>&lt;h2 id=&#34;형태소분석기&#34;&gt;&#xA;  형태소분석기&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ed%98%95%ed%83%9c%ec%86%8c%eb%b6%84%ec%84%9d%ea%b8%b0&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;형태소분석기는 자연어처리에 사용하는 소프트웨어 또는 모듈이다. 이름처럼 형태소를 분석하기 위한 것이다.&#xA;형태소분석기가 뭔지 이해하려면 먼저 형태소가 뭔지 알아야한다.&lt;/p&gt;&#xA;&lt;h3 id=&#34;형태소-morpheme&#34;&gt;&#xA;  형태소 Morpheme&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ed%98%95%ed%83%9c%ec%86%8c-morpheme&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;형태소는 &amp;ldquo;더 이상 쪼갤 수 없는 뜻을 가진 최소 단위&amp;quot;라고 정의하는데 일반적으로는 품사를 뜻한다고 생각하면 쉽지만&#xA;어간,접미사, 접두사, 파생접미사, 특수기호같은 것도 형태소로 포함하기 때문이 흔히 생각하는 품사보다는 갯수가 많다고 생각하면 된다.&lt;/p&gt;&#xA;&lt;h3 id=&#34;형태소분석이란&#34;&gt;&#xA;  형태소분석이란?&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ed%98%95%ed%83%9c%ec%86%8c%eb%b6%84%ec%84%9d%ec%9d%b4%eb%9e%80&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;형태소분석은 문장에서 형태소를 각각 분리하고 형태소의 종류를 알아내는 것이다.&lt;br&gt;&#xA;쉽게 얘기하면 문장에 있는 각 품사들을 쪼개고 어떤 품사인지 표시하는 것이다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>데이터허브 - Data hub on 인투더데이터 데이터과학</title>
+    <link>https://intothedata.com/07.data_hub/</link>
+    <description>Recent content in 데이터허브 - Data hub on 인투더데이터 데이터과학</description>
+    <generator>Hugo</generator>
+    <language>ko-KR</language>
+    <atom:link href="https://intothedata.com/07.data_hub/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SK data hub</title>
+      <link>https://intothedata.com/07.data_hub/sk_data_hub/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/07.data_hub/sk_data_hub/</guid>
+      <description>&lt;h2 id=&#34;개요&#34;&gt;&#xA;  개요&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ea%b0%9c%ec%9a%94&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;SK플래닛(SK planet, 이하 SK플래닛)에서 운영하는 데이터를 제공하는 서비스이다.  계열사인 SK텔레콤으로 부터 얻을 수 있는 것을 포함해서 자체에서 제공하는 데이터와 제3자가 제공하는 데이터가 제공되고 있으며 일부는 유료로 제공된다.&lt;/p&gt;&#xA;&lt;h3 id=&#34;이용방식&#34;&gt;&#xA;  이용방식&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%9d%b4%ec%9a%a9%eb%b0%a9%ec%8b%9d&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;API 방식으로도 데이터를 가져올 수 있도록 하고 있으나 모든 데이터를 API이용해서 접근할 수 있는 것은 아니다.  일부는 파일을 다운로드 받아야 할 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;서비스 형태로 보면 DaaS(data as a service)라고 볼 수 있으며, 데이터를 제공하고 구매하는 마켓의 형태로 운영한지 조금되었지만 사업성이나 자체 수익, 비즈니스의 발전 등에 대해서는 알 수 없다. 국내는 아직도 정보를 독점하려는 경향이 있어 매우 다양한 데이터가 제공되지 않지만 유용한 데이터도 많이 제공하고 있다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Analysis on 인투더데이터 데이터과학</title>
+    <link>https://intothedata.com/tags/data-analysis/</link>
+    <description>Recent content in Data Analysis on 인투더데이터 데이터과학</description>
+    <generator>Hugo</generator>
+    <language>ko-KR</language>
+    <atom:link href="https://intothedata.com/tags/data-analysis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>데이터 분석</title>
+      <link>https://intothedata.com/docs/04.data_analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/04.data_analysis/</guid>
+      <description>&lt;h2 id=&#34;데이터-분석-data-analysis&#34;&gt;&#xA;  데이터 분석 (Data Analysis)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%eb%8d%b0%ec%9d%b4%ed%84%b0-%eb%b6%84%ec%84%9d-data-analysis&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;데이터 분석은 수집된 데이터를 체계적으로 검토하고 해석하여 의미 있는 인사이트를 도출하고, 숨겨진 패턴이나 사실을 발견하는 과정을 의미한다. 이는 단순한 데이터 관찰을 넘어서 비즈니스 의사결정, 문제 해결, 미래 예측 등에 활용할 수 있는 실질적인 가치를 창출하는 활동이다.&lt;/p&gt;&#xA;&lt;h3 id=&#34;데이터-분석의-핵심-목적&#34;&gt;&#xA;  데이터 분석의 핵심 목적&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%eb%8d%b0%ec%9d%b4%ed%84%b0-%eb%b6%84%ec%84%9d%ec%9d%98-%ed%95%b5%ec%8b%ac-%eb%aa%a9%ec%a0%81&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;데이터 분석은 크게 네 가지 핵심 목적을 가지고 있다:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;1. 현상 확인 및 가설 검증&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;데이터를 통해 관찰되는 현상을 객관적으로 확인&lt;/li&gt;&#xA;&lt;li&gt;사전에 설정한 가설이 실제 데이터로 뒷받침되는지 검증&lt;/li&gt;&#xA;&lt;li&gt;통계적 유의성을 통한 과학적 접근&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;2. 원인 분석 및 인과관계 규명&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

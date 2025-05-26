@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  개요
+  #
+
+앞서 설명한 적이 있듯이 데이터사이언티스트는 데이터를 분석하고 가치있는 결과를 찾거나 비즈니스를 고도화하기 위해서 수학적, 통계학, 공학적 모델을 만들어서 활용하는 일을 업으로 하는 사람들을 말한다.
+위의 정의를 보면 알 수 있겠지만 데이터를 다루는 것을 잘해야 하지만 그것은 수단일 뿐 목적이 아니다. 가치를 찾는고 비즈니스 판단을 돕고 고도화를 위한 모델을 만드는 것이 목적이므로 그것을 할 수 있는 것이라면 어떤 것이라도 필요한 경우에는 쓸 수 있어야 한다.  그렇게 때문에 데이터사이언티스트가 여러가지 도구를 능숙하게 사용할 수 있다면 상황에 따라 대처할 수 있는 범위가 넓어지기 때문에 매우 유리하다.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:url" content="https://intothedata.com/09.datascience_tools/">
+  <meta property="og:site_name" content="인투더데이터 데이터과학">
+  <meta property="og:title" content="데이터사이언스 도구 - Data Science Tools">
+  <meta property="og:description" content="개요 # 앞서 설명한 적이 있듯이 데이터사이언티스트는 데이터를 분석하고 가치있는 결과를 찾거나 비즈니스를 고도화하기 위해서 수학적, 통계학, 공학적 모델을 만들어서 활용하는 일을 업으로 하는 사람들을 말한다.
+위의 정의를 보면 알 수 있겠지만 데이터를 다루는 것을 잘해야 하지만 그것은 수단일 뿐 목적이 아니다. 가치를 찾는고 비즈니스 판단을 돕고 고도화를 위한 모델을 만드는 것이 목적이므로 그것을 할 수 있는 것이라면 어떤 것이라도 필요한 경우에는 쓸 수 있어야 한다. 그렇게 때문에 데이터사이언티스트가 여러가지 도구를 능숙하게 사용할 수 있다면 상황에 따라 대처할 수 있는 범위가 넓어지기 때문에 매우 유리하다.">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:type" content="website">
+<title>데이터사이언스 도구 - Data Science Tools | 인투더데이터 데이터과학</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.ce02ec8b4aaa4b1d9386a72d0b93e5195eac0f6feec0b00ecd36d8128e870d23.css" integrity="sha256-zgLsi0qqSx2ThqctC5PlGV6sD2/uwLAOzTbYEo6HDSM=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.69b3ef820735840b8b46619f32c5cf1d96c086c45c7a95bafacc5d95cdc0473e.js" integrity="sha256-abPvggc1hAuLRmGfMsXPHZbAhsRcepW6&#43;sxdlc3ARz4=" crossorigin="anonymous"></script>
+
+
+<link rel="alternate" type="application/rss+xml" href="https://intothedata.com/09.datascience_tools/index.xml" title="인투더데이터 데이터과학" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>인투더데이터 데이터과학</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>데이터사이언스 도구 - Data Science Tools</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#개요">개요</a></li>
+    <li><a href="#데이터사이언티스트-도구">데이터사이언티스트 도구</a>
+      <ul>
+        <li><a href="#분석-도구">분석 도구</a></li>
+        <li><a href="#데이터-플랫폼">데이터 플랫폼</a></li>
+        <li><a href="#시각화-도구">시각화 도구</a></li>
+        <li><a href="#비즈니스-플랫폼">비즈니스 플랫폼</a></li>
+        <li><a href="#온라인-어낼리틱스-서비스">온라인 어낼리틱스 서비스</a></li>
+        <li><a href="#클라우드-어낼리틱스-플랫폼">클라우드 어낼리틱스 플랫폼</a></li>
+        <li><a href="#컴퓨터-랭귀지">컴퓨터 랭귀지</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h2 id="개요">
+  개요
+  <a class="anchor" href="#%ea%b0%9c%ec%9a%94">#</a>
+</h2>
+<p>앞서 설명한 적이 있듯이 데이터사이언티스트는 데이터를 분석하고 가치있는 결과를 찾거나 비즈니스를 고도화하기 위해서 수학적, 통계학, 공학적 모델을 만들어서 활용하는 일을 업으로 하는 사람들을 말한다.</p>
+<p>위의 정의를 보면 알 수 있겠지만 데이터를 다루는 것을 잘해야 하지만 그것은 수단일 뿐 목적이 아니다. 가치를 찾는고 비즈니스 판단을 돕고 고도화를 위한 모델을 만드는 것이 목적이므로 그것을 할 수 있는 것이라면 어떤 것이라도 필요한 경우에는 쓸 수 있어야 한다.  그렇게 때문에 데이터사이언티스트가 여러가지 도구를 능숙하게 사용할 수 있다면 상황에 따라 대처할 수 있는 범위가 넓어지기 때문에 매우 유리하다.</p>
+<p>일반적으로 데이터사이언티스트는 다음과 같은 도구를 많이 활용한다.</p>
+<h2 id="데이터사이언티스트-도구">
+  데이터사이언티스트 도구
+  <a class="anchor" href="#%eb%8d%b0%ec%9d%b4%ed%84%b0%ec%82%ac%ec%9d%b4%ec%96%b8%ed%8b%b0%ec%8a%a4%ed%8a%b8-%eb%8f%84%ea%b5%ac">#</a>
+</h2>
+<p>아래의 목록들은 사람들이 주로 사용하는 것들 중 빈도가 높은 순으로 나열한 것으로 제품의 품질과는 직접적인 관련이 없다.  또한 소속된 회사의 비즈니스나 연구하고 있는 분야, 회사에서 담당한 업무에 따라 각기 선호하는 도구나 주력으로 사용하는 도구가 제각기 다르다는 것을 알려둔다.</p>
+<h3 id="분석-도구">
+  분석 도구
+  <a class="anchor" href="#%eb%b6%84%ec%84%9d-%eb%8f%84%ea%b5%ac">#</a>
+</h3>
+<ul>
+<li>Excel</li>
+<li>R</li>
+<li>SAS</li>
+<li>Matlab</li>
+<li>SPSS</li>
+<li>Minitab</li>
+<li>iPython</li>
+</ul>
+<p>※ Matlab은 공학계산 및 모델링을 위한 도구이지만 분석을 하는데 충분히 활용이 가능하다.</p>
+<h3 id="데이터-플랫폼">
+  데이터 플랫폼
+  <a class="anchor" href="#%eb%8d%b0%ec%9d%b4%ed%84%b0-%ed%94%8c%eb%9e%ab%ed%8f%bc">#</a>
+</h3>
+<ul>
+<li>Hadoop/Hive</li>
+<li>MySQL</li>
+<li>PostgreSQL</li>
+<li>Oracle</li>
+<li>Teradata</li>
+<li>SAP Hana</li>
+</ul>
+<h3 id="시각화-도구">
+  시각화 도구
+  <a class="anchor" href="#%ec%8b%9c%ea%b0%81%ed%99%94-%eb%8f%84%ea%b5%ac">#</a>
+</h3>
+<ul>
+<li>Tableau</li>
+<li>Qlicview</li>
+<li>JMP</li>
+<li>Microstrategy</li>
+<li>Spotfire</li>
+</ul>
+<h3 id="비즈니스-플랫폼">
+  비즈니스 플랫폼
+  <a class="anchor" href="#%eb%b9%84%ec%a6%88%eb%8b%88%ec%8a%a4-%ed%94%8c%eb%9e%ab%ed%8f%bc">#</a>
+</h3>
+<ul>
+<li>Sales force</li>
+<li>CRM</li>
+<li>BO</li>
+</ul>
+<h3 id="온라인-어낼리틱스-서비스">
+  온라인 어낼리틱스 서비스
+  <a class="anchor" href="#%ec%98%a8%eb%9d%bc%ec%9d%b8-%ec%96%b4%eb%82%bc%eb%a6%ac%ed%8b%b1%ec%8a%a4-%ec%84%9c%eb%b9%84%ec%8a%a4">#</a>
+</h3>
+<ul>
+<li>Google Analytics</li>
+<li>Adobe Insights</li>
+</ul>
+<h3 id="클라우드-어낼리틱스-플랫폼">
+  클라우드 어낼리틱스 플랫폼
+  <a class="anchor" href="#%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ec%96%b4%eb%82%bc%eb%a6%ac%ed%8b%b1%ec%8a%a4-%ed%94%8c%eb%9e%ab%ed%8f%bc">#</a>
+</h3>
+<ul>
+<li>Google BigQuery</li>
+<li>Google Dataflow</li>
+<li>Amazon Redshift
+&hellip;</li>
+</ul>
+<h3 id="컴퓨터-랭귀지">
+  컴퓨터 랭귀지
+  <a class="anchor" href="#%ec%bb%b4%ed%93%a8%ed%84%b0-%eb%9e%ad%ea%b7%80%ec%a7%80">#</a>
+</h3>
+<ul>
+<li>python</li>
+<li>R</li>
+<li>C++</li>
+<li>Java</li>
+<li>Javascript</li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+  
+
+
+
+  
+    
+  
+
+
+
+<div class="book-languages" tabindex="0" aria-haspopup="true">
+  <ul>
+    <li class="flex align-center">
+      <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+      
+    </li> 
+  </ul>
+
+  <ul class="book-languages-list">
+    
+    <li class="active">
+      <a href="https://intothedata.com/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#개요">개요</a></li>
+    <li><a href="#데이터사이언티스트-도구">데이터사이언티스트 도구</a>
+      <ul>
+        <li><a href="#분석-도구">분석 도구</a></li>
+        <li><a href="#데이터-플랫폼">데이터 플랫폼</a></li>
+        <li><a href="#시각화-도구">시각화 도구</a></li>
+        <li><a href="#비즈니스-플랫폼">비즈니스 플랫폼</a></li>
+        <li><a href="#온라인-어낼리틱스-서비스">온라인 어낼리틱스 서비스</a></li>
+        <li><a href="#클라우드-어낼리틱스-플랫폼">클라우드 어낼리틱스 플랫폼</a></li>
+        <li><a href="#컴퓨터-랭귀지">컴퓨터 랭귀지</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

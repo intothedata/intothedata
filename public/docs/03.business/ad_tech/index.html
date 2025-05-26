@@ -1,0 +1,1890 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  애드테크 (Ad Tech, Ad Technology)
+  #
+
+온라인 광고는 PC, 스마트폰, 태블릿 등 디지털 기기에서 웹사이트나 앱을 이용할 때 노출되는 배너광고, 동영상 광고, 텍스트 광고 등을 포괄하는 개념이다.
+이와 관련된 기술을 애드 테크놀로지(Ad Technology)라고 하며, 줄여서 애드테크(Ad Tech)라고 부른다. 이러한 기술을 주력 사업으로 하는 회사들을 애드테크 컴퍼니(Ad Tech Company)라고 한다.
+
+  애드테크의 복잡성과 데이터과학의 역할
+  #
+
+단순히 광고 배너를 화면에 표시하는 것처럼 보이지만, 실제로는 매우 정교하고 복잡한 기술이 필요하다. 사용자가 웹페이지를 로드하는 순간부터 적절한 광고가 선택되어 노출되기까지의 과정은 다음과 같은 요소들을 포함한다:">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:url" content="https://intothedata.com/docs/03.business/ad_tech/">
+  <meta property="og:site_name" content="인투더데이터 데이터과학">
+  <meta property="og:title" content="애드테크 - Ad Tech">
+  <meta property="og:description" content="애드테크 (Ad Tech, Ad Technology) # 온라인 광고는 PC, 스마트폰, 태블릿 등 디지털 기기에서 웹사이트나 앱을 이용할 때 노출되는 배너광고, 동영상 광고, 텍스트 광고 등을 포괄하는 개념이다.
+이와 관련된 기술을 애드 테크놀로지(Ad Technology)라고 하며, 줄여서 애드테크(Ad Tech)라고 부른다. 이러한 기술을 주력 사업으로 하는 회사들을 애드테크 컴퍼니(Ad Tech Company)라고 한다.
+애드테크의 복잡성과 데이터과학의 역할 # 단순히 광고 배너를 화면에 표시하는 것처럼 보이지만, 실제로는 매우 정교하고 복잡한 기술이 필요하다. 사용자가 웹페이지를 로드하는 순간부터 적절한 광고가 선택되어 노출되기까지의 과정은 다음과 같은 요소들을 포함한다:">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:type" content="website">
+<title>애드테크 - Ad Tech | 인투더데이터 데이터과학</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.465376614827fff60754cc9c34686b524db662a4c314668361de5db45fde6203.css" integrity="sha256-RlN2YUgn//YHVMycNGhrUk22YqTDFGaDYd5dtF/eYgM=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.d9e6ba7770f5117e21758da45184f61d5669394aa618ebdfabe1d95519d50bbf.js" integrity="sha256-2ea6d3D1EX4hdY2kUYT2HVZpOUqmGOvfq&#43;HZVRnVC78=" crossorigin="anonymous"></script>
+
+
+<link rel="alternate" type="application/rss+xml" href="https://intothedata.com/docs/03.business/ad_tech/index.xml" title="인투더데이터 데이터과학" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>인투더데이터 데이터과학</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/00.about/" class="">인투더데이터 소개 About</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/01.data_science/" class="">데이터과학</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/01.data_science/datascientist_skillset/" class="">데이터과학자 스킬셋</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/" class="">데이터과학 학술분야</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/operational_research/" class="">경영과학 - Operational Research</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/operational_research/demand_forecasting/" class="">수요예측 - Demand Forecasting</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/economics/" class="">계량경제학 - Economics</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/economics/distributed_lag_model/" class="">분산지연모델</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/data_mining/" class="">데이터마이닝</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/data_mining/clustering/" class="">군집분석 - Clustering</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/data_mining/clustering/k-means/" class="">K-means - K중심값</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/modeling/" class="">모델링 - Modeling</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/business_analysis/" class="">비즈니스 데이터 분석</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/business_analysis/behavioral_change_point_analysis/" class="">행동변화점분석</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/timeseries_analysis/" class="">시계열 분석 - Time-series Analysis</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/timeseries_analysis/granger_causality/" class="">그래인저 인과관계 - Granger Causality</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/anomaly_detection/" class="">이상감지</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/anomaly_detection/3_sigma_rule/" class="">3 sigma rule</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/anomaly_detection/generalized_esd/" class="">Generalized ESD</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/artificial_intelligence/" class="">인공지능 - Artificial Intelligence</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/artificial_intelligence/fuzzy_inferenece/" class="">퍼지 추론 - Fuzzy Inferenece</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/information_retrieval/" class="">정보검색</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/text_mining/" class="">텍스트마이닝 - Text Mining</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/text_mining/tfidf/" class="">TFIDF - Term Frequency Inverse Document Frequency</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/text_mining/cosine_similarity/" class="">코사인 유사도 - Cosine Similarity</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/" class="">통계학 - Statistics</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/central_limit_theorem/" class="">중심극한정리 - CLT; Central Limit Theorem</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/descriptive_statistics/" class="">기술통계 - Descriptive statistics</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/variance/" class="">분산 - Variance</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/survival_analysis/" class="">생존분석 - Survival Analysis</a>
+  
+
+          
+  <ul>
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/data/" class="">자료 - data</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/gaussian_distribution/" class="">정규분포, 가우시안 분포 - Normal Distribution, Gaussian Distribution</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/inferential_statistics/" class="">추론통계 - Inferential statistics</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/sampling/" class="">표본추출 - Sampling</a>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/sampling/neyman_alloction/" class="">네이만 배분법 - neyman allocation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/sampling/hyperloglog/" class="">하이퍼로그로그 - Hyper Log Log</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/correlation/" class="">피어슨 상관계수 - Pearson&#39;s product-moment correlation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/stochastic_process/" class="">확률과정 - Stochastic process</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/stochastic_process/brownian_motion/" class="">브라운 운동 - Brownian Motion</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/stochastic_process/ornstein_uhlenbeck_process/" class="">오른스타인-우렌벡 과정  Ornstein-Uhlenbeck process</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/pattern_recognition/" class="">패턴인식 - Pattern Recognition</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/pattern_recognition/neural_network/" class="">인공신경망 - Neural Network</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/" class="">데이터사이언스 - 산업별 갈래</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/adtech/" class="">온라인 광고 비즈니스 - Ad tech</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/adtech/ad_tech_terminlogy/" class="">온라인 광고 용어 - Online Ad Terminology</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/ad_tech/" class=" active">애드테크 - Ad Tech</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/ad_tech/ad_tech_terminlogy/" class="">온라인 광고 용어</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/online/" class="">온라인 비즈니스 - Online busines</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/online/ad_tech/" class="">온라인 광고 비즈니스 - Ad tech</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/online/ad_tech_terminlogy/" class="">온라인 광고 용어 - Online Ad Terminology</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/automobile/" class="">자동차 산업 - Automobile Industry</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/iron_mill/" class="">철강 - Iron mill</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/04.data_analysis/" class="">데이터 분석</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>데이터 수집 (Data collection)</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/06.data_collection/mobile_data_collection/" class="">데이터 수집 (Data collection)</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/05.data_visualization/" class="">데이터시각화</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/05.data_visualization/number_line_plot/" class="">넘버라인플롯</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/06.data_platform/" class="">데이터 플랫폼</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/06.data_platform/bigquery/" class="">빅쿼리 - Bigquery</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/06.data_platform/bigquery/excel_bigquery/" class="">엑셀에서 빅쿼리 데이터 가져오기</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/07.data_hub/" class="">데이터 허브</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/07.data_hub/sk_data_hub/" class="">SK 데이터 허브</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/08.reproducible_research/" class="">재현가능연구</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/09.datascience_tools/" class="">데이터사이언스 도구 - Data Science Tools</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/20.data_platform/" class="">데이터플랫폼</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/30.bigdata/" class="">빅데이터</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/36.time_series_analysis/" class="">시계열분석</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/" class="">인공지능</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/vector_search_engine/" class="">벡터검색엔진</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/faiss/" class="">Faiss - 벡터 검색 엔진</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/faiss/3_sigma_rule/" class="">3 sigma rule</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/faiss/generalized_esd/" class="">Generalized ESD</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/gpt/" class="">GPT</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/39.large_language_model/" class="">LLM</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/38.natural_languge_processing/" class="">자연어 처리</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/38.natural_languge_processing/korean_pos_tagger/" class="">한국어 형태소 분석기</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/38.natural_languge_processing/pos_tagger/" class="">형태소 분석기 - Pos tagger</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/40.r_language/" class="">R언어</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/50.computer_science/" class="">컴퓨터 공학</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/50.computer_science/random/" class="">랜덤</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/70.practical_data_science/" class="">실무 데이터과학</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/70.practical_data_science/quality_based_scoring/" class="">품질 기반 스코어링 - quality-based scoring</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/60.pracactical_data_processing/" class="">데이터 프로세싱</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/80.mathematics/" class="">수학 - Mathematics</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/80.mathematics/ordinary_differential_equation/" class="">상미분방정식 - Ordinary Differential Equation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/80.mathematics/mathematics_symbols/" class="">수학기호정리 - mathematics symbols</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/80.mathematics/fermats_last_theorem/" class="">페르마의 마지막 정리</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/90.metrics/" class="">지표</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/90.metrics/lorenz_curve/" class="">로렌츠 커브</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/99.materials/" class="">참고자료 - References</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/99.materials/people/" class="">인물 - People</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/99.materials/sites/" class="">참고 사이트</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/taglist/" class="">태그 목록</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>애드테크 - Ad Tech</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#애드테크-ad-tech-ad-technology">애드테크 (Ad Tech, Ad Technology)</a>
+      <ul>
+        <li><a href="#애드테크의-복잡성과-데이터과학의-역할">애드테크의 복잡성과 데이터과학의 역할</a></li>
+      </ul>
+    </li>
+    <li><a href="#광고-타겟팅-방법의-종류">광고 타겟팅 방법의 종류</a>
+      <ul>
+        <li><a href="#1-무작위-광고-random-targeting">1. 무작위 광고 (Random Targeting)</a></li>
+        <li><a href="#2-리타겟팅-광고-retargetingremarketing">2. 리타겟팅 광고 (Retargeting/Remarketing)</a></li>
+        <li><a href="#3-세그먼트-타겟팅-demographicbehavioral-targeting">3. 세그먼트 타겟팅 (Demographic/Behavioral Targeting)</a></li>
+        <li><a href="#4-문맥-광고-contextual-targeting">4. 문맥 광고 (Contextual Targeting)</a></li>
+        <li><a href="#5-네이티브-광고-native-advertising">5. 네이티브 광고 (Native Advertising)</a></li>
+        <li><a href="#6-프로그래매틱-광고-programmatic-advertising">6. 프로그래매틱 광고 (Programmatic Advertising)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h2 id="애드테크-ad-tech-ad-technology">
+  애드테크 (Ad Tech, Ad Technology)
+  <a class="anchor" href="#%ec%95%a0%eb%93%9c%ed%85%8c%ed%81%ac-ad-tech-ad-technology">#</a>
+</h2>
+<p>온라인 광고는 PC, 스마트폰, 태블릿 등 디지털 기기에서 웹사이트나 앱을 이용할 때 노출되는 배너광고, 동영상 광고, 텍스트 광고 등을 포괄하는 개념이다.</p>
+<p>이와 관련된 기술을 애드 테크놀로지(Ad Technology)라고 하며, 줄여서 애드테크(Ad Tech)라고 부른다. 이러한 기술을 주력 사업으로 하는 회사들을 애드테크 컴퍼니(Ad Tech Company)라고 한다.</p>
+<h3 id="애드테크의-복잡성과-데이터과학의-역할">
+  애드테크의 복잡성과 데이터과학의 역할
+  <a class="anchor" href="#%ec%95%a0%eb%93%9c%ed%85%8c%ed%81%ac%ec%9d%98-%eb%b3%b5%ec%9e%a1%ec%84%b1%ea%b3%bc-%eb%8d%b0%ec%9d%b4%ed%84%b0%ea%b3%bc%ed%95%99%ec%9d%98-%ec%97%ad%ed%95%a0">#</a>
+</h3>
+<p>단순히 광고 배너를 화면에 표시하는 것처럼 보이지만, 실제로는 매우 정교하고 복잡한 기술이 필요하다. 사용자가 웹페이지를 로드하는 순간부터 적절한 광고가 선택되어 노출되기까지의 과정은 다음과 같은 요소들을 포함한다:</p>
+<ul>
+<li><strong>실시간 입찰(RTB, Real-Time Bidding)</strong>: 밀리초 단위로 이루어지는 광고 경매</li>
+<li><strong>사용자 프로파일링</strong>: 쿠키, 디바이스 ID 등을 통한 사용자 행동 분석</li>
+<li><strong>예측 모델링</strong>: 클릭률(CTR), 전환율(CVR) 예측</li>
+<li><strong>최적화 알고리즘</strong>: 광고주의 목표에 맞는 최적의 광고 선택</li>
+<li><strong>사기 탐지</strong>: 봇 트래픽이나 클릭 사기 방지</li>
+</ul>
+<p>이러한 과정에서 빅데이터 처리, 기계학습, 통계 분석 등 데이터과학의 핵심 기술들이 광범위하게 활용된다.</p>
+<h2 id="광고-타겟팅-방법의-종류">
+  광고 타겟팅 방법의 종류
+  <a class="anchor" href="#%ea%b4%91%ea%b3%a0-%ed%83%80%ea%b2%9f%ed%8c%85-%eb%b0%a9%eb%b2%95%ec%9d%98-%ec%a2%85%eb%a5%98">#</a>
+</h2>
+<p>광고 타겟팅은 적절한 사용자에게 적절한 시점에 적절한 광고를 노출하는 것을 목표로 한다. 다양한 타겟팅 방법들이 발전해왔으며, 각각의 특징과 활용 사례는 다음과 같다.</p>
+<h3 id="1-무작위-광고-random-targeting">
+  1. 무작위 광고 (Random Targeting)
+  <a class="anchor" href="#1-%eb%ac%b4%ec%9e%91%ec%9c%84-%ea%b4%91%ea%b3%a0-random-targeting">#</a>
+</h3>
+<p><strong>개념</strong>: 특별한 타겟팅 로직 없이 무작위로 광고를 노출하는 가장 기본적인 방법</p>
+<p><strong>특징</strong>:</p>
+<ul>
+<li>구현이 간단하고 기술적 복잡성이 낮음</li>
+<li>광고 효율성이 매우 떨어짐</li>
+<li>현재는 거의 사용되지 않는 방식</li>
+</ul>
+<p><strong>활용 사례</strong>: 초기 온라인 광고 시장에서 주로 사용되었으나, 현재는 테스트 목적이나 기본 설정으로만 제한적 사용</p>
+<h3 id="2-리타겟팅-광고-retargetingremarketing">
+  2. 리타겟팅 광고 (Retargeting/Remarketing)
+  <a class="anchor" href="#2-%eb%a6%ac%ed%83%80%ea%b2%9f%ed%8c%85-%ea%b4%91%ea%b3%a0-retargetingremarketing">#</a>
+</h3>
+<p><strong>개념</strong>: 이전에 특정 웹사이트를 방문했거나 특정 행동을 한 사용자에게 관련 광고를 지속적으로 노출하는 방법</p>
+<p><strong>기술적 구현</strong>:</p>
+<ul>
+<li>쿠키나 픽셀 태그를 통한 사용자 추적</li>
+<li>사용자 행동 데이터 수집 및 세그먼트 생성</li>
+<li>빈도 캡핑(Frequency Capping)을 통한 과도한 노출 방지</li>
+</ul>
+<p><strong>효과</strong>:</p>
+<ul>
+<li>높은 전환율과 ROI</li>
+<li>브랜드 인지도 향상</li>
+<li>구매 의도가 있는 사용자에게 재접근 기회 제공</li>
+</ul>
+<p><strong>활용 사례</strong>:</p>
+<ul>
+<li>쇼핑몰에서 장바구니에 상품을 담고 구매하지 않은 사용자</li>
+<li>특정 상품 페이지를 조회한 사용자</li>
+<li>회원가입 과정을 완료하지 않은 사용자</li>
+</ul>
+<h3 id="3-세그먼트-타겟팅-demographicbehavioral-targeting">
+  3. 세그먼트 타겟팅 (Demographic/Behavioral Targeting)
+  <a class="anchor" href="#3-%ec%84%b8%ea%b7%b8%eb%a8%bc%ed%8a%b8-%ed%83%80%ea%b2%9f%ed%8c%85-demographicbehavioral-targeting">#</a>
+</h3>
+<p><strong>개념</strong>: 사용자의 인구통계학적 특성이나 행동 패턴을 기반으로 세그먼트를 분류하고, 각 세그먼트에 맞는 광고를 노출</p>
+<p><strong>세그먼트 분류 기준</strong>:</p>
+<ul>
+<li><strong>인구통계학적</strong>: 연령, 성별, 지역, 소득 수준</li>
+<li><strong>행동적</strong>: 웹사이트 방문 패턴, 구매 이력, 관심사</li>
+<li><strong>심리적</strong>: 라이프스타일, 가치관, 성격 특성</li>
+</ul>
+<p><strong>데이터과학 활용</strong>:</p>
+<ul>
+<li>클러스터링 알고리즘을 통한 사용자 세그먼테이션</li>
+<li>의사결정 트리를 활용한 세그먼트 특성 분석</li>
+<li>협업 필터링을 통한 유사 사용자 그룹 발견</li>
+</ul>
+<h3 id="4-문맥-광고-contextual-targeting">
+  4. 문맥 광고 (Contextual Targeting)
+  <a class="anchor" href="#4-%eb%ac%b8%eb%a7%a5-%ea%b4%91%ea%b3%a0-contextual-targeting">#</a>
+</h3>
+<p><strong>개념</strong>: 사용자가 현재 보고 있는 웹페이지의 내용과 관련성이 높은 광고를 노출하는 방법</p>
+<p><strong>기술적 구현</strong>:</p>
+<ul>
+<li>자연어 처리(NLP)를 통한 페이지 내용 분석</li>
+<li>키워드 추출 및 토픽 모델링</li>
+<li>광고와 콘텐츠 간의 의미적 유사도 계산</li>
+</ul>
+<p><strong>장점</strong>:</p>
+<ul>
+<li>개인정보 수집 없이도 효과적인 타겟팅 가능</li>
+<li>쿠키 규제 환경에서도 활용 가능</li>
+<li>브랜드 세이프티 확보 용이</li>
+</ul>
+<p><strong>활용 사례</strong>:</p>
+<ul>
+<li>요리 블로그에서 주방용품 광고 노출</li>
+<li>여행 관련 기사에서 항공권이나 호텔 광고 노출</li>
+<li>기술 뉴스 사이트에서 IT 제품 광고 노출</li>
+</ul>
+<h3 id="5-네이티브-광고-native-advertising">
+  5. 네이티브 광고 (Native Advertising)
+  <a class="anchor" href="#5-%eb%84%a4%ec%9d%b4%ed%8b%b0%eb%b8%8c-%ea%b4%91%ea%b3%a0-native-advertising">#</a>
+</h3>
+<p><strong>개념</strong>: 광고가 노출되는 플랫폼의 콘텐츠와 자연스럽게 어우러지도록 제작된 광고 형태</p>
+<p><strong>특징</strong>:</p>
+<ul>
+<li>플랫폼의 일반 콘텐츠와 유사한 형태와 기능</li>
+<li>사용자 경험을 해치지 않는 자연스러운 통합</li>
+<li>명확한 광고 표시를 통한 투명성 확보 필요</li>
+</ul>
+<p><strong>유형</strong>:</p>
+<ul>
+<li><strong>인피드 광고</strong>: 소셜미디어 피드에 자연스럽게 삽입</li>
+<li><strong>추천 콘텐츠</strong>: &ldquo;당신이 좋아할 만한 기사&rdquo; 형태</li>
+<li><strong>스폰서드 콘텐츠</strong>: 브랜드가 후원하는 에디토리얼 콘텐츠</li>
+<li><strong>검색 광고</strong>: 검색 결과와 유사한 형태의 광고</li>
+</ul>
+<p><strong>윤리적 고려사항</strong>:</p>
+<ul>
+<li>광고임을 명확히 표시해야 함 (예: &ldquo;광고&rdquo;, &ldquo;Sponsored&rdquo;, &ldquo;AD&rdquo;)</li>
+<li>사용자를 기만하지 않는 투명한 커뮤니케이션</li>
+<li>플랫폼의 가이드라인 및 법적 규제 준수</li>
+</ul>
+<p><strong>효과 측정</strong>:</p>
+<ul>
+<li>전통적인 배너 광고 대비 높은 참여율</li>
+<li>브랜드 인지도 및 호감도 향상</li>
+<li>광고 차단 소프트웨어의 영향 최소화</li>
+</ul>
+<h3 id="6-프로그래매틱-광고-programmatic-advertising">
+  6. 프로그래매틱 광고 (Programmatic Advertising)
+  <a class="anchor" href="#6-%ed%94%84%eb%a1%9c%ea%b7%b8%eb%9e%98%eb%a7%a4%ed%8b%b1-%ea%b4%91%ea%b3%a0-programmatic-advertising">#</a>
+</h3>
+<p><strong>개념</strong>: 인공지능과 자동화 기술을 활용하여 광고 구매, 배치, 최적화를 실시간으로 수행하는 방식</p>
+<p><strong>핵심 구성요소</strong>:</p>
+<ul>
+<li><strong>DSP(Demand-Side Platform)</strong>: 광고주를 위한 광고 구매 플랫폼</li>
+<li><strong>SSP(Supply-Side Platform)</strong>: 매체사를 위한 광고 판매 플랫폼</li>
+<li><strong>Ad Exchange</strong>: 광고 거래소</li>
+<li><strong>DMP(Data Management Platform)</strong>: 데이터 관리 플랫폼</li>
+</ul>
+<p><strong>실시간 입찰(RTB) 과정</strong>:</p>
+<ol>
+<li>사용자가 웹페이지 방문</li>
+<li>광고 요청 신호 발생</li>
+<li>사용자 정보 및 컨텍스트 분석</li>
+<li>여러 광고주가 동시에 입찰</li>
+<li>최고가 입찰자의 광고 노출 (100ms 이내)</li>
+</ol>
+<p>이러한 다양한 타겟팅 방법들은 단독으로 사용되기보다는 복합적으로 조합되어 활용되며, 지속적인 A/B 테스트와 성과 분석을 통해 최적화된다. 애드테크 분야에서 데이터과학자의 역할은 이러한 복잡한 시스템을 설계하고, 예측 모델을 구축하며, 광고 성과를 지속적으로 개선하는 것이다.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+  
+
+
+
+  
+    
+  
+
+
+
+<div class="book-languages" tabindex="0" aria-haspopup="true">
+  <ul>
+    <li class="flex align-center">
+      <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+      
+    </li> 
+  </ul>
+
+  <ul class="book-languages-list">
+    
+    <li class="active">
+      <a href="https://intothedata.com/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#애드테크-ad-tech-ad-technology">애드테크 (Ad Tech, Ad Technology)</a>
+      <ul>
+        <li><a href="#애드테크의-복잡성과-데이터과학의-역할">애드테크의 복잡성과 데이터과학의 역할</a></li>
+      </ul>
+    </li>
+    <li><a href="#광고-타겟팅-방법의-종류">광고 타겟팅 방법의 종류</a>
+      <ul>
+        <li><a href="#1-무작위-광고-random-targeting">1. 무작위 광고 (Random Targeting)</a></li>
+        <li><a href="#2-리타겟팅-광고-retargetingremarketing">2. 리타겟팅 광고 (Retargeting/Remarketing)</a></li>
+        <li><a href="#3-세그먼트-타겟팅-demographicbehavioral-targeting">3. 세그먼트 타겟팅 (Demographic/Behavioral Targeting)</a></li>
+        <li><a href="#4-문맥-광고-contextual-targeting">4. 문맥 광고 (Contextual Targeting)</a></li>
+        <li><a href="#5-네이티브-광고-native-advertising">5. 네이티브 광고 (Native Advertising)</a></li>
+        <li><a href="#6-프로그래매틱-광고-programmatic-advertising">6. 프로그래매틱 광고 (Programmatic Advertising)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>참고자료 - References on 인투더데이터 데이터과학</title>
+    <link>https://intothedata.com/docs/99.materials/</link>
+    <description>Recent content in 참고자료 - References on 인투더데이터 데이터과학</description>
+    <generator>Hugo</generator>
+    <language>ko-KR</language>
+    <atom:link href="https://intothedata.com/docs/99.materials/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>인물 - People</title>
+      <link>https://intothedata.com/docs/99.materials/people/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/99.materials/people/</guid>
+      <description>&lt;h2 id=&#34;인물-people&#34;&gt;&#xA;  인물 (People)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%9d%b8%eb%ac%bc-people&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;이름&lt;/th&gt;&#xA;          &lt;th&gt;한국어 이름&lt;/th&gt;&#xA;          &lt;th&gt;전공 분야&lt;/th&gt;&#xA;          &lt;th&gt;소속&lt;/th&gt;&#xA;          &lt;th&gt;설명&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Ashish Venugopal&lt;/td&gt;&#xA;          &lt;td&gt;&lt;/td&gt;&#xA;          &lt;td&gt;컴퓨터공학, 기계학습&lt;/td&gt;&#xA;          &lt;td&gt;Google&lt;/td&gt;&#xA;          &lt;td&gt;현재 구글의 기계번역 책임 총괄이다.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Rasmus Lerdorf&lt;/td&gt;&#xA;          &lt;td&gt;라스무스 레르도프&lt;/td&gt;&#xA;          &lt;td&gt;컴퓨터공학&lt;/td&gt;&#xA;          &lt;td&gt;WePAY&lt;/td&gt;&#xA;          &lt;td&gt;PHP 창시자로 Yahoo!에서 근무한적이 있다.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Hadley Wickham&lt;/td&gt;&#xA;          &lt;td&gt;해들리 위크햄&lt;/td&gt;&#xA;          &lt;td&gt;통계학, 컴퓨터공학&lt;/td&gt;&#xA;          &lt;td&gt;Rstudio&lt;/td&gt;&#xA;          &lt;td&gt;R의 시각화 패키지인 ggplot2를 만든 뉴질랜드 대학 교수&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Andrew Ng&lt;/td&gt;&#xA;          &lt;td&gt;앤드류 응&lt;/td&gt;&#xA;          &lt;td&gt;컴퓨터공학, 기계학습&lt;/td&gt;&#xA;          &lt;td&gt;Stanford&lt;/td&gt;&#xA;          &lt;td&gt;Coursera의 공통창업자이며 기계학습 전문가. 스탠포드 대학(Stanford University)의 교수이자 Baidu의 수석과학자이다.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Doug Cutting&lt;/td&gt;&#xA;          &lt;td&gt;더그 커팅&lt;/td&gt;&#xA;          &lt;td&gt;컴퓨터공학&lt;/td&gt;&#xA;          &lt;td&gt;Cloudera&lt;/td&gt;&#xA;          &lt;td&gt;Lucene, Hadoop, Nutch의 창시자이 Yahoo!에서 근무한적이 있다.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Max O. Lorenz&lt;/td&gt;&#xA;          &lt;td&gt;맥스 오 로렌츠&lt;/td&gt;&#xA;          &lt;td&gt;통계학, 경제학&lt;/td&gt;&#xA;          &lt;td&gt;사망&lt;/td&gt;&#xA;          &lt;td&gt;맥스 O 로렌츠 - Max O. Lorenz&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;</description>
+    </item>
+    <item>
+      <title>참고 사이트</title>
+      <link>https://intothedata.com/docs/99.materials/sites/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/99.materials/sites/</guid>
+      <description>&lt;h2 id=&#34;참고-사이트-sites&#34;&gt;&#xA;  참고 사이트 (Sites)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%b0%b8%ea%b3%a0-%ec%82%ac%ec%9d%b4%ed%8a%b8-sites&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;국내-기관&#34;&gt;&#xA;  국내 기관&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ea%b5%ad%eb%82%b4-%ea%b8%b0%ea%b4%80&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://spri.kr/&#34;&gt;http://spri.kr/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;외국-커뮤니티&#34;&gt;&#xA;  외국 커뮤니티&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%99%b8%ea%b5%ad-%ec%bb%a4%eb%ae%a4%eb%8b%88%ed%8b%b0&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://functionspace.org/&#34;&gt;http://functionspace.org/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://mathoverflow.net/&#34;&gt;http://mathoverflow.net/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://stackexchange.com/&#34;&gt;http://stackexchange.com/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

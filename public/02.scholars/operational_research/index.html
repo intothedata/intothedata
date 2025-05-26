@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="경영과학(Operational Research), 흔히 OR(오알)이라고 줄여서 부른다.
+경영과학은 기업의 경영 중에 필요한 어려운 결정들을 돕기위해서 과학적으로 최대한 올바른 결정을 내리는 방법을 주로 다루는 학문이다.
+한국에서는 산업공학이라는 학과명으로 잘 알려져 있다.
+경영과학이라는 이름때문에 기업 경영을 위한 조직 관리, 사업 관리 등을 연상할 수도 있지만 산업공학에서는 주로 다루는 것은 최적화와 관련된 것이다.
+제품의 수요 예측, 생산 단가, 최적 생산 제품수와 같은 것을 계산하고 결정한다.
+특히 선형최적화(linear optimization)를 비롯한 각종 최적화 기법이 경영과학에서 가장 많이 사용되는 것들이다.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:url" content="https://intothedata.com/02.scholars/operational_research/">
+  <meta property="og:site_name" content="인투더데이터 데이터과학">
+  <meta property="og:title" content="경영과학 - Operational Research">
+  <meta property="og:description" content="경영과학(Operational Research), 흔히 OR(오알)이라고 줄여서 부른다.
+경영과학은 기업의 경영 중에 필요한 어려운 결정들을 돕기위해서 과학적으로 최대한 올바른 결정을 내리는 방법을 주로 다루는 학문이다.
+한국에서는 산업공학이라는 학과명으로 잘 알려져 있다. 경영과학이라는 이름때문에 기업 경영을 위한 조직 관리, 사업 관리 등을 연상할 수도 있지만 산업공학에서는 주로 다루는 것은 최적화와 관련된 것이다.
+제품의 수요 예측, 생산 단가, 최적 생산 제품수와 같은 것을 계산하고 결정한다.
+특히 선형최적화(linear optimization)를 비롯한 각종 최적화 기법이 경영과학에서 가장 많이 사용되는 것들이다.">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:type" content="website">
+<title>경영과학 - Operational Research | 인투더데이터 데이터과학</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.ce02ec8b4aaa4b1d9386a72d0b93e5195eac0f6feec0b00ecd36d8128e870d23.css" integrity="sha256-zgLsi0qqSx2ThqctC5PlGV6sD2/uwLAOzTbYEo6HDSM=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.69b3ef820735840b8b46619f32c5cf1d96c086c45c7a95bafacc5d95cdc0473e.js" integrity="sha256-abPvggc1hAuLRmGfMsXPHZbAhsRcepW6&#43;sxdlc3ARz4=" crossorigin="anonymous"></script>
+
+
+<link rel="alternate" type="application/rss+xml" href="https://intothedata.com/02.scholars/operational_research/index.xml" title="인투더데이터 데이터과학" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>인투더데이터 데이터과학</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>경영과학 - Operational Research</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#선형최적화-linear-optimization">선형최적화 Linear optimization</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><p>경영과학(Operational Research), 흔히 OR(오알)이라고 줄여서 부른다.<br>
+경영과학은 기업의 경영 중에 필요한 어려운 결정들을 돕기위해서 과학적으로 최대한 올바른 결정을 내리는 방법을 주로 다루는 학문이다.<br>
+한국에서는 산업공학이라는 학과명으로 잘 알려져 있다.
+경영과학이라는 이름때문에 기업 경영을 위한 조직 관리, 사업 관리 등을 연상할 수도 있지만 산업공학에서는 주로 다루는 것은 최적화와 관련된 것이다.<br>
+제품의 수요 예측, 생산 단가, 최적 생산 제품수와 같은 것을 계산하고 결정한다.<br>
+특히 선형최적화(linear optimization)를 비롯한 각종 최적화 기법이 경영과학에서 가장 많이 사용되는 것들이다.</p>
+<p>경영과학에서 가장 핵심적으로 알아야 할 것은 선형최적화 계열의 기술이며 더 고급단계로는 비선형최적화를 익히게 된다.<br>
+깊이 공부하게 되면 결국 s최종적으로 통과, 기계학습 등의 응용수리학과 고등컴퓨터공학과 이어지게 된다.</p>
+<h2 id="선형최적화-linear-optimization">
+  선형최적화 Linear optimization
+  <a class="anchor" href="#%ec%84%a0%ed%98%95%ec%b5%9c%ec%a0%81%ed%99%94-linear-optimization">#</a>
+</h2>
+<p>선형 최적화 (Linear Optimization)는 정확하게 1개의 해가 나오지 않는 문제에서 가능한 최적의 결정을 가능한 빠르게 찾아내는 방법이다.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+  
+
+
+
+  
+    
+  
+
+
+
+<div class="book-languages" tabindex="0" aria-haspopup="true">
+  <ul>
+    <li class="flex align-center">
+      <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+      
+    </li> 
+  </ul>
+
+  <ul class="book-languages-list">
+    
+    <li class="active">
+      <a href="https://intothedata.com/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#선형최적화-linear-optimization">선형최적화 Linear optimization</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

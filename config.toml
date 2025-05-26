@@ -5,8 +5,8 @@
 baseURL = "http://intothedata.com/"
 languageCode = "ko"
 title = "인투더데이터 데이터과학 위키 Datascience Wiki"
-theme = "hugo-book" 
-#theme = "book" 
+theme = "hugo-book"
+#theme = "ananke"
 
 hasCJKLanguage = true
 publishDir = "public"
@@ -43,20 +43,14 @@ startLevel = 1
 [params]
     subtitle = "데이터사이언스 위키"
     author = "IntoTheData"
-    # ordersectionsby = "title"
-    ordersectionsby = "weight"
-    # showVisitedLinks = true
-
+    
     # Book theme specific settings
     BookTheme = "light"
     BookToC = true
-    BookSection = "/"  # This is key - use "/" to render all sections
+    BookSection = "/"  # Using root for all sections
     BookSearch = true
     BookComments = false
     
-    # themeVariant = "intothedata"  # techdoc에서만 쓰는 것이고
-    # Change default color scheme with a variant one. Can be "red", "blue", "green".
-    themeVariant = ""  # 테마
     custom_css = ["css/intothedata.css"]
 
 [[menu.shortcuts]]

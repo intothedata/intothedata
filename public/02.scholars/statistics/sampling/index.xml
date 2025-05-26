@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>표본추출 - Sampling on 인투더데이터 데이터과학</title>
+    <link>https://intothedata.com/02.scholars/statistics/sampling/</link>
+    <description>Recent content in 표본추출 - Sampling on 인투더데이터 데이터과학</description>
+    <generator>Hugo</generator>
+    <language>ko-KR</language>
+    <atom:link href="https://intothedata.com/02.scholars/statistics/sampling/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://intothedata.com/02.scholars/statistics/sampling/loglogbeta/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/02.scholars/statistics/sampling/loglogbeta/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>네이만 배분법 - neyman allocation</title>
+      <link>https://intothedata.com/02.scholars/statistics/sampling/neyman_alloction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/02.scholars/statistics/sampling/neyman_alloction/</guid>
+      <description>&lt;h2 id=&#34;참고&#34;&gt;&#xA;  참고&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%b0%b8%ea%b3%a0&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.google.co.kr/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=9&amp;amp;cad=rja&amp;amp;uact=8&amp;amp;ved=0ahUKEwiQ9u2SqtfVAhXEabwKHX4SB70QFghSMAg&amp;amp;url=http%3A%2F%2Fwww.5365.co.kr%2Fbbs_download.php%3Ftmp_name%3D20101116142614.2960.3.0%26name%3D%25BB%25F9%25C7%25C3%25C7%25A5%25BA%25BB%25C3%25DF%25C3%25E2%25B9%25E6%25B9%25FD%25B9%25E6%25B9%25FD4.hwp&amp;amp;usg=AFQjCNEqSdirh1eEFIgLNgD-NHBDEjSVOA&#34;&gt;https://www.google.co.kr/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=9&amp;amp;cad=rja&amp;amp;uact=8&amp;amp;ved=0ahUKEwiQ9u2SqtfVAhXEabwKHX4SB70QFghSMAg&amp;amp;url=http%3A%2F%2Fwww.5365.co.kr%2Fbbs_download.php%3Ftmp_name%3D20101116142614.2960.3.0%26name%3D%25BB%25F9%25C7%25C3%25C7%25A5%25BA%25BB%25C3%25DF%25C3%25E2%25B9%25E6%25B9%25FD%25B9%25E6%25B9%25FD4.hwp&amp;amp;usg=AFQjCNEqSdirh1eEFIgLNgD-NHBDEjSVOA&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.google.co.kr/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=8&amp;amp;cad=rja&amp;amp;uact=8&amp;amp;ved=0ahUKEwiQ9u2SqtfVAhXEabwKHX4SB70QFghMMAc&amp;amp;url=http%3A%2F%2Flunchbreak.tistory.com%2F26&amp;amp;usg=AFQjCNHQg_P6jC6ybqOi_bnHmbuE2VXCNg&#34;&gt;https://www.google.co.kr/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=8&amp;amp;cad=rja&amp;amp;uact=8&amp;amp;ved=0ahUKEwiQ9u2SqtfVAhXEabwKHX4SB70QFghMMAc&amp;amp;url=http%3A%2F%2Flunchbreak.tistory.com%2F26&amp;amp;usg=AFQjCNHQg_P6jC6ybqOi_bnHmbuE2VXCNg&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;수정절사법&#34;&gt;&#xA;  수정절사법&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%88%98%ec%a0%95%ec%a0%88%ec%82%ac%eb%b2%95&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;내용 정리중&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>하이퍼로그로그 - Hyper Log Log</title>
+      <link>https://intothedata.com/02.scholars/statistics/sampling/hyperloglog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/02.scholars/statistics/sampling/hyperloglog/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://d2.naver.com/helloworld/711301&#34;&gt;http://d2.naver.com/helloworld/711301&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;cardinality(unique count)를 샘플링해서 알아내는데 사용하는 확률자료구조이자 알고리즘이다.&lt;/p&gt;&#xA;&lt;p&gt;세익스피어 전 작품에서의 영어단어 세기&#xA;&lt;a href=&#34;http://highscalability.com/blog/2012/4/5/big-data-counting-how-to-count-a-billion-distinct-objects-us.html&#34;&gt;http://highscalability.com/blog/2012/4/5/big-data-counting-how-to-count-a-billion-distinct-objects-us.html&lt;/a&gt;&#xA;Philippe Flajolet 등이 2007년에 발표&#xA;HyperLogLog는 상대오차범위 조절 가능&#xA;상대오차는&lt;/p&gt;&#xA;&lt;p&gt;cardinality가 N이라면 레지스터 크기는 log_2log_2N + O(1)&#xA;Philippe Flajolet and Éric Fusy and Olivier Gandouet and Frédéric Meunier, &amp;ldquo;HyperLoglog: the analysis of a near-optimal cardinality estimation algorithm&amp;rdquo;, Discrete Mathematics and Theoretical Computer Science (DMTCS) Proceedings, vol AH, (2007) pp. 127&amp;ndash;146. &lt;a href=&#34;http://www.dmtcs.org/dmtcs-ojs/index.php/proceedings/article/view/dmAH0110&#34;&gt;http://www.dmtcs.org/dmtcs-ojs/index.php/proceedings/article/view/dmAH0110&lt;/a&gt;&#xA;Matt Abrams, &amp;ldquo;Big Data Counting: How To Count A Billion Distinct Objects Using Only 1.5KB Of Memory&amp;rdquo;, High Scalability, &lt;a href=&#34;http://highscalability.com/blog/2012/4/5/big-data-counting-how-to-count-a-billion-distinct-objects-us.html&#34;&gt;http://highscalability.com/blog/2012/4/5/big-data-counting-how-to-count-a-billion-distinct-objects-us.html&lt;/a&gt;&#xA;Ilya Katsov, &amp;ldquo;Probabilistic Data Structures for Web Analytics and Data Mining&amp;rdquo;, Highly Scalable Blog, &lt;a href=&#34;http://highlyscalable.wordpress.com/2012/05/01/probabilistic-structures-web-analytics-data-mining/&#34;&gt;http://highlyscalable.wordpress.com/2012/05/01/probabilistic-structures-web-analytics-data-mining/&lt;/a&gt;&#xA;&amp;ldquo;stream-lib&amp;rdquo;, &lt;a href=&#34;https://github.com/addthis/stream-lib/&#34;&gt;https://github.com/addthis/stream-lib/&lt;/a&gt;&#xA;&amp;ldquo;Iterated logarithm&amp;rdquo;, Wikipedia, &lt;a href=&#34;http://en.wikipedia.org/wiki/Iterated_logarithm&#34;&gt;http://en.wikipedia.org/wiki/Iterated_logarithm&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

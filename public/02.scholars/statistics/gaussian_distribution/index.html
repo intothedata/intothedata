@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="위키피디아의 정규분포를 보면 설명이 잘 되어있다.
+보통 정규분포를 따른다고 하는 표현을 다음과 같이 표기한다.
+$$X \sim \mathcal{N}(\mu,,\sigma^{2}),.$$
+정규분포 함수 공식은 다음과 같다.
+$$f(x) = \frac 1 {\sigma\sqrt{2\pi}} e^{-\frac{(x-\mu)^2} {2\sigma^2}}$$
+또는
+\[P(x) = \frac{1}{{\sigma \sqrt {2\pi } }}{e^{{{ - {{\left( {x - \mu } \right)}^2}} \mathord{\left/
+{\vphantom {{ - {{\left( {x - \mu } \right)}^2}} {2{\sigma ^2}}}} \right.
+} {2{\sigma ^2}}}}}\]
+위의 공식은 정규분포에서의 \(x\)의 밀도를 알려주는 함수를 만드는 공식이다. 즉 x값을 입력할 때 그 x값에 해당하는 확률 밀도를 리턴하는 함수이다.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:url" content="https://intothedata.com/02.scholars/statistics/gaussian_distribution/">
+  <meta property="og:site_name" content="인투더데이터 데이터과학">
+  <meta property="og:title" content="정규분포, 가우시안 분포 - Normal Distribution, Gaussian Distribution">
+  <meta property="og:description" content="위키피디아의 정규분포를 보면 설명이 잘 되어있다.
+보통 정규분포를 따른다고 하는 표현을 다음과 같이 표기한다.
+$$X \sim \mathcal{N}(\mu,,\sigma^{2}),.$$
+정규분포 함수 공식은 다음과 같다.
+$$f(x) = \frac 1 {\sigma\sqrt{2\pi}} e^{-\frac{(x-\mu)^2} {2\sigma^2}}$$
+또는
+\[P(x) = \frac{1}{{\sigma \sqrt {2\pi } }}{e^{{{ - {{\left( {x - \mu } \right)}^2}} \mathord{\left/ {\vphantom {{ - {{\left( {x - \mu } \right)}^2}} {2{\sigma ^2}}}} \right. } {2{\sigma ^2}}}}}\]
+위의 공식은 정규분포에서의 \(x\)의 밀도를 알려주는 함수를 만드는 공식이다. 즉 x값을 입력할 때 그 x값에 해당하는 확률 밀도를 리턴하는 함수이다.">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="02.scholars">
+<title>정규분포, 가우시안 분포 - Normal Distribution, Gaussian Distribution | 인투더데이터 데이터과학</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.ce02ec8b4aaa4b1d9386a72d0b93e5195eac0f6feec0b00ecd36d8128e870d23.css" integrity="sha256-zgLsi0qqSx2ThqctC5PlGV6sD2/uwLAOzTbYEo6HDSM=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.69b3ef820735840b8b46619f32c5cf1d96c086c45c7a95bafacc5d95cdc0473e.js" integrity="sha256-abPvggc1hAuLRmGfMsXPHZbAhsRcepW6&#43;sxdlc3ARz4=" crossorigin="anonymous"></script>
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>인투더데이터 데이터과학</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>정규분포, 가우시안 분포 - Normal Distribution, Gaussian Distribution</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents"></nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><p>위키피디아의 <a href="https://ko.wikipedia.org/wiki/%EC%A0%95%EA%B7%9C%EB%B6%84%ED%8F%AC">정규분포</a>를 보면 설명이 잘 되어있다.</p>
+<p>보통 정규분포를 따른다고 하는 표현을 다음과 같이 표기한다.</p>
+<p>$$X \sim \mathcal{N}(\mu,,\sigma^{2}),.$$</p>
+<p>정규분포 함수 공식은 다음과 같다.</p>
+<p>$$f(x) = \frac 1 {\sigma\sqrt{2\pi}} e^{-\frac{(x-\mu)^2} {2\sigma^2}}$$</p>
+<p>또는</p>
+<p>\[P(x) = \frac{1}{{\sigma \sqrt {2\pi } }}{e^{{{ - {{\left( {x - \mu } \right)}^2}} \mathord{\left/
+{\vphantom {{ - {{\left( {x - \mu } \right)}^2}} {2{\sigma ^2}}}} \right.
+} {2{\sigma ^2}}}}}\]</p>
+<p>위의 공식은 정규분포에서의 \(x\)의 밀도를 알려주는 함수를 만드는 공식이다. 즉 x값을 입력할 때 그 x값에 해당하는 확률 밀도를 리턴하는 함수이다.</p>
+<p>쉽게 설명하면 만약 어떤 데이터가 있고 그 데이터에 대한 평균과 표준편차를 알고 있다고 하자. 그렇게 하면 정규분포를 생성할 수 있다. 정규분포의 모양은 사실 평균과 표준편차에 따라 달라지는 것이기 때문이다. 그렇게 하고나면 그렇게 만들어진 정규분포에 x값의 위치에 따른 y값을 알아낼 수 있다. 이때 이 y값이 x가 나올 확률이 된다.</p>
+<p>그래서 위의 식 자체로 함수가 완성된 것이 아니다. 위의 공식에서 \(\sigma\)와 \(\mu\)를 넣어주어야 하는데 평균과 표준편차를 구해서 넣어주면 된다.</p>
+<p><a href="https://cran.r-project.org/web/packages/ExtDist/vignettes/Distributions-Normal.html">R vignett</a></p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+  
+
+
+
+  
+    
+  
+
+
+
+<div class="book-languages" tabindex="0" aria-haspopup="true">
+  <ul>
+    <li class="flex align-center">
+      <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+      
+    </li> 
+  </ul>
+
+  <ul class="book-languages-list">
+    
+    <li class="active">
+      <a href="https://intothedata.com/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents"></nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1933 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  재현가능연구 (Reproducible Research)
+  #
+
+재현가능연구는 영어 &ldquo;Reproducible Research&quot;를 번역한 용어로, 한국어로는 적당한 용어가 정착되지 않아 보통 영어를 그대로 읽어 &ldquo;리프로듀서블 리서치&quot;라고 부르기도 한다. 본 문서에서는 &ldquo;재현가능연구&quot;로 통일하여 표현한다.
+
+  재현가능연구의 정의와 개념
+  #
+
+재현가능연구란 과학연구의 전 과정과 결과를 투명하게 공개하여 누구나 동일한 결과를 재현할 수 있도록 하는 연구 방법론이다. 이는 단순히 연구 결과만을 공개하는 것이 아니라, 연구에 사용된 원시 데이터, 분석 코드, 연구 방법론, 그리고 결과 도출 과정을 모두 체계적으로 문서화하고 공개하는 것을 의미한다.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:url" content="https://intothedata.com/docs/08.reproducible_research/">
+  <meta property="og:site_name" content="인투더데이터 데이터과학">
+  <meta property="og:title" content="재현가능연구">
+  <meta property="og:description" content="재현가능연구 (Reproducible Research) # 재현가능연구는 영어 “Reproducible Research&#34;를 번역한 용어로, 한국어로는 적당한 용어가 정착되지 않아 보통 영어를 그대로 읽어 “리프로듀서블 리서치&#34;라고 부르기도 한다. 본 문서에서는 “재현가능연구&#34;로 통일하여 표현한다.
+재현가능연구의 정의와 개념 # 재현가능연구란 과학연구의 전 과정과 결과를 투명하게 공개하여 누구나 동일한 결과를 재현할 수 있도록 하는 연구 방법론이다. 이는 단순히 연구 결과만을 공개하는 것이 아니라, 연구에 사용된 원시 데이터, 분석 코드, 연구 방법론, 그리고 결과 도출 과정을 모두 체계적으로 문서화하고 공개하는 것을 의미한다.">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:type" content="website">
+<title>재현가능연구 | 인투더데이터 데이터과학</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.465376614827fff60754cc9c34686b524db662a4c314668361de5db45fde6203.css" integrity="sha256-RlN2YUgn//YHVMycNGhrUk22YqTDFGaDYd5dtF/eYgM=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.d9e6ba7770f5117e21758da45184f61d5669394aa618ebdfabe1d95519d50bbf.js" integrity="sha256-2ea6d3D1EX4hdY2kUYT2HVZpOUqmGOvfq&#43;HZVRnVC78=" crossorigin="anonymous"></script>
+
+
+<link rel="alternate" type="application/rss+xml" href="https://intothedata.com/docs/08.reproducible_research/index.xml" title="인투더데이터 데이터과학" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>인투더데이터 데이터과학</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/00.about/" class="">인투더데이터 소개 About</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/01.data_science/" class="">데이터과학</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/01.data_science/datascientist_skillset/" class="">데이터과학자 스킬셋</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/" class="">데이터과학 학술분야</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/operational_research/" class="">경영과학 - Operational Research</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/operational_research/demand_forecasting/" class="">수요예측 - Demand Forecasting</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/economics/" class="">계량경제학 - Economics</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/economics/distributed_lag_model/" class="">분산지연모델</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/data_mining/" class="">데이터마이닝</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/data_mining/clustering/" class="">군집분석 - Clustering</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/data_mining/clustering/k-means/" class="">K-means - K중심값</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/modeling/" class="">모델링 - Modeling</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/business_analysis/" class="">비즈니스 데이터 분석</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/business_analysis/behavioral_change_point_analysis/" class="">행동변화점분석</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/timeseries_analysis/" class="">시계열 분석 - Time-series Analysis</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/timeseries_analysis/granger_causality/" class="">그래인저 인과관계 - Granger Causality</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/anomaly_detection/" class="">이상감지</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/anomaly_detection/3_sigma_rule/" class="">3 sigma rule</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/anomaly_detection/generalized_esd/" class="">Generalized ESD</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/artificial_intelligence/" class="">인공지능 - Artificial Intelligence</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/artificial_intelligence/fuzzy_inferenece/" class="">퍼지 추론 - Fuzzy Inferenece</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/information_retrieval/" class="">정보검색</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/text_mining/" class="">텍스트마이닝 - Text Mining</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/text_mining/tfidf/" class="">TFIDF - Term Frequency Inverse Document Frequency</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/text_mining/cosine_similarity/" class="">코사인 유사도 - Cosine Similarity</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/" class="">통계학 - Statistics</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/central_limit_theorem/" class="">중심극한정리 - CLT; Central Limit Theorem</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/descriptive_statistics/" class="">기술통계 - Descriptive statistics</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/variance/" class="">분산 - Variance</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/survival_analysis/" class="">생존분석 - Survival Analysis</a>
+  
+
+          
+  <ul>
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/data/" class="">자료 - data</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/gaussian_distribution/" class="">정규분포, 가우시안 분포 - Normal Distribution, Gaussian Distribution</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/inferential_statistics/" class="">추론통계 - Inferential statistics</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/sampling/" class="">표본추출 - Sampling</a>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/sampling/neyman_alloction/" class="">네이만 배분법 - neyman allocation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/sampling/hyperloglog/" class="">하이퍼로그로그 - Hyper Log Log</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/correlation/" class="">피어슨 상관계수 - Pearson&#39;s product-moment correlation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/stochastic_process/" class="">확률과정 - Stochastic process</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/stochastic_process/brownian_motion/" class="">브라운 운동 - Brownian Motion</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/stochastic_process/ornstein_uhlenbeck_process/" class="">오른스타인-우렌벡 과정  Ornstein-Uhlenbeck process</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/pattern_recognition/" class="">패턴인식 - Pattern Recognition</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/pattern_recognition/neural_network/" class="">인공신경망 - Neural Network</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/" class="">데이터사이언스 - 산업별 갈래</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/adtech/" class="">온라인 광고 비즈니스 - Ad tech</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/adtech/ad_tech_terminlogy/" class="">온라인 광고 용어 - Online Ad Terminology</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/ad_tech/" class="">애드테크 - Ad Tech</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/ad_tech/ad_tech_terminlogy/" class="">온라인 광고 용어</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/online/" class="">온라인 비즈니스 - Online busines</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/online/ad_tech/" class="">온라인 광고 비즈니스 - Ad tech</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/online/ad_tech_terminlogy/" class="">온라인 광고 용어 - Online Ad Terminology</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/automobile/" class="">자동차 산업 - Automobile Industry</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/iron_mill/" class="">철강 - Iron mill</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/04.data_analysis/" class="">데이터 분석</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>데이터 수집 (Data collection)</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/06.data_collection/mobile_data_collection/" class="">데이터 수집 (Data collection)</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/05.data_visualization/" class="">데이터시각화</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/05.data_visualization/number_line_plot/" class="">넘버라인플롯</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/06.data_platform/" class="">데이터 플랫폼</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/06.data_platform/bigquery/" class="">빅쿼리 - Bigquery</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/06.data_platform/bigquery/excel_bigquery/" class="">엑셀에서 빅쿼리 데이터 가져오기</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/07.data_hub/" class="">데이터 허브</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/07.data_hub/sk_data_hub/" class="">SK 데이터 허브</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/08.reproducible_research/" class=" active">재현가능연구</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/09.datascience_tools/" class="">데이터사이언스 도구 - Data Science Tools</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/20.data_platform/" class="">데이터플랫폼</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/30.bigdata/" class="">빅데이터</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/36.time_series_analysis/" class="">시계열분석</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/" class="">인공지능</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/vector_search_engine/" class="">벡터검색엔진</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/faiss/" class="">Faiss - 벡터 검색 엔진</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/faiss/3_sigma_rule/" class="">3 sigma rule</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/faiss/generalized_esd/" class="">Generalized ESD</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/gpt/" class="">GPT</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/39.large_language_model/" class="">LLM</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/38.natural_languge_processing/" class="">자연어 처리</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/38.natural_languge_processing/korean_pos_tagger/" class="">한국어 형태소 분석기</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/38.natural_languge_processing/pos_tagger/" class="">형태소 분석기 - Pos tagger</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/40.r_language/" class="">R언어</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/50.computer_science/" class="">컴퓨터 공학</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/50.computer_science/random/" class="">랜덤</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/70.practical_data_science/" class="">실무 데이터과학</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/70.practical_data_science/quality_based_scoring/" class="">품질 기반 스코어링 - quality-based scoring</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/60.pracactical_data_processing/" class="">데이터 프로세싱</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/80.mathematics/" class="">수학 - Mathematics</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/80.mathematics/ordinary_differential_equation/" class="">상미분방정식 - Ordinary Differential Equation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/80.mathematics/mathematics_symbols/" class="">수학기호정리 - mathematics symbols</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/80.mathematics/fermats_last_theorem/" class="">페르마의 마지막 정리</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/90.metrics/" class="">지표</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/90.metrics/lorenz_curve/" class="">로렌츠 커브</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/99.materials/" class="">참고자료 - References</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/99.materials/people/" class="">인물 - People</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/99.materials/sites/" class="">참고 사이트</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/taglist/" class="">태그 목록</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>재현가능연구</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#재현가능연구-reproducible-research">재현가능연구 (Reproducible Research)</a>
+      <ul>
+        <li><a href="#재현가능연구의-정의와-개념">재현가능연구의 정의와 개념</a></li>
+        <li><a href="#재현가능연구의-배경과-필요성">재현가능연구의 배경과 필요성</a></li>
+        <li><a href="#연구윤리와의-관계">연구윤리와의 관계</a></li>
+        <li><a href="#재현가능연구의-실행-원칙">재현가능연구의 실행 원칙</a></li>
+        <li><a href="#재현가능연구의-구체적-실행-방법">재현가능연구의 구체적 실행 방법</a></li>
+        <li><a href="#재현가능연구를-위한-도구와-기술">재현가능연구를 위한 도구와 기술</a></li>
+        <li><a href="#재현가능연구의-도전과-한계">재현가능연구의 도전과 한계</a></li>
+        <li><a href="#재현가능연구의-미래-전망">재현가능연구의 미래 전망</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h2 id="재현가능연구-reproducible-research">
+  재현가능연구 (Reproducible Research)
+  <a class="anchor" href="#%ec%9e%ac%ed%98%84%ea%b0%80%eb%8a%a5%ec%97%b0%ea%b5%ac-reproducible-research">#</a>
+</h2>
+<p>재현가능연구는 영어 &ldquo;Reproducible Research&quot;를 번역한 용어로, 한국어로는 적당한 용어가 정착되지 않아 보통 영어를 그대로 읽어 &ldquo;리프로듀서블 리서치&quot;라고 부르기도 한다. 본 문서에서는 &ldquo;재현가능연구&quot;로 통일하여 표현한다.</p>
+<h3 id="재현가능연구의-정의와-개념">
+  재현가능연구의 정의와 개념
+  <a class="anchor" href="#%ec%9e%ac%ed%98%84%ea%b0%80%eb%8a%a5%ec%97%b0%ea%b5%ac%ec%9d%98-%ec%a0%95%ec%9d%98%ec%99%80-%ea%b0%9c%eb%85%90">#</a>
+</h3>
+<p>재현가능연구란 <strong>과학연구의 전 과정과 결과를 투명하게 공개하여 누구나 동일한 결과를 재현할 수 있도록 하는 연구 방법론</strong>이다. 이는 단순히 연구 결과만을 공개하는 것이 아니라, 연구에 사용된 원시 데이터, 분석 코드, 연구 방법론, 그리고 결과 도출 과정을 모두 체계적으로 문서화하고 공개하는 것을 의미한다.</p>
+<p>재현가능연구의 핵심 요소는 다음과 같다:</p>
+<p><strong>1. 투명성 (Transparency)</strong></p>
+<ul>
+<li>연구 과정의 모든 단계를 명확히 기록하고 공개</li>
+<li>데이터 수집부터 결과 해석까지의 전 과정 문서화</li>
+<li>연구 방법론과 분석 절차의 상세한 설명</li>
+</ul>
+<p><strong>2. 접근성 (Accessibility)</strong></p>
+<ul>
+<li>연구에 사용된 모든 자료를 누구나 접근할 수 있도록 공개</li>
+<li>오픈소스 도구와 표준 형식 사용</li>
+<li>비용 장벽 없이 재현 가능한 환경 제공</li>
+</ul>
+<p><strong>3. 재현성 (Reproducibility)</strong></p>
+<ul>
+<li>동일한 데이터와 방법으로 동일한 결과 도출 가능</li>
+<li>독립적인 연구자가 검증할 수 있는 수준의 상세함</li>
+<li>시간이 지나도 재현 가능한 안정성</li>
+</ul>
+<h3 id="재현가능연구의-배경과-필요성">
+  재현가능연구의 배경과 필요성
+  <a class="anchor" href="#%ec%9e%ac%ed%98%84%ea%b0%80%eb%8a%a5%ec%97%b0%ea%b5%ac%ec%9d%98-%eb%b0%b0%ea%b2%bd%ea%b3%bc-%ed%95%84%ec%9a%94%ec%84%b1">#</a>
+</h3>
+<p>재현가능연구에 대한 관심이 높아진 배경에는 **재현성 위기(Replication Crisis)**가 있다. 2000년대 들어 여러 분야에서 기존 연구 결과를 재현하려는 시도들이 실패하면서 과학 연구의 신뢰성에 대한 의문이 제기되었다.</p>
+<p><strong>주요 문제 사례들:</strong></p>
+<ol>
+<li>
+<p><strong>생명과학 분야의 재현성 문제</strong></p>
+<ul>
+<li>특정 바이오 연구 논문의 재현에 1년 이상 소요</li>
+<li>참조 논문들이 원본의 오류를 그대로 계승하여 확산</li>
+<li>제약회사들이 기존 연구 결과의 재현에 실패하는 사례 증가</li>
+</ul>
+</li>
+<li>
+<p><strong>심리학 분야의 재현성 위기</strong></p>
+<ul>
+<li>2015년 Open Science Collaboration의 연구에서 심리학 논문 100편 중 39편만 재현 성공</li>
+<li>통계적 유의성에 의존한 연구 관행의 문제점 노출</li>
+</ul>
+</li>
+<li>
+<p><strong>경제학 및 사회과학 분야</strong></p>
+<ul>
+<li>데이터 접근 제한과 분석 코드 미공개로 인한 검증 어려움</li>
+<li>연구자의 주관적 판단이 개입될 여지가 많은 분석 과정</li>
+</ul>
+</li>
+</ol>
+<p><strong>재현가능연구가 필요한 이유:</strong></p>
+<ul>
+<li><strong>과학적 신뢰성 확보</strong>: 연구 결과의 검증 가능성 제공</li>
+<li><strong>연구 효율성 향상</strong>: 중복 연구 방지 및 기존 연구 활용 극대화</li>
+<li><strong>지식 축적 촉진</strong>: 체계적인 지식 공유와 발전</li>
+<li><strong>연구 윤리 강화</strong>: 투명한 연구 과정을 통한 부정행위 방지</li>
+</ul>
+<h3 id="연구윤리와의-관계">
+  연구윤리와의 관계
+  <a class="anchor" href="#%ec%97%b0%ea%b5%ac%ec%9c%a4%eb%a6%ac%ec%99%80%ec%9d%98-%ea%b4%80%ea%b3%84">#</a>
+</h3>
+<p>재현가능연구는 연구윤리와 밀접한 관련이 있다. 전통적인 연구윤리가 연구 부정행위(fabrication, falsification, plagiarism)를 금지하는 소극적 접근이었다면, 재현가능연구는 투명성과 검증 가능성을 통해 연구 신뢰성을 적극적으로 확보하는 접근법이다.</p>
+<p><strong>연구윤리 관점에서의 의의:</strong></p>
+<ol>
+<li><strong>예방적 효과</strong>: 투명한 공개로 인한 부정행위 억제</li>
+<li><strong>자정 기능</strong>: 동료 검토와 재현 시도를 통한 오류 발견</li>
+<li><strong>책임성 강화</strong>: 연구자의 연구 과정에 대한 책임 의식 제고</li>
+<li><strong>신뢰 회복</strong>: 과학 연구에 대한 사회적 신뢰 증진</li>
+</ol>
+<h3 id="재현가능연구의-실행-원칙">
+  재현가능연구의 실행 원칙
+  <a class="anchor" href="#%ec%9e%ac%ed%98%84%ea%b0%80%eb%8a%a5%ec%97%b0%ea%b5%ac%ec%9d%98-%ec%8b%a4%ed%96%89-%ec%9b%90%ec%b9%99">#</a>
+</h3>
+<p>재현가능연구를 성공적으로 수행하기 위해서는 다음과 같은 원칙을 따라야 한다:</p>
+<p><strong>1. 완전성 (Completeness)</strong></p>
+<ul>
+<li>연구에 사용된 모든 데이터, 코드, 문서 포함</li>
+<li>데이터 전처리부터 최종 결과까지의 전 과정 기록</li>
+<li>사용된 소프트웨어 버전 및 환경 정보 명시</li>
+</ul>
+<p><strong>2. 명확성 (Clarity)</strong></p>
+<ul>
+<li>누구나 이해할 수 있는 수준의 상세한 설명</li>
+<li>코드에 충분한 주석과 문서화</li>
+<li>분석 과정의 논리적 흐름 제시</li>
+</ul>
+<p><strong>3. 표준화 (Standardization)</strong></p>
+<ul>
+<li>널리 사용되는 표준 형식과 도구 활용</li>
+<li>오픈소스 소프트웨어 우선 사용</li>
+<li>플랫폼 독립적인 형식 선택</li>
+</ul>
+<p><strong>4. 지속가능성 (Sustainability)</strong></p>
+<ul>
+<li>장기간 접근 가능한 저장소 활용</li>
+<li>버전 관리 시스템을 통한 변경 이력 추적</li>
+<li>의존성 관리를 통한 환경 재현성 확보</li>
+</ul>
+<h3 id="재현가능연구의-구체적-실행-방법">
+  재현가능연구의 구체적 실행 방법
+  <a class="anchor" href="#%ec%9e%ac%ed%98%84%ea%b0%80%eb%8a%a5%ec%97%b0%ea%b5%ac%ec%9d%98-%ea%b5%ac%ec%b2%b4%ec%a0%81-%ec%8b%a4%ed%96%89-%eb%b0%a9%eb%b2%95">#</a>
+</h3>
+<p><strong>1. 데이터 관리</strong></p>
+<ul>
+<li>원시 데이터와 처리된 데이터 구분하여 보관</li>
+<li>데이터 수집 과정과 전처리 단계 상세 기록</li>
+<li>개인정보보호 등 제약이 있는 경우 합성 데이터나 요약 통계 제공</li>
+</ul>
+<p><strong>2. 코드 관리</strong></p>
+<ul>
+<li>버전 관리 시스템(Git 등) 활용</li>
+<li>모듈화된 코드 구조로 가독성 향상</li>
+<li>의존성 관리 도구를 통한 환경 재현성 확보</li>
+</ul>
+<p><strong>3. 문서화</strong></p>
+<ul>
+<li>README 파일을 통한 전체 프로젝트 개요 제공</li>
+<li>각 단계별 상세한 설명과 실행 방법 기술</li>
+<li>결과 해석과 한계점 명시</li>
+</ul>
+<p><strong>4. 배포와 공유</strong></p>
+<ul>
+<li>GitHub, GitLab 등의 공개 저장소 활용</li>
+<li>Zenodo, figshare 등의 학술 데이터 저장소 이용</li>
+<li>DOI 할당을 통한 영구적 접근성 확보</li>
+</ul>
+<h3 id="재현가능연구를-위한-도구와-기술">
+  재현가능연구를 위한 도구와 기술
+  <a class="anchor" href="#%ec%9e%ac%ed%98%84%ea%b0%80%eb%8a%a5%ec%97%b0%ea%b5%ac%eb%a5%bc-%ec%9c%84%ed%95%9c-%eb%8f%84%ea%b5%ac%ec%99%80-%ea%b8%b0%ec%88%a0">#</a>
+</h3>
+<p><strong>1. 프로그래밍 언어별 도구</strong></p>
+<p><strong>R 생태계:</strong></p>
+<ul>
+<li><strong>R Markdown</strong>: 코드, 텍스트, 결과를 하나의 문서로 통합</li>
+<li><strong>knitr</strong>: 동적 문서 생성을 위한 핵심 패키지</li>
+<li><strong>renv</strong>: 패키지 의존성 관리</li>
+<li><strong>targets</strong>: 재현 가능한 분석 파이프라인 구축</li>
+</ul>
+<p><strong>Python 생태계:</strong></p>
+<ul>
+<li><strong>Jupyter Notebook</strong>: 대화형 분석 환경</li>
+<li><strong>Quarto</strong>: 다중 언어 지원 출판 시스템</li>
+<li><strong>conda/pip</strong>: 패키지 및 환경 관리</li>
+<li><strong>DVC</strong>: 데이터 버전 관리</li>
+</ul>
+<p><strong>2. 컨테이너 기술</strong></p>
+<ul>
+<li><strong>Docker</strong>: 일관된 실행 환경 제공</li>
+<li><strong>Singularity</strong>: HPC 환경에 특화된 컨테이너</li>
+<li><strong>Binder</strong>: 클라우드 기반 재현 가능한 환경</li>
+</ul>
+<p><strong>3. 워크플로우 관리</strong></p>
+<ul>
+<li><strong>Snakemake</strong>: Python 기반 워크플로우 관리</li>
+<li><strong>Nextflow</strong>: 확장 가능한 파이프라인 구축</li>
+<li><strong>CWL</strong>: 표준화된 워크플로우 기술 언어</li>
+</ul>
+<h3 id="재현가능연구의-도전과-한계">
+  재현가능연구의 도전과 한계
+  <a class="anchor" href="#%ec%9e%ac%ed%98%84%ea%b0%80%eb%8a%a5%ec%97%b0%ea%b5%ac%ec%9d%98-%eb%8f%84%ec%a0%84%ea%b3%bc-%ed%95%9c%ea%b3%84">#</a>
+</h3>
+<p><strong>1. 기술적 도전</strong></p>
+<ul>
+<li>대용량 데이터 공유의 어려움</li>
+<li>복잡한 소프트웨어 의존성 관리</li>
+<li>하드웨어 환경 차이로 인한 결과 변동</li>
+</ul>
+<p><strong>2. 제도적 장벽</strong></p>
+<ul>
+<li>개인정보보호법 등 법적 제약</li>
+<li>상업적 데이터의 공개 제한</li>
+<li>학술 평가 시스템의 미반영</li>
+</ul>
+<p><strong>3. 문화적 저항</strong></p>
+<ul>
+<li>추가적인 작업 부담에 대한 우려</li>
+<li>연구 과정 공개에 대한 부담감</li>
+<li>기존 연구 관행의 관성</li>
+</ul>
+<h3 id="재현가능연구의-미래-전망">
+  재현가능연구의 미래 전망
+  <a class="anchor" href="#%ec%9e%ac%ed%98%84%ea%b0%80%eb%8a%a5%ec%97%b0%ea%b5%ac%ec%9d%98-%eb%af%b8%eb%9e%98-%ec%a0%84%eb%a7%9d">#</a>
+</h3>
+<p>재현가능연구는 단순한 연구 방법론을 넘어 과학 연구의 새로운 패러다임으로 자리잡고 있다. 특히 데이터 사이언스 분야에서는 이미 표준적인 관행이 되었으며, 다른 분야로도 확산되고 있다.</p>
+<p><strong>향후 발전 방향:</strong></p>
+<ul>
+<li>AI/ML 모델의 재현성 확보 방법론 발전</li>
+<li>클라우드 기반 재현 가능한 연구 환경 확산</li>
+<li>자동화된 재현성 검증 도구 개발</li>
+<li>재현가능연구를 위한 교육 프로그램 확대</li>
+</ul>
+<p>재현가능연구는 과학 연구의 신뢰성과 투명성을 높이는 핵심 방법론으로, 모든 연구자가 습득해야 할 필수 역량이 되고 있다. 특히 데이터 사이언티스트에게는 선택이 아닌 필수 요소로 자리잡았으며, 이를 통해 더욱 신뢰할 수 있고 가치 있는 연구 성과를 창출할 수 있다.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+  
+
+
+
+  
+    
+  
+
+
+
+<div class="book-languages" tabindex="0" aria-haspopup="true">
+  <ul>
+    <li class="flex align-center">
+      <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+      
+    </li> 
+  </ul>
+
+  <ul class="book-languages-list">
+    
+    <li class="active">
+      <a href="https://intothedata.com/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#재현가능연구-reproducible-research">재현가능연구 (Reproducible Research)</a>
+      <ul>
+        <li><a href="#재현가능연구의-정의와-개념">재현가능연구의 정의와 개념</a></li>
+        <li><a href="#재현가능연구의-배경과-필요성">재현가능연구의 배경과 필요성</a></li>
+        <li><a href="#연구윤리와의-관계">연구윤리와의 관계</a></li>
+        <li><a href="#재현가능연구의-실행-원칙">재현가능연구의 실행 원칙</a></li>
+        <li><a href="#재현가능연구의-구체적-실행-방법">재현가능연구의 구체적 실행 방법</a></li>
+        <li><a href="#재현가능연구를-위한-도구와-기술">재현가능연구를 위한 도구와 기술</a></li>
+        <li><a href="#재현가능연구의-도전과-한계">재현가능연구의 도전과 한계</a></li>
+        <li><a href="#재현가능연구의-미래-전망">재현가능연구의 미래 전망</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

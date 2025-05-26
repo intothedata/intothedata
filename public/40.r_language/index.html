@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  R언어 - R language
+  #
+
+R은 원래 한국어의 외래어 발음으로 “아르”라고 읽어야 한다. 때문에 “R은 컴퓨터언어다&quot;와 같이 R을 “알”로 발음해서 표기한 것은 맞춤법상 틀린 것이고 “R는 컴퓨터언어다”와 같이 표기해야 하는 것이 옳다. 하지만 너무 많은 사람들이 R을 “알”이라고 발음하고 있으며 “아르”라고 발음해서 표기하면 오히려 더 이상하다는 느낌이 들 정도이다. 필자 또한 발음을 “알”로 하고 있어 여기서도 R을 “알”이라고 발음하는 형식으로 작성한다.  틀린 맞춤법을 사용하는 것에 대해 유감의 뜻을 표한다.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:url" content="https://intothedata.com/40.r_language/">
+  <meta property="og:site_name" content="인투더데이터 데이터과학">
+  <meta property="og:title" content="R언어 - R language">
+  <meta property="og:description" content="R언어 - R language # R은 원래 한국어의 외래어 발음으로 “아르”라고 읽어야 한다. 때문에 “R은 컴퓨터언어다&#34;와 같이 R을 “알”로 발음해서 표기한 것은 맞춤법상 틀린 것이고 “R는 컴퓨터언어다”와 같이 표기해야 하는 것이 옳다. 하지만 너무 많은 사람들이 R을 “알”이라고 발음하고 있으며 “아르”라고 발음해서 표기하면 오히려 더 이상하다는 느낌이 들 정도이다. 필자 또한 발음을 “알”로 하고 있어 여기서도 R을 “알”이라고 발음하는 형식으로 작성한다. 틀린 맞춤법을 사용하는 것에 대해 유감의 뜻을 표한다.">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:type" content="website">
+<title>R언어 - R language | 인투더데이터 데이터과학</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.ce02ec8b4aaa4b1d9386a72d0b93e5195eac0f6feec0b00ecd36d8128e870d23.css" integrity="sha256-zgLsi0qqSx2ThqctC5PlGV6sD2/uwLAOzTbYEo6HDSM=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.69b3ef820735840b8b46619f32c5cf1d96c086c45c7a95bafacc5d95cdc0473e.js" integrity="sha256-abPvggc1hAuLRmGfMsXPHZbAhsRcepW6&#43;sxdlc3ARz4=" crossorigin="anonymous"></script>
+
+
+<link rel="alternate" type="application/rss+xml" href="https://intothedata.com/40.r_language/index.xml" title="인투더데이터 데이터과학" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>인투더데이터 데이터과학</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>R언어 - R language</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#r언어---r-language">R언어 - R language</a></li>
+    <li><a href="#r의-시작">R의 시작</a></li>
+    <li><a href="#r의-특징">R의 특징</a>
+      <ul>
+        <li><a href="#r의-정체성">R의 정체성</a></li>
+        <li><a href="#r의-의존성과-라이센스">R의 의존성과 라이센스</a></li>
+        <li><a href="#r과-일반적인-컴퓨터-언어">R과 일반적인 컴퓨터 언어</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h2 id="r언어---r-language">
+  R언어 - R language
+  <a class="anchor" href="#r%ec%96%b8%ec%96%b4---r-language">#</a>
+</h2>
+<p>R은 원래 한국어의 외래어 발음으로 “아르”라고 읽어야 한다. 때문에 “R은 컴퓨터언어다&quot;와 같이 R을 “알”로 발음해서 표기한 것은 맞춤법상 틀린 것이고 “R는 컴퓨터언어다”와 같이 표기해야 하는 것이 옳다. 하지만 너무 많은 사람들이 R을 “알”이라고 발음하고 있으며 “아르”라고 발음해서 표기하면 오히려 더 이상하다는 느낌이 들 정도이다. 필자 또한 발음을 “알”로 하고 있어 여기서도 R을 “알”이라고 발음하는 형식으로 작성한다.  틀린 맞춤법을 사용하는 것에 대해 유감의 뜻을 표한다.</p>
+<h2 id="r의-시작">
+  R의 시작
+  <a class="anchor" href="#r%ec%9d%98-%ec%8b%9c%ec%9e%91">#</a>
+</h2>
+<p>R언어는 로스 이하카와 로버트 젠틀맨이 만든 과학계산 및 통계, 수리계산에 촛점을 맞춰 만든 컴퓨터 랭귀지이다.</p>
+<p>R은 원래 AT&amp;T 벨연구소에서 만든 S언어의 계보를 따른다. S언어가 버전업 되면 S-PLUS로 개량되었고 R은 그 S-PLUS의 상당 부분을 따르고 문법도 대부분 호환된다. 즉, R은 S-PLUS를 오픈 소스로 다시 만든 것이라고 할 수 있다.</p>
+<p>R의 이름이 R이 된 것은 다음과 같은 중의적인 의미가 있다.</p>
+<ol>
+<li>S언어보다 알파벳의 순서로 볼 때 더 앞이서 S보다 진보된 것이라는 의미</li>
+<li>“Research”의 첫글자를 뜻하는 R</li>
+<li>창시자인 로스 이하카와 로버트 젠틀맨의 이름의 첫글자가 모두 R</li>
+</ol>
+<h2 id="r의-특징">
+  R의 특징
+  <a class="anchor" href="#r%ec%9d%98-%ed%8a%b9%ec%a7%95">#</a>
+</h2>
+<h3 id="r의-정체성">
+  R의 정체성
+  <a class="anchor" href="#r%ec%9d%98-%ec%a0%95%ec%b2%b4%ec%84%b1">#</a>
+</h3>
+<p>특징을 알기 위해서는 정체성을 알아두는 것이 좋고 정체성을 알려면 탄생과 관련된 역사를 아는 것이 가장 단순하고 좋은 방법 중 하나이다.</p>
+<p>앞에서 말했듯이 R은 S/S-PLUS언어를 오픈소스로 다시 만든 것인데 S언어의 S는 &ldquo;statistics&quot;의 첫글자를 뜻한다. 단어의 뜻 그대로 통계이다. 통계를 위해 특화된 컴퓨터랭귀지라고 할 수 있다.  통계를 위한 도구라는 것은 거의 모든 대수연산이나 연구, 분석과 같은 과학분야에 전반적으로 활용할 수 있다는 뜻이 된다.</p>
+<h3 id="r의-의존성과-라이센스">
+  R의 의존성과 라이센스
+  <a class="anchor" href="#r%ec%9d%98-%ec%9d%98%ec%a1%b4%ec%84%b1%ea%b3%bc-%eb%9d%bc%ec%9d%b4%ec%84%bc%ec%8a%a4">#</a>
+</h3>
+<p>R은 GNU의 여러 라이브러리에 의존성이 강하다. 특히 선형대수학과 관련된 패키지들은 GNU의 라이브러리를 그대로 연동해서 사용하는데 이 라이브러리들이 모두 GNU 라이센스를 따르므로 R도 모두 GNU 라이센스를 따른다. R이 GNU 라이센스를 따르기 때문에 R로 작성된 R의 패키지들도 모두 파생되어서 GNU 라이센스를 따르게 된다. 간단히 설명하면 R과 관련된 것은 거의 모두 오픈소스로 개방되어 있다.</p>
+<h3 id="r과-일반적인-컴퓨터-언어">
+  R과 일반적인 컴퓨터 언어
+  <a class="anchor" href="#r%ea%b3%bc-%ec%9d%bc%eb%b0%98%ec%a0%81%ec%9d%b8-%ec%bb%b4%ed%93%a8%ed%84%b0-%ec%96%b8%ec%96%b4">#</a>
+</h3>
+<p>R을 소개하는 R project 페이지를 방문해서 소개글을 읽어 보면 R은 범용컴퓨터랭귀지라고 설명하고 있다. R은 범용컴퓨터언어가 맞다. 하지만 범용으로 사용하기에는 어려운점이 많다. 소프트웨어 개발, 고성능 구현체, 웹서비스와 같은 것을 작성하지 못하는 것은 아니다. 하지만 느린 연산 속도, 인메모리 방식의 한계, 확장을 위해서 C++언어로 개발해야 하는 등 일반적인 범용컴퓨터언어가 하는 작업을 R로 하기 위해서는 높은 난이도의 작업을 해야 한다. 하지만 분석을 위한 계산이나 과학기술연구는 편하게 사용할 수 있도록 되어있다.</p>
+<p>R은 범용컴퓨터언어가 맞지만 통계, 분석, 과학계산을 위한 특화된 랭귀지로 생각하는 것이 R로 하기에 유리한 일의 범위를 가늠하는데 유리할 것이다.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+  
+
+
+
+  
+    
+  
+
+
+
+<div class="book-languages" tabindex="0" aria-haspopup="true">
+  <ul>
+    <li class="flex align-center">
+      <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+      
+    </li> 
+  </ul>
+
+  <ul class="book-languages-list">
+    
+    <li class="active">
+      <a href="https://intothedata.com/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#r언어---r-language">R언어 - R language</a></li>
+    <li><a href="#r의-시작">R의 시작</a></li>
+    <li><a href="#r의-특징">R의 특징</a>
+      <ul>
+        <li><a href="#r의-정체성">R의 정체성</a></li>
+        <li><a href="#r의-의존성과-라이센스">R의 의존성과 라이센스</a></li>
+        <li><a href="#r과-일반적인-컴퓨터-언어">R과 일반적인 컴퓨터 언어</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

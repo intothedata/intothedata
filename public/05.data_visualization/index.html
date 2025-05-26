@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  데이터시각화 개요 Overview of Data Visualization
+  #
+
+데이터를 시각적으로 표현하는 것을 데이터 시각화(Data Visualization)이라고 한다.
+데이터시각화라는 차트(Chart), 플롯(Plot)을 그리는 것이라고 생각하기 쉽다.
+데이터시각화는 단순하게 차트를 그리는 것을 말하는 것은 아니다.
+데이터를 잘 이해하고 인사이트를 잘 찾아낼 수 있게 데이터를 적절하고 효과적으로 표현하는 행위, 기술을 말한다.
+즉, 엑셀에서 막대그래프를 그리고 표현하는 것도 데이터시각화의 일부이지만 데이터시각화는 그 보다는 더 범위가 넓다.
+데이터시각화에서 그리는 도표는 흔히 차트라고 불리는 것 보다는 플롯이라고 불리는 복잡한 것들이 많다.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:url" content="https://intothedata.com/05.data_visualization/">
+  <meta property="og:site_name" content="인투더데이터 데이터과학">
+  <meta property="og:title" content="데이터시각화 - Data Visualization">
+  <meta property="og:description" content="데이터시각화 개요 Overview of Data Visualization # 데이터를 시각적으로 표현하는 것을 데이터 시각화(Data Visualization)이라고 한다.
+데이터시각화라는 차트(Chart), 플롯(Plot)을 그리는 것이라고 생각하기 쉽다. 데이터시각화는 단순하게 차트를 그리는 것을 말하는 것은 아니다. 데이터를 잘 이해하고 인사이트를 잘 찾아낼 수 있게 데이터를 적절하고 효과적으로 표현하는 행위, 기술을 말한다.
+즉, 엑셀에서 막대그래프를 그리고 표현하는 것도 데이터시각화의 일부이지만 데이터시각화는 그 보다는 더 범위가 넓다.
+데이터시각화에서 그리는 도표는 흔히 차트라고 불리는 것 보다는 플롯이라고 불리는 복잡한 것들이 많다.">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:type" content="website">
+<title>데이터시각화 - Data Visualization | 인투더데이터 데이터과학</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.ce02ec8b4aaa4b1d9386a72d0b93e5195eac0f6feec0b00ecd36d8128e870d23.css" integrity="sha256-zgLsi0qqSx2ThqctC5PlGV6sD2/uwLAOzTbYEo6HDSM=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.69b3ef820735840b8b46619f32c5cf1d96c086c45c7a95bafacc5d95cdc0473e.js" integrity="sha256-abPvggc1hAuLRmGfMsXPHZbAhsRcepW6&#43;sxdlc3ARz4=" crossorigin="anonymous"></script>
+
+
+<link rel="alternate" type="application/rss+xml" href="https://intothedata.com/05.data_visualization/index.xml" title="인투더데이터 데이터과학" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>인투더데이터 데이터과학</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>데이터시각화 - Data Visualization</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#데이터시각화-개요-overview-of-data-visualization">데이터시각화 개요 Overview of Data Visualization</a></li>
+    <li><a href="#데이터시각화를-위해서-배워야-할-것">데이터시각화를 위해서 배워야 할 것</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h2 id="데이터시각화-개요-overview-of-data-visualization">
+  데이터시각화 개요 Overview of Data Visualization
+  <a class="anchor" href="#%eb%8d%b0%ec%9d%b4%ed%84%b0%ec%8b%9c%ea%b0%81%ed%99%94-%ea%b0%9c%ec%9a%94-overview-of-data-visualization">#</a>
+</h2>
+<p>데이터를 시각적으로 표현하는 것을 데이터 시각화(Data Visualization)이라고 한다.</p>
+<p>데이터시각화라는 차트(Chart), 플롯(Plot)을 그리는 것이라고 생각하기 쉽다.
+데이터시각화는 단순하게 차트를 그리는 것을 말하는 것은 아니다.
+데이터를 잘 이해하고 인사이트를 잘 찾아낼 수 있게 데이터를 적절하고 효과적으로 표현하는 행위, 기술을 말한다.</p>
+<p>즉, 엑셀에서 막대그래프를 그리고 표현하는 것도 데이터시각화의 일부이지만 데이터시각화는 그 보다는 더 범위가 넓다.</p>
+<p>데이터시각화에서 그리는 도표는 흔히 차트라고 불리는 것 보다는 플롯이라고 불리는 복잡한 것들이 많다.</p>
+<ul>
+<li>차트는 1개 또는 2개 정도의 차원의 데이터를 표현해서 쉽게 설명하기 위한 것이다.</li>
+<li>플롯은 2개 이상의 데이터를 서로 연관관계나 관련성을 표현하기 위한 것이다.</li>
+<li>그 외에 인터랙티브 액션이나 애니메이션 유형, 그리고 커스텀하게 만들어낸 독특한 데이터시각화가 있다.</li>
+</ul>
+<p>좁은 의미에서의 데이터시각화라고 하면 위에서 세번째를 말한다.</p>
+<h2 id="데이터시각화를-위해서-배워야-할-것">
+  데이터시각화를 위해서 배워야 할 것
+  <a class="anchor" href="#%eb%8d%b0%ec%9d%b4%ed%84%b0%ec%8b%9c%ea%b0%81%ed%99%94%eb%a5%bc-%ec%9c%84%ed%95%b4%ec%84%9c-%eb%b0%b0%ec%9b%8c%ec%95%bc-%ed%95%a0-%ea%b2%83">#</a>
+</h2>
+<p>데이터시각화를 위한 도구는 상당히 많다.<br>
+현재 대표적인 것으로는</p>
+<ul>
+<li>엑셀 (Excel)</li>
+<li>태블로 (Tableau)</li>
+<li>Python Matplotlib</li>
+<li>Python Seaborn</li>
+<li>R ggplot2</li>
+<li>R lattice</li>
+<li>R 기본 플롯</li>
+<li>Javascript D3</li>
+</ul>
+<p>물론 이 외에도 상당히 많다.<br>
+이 중에서 가장 빠르고 편한 것은 R ggplot2이고 전통적인 프로그래밍 방식에 가장 가까운 것은 Python의 플로팅 패키지들이다.<br>
+프로그래밍을 하지 않고 가장 편한 것은 Excel과 Tableu이다.<br>
+데이터시각화라는 이름이 가장 어울리면서도 독특하고 매력적인 것을 할 수 있는 것은 D3이다.</p>
+<p>선택은 하는 사람이 결정해야 한다.</p>
+<p>최종 수정일: {{ .Lastmod.Format &ldquo;2006-01-02 03:04&rdquo; }}</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+  
+
+
+
+  
+    
+  
+
+
+
+<div class="book-languages" tabindex="0" aria-haspopup="true">
+  <ul>
+    <li class="flex align-center">
+      <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+      
+    </li> 
+  </ul>
+
+  <ul class="book-languages-list">
+    
+    <li class="active">
+      <a href="https://intothedata.com/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#데이터시각화-개요-overview-of-data-visualization">데이터시각화 개요 Overview of Data Visualization</a></li>
+    <li><a href="#데이터시각화를-위해서-배워야-할-것">데이터시각화를 위해서 배워야 할 것</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

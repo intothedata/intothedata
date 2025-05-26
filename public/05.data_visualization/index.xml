@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>데이터시각화 - Data Visualization on 인투더데이터 데이터과학</title>
+    <link>https://intothedata.com/05.data_visualization/</link>
+    <description>Recent content in 데이터시각화 - Data Visualization on 인투더데이터 데이터과학</description>
+    <generator>Hugo</generator>
+    <language>ko-KR</language>
+    <atom:link href="https://intothedata.com/05.data_visualization/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>넘버라인플롯 - Number line plot</title>
+      <link>https://intothedata.com/05.data_visualization/number_line_plot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/05.data_visualization/number_line_plot/</guid>
+      <description>&lt;h2 id=&#34;넘버라인플롯-number-line-plot&#34;&gt;&#xA;  넘버라인플롯 Number line plot&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%eb%84%98%eb%b2%84%eb%9d%bc%ec%9d%b8%ed%94%8c%eb%a1%af-number-line-plot&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;다음과 같이 생긴 것이 넘버라인플롯이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://www.varsitytutors.com/assets/vt-hotmath-legacy/images/gt/lessons/genericalg1/line_plot.gif&#34; alt=&#34;라인플롯예제1&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;라인플롯, 닷플롯이라고 부르며, 직선으로 된 축 위에 점을 찍어서 카운트를 표현한 것이 특징이다.&lt;br&gt;&#xA;수량을 명료하게 표현하기 때문에 단순하지만 매우 효과적으로 의미를 전달할 수 있다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;특징&#34;&gt;&#xA;  특징&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ed%8a%b9%ec%a7%95&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;숫자를 순서대로 정렬하고 숫자별로 카운트를 점으로 표현해서 알아보기 쉽게 한다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;참고자료&#34;&gt;&#xA;  참고자료&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%b0%b8%ea%b3%a0%ec%9e%90%eb%a3%8c&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.khanacademy.org/math/cc-third-grade-math/represent-and-interpret-data/imp-line-plots/a/line-plots-review&#34;&gt;&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

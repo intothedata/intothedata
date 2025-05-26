@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="최근에 “데이터 분석”은 작은 데이터를 분석하지 않고 큰 데이트를 빠르고 많이 분석하기 때문에 빅데이터 플랫폼과의 관계를 깊이 고민해야만 한다.  이제는 분석해야 할 데이터의 양이 많고 계속해서 새로 입수되는 데이터를 인적, 물적 자원의 한계로 삭제해서 버리던 데이터를 보관하고 이렇게 쌓인 데이터로 기존의 분석 작업을 더 발전시키나 회사의 비즈니스 개발 또는 고도화를 위해 새로운 분석 모델을 만드는 일들이 점점 일반화되가는 추세이기 때문이다.
+빅데이터는 용어에 비해 그 개념을 이해하기 확실히 이해하기 어렵기 때문에 구분을 해서 기억하는 것이 좋다.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:url" content="https://intothedata.com/30.bigdata/">
+  <meta property="og:site_name" content="인투더데이터 데이터과학">
+  <meta property="og:title" content="빅데이터 - Big data">
+  <meta property="og:description" content="최근에 “데이터 분석”은 작은 데이터를 분석하지 않고 큰 데이트를 빠르고 많이 분석하기 때문에 빅데이터 플랫폼과의 관계를 깊이 고민해야만 한다. 이제는 분석해야 할 데이터의 양이 많고 계속해서 새로 입수되는 데이터를 인적, 물적 자원의 한계로 삭제해서 버리던 데이터를 보관하고 이렇게 쌓인 데이터로 기존의 분석 작업을 더 발전시키나 회사의 비즈니스 개발 또는 고도화를 위해 새로운 분석 모델을 만드는 일들이 점점 일반화되가는 추세이기 때문이다.
+빅데이터는 용어에 비해 그 개념을 이해하기 확실히 이해하기 어렵기 때문에 구분을 해서 기억하는 것이 좋다.">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:type" content="website">
+<title>빅데이터 - Big data | 인투더데이터 데이터과학</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.ce02ec8b4aaa4b1d9386a72d0b93e5195eac0f6feec0b00ecd36d8128e870d23.css" integrity="sha256-zgLsi0qqSx2ThqctC5PlGV6sD2/uwLAOzTbYEo6HDSM=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.69b3ef820735840b8b46619f32c5cf1d96c086c45c7a95bafacc5d95cdc0473e.js" integrity="sha256-abPvggc1hAuLRmGfMsXPHZbAhsRcepW6&#43;sxdlc3ARz4=" crossorigin="anonymous"></script>
+
+
+<link rel="alternate" type="application/rss+xml" href="https://intothedata.com/30.bigdata/index.xml" title="인투더데이터 데이터과학" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>인투더데이터 데이터과학</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>빅데이터 - Big data</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#빅데이터의-기술적-개념">빅데이터의 기술적 개념</a>
+      <ul>
+        <li><a href="#분산-컴퓨팅---distributed-computing">분산 컴퓨팅 - Distributed computing</a></li>
+        <li><a href="#클라우드-컴퓨팅---cloud-computing">클라우드 컴퓨팅 - Cloud computing</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><p>최근에 “데이터 분석”은 작은 데이터를 분석하지 않고 큰 데이트를 빠르고 많이 분석하기 때문에 빅데이터 플랫폼과의 관계를 깊이 고민해야만 한다.  이제는 분석해야 할 데이터의 양이 많고 계속해서 새로 입수되는 데이터를 인적, 물적 자원의 한계로 삭제해서 버리던 데이터를 보관하고 이렇게 쌓인 데이터로 기존의 분석 작업을 더 발전시키나 회사의 비즈니스 개발 또는 고도화를 위해 새로운 분석 모델을 만드는 일들이 점점 일반화되가는 추세이기 때문이다.</p>
+<p>빅데이터는 용어에 비해 그 개념을 이해하기 확실히 이해하기 어렵기 때문에 구분을 해서 기억하는 것이 좋다.</p>
+<p>크게는 아래의 두가지로 구분해야 한다.</p>
+<ul>
+<li>빅데이터의 기술적 개념</li>
+<li>빅데이터의 행위적 개념</li>
+</ul>
+<h2 id="빅데이터의-기술적-개념">
+  빅데이터의 기술적 개념
+  <a class="anchor" href="#%eb%b9%85%eb%8d%b0%ec%9d%b4%ed%84%b0%ec%9d%98-%ea%b8%b0%ec%88%a0%ec%a0%81-%ea%b0%9c%eb%85%90">#</a>
+</h2>
+<p>벽데이터의 기술적 개념은 아주 단순한데서 출발한다.  한대의 대형 컴퓨터로 처리할 수 없는 양의 데이터를 처리하려면 어떻게 해야 하는가? 라는 문제를 해결하기 위한 것들이다.</p>
+<h3 id="분산-컴퓨팅---distributed-computing">
+  분산 컴퓨팅 - Distributed computing
+  <a class="anchor" href="#%eb%b6%84%ec%82%b0-%ec%bb%b4%ed%93%a8%ed%8c%85---distributed-computing">#</a>
+</h3>
+<p>오래전부터 빠른 속도로 증가하는 데이터의 양 때문에 로그 프로세싱, 데이터 집계 및 데이터 처리에 많은 시간을 소요하게 되었다. 1대 또는 소수의 몇대의 컴퓨터로는 대량의 데이터를 처리하지 못하거나 시간이 너무 오래결려 현실적으로 가능하지 않다고 봐야했다.  이것은 여러개의 코어를 가진 컴퓨터 프로세서로도 해결이 되지 않았다. 이런 한계를 만난 시점부터 여러대의 컴퓨터를 묶어서 데이터를 분배해서 따로 처리하게 하고 다시 병합하도록 하는 분산 컴퓨팅 기술이 발달하게 되었는데 빅데이터는 대량의 데이터를 다루므로 분산 컴퓨팅 기술이 필수적이다.</p>
+<h3 id="클라우드-컴퓨팅---cloud-computing">
+  클라우드 컴퓨팅 - Cloud computing
+  <a class="anchor" href="#%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ec%bb%b4%ed%93%a8%ed%8c%85---cloud-computing">#</a>
+</h3>
+<p>클라우드 컴퓨팅은 구름속에 있어 밖에서 볼때는 뭐가 있는지 모르지만 그냥 그 안에 필요한 것이 있으면 꺼내 쓴다는 의미로 용어가 만들어진 것이다. 보통은 필요한 서비스를 인하우스(in-house)에서 만들어서 사용하거나 솔루션 업체로부터 제공받아 구축해서 사용하는 것이 아니라 솔루션 업체의 서비스를 그대로 온라인으로 연동해서 사용하는 것을 통칭해서 말한다.</p>
+<p>클라우드가 빅데이터와 관련이 있는 것은 분산 컴퓨팅의 서버들을 한데 묶거나 소프트웨어를 설치해서 환경을 구성하는 것도 분산 컴퓨팅에서 구동되는 플랫폼이나 프로그램을 작성하는 것 만큼 인적자원을 많이 소모하고 큰 부담이 되기 때문이다.</p>
+<p>빅데이터에서의 목표는 대량의 데이터를 처리해서 가치를 찾고 합리적인 비즈니스 결정을 하거나 인사이트를 얻는 것이지 대량의 컴퓨터를 편하고 효율적으로 관리하는 것은 아니다.</p>
+<p>데이터의 처리 및 활용은 빅데이터로 해결하고 빅데이터에 필요한 환경구성이나 자원들은 클라우드 기술을 활용하는 방식으로 분업화되어 있다고 생각하면 된다.  벽데이터와 클라우드는 상호보완의 관계이다.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+  
+
+
+
+  
+    
+  
+
+
+
+<div class="book-languages" tabindex="0" aria-haspopup="true">
+  <ul>
+    <li class="flex align-center">
+      <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+      
+    </li> 
+  </ul>
+
+  <ul class="book-languages-list">
+    
+    <li class="active">
+      <a href="https://intothedata.com/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#빅데이터의-기술적-개념">빅데이터의 기술적 개념</a>
+      <ul>
+        <li><a href="#분산-컴퓨팅---distributed-computing">분산 컴퓨팅 - Distributed computing</a></li>
+        <li><a href="#클라우드-컴퓨팅---cloud-computing">클라우드 컴퓨팅 - Cloud computing</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

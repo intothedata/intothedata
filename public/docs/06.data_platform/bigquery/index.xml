@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>빅쿼리 - Bigquery on 인투더데이터 데이터과학</title>
+    <link>https://intothedata.com/docs/06.data_platform/bigquery/</link>
+    <description>Recent content in 빅쿼리 - Bigquery on 인투더데이터 데이터과학</description>
+    <generator>Hugo</generator>
+    <language>ko-KR</language>
+    <atom:link href="https://intothedata.com/docs/06.data_platform/bigquery/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>엑셀에서 빅쿼리 데이터 가져오기</title>
+      <link>https://intothedata.com/docs/06.data_platform/bigquery/excel_bigquery/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/06.data_platform/bigquery/excel_bigquery/</guid>
+      <description>&lt;p&gt;Windows용 Excel을 기준으로 했고 Mac에서는 확인하지 않았다.&#xA;Windows용 Excel의 파워피봇(Powerpivot)에서 연결할 것이다.&#xA;파워피봇은 Excel에 내장된 데이터베이스 및 빅데이터 플랫폼, 클라우드 플랫폼에 연동을 쉽게 할 수 있도록 도와주는 도구인데&#xA;Office 365 ProPlus 이상의 버전에서만 활성화되는 기능이다.&#xA;파워피봇이 아니어도 데이터를 불어 올 수는 있지만 그냥 편하게 살기 위해서 파워피봇을 쓰기로 한다.&#xA;진행&#xA;ODBC 드라이버 설치&#xA;먼저 ODBC를 다운로드 받는다. Google Bigquery는 자체 제작한 ODBC 드라이버가 없고 Simba(ODBC, JDBC를 전문으로 만드는 회사)에서 제작한 ODBC를 라이센싱해서 제공하고 있다.&#xA;구글 클라우드로 가서 Bigquery용 Simba ODBC 드라이버를 다운로드 받아서 설치한다.&#xA;주의할 것은 사용하고 있는 Windows OS가 64bit라고 해도 ODBC 64bit, 32bit 2개를 모두 받아서 설치해야 한다는 점이다.&#xA;그렇지 않으면 엑셀에서 연결할 때 아키텍쳐 불일치 오류가 발생하는 경우가 많다.&#xA;&lt;a href=&#34;https://cloud.google.com/bigquery/partners/simba-drivers/&#34;&gt;https://cloud.google.com/bigquery/partners/simba-drivers/&lt;/a&gt;&#xA;위의 URL에 접속해서 ODBC driver 2개를 받아서 모두 설치한다.&#xA;Bigquery 접속용 키 가져오기&#xA;Bigquery에 접속하기 위해서 Key 다운로드 받아서 저장해 두어야 한다.&#xA;Key는 Google cloud console에서 다운로드 받을 수 있다.&#xA;Google cloud 대시보드 접속&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

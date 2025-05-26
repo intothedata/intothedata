@@ -1,0 +1,1959 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  지표 (Metrics)
+  #
+
+지표는 시스템, 프로세스, 또는 성과를 정량적으로 측정하고 평가하기 위한 수치적 기준을 의미한다. 현대의 데이터 기반 의사결정 환경에서 지표는 목표 달성도를 객관적으로 판단하고 개선 방향을 제시하는 핵심적인 역할을 수행한다.
+
+  지표의 정의와 중요성
+  #
+
+지표는 측정 가능한 값으로서 특정 목표나 성과에 대한 진행 상황을 나타낸다. 효과적인 지표는 다음과 같은 특성을 가져야 한다:
+
+측정 가능성 (Measurable): 정확하고 일관된 방법으로 측정할 수 있어야 함
+관련성 (Relevant): 비즈니스 목표나 의사결정과 직접적인 연관성이 있어야 함
+시의성 (Timely): 적절한 시점에 데이터를 제공할 수 있어야 함
+실행 가능성 (Actionable): 측정 결과를 바탕으로 구체적인 행동을 취할 수 있어야 함
+
+
+  지표의 유형
+  #
+
+
+  1. 비즈니스 지표 (Business Metrics)
+  #
+
+재무 지표">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:url" content="https://intothedata.com/docs/90.metrics/">
+  <meta property="og:site_name" content="인투더데이터 데이터과학">
+  <meta property="og:title" content="지표">
+  <meta property="og:description" content="지표 (Metrics) # 지표는 시스템, 프로세스, 또는 성과를 정량적으로 측정하고 평가하기 위한 수치적 기준을 의미한다. 현대의 데이터 기반 의사결정 환경에서 지표는 목표 달성도를 객관적으로 판단하고 개선 방향을 제시하는 핵심적인 역할을 수행한다.
+지표의 정의와 중요성 # 지표는 측정 가능한 값으로서 특정 목표나 성과에 대한 진행 상황을 나타낸다. 효과적인 지표는 다음과 같은 특성을 가져야 한다:
+측정 가능성 (Measurable): 정확하고 일관된 방법으로 측정할 수 있어야 함 관련성 (Relevant): 비즈니스 목표나 의사결정과 직접적인 연관성이 있어야 함 시의성 (Timely): 적절한 시점에 데이터를 제공할 수 있어야 함 실행 가능성 (Actionable): 측정 결과를 바탕으로 구체적인 행동을 취할 수 있어야 함 지표의 유형 # 1. 비즈니스 지표 (Business Metrics) # 재무 지표">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:type" content="website">
+<title>지표 | 인투더데이터 데이터과학</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.465376614827fff60754cc9c34686b524db662a4c314668361de5db45fde6203.css" integrity="sha256-RlN2YUgn//YHVMycNGhrUk22YqTDFGaDYd5dtF/eYgM=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.d9e6ba7770f5117e21758da45184f61d5669394aa618ebdfabe1d95519d50bbf.js" integrity="sha256-2ea6d3D1EX4hdY2kUYT2HVZpOUqmGOvfq&#43;HZVRnVC78=" crossorigin="anonymous"></script>
+
+
+<link rel="alternate" type="application/rss+xml" href="https://intothedata.com/docs/90.metrics/index.xml" title="인투더데이터 데이터과학" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>인투더데이터 데이터과학</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/00.about/" class="">인투더데이터 소개 About</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/01.data_science/" class="">데이터과학</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/01.data_science/datascientist_skillset/" class="">데이터과학자 스킬셋</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/" class="">데이터과학 학술분야</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/operational_research/" class="">경영과학 - Operational Research</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/operational_research/demand_forecasting/" class="">수요예측 - Demand Forecasting</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/economics/" class="">계량경제학 - Economics</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/economics/distributed_lag_model/" class="">분산지연모델</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/data_mining/" class="">데이터마이닝</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/data_mining/clustering/" class="">군집분석 - Clustering</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/data_mining/clustering/k-means/" class="">K-means - K중심값</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/modeling/" class="">모델링 - Modeling</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/business_analysis/" class="">비즈니스 데이터 분석</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/business_analysis/behavioral_change_point_analysis/" class="">행동변화점분석</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/timeseries_analysis/" class="">시계열 분석 - Time-series Analysis</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/timeseries_analysis/granger_causality/" class="">그래인저 인과관계 - Granger Causality</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/anomaly_detection/" class="">이상감지</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/anomaly_detection/3_sigma_rule/" class="">3 sigma rule</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/anomaly_detection/generalized_esd/" class="">Generalized ESD</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/artificial_intelligence/" class="">인공지능 - Artificial Intelligence</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/artificial_intelligence/fuzzy_inferenece/" class="">퍼지 추론 - Fuzzy Inferenece</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/information_retrieval/" class="">정보검색</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/text_mining/" class="">텍스트마이닝 - Text Mining</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/text_mining/tfidf/" class="">TFIDF - Term Frequency Inverse Document Frequency</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/text_mining/cosine_similarity/" class="">코사인 유사도 - Cosine Similarity</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/" class="">통계학 - Statistics</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/central_limit_theorem/" class="">중심극한정리 - CLT; Central Limit Theorem</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/descriptive_statistics/" class="">기술통계 - Descriptive statistics</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/variance/" class="">분산 - Variance</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/survival_analysis/" class="">생존분석 - Survival Analysis</a>
+  
+
+          
+  <ul>
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/data/" class="">자료 - data</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/gaussian_distribution/" class="">정규분포, 가우시안 분포 - Normal Distribution, Gaussian Distribution</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/inferential_statistics/" class="">추론통계 - Inferential statistics</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/sampling/" class="">표본추출 - Sampling</a>
+  
+
+          
+  <ul>
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/sampling/neyman_alloction/" class="">네이만 배분법 - neyman allocation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/sampling/hyperloglog/" class="">하이퍼로그로그 - Hyper Log Log</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/correlation/" class="">피어슨 상관계수 - Pearson&#39;s product-moment correlation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/stochastic_process/" class="">확률과정 - Stochastic process</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/stochastic_process/brownian_motion/" class="">브라운 운동 - Brownian Motion</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/stochastic_process/ornstein_uhlenbeck_process/" class="">오른스타인-우렌벡 과정  Ornstein-Uhlenbeck process</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/pattern_recognition/" class="">패턴인식 - Pattern Recognition</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/pattern_recognition/neural_network/" class="">인공신경망 - Neural Network</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/" class="">데이터사이언스 - 산업별 갈래</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/adtech/" class="">온라인 광고 비즈니스 - Ad tech</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/adtech/ad_tech_terminlogy/" class="">온라인 광고 용어 - Online Ad Terminology</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/ad_tech/" class="">애드테크 - Ad Tech</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/ad_tech/ad_tech_terminlogy/" class="">온라인 광고 용어</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/online/" class="">온라인 비즈니스 - Online busines</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/online/ad_tech/" class="">온라인 광고 비즈니스 - Ad tech</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/online/ad_tech_terminlogy/" class="">온라인 광고 용어 - Online Ad Terminology</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/automobile/" class="">자동차 산업 - Automobile Industry</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/03.business/iron_mill/" class="">철강 - Iron mill</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/04.data_analysis/" class="">데이터 분석</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>데이터 수집 (Data collection)</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/06.data_collection/mobile_data_collection/" class="">데이터 수집 (Data collection)</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/05.data_visualization/" class="">데이터시각화</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/05.data_visualization/number_line_plot/" class="">넘버라인플롯</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/06.data_platform/" class="">데이터 플랫폼</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/06.data_platform/bigquery/" class="">빅쿼리 - Bigquery</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/06.data_platform/bigquery/excel_bigquery/" class="">엑셀에서 빅쿼리 데이터 가져오기</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/07.data_hub/" class="">데이터 허브</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/07.data_hub/sk_data_hub/" class="">SK 데이터 허브</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/08.reproducible_research/" class="">재현가능연구</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/09.datascience_tools/" class="">데이터사이언스 도구 - Data Science Tools</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/20.data_platform/" class="">데이터플랫폼</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/30.bigdata/" class="">빅데이터</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/36.time_series_analysis/" class="">시계열분석</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/" class="">인공지능</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/vector_search_engine/" class="">벡터검색엔진</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/faiss/" class="">Faiss - 벡터 검색 엔진</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/faiss/3_sigma_rule/" class="">3 sigma rule</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/faiss/generalized_esd/" class="">Generalized ESD</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/gpt/" class="">GPT</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/37.artificial_intelligence/39.large_language_model/" class="">LLM</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/38.natural_languge_processing/" class="">자연어 처리</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/38.natural_languge_processing/korean_pos_tagger/" class="">한국어 형태소 분석기</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/38.natural_languge_processing/pos_tagger/" class="">형태소 분석기 - Pos tagger</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/40.r_language/" class="">R언어</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/50.computer_science/" class="">컴퓨터 공학</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/50.computer_science/random/" class="">랜덤</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/70.practical_data_science/" class="">실무 데이터과학</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/70.practical_data_science/quality_based_scoring/" class="">품질 기반 스코어링 - quality-based scoring</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/60.pracactical_data_processing/" class="">데이터 프로세싱</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/80.mathematics/" class="">수학 - Mathematics</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/80.mathematics/ordinary_differential_equation/" class="">상미분방정식 - Ordinary Differential Equation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/80.mathematics/mathematics_symbols/" class="">수학기호정리 - mathematics symbols</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/80.mathematics/fermats_last_theorem/" class="">페르마의 마지막 정리</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/90.metrics/" class=" active">지표</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/90.metrics/lorenz_curve/" class="">로렌츠 커브</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/99.materials/" class="">참고자료 - References</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/99.materials/people/" class="">인물 - People</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/99.materials/sites/" class="">참고 사이트</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/taglist/" class="">태그 목록</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>지표</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#지표-metrics">지표 (Metrics)</a>
+      <ul>
+        <li><a href="#지표의-정의와-중요성">지표의 정의와 중요성</a></li>
+        <li><a href="#지표의-유형">지표의 유형</a></li>
+        <li><a href="#지표-관리-시스템">지표 관리 시스템</a></li>
+        <li><a href="#지표-설계-원칙">지표 설계 원칙</a></li>
+        <li><a href="#지표-분석-방법">지표 분석 방법</a></li>
+        <li><a href="#지표-활용-시-주의사항">지표 활용 시 주의사항</a></li>
+        <li><a href="#미래-전망">미래 전망</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h2 id="지표-metrics">
+  지표 (Metrics)
+  <a class="anchor" href="#%ec%a7%80%ed%91%9c-metrics">#</a>
+</h2>
+<p>지표는 시스템, 프로세스, 또는 성과를 정량적으로 측정하고 평가하기 위한 수치적 기준을 의미한다. 현대의 데이터 기반 의사결정 환경에서 지표는 목표 달성도를 객관적으로 판단하고 개선 방향을 제시하는 핵심적인 역할을 수행한다.</p>
+<h3 id="지표의-정의와-중요성">
+  지표의 정의와 중요성
+  <a class="anchor" href="#%ec%a7%80%ed%91%9c%ec%9d%98-%ec%a0%95%ec%9d%98%ec%99%80-%ec%a4%91%ec%9a%94%ec%84%b1">#</a>
+</h3>
+<p>지표는 <strong>측정 가능한 값</strong>으로서 특정 목표나 성과에 대한 진행 상황을 나타낸다. 효과적인 지표는 다음과 같은 특성을 가져야 한다:</p>
+<ul>
+<li><strong>측정 가능성 (Measurable)</strong>: 정확하고 일관된 방법으로 측정할 수 있어야 함</li>
+<li><strong>관련성 (Relevant)</strong>: 비즈니스 목표나 의사결정과 직접적인 연관성이 있어야 함</li>
+<li><strong>시의성 (Timely)</strong>: 적절한 시점에 데이터를 제공할 수 있어야 함</li>
+<li><strong>실행 가능성 (Actionable)</strong>: 측정 결과를 바탕으로 구체적인 행동을 취할 수 있어야 함</li>
+</ul>
+<h3 id="지표의-유형">
+  지표의 유형
+  <a class="anchor" href="#%ec%a7%80%ed%91%9c%ec%9d%98-%ec%9c%a0%ed%98%95">#</a>
+</h3>
+<h4 id="1-비즈니스-지표-business-metrics">
+  1. 비즈니스 지표 (Business Metrics)
+  <a class="anchor" href="#1-%eb%b9%84%ec%a6%88%eb%8b%88%ec%8a%a4-%ec%a7%80%ed%91%9c-business-metrics">#</a>
+</h4>
+<p><strong>재무 지표</strong></p>
+<ul>
+<li>매출 (Revenue)</li>
+<li>순이익 (Net Profit)</li>
+<li>ROI (Return on Investment)</li>
+<li>EBITDA (Earnings Before Interest, Taxes, Depreciation, and Amortization)</li>
+</ul>
+<p><strong>고객 지표</strong></p>
+<ul>
+<li>고객 획득 비용 (CAC: Customer Acquisition Cost)</li>
+<li>고객 생애 가치 (LTV: Lifetime Value)</li>
+<li>고객 만족도 (CSAT: Customer Satisfaction)</li>
+<li>순추천지수 (NPS: Net Promoter Score)</li>
+</ul>
+<p><strong>운영 지표</strong></p>
+<ul>
+<li>전환율 (Conversion Rate)</li>
+<li>이탈률 (Churn Rate)</li>
+<li>활성 사용자 수 (DAU/MAU: Daily/Monthly Active Users)</li>
+<li>평균 주문 가치 (AOV: Average Order Value)</li>
+</ul>
+<h4 id="2-기술-지표-technical-metrics">
+  2. 기술 지표 (Technical Metrics)
+  <a class="anchor" href="#2-%ea%b8%b0%ec%88%a0-%ec%a7%80%ed%91%9c-technical-metrics">#</a>
+</h4>
+<p><strong>성능 지표</strong></p>
+<ul>
+<li>응답 시간 (Response Time)</li>
+<li>처리량 (Throughput)</li>
+<li>가용성 (Availability)</li>
+<li>에러율 (Error Rate)</li>
+</ul>
+<p><strong>품질 지표</strong></p>
+<ul>
+<li>코드 커버리지 (Code Coverage)</li>
+<li>버그 밀도 (Bug Density)</li>
+<li>기술 부채 (Technical Debt)</li>
+<li>사이클로매틱 복잡도 (Cyclomatic Complexity)</li>
+</ul>
+<p><strong>인프라 지표</strong></p>
+<ul>
+<li>CPU 사용률</li>
+<li>메모리 사용률</li>
+<li>디스크 I/O</li>
+<li>네트워크 대역폭</li>
+</ul>
+<h4 id="3-머신러닝-지표-machine-learning-metrics">
+  3. 머신러닝 지표 (Machine Learning Metrics)
+  <a class="anchor" href="#3-%eb%a8%b8%ec%8b%a0%eb%9f%ac%eb%8b%9d-%ec%a7%80%ed%91%9c-machine-learning-metrics">#</a>
+</h4>
+<p><strong>분류 모델 지표</strong></p>
+<ul>
+<li>정확도 (Accuracy)</li>
+<li>정밀도 (Precision)</li>
+<li>재현율 (Recall)</li>
+<li>F1 점수 (F1 Score)</li>
+<li>AUC-ROC (Area Under the Curve - Receiver Operating Characteristic)</li>
+</ul>
+<p><strong>회귀 모델 지표</strong></p>
+<ul>
+<li>평균 절대 오차 (MAE: Mean Absolute Error)</li>
+<li>평균 제곱 오차 (MSE: Mean Squared Error)</li>
+<li>평균 제곱근 오차 (RMSE: Root Mean Squared Error)</li>
+<li>결정 계수 (R²: R-squared)</li>
+</ul>
+<p><strong>추천 시스템 지표</strong></p>
+<ul>
+<li>정밀도@K (Precision@K)</li>
+<li>재현율@K (Recall@K)</li>
+<li>NDCG (Normalized Discounted Cumulative Gain)</li>
+<li>다양성 (Diversity)</li>
+</ul>
+<h3 id="지표-관리-시스템">
+  지표 관리 시스템
+  <a class="anchor" href="#%ec%a7%80%ed%91%9c-%ea%b4%80%eb%a6%ac-%ec%8b%9c%ec%8a%a4%ed%85%9c">#</a>
+</h3>
+<h4 id="kpi-key-performance-indicators">
+  KPI (Key Performance Indicators)
+  <a class="anchor" href="#kpi-key-performance-indicators">#</a>
+</h4>
+<p>핵심성과지표는 조직의 전략적 목표 달성도를 측정하는 가장 중요한 지표들이다. 효과적인 KPI는 SMART 원칙을 따라야 한다:</p>
+<ul>
+<li><strong>S</strong>pecific (구체적)</li>
+<li><strong>M</strong>easurable (측정 가능한)</li>
+<li><strong>A</strong>chievable (달성 가능한)</li>
+<li><strong>R</strong>elevant (관련성 있는)</li>
+<li><strong>T</strong>ime-bound (시간 제한이 있는)</li>
+</ul>
+<h4 id="대시보드-dashboard">
+  대시보드 (Dashboard)
+  <a class="anchor" href="#%eb%8c%80%ec%8b%9c%eb%b3%b4%eb%93%9c-dashboard">#</a>
+</h4>
+<p>지표를 시각적으로 표현하여 실시간 모니터링과 의사결정을 지원하는 도구이다. 효과적인 대시보드는:</p>
+<ul>
+<li>핵심 지표를 한눈에 파악할 수 있게 구성</li>
+<li>드릴다운 기능을 통한 상세 분석 지원</li>
+<li>알림 및 임계값 설정 기능 제공</li>
+<li>모바일 환경에서도 접근 가능</li>
+</ul>
+<h4 id="지표-거버넌스">
+  지표 거버넌스
+  <a class="anchor" href="#%ec%a7%80%ed%91%9c-%ea%b1%b0%eb%b2%84%eb%84%8c%ec%8a%a4">#</a>
+</h4>
+<p>조직 내에서 지표의 정의, 계산 방법, 책임자, 업데이트 주기 등을 체계적으로 관리하는 프레임워크이다.</p>
+<h3 id="지표-설계-원칙">
+  지표 설계 원칙
+  <a class="anchor" href="#%ec%a7%80%ed%91%9c-%ec%84%a4%ea%b3%84-%ec%9b%90%ec%b9%99">#</a>
+</h3>
+<h4 id="1-목표-지향성">
+  1. 목표 지향성
+  <a class="anchor" href="#1-%eb%aa%a9%ed%91%9c-%ec%a7%80%ed%96%a5%ec%84%b1">#</a>
+</h4>
+<p>지표는 명확한 비즈니스 목표와 연결되어야 하며, 측정 결과가 의사결정에 직접적으로 활용될 수 있어야 한다.</p>
+<h4 id="2-균형성">
+  2. 균형성
+  <a class="anchor" href="#2-%ea%b7%a0%ed%98%95%ec%84%b1">#</a>
+</h4>
+<p>단일 지표에만 의존하지 않고 다양한 관점의 지표를 균형 있게 활용해야 한다. 예를 들어, 성장 지표와 함께 품질 지표도 고려해야 한다.</p>
+<h4 id="3-단순성">
+  3. 단순성
+  <a class="anchor" href="#3-%eb%8b%a8%ec%88%9c%ec%84%b1">#</a>
+</h4>
+<p>복잡한 계산이나 해석이 필요한 지표보다는 이해하기 쉽고 명확한 지표를 선택하는 것이 바람직하다.</p>
+<h4 id="4-일관성">
+  4. 일관성
+  <a class="anchor" href="#4-%ec%9d%bc%ea%b4%80%ec%84%b1">#</a>
+</h4>
+<p>동일한 지표는 시간과 부서에 관계없이 일관된 방법으로 계산되어야 한다.</p>
+<h3 id="지표-분석-방법">
+  지표 분석 방법
+  <a class="anchor" href="#%ec%a7%80%ed%91%9c-%eb%b6%84%ec%84%9d-%eb%b0%a9%eb%b2%95">#</a>
+</h3>
+<h4 id="트렌드-분석">
+  트렌드 분석
+  <a class="anchor" href="#%ed%8a%b8%eb%a0%8c%eb%93%9c-%eb%b6%84%ec%84%9d">#</a>
+</h4>
+<p>시간에 따른 지표의 변화 패턴을 분석하여 성장, 감소, 계절성 등을 파악한다.</p>
+<h4 id="벤치마킹">
+  벤치마킹
+  <a class="anchor" href="#%eb%b2%a4%ec%b9%98%eb%a7%88%ed%82%b9">#</a>
+</h4>
+<p>업계 표준이나 경쟁사와의 비교를 통해 상대적 성과를 평가한다.</p>
+<h4 id="상관관계-분석">
+  상관관계 분석
+  <a class="anchor" href="#%ec%83%81%ea%b4%80%ea%b4%80%ea%b3%84-%eb%b6%84%ec%84%9d">#</a>
+</h4>
+<p>서로 다른 지표 간의 관계를 분석하여 인과관계나 영향 요인을 파악한다.</p>
+<h4 id="세그먼트-분석">
+  세그먼트 분석
+  <a class="anchor" href="#%ec%84%b8%ea%b7%b8%eb%a8%bc%ed%8a%b8-%eb%b6%84%ec%84%9d">#</a>
+</h4>
+<p>고객군, 제품군, 지역별 등으로 세분화하여 지표를 분석한다.</p>
+<h3 id="지표-활용-시-주의사항">
+  지표 활용 시 주의사항
+  <a class="anchor" href="#%ec%a7%80%ed%91%9c-%ed%99%9c%ec%9a%a9-%ec%8b%9c-%ec%a3%bc%ec%9d%98%ec%82%ac%ed%95%ad">#</a>
+</h3>
+<h4 id="1-지표의-한계-인식">
+  1. 지표의 한계 인식
+  <a class="anchor" href="#1-%ec%a7%80%ed%91%9c%ec%9d%98-%ed%95%9c%ea%b3%84-%ec%9d%b8%ec%8b%9d">#</a>
+</h4>
+<p>지표는 현실의 일부만을 반영하므로, 정성적 정보와 함께 종합적으로 판단해야 한다.</p>
+<h4 id="2-게임화-방지">
+  2. 게임화 방지
+  <a class="anchor" href="#2-%ea%b2%8c%ec%9e%84%ed%99%94-%eb%b0%a9%ec%a7%80">#</a>
+</h4>
+<p>지표 자체가 목표가 되어 본래 목적을 왜곡하는 현상을 방지해야 한다.</p>
+<h4 id="3-맥락-고려">
+  3. 맥락 고려
+  <a class="anchor" href="#3-%eb%a7%a5%eb%9d%bd-%ea%b3%a0%eb%a0%a4">#</a>
+</h4>
+<p>동일한 지표라도 상황과 맥락에 따라 다르게 해석될 수 있음을 인식해야 한다.</p>
+<h4 id="4-지속적-개선">
+  4. 지속적 개선
+  <a class="anchor" href="#4-%ec%a7%80%ec%86%8d%ec%a0%81-%ea%b0%9c%ec%84%a0">#</a>
+</h4>
+<p>비즈니스 환경 변화에 따라 지표도 지속적으로 검토하고 개선해야 한다.</p>
+<h3 id="미래-전망">
+  미래 전망
+  <a class="anchor" href="#%eb%af%b8%eb%9e%98-%ec%a0%84%eb%a7%9d">#</a>
+</h3>
+<p>데이터 과학과 인공지능 기술의 발전으로 지표 관리는 다음과 같은 방향으로 진화하고 있다:</p>
+<ul>
+<li><strong>실시간 지표</strong>: 스트리밍 데이터 처리를 통한 실시간 지표 계산과 모니터링</li>
+<li><strong>예측적 지표</strong>: 머신러닝을 활용한 미래 성과 예측 지표</li>
+<li><strong>자동화된 인사이트</strong>: AI를 통한 지표 이상 탐지와 자동 분석</li>
+<li><strong>개인화된 지표</strong>: 역할과 책임에 따른 맞춤형 지표 제공</li>
+<li><strong>통합 지표 플랫폼</strong>: 다양한 데이터 소스를 통합한 원스톱 지표 관리 시스템</li>
+</ul>
+<p>지표는 데이터 기반 의사결정의 핵심 도구로서, 조직의 성과 향상과 목표 달성을 위한 필수적인 요소이다. 효과적인 지표 관리를 통해 조직은 더 나은 성과를 달성하고 지속적인 개선을 이룰 수 있다.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+  
+
+
+
+  
+    
+  
+
+
+
+<div class="book-languages" tabindex="0" aria-haspopup="true">
+  <ul>
+    <li class="flex align-center">
+      <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+      
+    </li> 
+  </ul>
+
+  <ul class="book-languages-list">
+    
+    <li class="active">
+      <a href="https://intothedata.com/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#지표-metrics">지표 (Metrics)</a>
+      <ul>
+        <li><a href="#지표의-정의와-중요성">지표의 정의와 중요성</a></li>
+        <li><a href="#지표의-유형">지표의 유형</a></li>
+        <li><a href="#지표-관리-시스템">지표 관리 시스템</a></li>
+        <li><a href="#지표-설계-원칙">지표 설계 원칙</a></li>
+        <li><a href="#지표-분석-방법">지표 분석 방법</a></li>
+        <li><a href="#지표-활용-시-주의사항">지표 활용 시 주의사항</a></li>
+        <li><a href="#미래-전망">미래 전망</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

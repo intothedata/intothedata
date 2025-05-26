@@ -1,4 +1,17 @@
-[module.hugoVersion]
-# min = "0.128.0"
-extended = true  # Extended 버전 필수
+baseURL = 'https://intothedata.com/'
+languageCode = 'ko-KR'
+title = '인투더데이터 데이터과학'
+theme = 'book'
 
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
+
+[outputs]
+    home = [ "HTML"]
+    page = [ "HTML"]
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
