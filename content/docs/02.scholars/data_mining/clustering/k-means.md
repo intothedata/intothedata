@@ -34,21 +34,21 @@ K-means 알고리즘은 다음과 같은 단계로 진행된다.
 
 ### K-means 알고리즘의 수식
 
-K-means 알고리즘에서 각 데이터 포인트 $\mathbf{x}_i$를 가장 가까운 군집 중심(centroid) $\boldsymbol{\mu}_k$에 할당하고, 군집 중심을 반복적으로 갱신합니다. 이 과정은 다음의 목적함수(오차 제곱합, SSE: Sum of Squared Errors)를 최소화하는 방향으로 진행됩니다.
+K-means 알고리즘에서 각 데이터 포인트 \\(\mathbf{x}_i\\)를 가장 가까운 군집 중심(centroid) \\(\boldsymbol{\mu}_k\\)에 할당하고, 군집 중심을 반복적으로 갱신합니다. 이 과정은 다음의 목적함수(오차 제곱합, SSE: Sum of Squared Errors)를 최소화하는 방향으로 진행된다.
 
 $$
 J = \sum_{k=1}^{K} \sum_{i \in C_k} \|\mathbf{x}_i - \boldsymbol{\mu}_k\|^2
 $$
 
-- $K$: 군집(클러스터)의 개수
-- $C_k$: $k$번째 군집에 속한 데이터 인덱스 집합
-- $\mathbf{x}_i$: $i$번째 데이터 포인트 (벡터)
-- $\boldsymbol{\mu}_k$: $k$번째 군집의 중심(centroid)
-- $\|\cdot\|$: 유클리드 거리(보통 L2 노름)
+- \\(K\\): 군집(클러스터)의 개수
+- \\(C_k\\): \\(k\\)번째 군집에 속한 데이터 인덱스 집합
+- \\(\mathbf{x}_i\\): \\(i\\)번째 데이터 포인트 (벡터)
+- \\(\boldsymbol{\mu}_k\\): \\(k\\)번째 군집의 중심(centroid)
+- \\(\|\cdot\|\\): 유클리드 거리(보통 L2 노름)
 
 #### 중심점(centroid) 계산
 
-각 군집 $k$의 중심점은 해당 군집에 속한 모든 데이터의 평균으로 계산합니다.
+각 군집 \\(k\\)의 중심점은 해당 군집에 속한 모든 데이터의 평균으로 계산한다.
 
 $$
 \boldsymbol{\mu}_k = \frac{1}{|C_k|} \sum_{i \in C_k} \mathbf{x}_i
@@ -56,13 +56,13 @@ $$
 
 #### 군집 할당
 
-각 데이터 포인트 $\mathbf{x}_i$는 모든 중심점 $\boldsymbol{\mu}_k$와의 거리를 계산하여, 가장 가까운 군집에 할당합니다.
+각 데이터 포인트 \\(\mathbf{x}_i\\)는 모든 중심점 \\(\boldsymbol{\mu}_k\\)와의 거리를 계산하여, 가장 가까운 군집에 할당한다.
 
 $$
 \text{Assign } \mathbf{x}_i \text{ to cluster } k^* = \underset{k}{\arg\min} \; \|\mathbf{x}_i - \boldsymbol{\mu}_k\|^2
 $$
 
-이러한 과정을 반복하여, 전체 데이터의 군집 내 거리 제곱합($J$)이 최소가 되도록 군집을 형성합니다.
+이러한 과정을 반복하여, 전체 데이터의 군집 내 거리 제곱합(\\(J\\))이 최소가 되도록 군집을 형성한다.
 
 
 ## 장점과 단점
