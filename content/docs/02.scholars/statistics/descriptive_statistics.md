@@ -1,5 +1,5 @@
 +++
-title = "기술통계학 - Descriptive Statistics"
+title = "기술통계"
 type = "docs"
 alwaysopen = true
 tags = ["기술통계", "Descriptive Statistics", "데이터요약", "시각화", "도수분포", "중심경향", "변동성"]
