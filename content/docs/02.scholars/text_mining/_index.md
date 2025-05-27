@@ -1,10 +1,10 @@
 +++
-title = "텍스트마이닝 - Text Mining"
+title = "텍스트마이닝"
 type = "docs"
 alwaysopen = true
 +++
 
-## 개요 - overview
+## 텍스트마이닝 - Text Mining
 
 텍스트마이닝(Text mining)은 데이터마이닝의 일부라고 볼 수 있다. 데이터마이닝이 수치데이터와 범주형데이터를 집중적으로 보는 반면에 텍스트마이닝은 데이터마이닝 중에서도 텍스트데이터를 주로 다루는 것을 말한다.
 

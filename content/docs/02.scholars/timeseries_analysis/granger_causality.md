@@ -1,9 +1,9 @@
 ---
-title: "그래인저 인과관계 - Granger Causality"
+title: "그래인저 인과관계"
 type: "docs"
 ---
 
-## 개요
+## 그래인저 인과관계 - Granger Causality
 
 **닭이 먼저인가 달걀이 먼저인가?**
 

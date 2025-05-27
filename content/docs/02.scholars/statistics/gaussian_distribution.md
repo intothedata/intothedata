@@ -1,8 +1,10 @@
 +++
-title = "정규분포, 가우시안 분포 - Normal Distribution, Gaussian Distribution"
+title = "정규분포, 가우시안 분포"
 type = "docs"
 alwaysopen = true
 +++
+
+## 정규분포, 가우시안 분포 - Normal Distribution, Gaussian Distribution
 
 위키피디아의 [정규분포](https://ko.wikipedia.org/wiki/%EC%A0%95%EA%B7%9C%EB%B6%84%ED%8F%AC)를 보면 설명이 잘 되어있다.
 
@@ -27,4 +29,3 @@ $$f(x) = \frac 1 {\sigma\sqrt{2\pi}} e^{-\frac{(x-\mu)^2} {2\sigma^2}}$$
 그래서 위의 식 자체로 함수가 완성된 것이 아니다. 위의 공식에서 \\(\sigma\\)와 \\(\mu\\)를 넣어주어야 하는데 평균과 표준편차를 구해서 넣어주면 된다.
 
 [R vignett](https://cran.r-project.org/web/packages/ExtDist/vignettes/Distributions-Normal.html)
-

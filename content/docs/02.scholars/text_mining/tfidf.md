@@ -1,8 +1,10 @@
 +++
-title = "TFIDF - Term Frequency Inverse Document Frequency"
+title = "TFIDF"
 type = "docs"
 alwaysopen = true
 +++
+
+## TFIDF - Term Frequency Inverse Document Frequency
 
 TF-IDF는 문서를 벡터화 할 때 문서내의 텀(term)들에 수치를 가중치가 적용된 형태로 부여하는 방법 중의 하나이다.
 

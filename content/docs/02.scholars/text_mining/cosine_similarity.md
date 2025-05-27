@@ -1,8 +1,10 @@
 +++
-title = "코사인 유사도 - Cosine Similarity"
+title = "코사인 유사도"
 type = "docs"
 alwaysopen = true
 +++
+
+## 코사인 유사도 - Cosine Similarity
 
 데이터 포인트들 간의 유사도를 코사인(으로 계산한 것을 말한다. 정확히는 두 벡터의 사잇각을 코사인값으로 나타낸 것이다.
 

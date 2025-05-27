@@ -1,5 +1,5 @@
 +++
-title = "시계열 분석 - Time-series Analysis"
+title = "시계열 분석"
 type = "docs"
 +++
 
