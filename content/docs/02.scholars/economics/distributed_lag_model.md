@@ -5,7 +5,7 @@ alwaysopen = true
 tags = ["분산지연모델", "Distributed Lag Model", "시계열분석", "계량경제학", "지연효과", "동적모델"]
 +++
 
-## 분산지연모델 (Distributed Lag Model)
+## 분산지연모델 - Distributed Lag Model
 
 분산지연모델(Distributed Lag Model)은 종속변수가 독립변수의 현재값뿐만 아니라 과거값들에도 영향을 받는다고 가정하는 시계열 회귀모델이다. 경제학에서 정책이나 충격의 효과가 시간에 걸쳐 점진적으로 나타나는 현상을 모델링하는 데 널리 사용된다.
 
@@ -24,11 +24,11 @@ tags = ["분산지연모델", "Distributed Lag Model", "시계열분석", "계�
 $$Y_t = \alpha + \beta_0 X_t + \beta_1 X_{t-1} + \beta_2 X_{t-2} + \cdots + \beta_p X_{t-p} + \varepsilon_t$$
 
 여기서:
-- $Y_t$: 시점 t에서의 종속변수
-- $X_t, X_{t-1}, \ldots, X_{t-p}$: 독립변수의 현재값과 과거값들
-- $\beta_0, \beta_1, \ldots, \beta_p$: 각 시점별 회귀계수 (지연가중치)
-- $p$: 최대 지연기간
-- $\varepsilon_t$: 오차항
+- \( Y_t \): 시점 t에서의 종속변수
+- \( X_t, X_{t-1}, \ldots, X_{t-p} \): 독립변수의 현재값과 과거값들
+- \( \beta_0, \beta_1, \ldots, \beta_p \): 각 시점별 회귀계수(지연가중치)
+- \( p \): 최대 지연기간
+- \( \varepsilon_t \): 오차항
 
 ### 지연가중치의 해석
 
