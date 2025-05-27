@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>계량경제학 - Economics on 인투더데이터 데이터과학</title>
+    <title>계량경제학 on 인투더데이터 데이터과학</title>
     <link>https://intothedata.com/docs/02.scholars/economics/</link>
-    <description>Recent content in 계량경제학 - Economics on 인투더데이터 데이터과학</description>
+    <description>Recent content in 계량경제학 on 인투더데이터 데이터과학</description>
     <generator>Hugo</generator>
     <language>ko-KR</language>
     <atom:link href="https://intothedata.com/docs/02.scholars/economics/index.xml" rel="self" type="application/rss+xml" />
@@ -12,7 +12,7 @@
       <link>https://intothedata.com/docs/02.scholars/economics/distributed_lag_model/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://intothedata.com/docs/02.scholars/economics/distributed_lag_model/</guid>
-      <description>&lt;h2 id=&#34;분산지연모델-distributed-lag-model&#34;&gt;&#xA;  분산지연모델 (Distributed Lag Model)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%eb%b6%84%ec%82%b0%ec%a7%80%ec%97%b0%eb%aa%a8%eb%8d%b8-distributed-lag-model&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;</description>
+      <description>&lt;h2 id=&#34;분산지연모델-distributed-lag-model&#34;&gt;&#xA;  분산지연모델 (Distributed Lag Model)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%eb%b6%84%ec%82%b0%ec%a7%80%ec%97%b0%eb%aa%a8%eb%8d%b8-distributed-lag-model&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;분산지연모델(Distributed Lag Model)은 종속변수가 독립변수의 현재값뿐만 아니라 과거값들에도 영향을 받는다고 가정하는 시계열 회귀모델이다. 경제학에서 정책이나 충격의 효과가 시간에 걸쳐 점진적으로 나타나는 현상을 모델링하는 데 널리 사용된다.&lt;/p&gt;&#xA;&lt;h3 id=&#34;분산지연모델의-기본-개념&#34;&gt;&#xA;  분산지연모델의 기본 개념&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%eb%b6%84%ec%82%b0%ec%a7%80%ec%97%b0%eb%aa%a8%eb%8d%b8%ec%9d%98-%ea%b8%b0%eb%b3%b8-%ea%b0%9c%eb%85%90&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;경제 현상에서는 한 변수의 변화가 다른 변수에 즉시 영향을 미치기보다는 시간을 두고 점진적으로 영향을 미치는 경우가 많다. 예를 들어:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;통화정책의 효과&lt;/strong&gt;: 금리 변화가 경제성장에 미치는 영향은 수개월에 걸쳐 나타남&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;광고의 효과&lt;/strong&gt;: 광고 지출이 매출에 미치는 영향은 여러 기간에 걸쳐 지속됨&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;투자의 효과&lt;/strong&gt;: 설비투자가 생산성에 미치는 영향은 장기간에 걸쳐 실현됨&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;분산지연모델의-수학적-표현&#34;&gt;&#xA;  분산지연모델의 수학적 표현&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%eb%b6%84%ec%82%b0%ec%a7%80%ec%97%b0%eb%aa%a8%eb%8d%b8%ec%9d%98-%ec%88%98%ed%95%99%ec%a0%81-%ed%91%9c%ed%98%84&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;일반적인 분산지연모델은 다음과 같이 표현된다:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>생존분석 - Survival Analysis on 인투더데이터 데이터과학</title>
+    <title>생존분석 on 인투더데이터 데이터과학</title>
     <link>https://intothedata.com/docs/02.scholars/statistics/survival_analysis/</link>
-    <description>Recent content in 생존분석 - Survival Analysis on 인투더데이터 데이터과학</description>
+    <description>Recent content in 생존분석 on 인투더데이터 데이터과학</description>
     <generator>Hugo</generator>
     <language>ko-KR</language>
     <atom:link href="https://intothedata.com/docs/02.scholars/statistics/survival_analysis/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>로그랭크검정 - Log Rank Test</title>
+      <title>로그랭크검정</title>
       <link>https://intothedata.com/docs/02.scholars/statistics/survival_analysis/log_rank_test/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://intothedata.com/docs/02.scholars/statistics/survival_analysis/log_rank_test/</guid>
-      <description></description>
+      <description>&lt;h2 id=&#34;로그랭크검정-log-rank-test&#34;&gt;&#xA;  로그랭크검정 (Log-rank Test)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%eb%a1%9c%ea%b7%b8%eb%9e%ad%ed%81%ac%ea%b2%80%ec%a0%95-log-rank-test&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;개요&#34;&gt;&#xA;  개요&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ea%b0%9c%ec%9a%94&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;로그랭크검정(Log-rank Test)은 두 개 이상의 그룹 간 생존시간 분포가 동일한지를 검정하는 비모수적 통계 검정 방법이다. 영어로는 &lt;strong&gt;Log-rank Test&lt;/strong&gt;라고 하며, 맨텔-콕스 검정(Mantel-Cox Test)이라고도 불린다.&lt;/p&gt;&#xA;&lt;p&gt;로그랭크검정은 생존분석에서 가장 널리 사용되는 검정 방법 중 하나로, 검열 데이터가 있는 상황에서도 적용할 수 있으며, 생존시간의 분포에 대한 특별한 가정 없이 사용할 수 있는 비모수적 방법이다.&lt;/p&gt;&#xA;&lt;h3 id=&#34;검정의-목적과-가설&#34;&gt;&#xA;  검정의 목적과 가설&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ea%b2%80%ec%a0%95%ec%9d%98-%eb%aa%a9%ec%a0%81%ea%b3%bc-%ea%b0%80%ec%84%a4&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;로그랭크검정의 주요 목적은 다음과 같다:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;그룹 간 생존함수 비교&lt;/strong&gt;: 두 개 이상의 그룹에서 생존함수가 동일한지 검정&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;치료 효과 평가&lt;/strong&gt;: 서로 다른 치료법의 효과를 비교&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;위험요인 분석&lt;/strong&gt;: 특정 요인이 생존시간에 영향을 미치는지 평가&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;가설-설정&#34;&gt;&#xA;  가설 설정&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ea%b0%80%ec%84%a4-%ec%84%a4%ec%a0%95&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;귀무가설 (H₀)&lt;/strong&gt;: 모든 그룹의 생존함수가 동일하다&#xA;&lt;ul&gt;&#xA;&lt;li&gt;H₀: S₁(t) = S₂(t) = &amp;hellip; = Sₖ(t) for all t&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;대립가설 (H₁)&lt;/strong&gt;: 적어도 하나의 그룹에서 생존함수가 다르다&#xA;&lt;ul&gt;&#xA;&lt;li&gt;H₁: 적어도 하나의 i, j에 대해 Sᵢ(t) ≠ Sⱼ(t)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;검정-통계량의-원리&#34;&gt;&#xA;  검정 통계량의 원리&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ea%b2%80%ec%a0%95-%ed%86%b5%ea%b3%84%eb%9f%89%ec%9d%98-%ec%9b%90%eb%a6%ac&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;로그랭크검정은 각 사건 발생 시점에서 관찰된 사건 수와 기댓값을 비교하는 방식으로 작동한다.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
