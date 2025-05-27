@@ -17,6 +17,7 @@ theme = 'book'
 [outputs]
     home = [ "HTML"]
     page = [ "HTML"]
+    tags = [ "HTML"]
 
 [taxonomies]
   category = "categories"
@@ -25,3 +26,5 @@ theme = 'book'
 
 [params]
   math = true
+
+
