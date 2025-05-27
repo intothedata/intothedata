@@ -34,6 +34,7 @@ startLevel = 1
 [outputs]
     home = [ "HTML"]
     page = [ "HTML"]
+    tags = [ "HTML"]
 
 # taxonomy
 [taxonomies]
