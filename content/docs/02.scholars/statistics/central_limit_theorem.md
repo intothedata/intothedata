@@ -6,7 +6,7 @@ alwaysopen: true
 tags: [CLT, Central Limit Theorem, 중심극한정리, 통계학, 확률론, 표본분포]
 ---
 
-## 중심극한정리 (Central Limit Theorem)
+## 중심극한정리 - Central Limit Theorem
 
 중심극한정리는 통계학에서 가장 중요하고 기본적인 정리 중 하나로, 통계학을 처음 접할 때 반드시 이해해야 하는 핵심 개념이다.
 

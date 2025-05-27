@@ -1,10 +1,10 @@
 +++
-title = "피어슨 상관계수 - Pearson's product-moment correlation"
+title = "피어슨 상관계수"
 type = "docs"
 alwaysopen = true
 +++
 
-## 개요
+## 피어슨 상관계수 - Pearson's product-moment correlation
 
 연속형 변수 2개의 상관 관계를 확인하기 위한 가장 기본적인 방법이다.
 

@@ -5,7 +5,7 @@ tags = ["생존분석", "Survival Analysis", "의료통계", "생존시간", "�
 alwaysopen = true
 +++
 
-## 생존분석 (Survival Analysis)
+## 생존분석 - Survival Analysis
 
 ### 개요
 

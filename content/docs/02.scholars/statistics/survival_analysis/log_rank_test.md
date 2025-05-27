@@ -3,7 +3,7 @@ title = "로그랭크검정"
 type = "docs"
 +++
 
-## 로그랭크검정 (Log-rank Test)
+## 로그랭크검정 - Log-rank Test
 
 ### 개요
 

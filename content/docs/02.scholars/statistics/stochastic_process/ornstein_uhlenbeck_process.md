@@ -1,6 +1,7 @@
 +++
-title = "오른스타인-우렌벡 과정  Ornstein-Uhlenbeck process"
+title = "오른스타인-우렌벡 과정"
 type = "docs"
 +++
 
-내용 작성 중
+## 오른스타인-우렌벡 과정  Ornstein-Uhlenbeck process
+
