@@ -1,5 +1,5 @@
 +++
-title = "분류 - Classification"
+title = "분류"
 type = "docs"
 tags = ["분류", "Classification", "Supervised Learning", "지도학습"]
 +++
@@ -14,6 +14,8 @@ tags = ["분류", "Classification", "Supervised Learning", "지도학습"]
 - 사진 속 동물이 고양이인지 개인지 구분
 - 환자의 진단 결과가 질병 유무로 분류
 - 고객이 상품을 구매할지 여부 예측
+
+    분류는 매우 많은 분야에서 사용된다. 활용할 수 있는 곳이 많기 때문이다. 그래서 기계학습에서 주로 해결하려고 하는 문제는 대부분 분류와 관련된 것이다.
 
 ### 분류의 주요 알고리즘
 
