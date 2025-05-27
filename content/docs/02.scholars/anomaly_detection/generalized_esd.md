@@ -5,8 +5,8 @@ type: "docs"
 
 **Generalized ESD Test for Outliers**
 
-이 기법은 이상감기 기법이다. 원래 명칭을 조금 길에 풀어쓰면 “Generalized Extreme Studentized Deviate Test”이다.
-하나 이상의 이상치(outlier)를 찾는 방법이며 원래 명칭은 “Grubbs' test for outliers” 이다.
+ 이상감지에 사용하는 기법이다. 원래 명칭을 조금 길에 풀어쓰면 “Generalized Extreme Studentized Deviate Test”이 된다.
+1개 이상의 이상치(outlier)를 찾는 방법이며 원래 명칭은 “Grubbs' test for outliers” 이다.
 
 “Grubbs' test for outlies”는 다른 이름으로 “Maximum normed residual test” 또는 “Extreme studentized deviate test”로 표기 되기도 한다.
 
@@ -25,7 +25,7 @@ type: "docs"
 GEST는 k를 지정하는 것을 해결한 것이다.
 GESD 테스트에서는 의심되는 이상값 수의 상한값만 지정하면 된다.
 
-
 ## 참고자료
 
-https://towardsdatascience.com/anomaly-detection-with-generalized-extreme-studentized-deviate-in-python-f350075900e2
+[towardsdatascience](
+https://towardsdatascience.com/anomaly-detection-with-generalized-extreme-studentized-deviate-in-python-f350075900e2)
