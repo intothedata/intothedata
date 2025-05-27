@@ -15,3 +15,15 @@ unsafe = true
 [taxonomies]
   category = "categories"
   tag = "tags"
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]
+[params]
+  math = true
