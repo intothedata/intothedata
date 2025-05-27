@@ -1,9 +1,9 @@
 +++
 title = "표본추출"
 type = "docs"
-weight: 1001
-alwaysopen: true
-tags: []
+weight = 1001
+alwaysopen = true
+tags = []
 +++
 
 ## 표본추출 - Sampling
