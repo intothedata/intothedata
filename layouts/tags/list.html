@@ -1,0 +1,50 @@
+{{ define "main" }}
+<article class="markdown book-post">
+  <h1>{{ .Title }}</h1>
+  <p>모든 태그 목록</p>
+  
+  <div class="tag-cloud">
+    {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+      <div class="tag-item">
+        <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" class="tag-link">
+          {{ $name }} <span class="tag-count">({{ $taxonomy.Count }})</span>
+        </a>
+      </div>
+    {{ end }}
+  </div>
+</article>
+
+<style>
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.tag-item {
+  display: inline-block;
+}
+
+.tag-link {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #f0f0f0;
+  border-radius: 15px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.tag-link:hover {
+  background-color: #e0e0e0;
+  text-decoration: none;
+}
+
+.tag-count {
+  color: #666;
+  font-size: 12px;
+}
+</style>
+{{ end }} 

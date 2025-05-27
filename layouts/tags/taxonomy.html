@@ -1,0 +1,105 @@
+{{ define "main" }}
+<article class="markdown book-post">
+  <h1>태그: {{ .Title }}</h1>
+  <p>이 태그가 포함된 글들. (총 {{ len .Pages }}개)</p>
+  
+  <div class="posts-list">
+    {{ range .Pages }}
+      <div class="post-item">
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        {{ if .Date }}
+          <div class="post-meta">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006년 1월 2일" }}</time>
+          </div>
+        {{ end }}
+        {{ if .Summary }}
+          <div class="post-summary">
+            {{ .Summary }}
+          </div>
+        {{ end }}
+        {{ if .Params.tags }}
+          <div class="post-tags">
+            {{ range .Params.tags }}
+              <span class="tag">{{ . }}</span>
+            {{ end }}
+          </div>
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+  
+  <div class="back-to-tags">
+    <a href="/tags/">← 모든 태그 보기</a>
+  </div>
+</article>
+
+<style>
+.posts-list {
+  margin-top: 20px;
+}
+
+.post-item {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.post-item:last-child {
+  border-bottom: none;
+}
+
+.post-item h3 {
+  margin: 0 0 10px 0;
+}
+
+.post-item h3 a {
+  text-decoration: none;
+  color: #333;
+}
+
+.post-item h3 a:hover {
+  color: #0066cc;
+}
+
+.post-meta {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.post-summary {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.post-tags {
+  margin-top: 10px;
+}
+
+.post-tags .tag {
+  display: inline-block;
+  padding: 2px 8px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  font-size: 12px;
+  color: #666;
+  margin-right: 5px;
+}
+
+.back-to-tags {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.back-to-tags a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.back-to-tags a:hover {
+  text-decoration: underline;
+}
+</style>
+{{ end }} 
