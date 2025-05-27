@@ -1,5 +1,100 @@
-<ul id="all-tags">
-{{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-<li><a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a> ({{ $taxonomy.Count }})</li>
-{{ end }}
-</ul> 
+<div class="shortcode-taglist">
+  {{ if .Site.Taxonomies.tags }}
+    <div class="tag-grid">
+      {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+        <div class="tag-item">
+          <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}/" class="tag-link">
+            <span class="tag-name">{{ $name }}</span>
+            <span class="tag-count">{{ $taxonomy.Count }}</span>
+          </a>
+        </div>
+      {{ end }}
+    </div>
+  {{ else }}
+    <p>아직 태그가 없습니다.</p>
+  {{ end }}
+</div>
+
+<style>
+.shortcode-taglist {
+  margin: 20px 0;
+}
+
+.tag-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.tag-item {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.tag-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-color: #007bff;
+}
+
+.tag-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #495057;
+  transition: all 0.3s ease;
+}
+
+.tag-link:hover {
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+}
+
+.tag-name {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.tag-count {
+  background-color: #dee2e6;
+  color: #6c757d;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.tag-link:hover .tag-count {
+  background-color: rgba(255,255,255,0.2);
+  color: white;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .tag-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 8px;
+  }
+  
+  .tag-link {
+    padding: 10px 12px;
+  }
+  
+  .tag-name {
+    font-size: 13px;
+  }
+  
+  .tag-count {
+    font-size: 11px;
+    padding: 3px 6px;
+  }
+}
+</style> 
