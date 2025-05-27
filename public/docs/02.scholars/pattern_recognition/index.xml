@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>패턴인식 - Pattern Recognition on 인투더데이터 데이터과학</title>
+    <title>패턴인식 on 인투더데이터 데이터과학</title>
     <link>https://intothedata.com/docs/02.scholars/pattern_recognition/</link>
-    <description>Recent content in 패턴인식 - Pattern Recognition on 인투더데이터 데이터과학</description>
+    <description>Recent content in 패턴인식 on 인투더데이터 데이터과학</description>
     <generator>Hugo</generator>
     <language>ko-KR</language>
     <atom:link href="https://intothedata.com/docs/02.scholars/pattern_recognition/index.xml" rel="self" type="application/rss+xml" />

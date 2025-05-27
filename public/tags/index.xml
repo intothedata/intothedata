@@ -85,6 +85,13 @@
       <description></description>
     </item>
     <item>
+      <title>Classification</title>
+      <link>https://intothedata.com/tags/classification/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/classification/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>CLT</title>
       <link>https://intothedata.com/tags/clt/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -134,10 +141,31 @@
       <description></description>
     </item>
     <item>
-      <title>Economics</title>
-      <link>https://intothedata.com/tags/economics/</link>
+      <title>Demand Forecasting</title>
+      <link>https://intothedata.com/tags/demand-forecasting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://intothedata.com/tags/economics/</guid>
+      <guid>https://intothedata.com/tags/demand-forecasting/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Descriptive Statistics</title>
+      <link>https://intothedata.com/tags/descriptive-statistics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/descriptive-statistics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Distributed Lag Model</title>
+      <link>https://intothedata.com/tags/distributed-lag-model/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/distributed-lag-model/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Econometrics</title>
+      <link>https://intothedata.com/tags/econometrics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/econometrics/</guid>
       <description></description>
     </item>
     <item>
@@ -155,10 +183,10 @@
       <description></description>
     </item>
     <item>
-      <title>K중삼값</title>
-      <link>https://intothedata.com/tags/k%EC%A4%91%EC%82%BC%EA%B0%92/</link>
+      <title>K중심값</title>
+      <link>https://intothedata.com/tags/k%EC%A4%91%EC%8B%AC%EA%B0%92/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://intothedata.com/tags/k%EC%A4%91%EC%82%BC%EA%B0%92/</guid>
+      <guid>https://intothedata.com/tags/k%EC%A4%91%EC%8B%AC%EA%B0%92/</guid>
       <description></description>
     </item>
     <item>
@@ -169,10 +197,38 @@
       <description></description>
     </item>
     <item>
+      <title>Neural Network</title>
+      <link>https://intothedata.com/tags/neural-network/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/neural-network/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>NLP</title>
       <link>https://intothedata.com/tags/nlp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://intothedata.com/tags/nlp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Operational Research</title>
+      <link>https://intothedata.com/tags/operational-research/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/operational-research/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OR</title>
+      <link>https://intothedata.com/tags/or/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/or/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pattern Recognition</title>
+      <link>https://intothedata.com/tags/pattern-recognition/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/pattern-recognition/</guid>
       <description></description>
     </item>
     <item>
@@ -218,6 +274,27 @@
       <description></description>
     </item>
     <item>
+      <title>Statistics</title>
+      <link>https://intothedata.com/tags/statistics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/statistics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Supervised Learning</title>
+      <link>https://intothedata.com/tags/supervised-learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/supervised-learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Survival Analysis</title>
+      <link>https://intothedata.com/tags/survival-analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/survival-analysis/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Time Series</title>
       <link>https://intothedata.com/tags/time-series/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -253,10 +330,59 @@
       <description></description>
     </item>
     <item>
+      <title>검열데이터</title>
+      <link>https://intothedata.com/tags/%EA%B2%80%EC%97%B4%EB%8D%B0%EC%9D%B4%ED%84%B0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/%EA%B2%80%EC%97%B4%EB%8D%B0%EC%9D%B4%ED%84%B0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>경영과학</title>
+      <link>https://intothedata.com/tags/%EA%B2%BD%EC%98%81%EA%B3%BC%ED%95%99/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/%EA%B2%BD%EC%98%81%EA%B3%BC%ED%95%99/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>경제학</title>
+      <link>https://intothedata.com/tags/%EA%B2%BD%EC%A0%9C%ED%95%99/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/%EA%B2%BD%EC%A0%9C%ED%95%99/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>계량경제학</title>
       <link>https://intothedata.com/tags/%EA%B3%84%EB%9F%89%EA%B2%BD%EC%A0%9C%ED%95%99/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://intothedata.com/tags/%EA%B3%84%EB%9F%89%EA%B2%BD%EC%A0%9C%ED%95%99/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>군집분석</title>
+      <link>https://intothedata.com/tags/%EA%B5%B0%EC%A7%91%EB%B6%84%EC%84%9D/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/%EA%B5%B0%EC%A7%91%EB%B6%84%EC%84%9D/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>기계학습</title>
+      <link>https://intothedata.com/tags/%EA%B8%B0%EA%B3%84%ED%95%99%EC%8A%B5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/%EA%B8%B0%EA%B3%84%ED%95%99%EC%8A%B5/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>기술통계</title>
+      <link>https://intothedata.com/tags/%EA%B8%B0%EC%88%A0%ED%86%B5%EA%B3%84/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/%EA%B8%B0%EC%88%A0%ED%86%B5%EA%B3%84/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>뉴런</title>
+      <link>https://intothedata.com/tags/%EB%89%B4%EB%9F%B0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/%EB%89%B4%EB%9F%B0/</guid>
       <description></description>
     </item>
     <item>
@@ -288,6 +414,13 @@
       <description></description>
     </item>
     <item>
+      <title>데이터분석</title>
+      <link>https://intothedata.com/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>데이터사이언스</title>
       <link>https://intothedata.com/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%82%AC%EC%9D%B4%EC%96%B8%EC%8A%A4/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -299,6 +432,13 @@
       <link>https://intothedata.com/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%82%AC%EC%9D%B4%EC%96%B8%EC%8A%A4-%EC%9D%91%EC%9A%A9/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://intothedata.com/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%82%AC%EC%9D%B4%EC%96%B8%EC%8A%A4-%EC%9D%91%EC%9A%A9/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>데이터요약</title>
+      <link>https://intothedata.com/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%9A%94%EC%95%BD/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%9A%94%EC%95%BD/</guid>
       <description></description>
     </item>
     <item>
@@ -316,6 +456,27 @@
       <description></description>
     </item>
     <item>
+      <title>도수분포</title>
+      <link>https://intothedata.com/tags/%EB%8F%84%EC%88%98%EB%B6%84%ED%8F%AC/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/%EB%8F%84%EC%88%98%EB%B6%84%ED%8F%AC/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>동적모델</title>
+      <link>https://intothedata.com/tags/%EB%8F%99%EC%A0%81%EB%AA%A8%EB%8D%B8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/%EB%8F%99%EC%A0%81%EB%AA%A8%EB%8D%B8/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>딥러닝</title>
+      <link>https://intothedata.com/tags/%EB%94%A5%EB%9F%AC%EB%8B%9D/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/%EB%94%A5%EB%9F%AC%EB%8B%9D/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>벡터검색</title>
       <link>https://intothedata.com/tags/%EB%B2%A1%ED%84%B0%EA%B2%80%EC%83%89/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -330,10 +491,31 @@
       <description></description>
     </item>
     <item>
+      <title>변동성</title>
+      <link>https://intothedata.com/tags/%EB%B3%80%EB%8F%99%EC%84%B1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/%EB%B3%80%EB%8F%99%EC%84%B1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>분류</title>
+      <link>https://intothedata.com/tags/%EB%B6%84%EB%A5%98/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/%EB%B6%84%EB%A5%98/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>분산</title>
       <link>https://intothedata.com/tags/%EB%B6%84%EC%82%B0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://intothedata.com/tags/%EB%B6%84%EC%82%B0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>분산지연모델</title>
+      <link>https://intothedata.com/tags/%EB%B6%84%EC%82%B0%EC%A7%80%EC%97%B0%EB%AA%A8%EB%8D%B8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/%EB%B6%84%EC%82%B0%EC%A7%80%EC%97%B0%EB%AA%A8%EB%8D%B8/</guid>
       <description></description>
     </item>
     <item>
@@ -351,10 +533,52 @@
       <description></description>
     </item>
     <item>
+      <title>산업공학</title>
+      <link>https://intothedata.com/tags/%EC%82%B0%EC%97%85%EA%B3%B5%ED%95%99/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/%EC%82%B0%EC%97%85%EA%B3%B5%ED%95%99/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>생존분석</title>
+      <link>https://intothedata.com/tags/%EC%83%9D%EC%A1%B4%EB%B6%84%EC%84%9D/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/%EC%83%9D%EC%A1%B4%EB%B6%84%EC%84%9D/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>생존시간</title>
+      <link>https://intothedata.com/tags/%EC%83%9D%EC%A1%B4%EC%8B%9C%EA%B0%84/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/%EC%83%9D%EC%A1%B4%EC%8B%9C%EA%B0%84/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>수요예측</title>
+      <link>https://intothedata.com/tags/%EC%88%98%EC%9A%94%EC%98%88%EC%B8%A1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/%EC%88%98%EC%9A%94%EC%98%88%EC%B8%A1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>시각화</title>
+      <link>https://intothedata.com/tags/%EC%8B%9C%EA%B0%81%ED%99%94/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/%EC%8B%9C%EA%B0%81%ED%99%94/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>시계열데이터</title>
       <link>https://intothedata.com/tags/%EC%8B%9C%EA%B3%84%EC%97%B4%EB%8D%B0%EC%9D%B4%ED%84%B0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://intothedata.com/tags/%EC%8B%9C%EA%B3%84%EC%97%B4%EB%8D%B0%EC%9D%B4%ED%84%B0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>시계열분석</title>
+      <link>https://intothedata.com/tags/%EC%8B%9C%EA%B3%84%EC%97%B4%EB%B6%84%EC%84%9D/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/%EC%8B%9C%EA%B3%84%EC%97%B4%EB%B6%84%EC%84%9D/</guid>
       <description></description>
     </item>
     <item>
@@ -372,6 +596,27 @@
       <description></description>
     </item>
     <item>
+      <title>예측모델</title>
+      <link>https://intothedata.com/tags/%EC%98%88%EC%B8%A1%EB%AA%A8%EB%8D%B8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/%EC%98%88%EC%B8%A1%EB%AA%A8%EB%8D%B8/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>운영연구</title>
+      <link>https://intothedata.com/tags/%EC%9A%B4%EC%98%81%EC%97%B0%EA%B5%AC/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/%EC%9A%B4%EC%98%81%EC%97%B0%EA%B5%AC/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>의료통계</title>
+      <link>https://intothedata.com/tags/%EC%9D%98%EB%A3%8C%ED%86%B5%EA%B3%84/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/%EC%9D%98%EB%A3%8C%ED%86%B5%EA%B3%84/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>이상감지</title>
       <link>https://intothedata.com/tags/%EC%9D%B4%EC%83%81%EA%B0%90%EC%A7%80/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -383,6 +628,20 @@
       <link>https://intothedata.com/tags/%EC%9D%B4%EC%83%81%EC%A7%95%ED%9B%84%EA%B0%90%EC%A7%80/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://intothedata.com/tags/%EC%9D%B4%EC%83%81%EC%A7%95%ED%9B%84%EA%B0%90%EC%A7%80/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>인공신경망</title>
+      <link>https://intothedata.com/tags/%EC%9D%B8%EA%B3%B5%EC%8B%A0%EA%B2%BD%EB%A7%9D/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/%EC%9D%B8%EA%B3%B5%EC%8B%A0%EA%B2%BD%EB%A7%9D/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>인공지능</title>
+      <link>https://intothedata.com/tags/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5/</guid>
       <description></description>
     </item>
     <item>
@@ -400,10 +659,52 @@
       <description></description>
     </item>
     <item>
+      <title>중심경향</title>
+      <link>https://intothedata.com/tags/%EC%A4%91%EC%8B%AC%EA%B2%BD%ED%96%A5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/%EC%A4%91%EC%8B%AC%EA%B2%BD%ED%96%A5/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>중심극한정리</title>
       <link>https://intothedata.com/tags/%EC%A4%91%EC%8B%AC%EA%B7%B9%ED%95%9C%EC%A0%95%EB%A6%AC/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://intothedata.com/tags/%EC%A4%91%EC%8B%AC%EA%B7%B9%ED%95%9C%EC%A0%95%EB%A6%AC/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>지도학습</title>
+      <link>https://intothedata.com/tags/%EC%A7%80%EB%8F%84%ED%95%99%EC%8A%B5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/%EC%A7%80%EB%8F%84%ED%95%99%EC%8A%B5/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>지연효과</title>
+      <link>https://intothedata.com/tags/%EC%A7%80%EC%97%B0%ED%9A%A8%EA%B3%BC/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/%EC%A7%80%EC%97%B0%ED%9A%A8%EA%B3%BC/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>추론통계</title>
+      <link>https://intothedata.com/tags/%EC%B6%94%EB%A1%A0%ED%86%B5%EA%B3%84/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/%EC%B6%94%EB%A1%A0%ED%86%B5%EA%B3%84/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>카플란마이어</title>
+      <link>https://intothedata.com/tags/%EC%B9%B4%ED%94%8C%EB%9E%80%EB%A7%88%EC%9D%B4%EC%96%B4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/%EC%B9%B4%ED%94%8C%EB%9E%80%EB%A7%88%EC%9D%B4%EC%96%B4/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>콕스회귀</title>
+      <link>https://intothedata.com/tags/%EC%BD%95%EC%8A%A4%ED%9A%8C%EA%B7%80/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/%EC%BD%95%EC%8A%A4%ED%9A%8C%EA%B7%80/</guid>
       <description></description>
     </item>
     <item>
@@ -414,10 +715,45 @@
       <description></description>
     </item>
     <item>
+      <title>통계학</title>
+      <link>https://intothedata.com/tags/%ED%86%B5%EA%B3%84%ED%95%99/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/%ED%86%B5%EA%B3%84%ED%95%99/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>패턴인식</title>
+      <link>https://intothedata.com/tags/%ED%8C%A8%ED%84%B4%EC%9D%B8%EC%8B%9D/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/%ED%8C%A8%ED%84%B4%EC%9D%B8%EC%8B%9D/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>표본분포</title>
+      <link>https://intothedata.com/tags/%ED%91%9C%EB%B3%B8%EB%B6%84%ED%8F%AC/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/%ED%91%9C%EB%B3%B8%EB%B6%84%ED%8F%AC/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>형태소분석기</title>
       <link>https://intothedata.com/tags/%ED%98%95%ED%83%9C%EC%86%8C%EB%B6%84%EC%84%9D%EA%B8%B0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://intothedata.com/tags/%ED%98%95%ED%83%9C%EC%86%8C%EB%B6%84%EC%84%9D%EA%B8%B0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>확률론</title>
+      <link>https://intothedata.com/tags/%ED%99%95%EB%A5%A0%EB%A1%A0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/%ED%99%95%EB%A5%A0%EB%A1%A0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>회귀분석</title>
+      <link>https://intothedata.com/tags/%ED%9A%8C%EA%B7%80%EB%B6%84%EC%84%9D/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/tags/%ED%9A%8C%EA%B7%80%EB%B6%84%EC%84%9D/</guid>
       <description></description>
     </item>
   </channel>

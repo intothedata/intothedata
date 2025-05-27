@@ -8,11 +8,18 @@
     <language>ko-KR</language>
     <atom:link href="https://intothedata.com/tags/%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0%EB%A7%81/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>군집분석 - Clustering</title>
+      <title>K중심값</title>
+      <link>https://intothedata.com/docs/02.scholars/data_mining/clustering/k-means/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://intothedata.com/docs/02.scholars/data_mining/clustering/k-means/</guid>
+      <description>&lt;h2 id=&#34;k중심값-k-means&#34;&gt;&#xA;  K중심값 (K-means)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#k%ec%a4%91%ec%8b%ac%ea%b0%92-k-means&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;K-means는 데이터마이닝과 기계학습에서 가장 널리 사용되는 클러스터링(군집화) 알고리즘 중 하나입니다. 영어 원어인 &amp;ldquo;K-means&amp;quot;는 한국어로 &lt;strong&gt;K중심값&lt;/strong&gt; 또는 &lt;strong&gt;K평균&lt;/strong&gt; 등으로 번역되기도 하지만, 현업에서는 주로 &amp;ldquo;케이민즈&amp;quot;라고 원어 그대로 부르는 경우가 많습니다. 본 문서에서도 혼동을 피하기 위해 K-means로 표기합니다.&lt;/p&gt;&#xA;&lt;p&gt;여기서 &amp;ldquo;K&amp;quot;는 사용자가 미리 정하는 군집(클러스터)의 개수를 의미하며, &amp;ldquo;means&amp;quot;는 각 군집의 중심값(평균값, 대푯값)을 의미합니다. 다만, K-means에서의 &amp;ldquo;mean&amp;quot;은 통계적 의미의 평균이라기보다는, 각 군집을 대표하는 중심점(centroid)이라는 개념에 더 가깝습니다.&lt;/p&gt;&#xA;&lt;p&gt;K-means의 핵심은 데이터를 K개의 그룹으로 나누되, 각 그룹 내의 데이터들이 서로 최대한 비슷하도록(즉, 중심점과의 거리가 최소가 되도록) 군집을 형성하는 것입니다. 이 알고리즘은 간단하면서도 효과적이어서, 고객 세분화, 이미지 분할, 이상치 탐지 등 다양한 분야에서 널리 활용됩니다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>군집분석</title>
       <link>https://intothedata.com/docs/02.scholars/data_mining/clustering/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://intothedata.com/docs/02.scholars/data_mining/clustering/</guid>
-      <description>&lt;h2 id=&#34;군집분석---clustering&#34;&gt;&#xA;  군집분석 - clustering&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ea%b5%b0%ec%a7%91%eb%b6%84%ec%84%9d---clustering&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;군집분석, 군집화, 클러스터링(Clustering)은 모두 같은 뜻이라고 봐도 무방하다.&lt;/p&gt;&#xA;&lt;p&gt;통계학에서는 군집분석이라고 부르며 기계학습에서는 클러스터링이라고 부른다. 그리고 클러스터링을 한국어로 바꾸면 군집화가 된다.  클러스터링은 패턴인식에서는 양자화(Quantization) 또는 코딩(Coding)이라고 부르기도 한다.  설명이 매우 길어지므로 여기서는 자세한 얘기는 생략한다.&lt;/p&gt;&#xA;&lt;p&gt;클러스터링은 하면 여러 개체를 묶는 것을 말한다. 어떤 방법을 사용해서든 주어진 개체들을 여러 개의 그룹으로 묶으면 그것을 클러스터링이라고 부를 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;보통 컴퓨터공학(computer science)에서의 클러스터링은 여러 서버나 플랫폼을 하나로 묶어 선형확장성 같은 것을 보장하고 대규모 트래픽을 처리하거나&#xA;병렬 연산을 수행할 수 있도록 하는 것을 말하는데 기계학습과 데이터마이닝에서 말하는 클러스터링과는 구분을 할 필요가 있다.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;군집분석clustering이란&#34;&gt;&#xA;  군집분석(Clustering)이란?&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ea%b5%b0%ec%a7%91%eb%b6%84%ec%84%9dclustering%ec%9d%b4%eb%9e%80&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;군집분석, 군집화, 클러스터링(Clustering)은 모두 본질적으로 같은 의미로 사용됩니다. 통계학에서는 주로 &amp;lsquo;군집분석&amp;rsquo;이라는 용어를, 기계학습(머신러닝)에서는 &amp;lsquo;클러스터링&amp;rsquo;이라는 용어를 사용하며, &amp;lsquo;군집화&amp;rsquo;는 클러스터링의 한국어 번역입니다. 패턴인식 분야에서는 클러스터링을 &amp;lsquo;양자화(Quantization)&amp;rsquo; 또는 &amp;lsquo;코딩(Coding)&amp;lsquo;이라고 부르기도 합니다.&lt;/p&gt;&#xA;&lt;p&gt;클러스터링은 주어진 데이터(개체, 객체)들을 유사한 특성을 가진 그룹(군집, 클러스터)으로 자동으로 묶는 비지도학습(Unsupervised Learning) 기법 중 하나입니다. 즉, 사전에 정답(레이블)이 없는 데이터에서 데이터 간의 유사성 또는 거리 등을 기준으로 여러 개의 집단으로 나누는 방법입니다. 이 과정에서 각 군집 내의 데이터는 서로 비슷하고, 군집 간에는 차이가 크도록 그룹화하는 것이 목표입니다.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

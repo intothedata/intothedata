@@ -8,11 +8,11 @@
     <language>ko-KR</language>
     <atom:link href="https://intothedata.com/tags/%EC%A4%91%EC%8B%AC%EA%B7%B9%ED%95%9C%EC%A0%95%EB%A6%AC/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>중심극한정리 - CLT; Central Limit Theorem</title>
+      <title>중심극한정리</title>
       <link>https://intothedata.com/docs/02.scholars/statistics/central_limit_theorem/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://intothedata.com/docs/02.scholars/statistics/central_limit_theorem/</guid>
-      <description>&lt;h2 id=&#34;중심극한정리---central-limit-theorem&#34;&gt;&#xA;  중심극한정리 - Central Limit Theorem&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%a4%91%ec%8b%ac%ea%b7%b9%ed%95%9c%ec%a0%95%eb%a6%ac---central-limit-theorem&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;통계학을 처음 접하게 될 때 가장 초기에 듣는 것이 “중심극한정리”이다.&lt;/p&gt;&#xA;&lt;p&gt;중심극한정리가 문헌에 나타난 것은 대략 1700년 경으로 알려져 있지만 정확히 언제부터 사람들이 이것을 알게 되었는지는 알려진 것이 없다고 한다. 하지만 중심극한정리는 통계학 역사상 가장 중요한 발견이라고 한다.&lt;/p&gt;&#xA;&lt;p&gt;중심극한정리는 쉬워 보이지만 대충 개념을 확실히 이해하지 않고 넘어가면 후에 큰 실수하기 쉽다.&lt;br&gt;&#xA;사실 근원(prime)까지 이해하기에는 중심극한정리는 매우 난해하고 현실에서 중심극한정리를 이용할 일이 많지 않기 때문에 간단하게 무엇인지만 알고 넘어가는 경우가 많다. 하지만 정확하게 알지 못하는 것으로 인해 통계분석을 진행하다가 틀린 논리를 근거로 내세우는 실수를 저지르기도 한다.&lt;br&gt;&#xA;심지어 통계학을 전공한 사람들도 중심극한정리를 제대로 이해하지 못한 경우가 많다.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;중심극한정리-central-limit-theorem&#34;&gt;&#xA;  중심극한정리 (Central Limit Theorem)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%a4%91%ec%8b%ac%ea%b7%b9%ed%95%9c%ec%a0%95%eb%a6%ac-central-limit-theorem&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;중심극한정리는 통계학에서 가장 중요하고 기본적인 정리 중 하나로, 통계학을 처음 접할 때 반드시 이해해야 하는 핵심 개념이다.&lt;/p&gt;&#xA;&lt;h3 id=&#34;역사적-배경&#34;&gt;&#xA;  역사적 배경&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%97%ad%ec%82%ac%ec%a0%81-%eb%b0%b0%ea%b2%bd&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;중심극한정리의 개념은 18세기 초 아브라함 드 무아브르(Abraham de Moivre)에 의해 처음 발견되었으며, 이후 피에르 시몬 라플라스(Pierre-Simon Laplace)와 칼 프리드리히 가우스(Carl Friedrich Gauss) 등에 의해 발전되었다. 현대적 형태의 중심극한정리는 20세기에 들어서야 완성되었으며, 통계학 역사상 가장 중요한 발견 중 하나로 평가받고 있다.&lt;/p&gt;&#xA;&lt;p&gt;중심극한정리는 겉보기에는 단순해 보이지만, 그 개념을 정확히 이해하지 않고 넘어가면 통계 분석에서 심각한 오류를 범할 수 있다. 통계학 전공자들조차 이 정리의 정확한 의미와 적용 조건을 제대로 이해하지 못하는 경우가 많아 주의가 필요하다.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

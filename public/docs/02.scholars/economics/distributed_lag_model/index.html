@@ -6,20 +6,44 @@
 <meta name="description" content="
   분산지연모델 (Distributed Lag Model)
   #
-">
+
+분산지연모델(Distributed Lag Model)은 종속변수가 독립변수의 현재값뿐만 아니라 과거값들에도 영향을 받는다고 가정하는 시계열 회귀모델이다. 경제학에서 정책이나 충격의 효과가 시간에 걸쳐 점진적으로 나타나는 현상을 모델링하는 데 널리 사용된다.
+
+  분산지연모델의 기본 개념
+  #
+
+경제 현상에서는 한 변수의 변화가 다른 변수에 즉시 영향을 미치기보다는 시간을 두고 점진적으로 영향을 미치는 경우가 많다. 예를 들어:
+
+통화정책의 효과: 금리 변화가 경제성장에 미치는 영향은 수개월에 걸쳐 나타남
+광고의 효과: 광고 지출이 매출에 미치는 영향은 여러 기간에 걸쳐 지속됨
+투자의 효과: 설비투자가 생산성에 미치는 영향은 장기간에 걸쳐 실현됨
+
+
+  분산지연모델의 수학적 표현
+  #
+
+일반적인 분산지연모델은 다음과 같이 표현된다:">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:url" content="https://intothedata.com/docs/02.scholars/economics/distributed_lag_model/">
   <meta property="og:site_name" content="인투더데이터 데이터과학">
   <meta property="og:title" content="분산지연모델">
-  <meta property="og:description" content="분산지연모델 (Distributed Lag Model) #">
+  <meta property="og:description" content="분산지연모델 (Distributed Lag Model) # 분산지연모델(Distributed Lag Model)은 종속변수가 독립변수의 현재값뿐만 아니라 과거값들에도 영향을 받는다고 가정하는 시계열 회귀모델이다. 경제학에서 정책이나 충격의 효과가 시간에 걸쳐 점진적으로 나타나는 현상을 모델링하는 데 널리 사용된다.
+분산지연모델의 기본 개념 # 경제 현상에서는 한 변수의 변화가 다른 변수에 즉시 영향을 미치기보다는 시간을 두고 점진적으로 영향을 미치는 경우가 많다. 예를 들어:
+통화정책의 효과: 금리 변화가 경제성장에 미치는 영향은 수개월에 걸쳐 나타남 광고의 효과: 광고 지출이 매출에 미치는 영향은 여러 기간에 걸쳐 지속됨 투자의 효과: 설비투자가 생산성에 미치는 영향은 장기간에 걸쳐 실현됨 분산지연모델의 수학적 표현 # 일반적인 분산지연모델은 다음과 같이 표현된다:">
   <meta property="og:locale" content="ko_KR">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
+    <meta property="article:tag" content="분산지연모델">
+    <meta property="article:tag" content="Distributed Lag Model">
+    <meta property="article:tag" content="시계열분석">
+    <meta property="article:tag" content="계량경제학">
+    <meta property="article:tag" content="지연효과">
+    <meta property="article:tag" content="동적모델">
 <title>분산지연모델 | 인투더데이터 데이터과학</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.465376614827fff60754cc9c34686b524db662a4c314668361de5db45fde6203.css" integrity="sha256-RlN2YUgn//YHVMycNGhrUk22YqTDFGaDYd5dtF/eYgM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.d9e6ba7770f5117e21758da45184f61d5669394aa618ebdfabe1d95519d50bbf.js" integrity="sha256-2ea6d3D1EX4hdY2kUYT2HVZpOUqmGOvfq&#43;HZVRnVC78=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.aeb694d06aa734b17c3853143587303c5781433c23054f5c8701cf28bac53ad1.js" integrity="sha256-rraU0GqnNLF8OFMUNYcwPFeBQzwjBU9chwHPKLrFOtE=" crossorigin="anonymous"></script>
 
 
 <!--
@@ -72,7 +96,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/00.about/" class="">인투더데이터 소개 About</a>
+    <a href="https://intothedata.com/docs/00.about/" class="">인투더데이터 소개</a>
   
 
           
@@ -134,7 +158,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/02.scholars/operational_research/" class="">경영과학 - Operational Research</a>
+    <a href="https://intothedata.com/docs/02.scholars/operational_research/" class="">경영과학</a>
   
 
           
@@ -147,7 +171,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/02.scholars/operational_research/demand_forecasting/" class="">수요예측 - Demand Forecasting</a>
+    <a href="https://intothedata.com/docs/02.scholars/operational_research/demand_forecasting/" class="">수요예측</a>
   
 
           
@@ -170,7 +194,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/02.scholars/economics/" class="">계량경제학 - Economics</a>
+    <a href="https://intothedata.com/docs/02.scholars/economics/" class="">계량경제학</a>
   
 
           
@@ -214,7 +238,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/02.scholars/data_mining/clustering/" class="">군집분석 - Clustering</a>
+    <a href="https://intothedata.com/docs/02.scholars/data_mining/clustering/" class="">군집분석</a>
   
 
           
@@ -227,11 +251,29 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/02.scholars/data_mining/clustering/k-means/" class="">K-means - K중심값</a>
+    <a href="https://intothedata.com/docs/02.scholars/data_mining/clustering/k-means/" class="">K중심값</a>
   
 
         </li>
       
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/data_mining/classification/" class="">분류 - Classification</a>
+  
+
+          
+  <ul>
     
   </ul>
 
@@ -250,7 +292,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/02.scholars/modeling/" class="">모델링 - Modeling</a>
+    <a href="https://intothedata.com/docs/02.scholars/modeling/" class="">모델링</a>
   
 
           
@@ -472,7 +514,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/02.scholars/statistics/" class="">통계학 - Statistics</a>
+    <a href="https://intothedata.com/docs/02.scholars/statistics/" class="">통계학</a>
   
 
           
@@ -485,7 +527,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/02.scholars/statistics/central_limit_theorem/" class="">중심극한정리 - CLT; Central Limit Theorem</a>
+    <a href="https://intothedata.com/docs/02.scholars/statistics/central_limit_theorem/" class="">중심극한정리</a>
   
 
         </li>
@@ -498,7 +540,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/02.scholars/statistics/descriptive_statistics/" class="">기술통계 - Descriptive statistics</a>
+    <a href="https://intothedata.com/docs/02.scholars/statistics/descriptive_statistics/" class="">기술통계학 - Descriptive Statistics</a>
   
 
         </li>
@@ -524,12 +566,23 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/02.scholars/statistics/survival_analysis/" class="">생존분석 - Survival Analysis</a>
+    <a href="https://intothedata.com/docs/02.scholars/statistics/survival_analysis/" class="">생존분석</a>
   
 
           
   <ul>
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/survival_analysis/log_rank_test/" class="">로그랭크검정</a>
+  
+
+        </li>
       
     
   </ul>
@@ -691,7 +744,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/02.scholars/pattern_recognition/" class="">패턴인식 - Pattern Recognition</a>
+    <a href="https://intothedata.com/docs/02.scholars/pattern_recognition/" class="">패턴인식</a>
   
 
           
@@ -704,7 +757,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/02.scholars/pattern_recognition/neural_network/" class="">인공신경망 - Neural Network</a>
+    <a href="https://intothedata.com/docs/02.scholars/pattern_recognition/neural_network/" class="">인공신경망</a>
   
 
           
@@ -1590,7 +1643,22 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#분산지연모델-distributed-lag-model">분산지연모델 (Distributed Lag Model)</a></li>
+    <li><a href="#분산지연모델-distributed-lag-model">분산지연모델 (Distributed Lag Model)</a>
+      <ul>
+        <li><a href="#분산지연모델의-기본-개념">분산지연모델의 기본 개념</a></li>
+        <li><a href="#분산지연모델의-수학적-표현">분산지연모델의 수학적 표현</a></li>
+        <li><a href="#지연가중치의-해석">지연가중치의 해석</a></li>
+        <li><a href="#분산지연모델의-유형">분산지연모델의 유형</a></li>
+        <li><a href="#추정상의-문제점과-해결방법">추정상의 문제점과 해결방법</a></li>
+        <li><a href="#알몬-다항식-지연모델-almon-polynomial-distributed-lag">알몬 다항식 지연모델 (Almon Polynomial Distributed Lag)</a></li>
+        <li><a href="#실증분석-예시">실증분석 예시</a></li>
+        <li><a href="#동적승수-dynamic-multipliers">동적승수 (Dynamic Multipliers)</a></li>
+        <li><a href="#모델-진단과-검정">모델 진단과 검정</a></li>
+        <li><a href="#확장모델">확장모델</a></li>
+        <li><a href="#실무-적용-시-고려사항">실무 적용 시 고려사항</a></li>
+        <li><a href="#소프트웨어-구현">소프트웨어 구현</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -1607,7 +1675,290 @@ https://github.com/alex-shpak/hugo-book
   분산지연모델 (Distributed Lag Model)
   <a class="anchor" href="#%eb%b6%84%ec%82%b0%ec%a7%80%ec%97%b0%eb%aa%a8%eb%8d%b8-distributed-lag-model">#</a>
 </h2>
-</article>
+<p>분산지연모델(Distributed Lag Model)은 종속변수가 독립변수의 현재값뿐만 아니라 과거값들에도 영향을 받는다고 가정하는 시계열 회귀모델이다. 경제학에서 정책이나 충격의 효과가 시간에 걸쳐 점진적으로 나타나는 현상을 모델링하는 데 널리 사용된다.</p>
+<h3 id="분산지연모델의-기본-개념">
+  분산지연모델의 기본 개념
+  <a class="anchor" href="#%eb%b6%84%ec%82%b0%ec%a7%80%ec%97%b0%eb%aa%a8%eb%8d%b8%ec%9d%98-%ea%b8%b0%eb%b3%b8-%ea%b0%9c%eb%85%90">#</a>
+</h3>
+<p>경제 현상에서는 한 변수의 변화가 다른 변수에 즉시 영향을 미치기보다는 시간을 두고 점진적으로 영향을 미치는 경우가 많다. 예를 들어:</p>
+<ul>
+<li><strong>통화정책의 효과</strong>: 금리 변화가 경제성장에 미치는 영향은 수개월에 걸쳐 나타남</li>
+<li><strong>광고의 효과</strong>: 광고 지출이 매출에 미치는 영향은 여러 기간에 걸쳐 지속됨</li>
+<li><strong>투자의 효과</strong>: 설비투자가 생산성에 미치는 영향은 장기간에 걸쳐 실현됨</li>
+</ul>
+<h3 id="분산지연모델의-수학적-표현">
+  분산지연모델의 수학적 표현
+  <a class="anchor" href="#%eb%b6%84%ec%82%b0%ec%a7%80%ec%97%b0%eb%aa%a8%eb%8d%b8%ec%9d%98-%ec%88%98%ed%95%99%ec%a0%81-%ed%91%9c%ed%98%84">#</a>
+</h3>
+<p>일반적인 분산지연모델은 다음과 같이 표현된다:</p>
+<p>$$Y_t = \alpha + \beta_0 X_t + \beta_1 X_{t-1} + \beta_2 X_{t-2} + \cdots + \beta_p X_{t-p} + \varepsilon_t$$</p>
+<p>여기서:</p>
+<ul>
+<li>$Y_t$: 시점 t에서의 종속변수</li>
+<li>$X_t, X_{t-1}, \ldots, X_{t-p}$: 독립변수의 현재값과 과거값들</li>
+<li>$\beta_0, \beta_1, \ldots, \beta_p$: 각 시점별 회귀계수 (지연가중치)</li>
+<li>$p$: 최대 지연기간</li>
+<li>$\varepsilon_t$: 오차항</li>
+</ul>
+<h3 id="지연가중치의-해석">
+  지연가중치의 해석
+  <a class="anchor" href="#%ec%a7%80%ec%97%b0%ea%b0%80%ec%a4%91%ec%b9%98%ec%9d%98-%ed%95%b4%ec%84%9d">#</a>
+</h3>
+<p>각 지연가중치 $\beta_i$는 다음과 같이 해석된다:</p>
+<ul>
+<li><strong>$\beta_0$</strong>: 즉시효과(Impact Effect) - $X$의 변화가 같은 기간 $Y$에 미치는 즉각적 영향</li>
+<li><strong>$\beta_i$ (i&gt;0)</strong>: 지연효과(Lag Effect) - $X$의 변화가 i기간 후 $Y$에 미치는 영향</li>
+<li><strong>$\sum_{i=0}^{p} \beta_i$</strong>: 장기승수(Long-run Multiplier) - $X$의 영구적 변화가 $Y$에 미치는 총 효과</li>
+</ul>
+<h3 id="분산지연모델의-유형">
+  분산지연모델의 유형
+  <a class="anchor" href="#%eb%b6%84%ec%82%b0%ec%a7%80%ec%97%b0%eb%aa%a8%eb%8d%b8%ec%9d%98-%ec%9c%a0%ed%98%95">#</a>
+</h3>
+<h4 id="1-유한분산지연모델-finite-distributed-lag-model">
+  1. 유한분산지연모델 (Finite Distributed Lag Model)
+  <a class="anchor" href="#1-%ec%9c%a0%ed%95%9c%eb%b6%84%ec%82%b0%ec%a7%80%ec%97%b0%eb%aa%a8%eb%8d%b8-finite-distributed-lag-model">#</a>
+</h4>
+<p>지연기간이 유한한 모델로, 실제 추정에서 가장 많이 사용된다:</p>
+<p>$$Y_t = \alpha + \sum_{i=0}^{p} \beta_i X_{t-i} + \varepsilon_t$$</p>
+<p><strong>장점</strong>: 해석이 명확하고 추정이 상대적으로 간단
+<strong>단점</strong>: 적절한 지연기간 p를 결정하기 어려움</p>
+<h4 id="2-무한분산지연모델-infinite-distributed-lag-model">
+  2. 무한분산지연모델 (Infinite Distributed Lag Model)
+  <a class="anchor" href="#2-%eb%ac%b4%ed%95%9c%eb%b6%84%ec%82%b0%ec%a7%80%ec%97%b0%eb%aa%a8%eb%8d%b8-infinite-distributed-lag-model">#</a>
+</h4>
+<p>지연기간이 무한한 모델:</p>
+<p>$$Y_t = \alpha + \sum_{i=0}^{\infty} \beta_i X_{t-i} + \varepsilon_t$$</p>
+<p><strong>특징</strong>: 이론적으로는 완전하지만 실제 추정에는 제약이 있음</p>
+<h4 id="3-기하분산지연모델-geometric-distributed-lag-model">
+  3. 기하분산지연모델 (Geometric Distributed Lag Model)
+  <a class="anchor" href="#3-%ea%b8%b0%ed%95%98%eb%b6%84%ec%82%b0%ec%a7%80%ec%97%b0%eb%aa%a8%eb%8d%b8-geometric-distributed-lag-model">#</a>
+</h4>
+<p>지연가중치가 기하급수적으로 감소하는 모델:</p>
+<p>$$\beta_i = \beta_0 \lambda^i, \quad 0 &lt; \lambda &lt; 1$$</p>
+<p>이 경우 모델은 다음과 같이 변환될 수 있다:</p>
+<p>$$Y_t = \alpha(1-\lambda) + \beta_0 X_t + \lambda Y_{t-1} + \varepsilon_t - \lambda \varepsilon_{t-1}$$</p>
+<h3 id="추정상의-문제점과-해결방법">
+  추정상의 문제점과 해결방법
+  <a class="anchor" href="#%ec%b6%94%ec%a0%95%ec%83%81%ec%9d%98-%eb%ac%b8%ec%a0%9c%ec%a0%90%ea%b3%bc-%ed%95%b4%ea%b2%b0%eb%b0%a9%eb%b2%95">#</a>
+</h3>
+<h4 id="1-다중공선성-문제">
+  1. 다중공선성 문제
+  <a class="anchor" href="#1-%eb%8b%a4%ec%a4%91%ea%b3%b5%ec%84%a0%ec%84%b1-%eb%ac%b8%ec%a0%9c">#</a>
+</h4>
+<p>지연변수들 간의 높은 상관관계로 인한 문제:</p>
+<p><strong>해결방법</strong>:</p>
+<ul>
+<li><strong>알몬 다항식 지연모델</strong>: 지연가중치를 다항식으로 제약</li>
+<li><strong>주성분 회귀</strong>: 지연변수들의 주성분을 사용</li>
+<li><strong>능형회귀</strong>: 정규화를 통한 추정</li>
+</ul>
+<h4 id="2-자유도-손실">
+  2. 자유도 손실
+  <a class="anchor" href="#2-%ec%9e%90%ec%9c%a0%eb%8f%84-%ec%86%90%ec%8b%a4">#</a>
+</h4>
+<p>많은 지연변수로 인한 자유도 감소:</p>
+<p><strong>해결방법</strong>:</p>
+<ul>
+<li><strong>정보기준</strong>: AIC, BIC를 이용한 최적 지연기간 선택</li>
+<li><strong>단계적 회귀</strong>: 유의하지 않은 지연변수 제거</li>
+</ul>
+<h4 id="3-내생성-문제">
+  3. 내생성 문제
+  <a class="anchor" href="#3-%eb%82%b4%ec%83%9d%ec%84%b1-%eb%ac%b8%ec%a0%9c">#</a>
+</h4>
+<p>$Y$의 과거값이 $X$의 현재값에 영향을 미치는 경우:</p>
+<p><strong>해결방법</strong>:</p>
+<ul>
+<li><strong>도구변수법</strong>: 외생적 도구변수 사용</li>
+<li><strong>VAR 모델</strong>: 모든 변수를 내생변수로 처리</li>
+</ul>
+<h3 id="알몬-다항식-지연모델-almon-polynomial-distributed-lag">
+  알몬 다항식 지연모델 (Almon Polynomial Distributed Lag)
+  <a class="anchor" href="#%ec%95%8c%eb%aa%ac-%eb%8b%a4%ed%95%ad%ec%8b%9d-%ec%a7%80%ec%97%b0%eb%aa%a8%eb%8d%b8-almon-polynomial-distributed-lag">#</a>
+</h3>
+<p>지연가중치를 k차 다항식으로 제약하는 방법:</p>
+<p>$$\beta_i = \sum_{j=0}^{k} \gamma_j i^j$$</p>
+<p>이를 통해 추정해야 할 모수의 수를 크게 줄일 수 있다.</p>
+<p><strong>장점</strong>: 모수 절약, 다중공선성 완화
+<strong>단점</strong>: 다항식 차수 선택의 자의성</p>
+<h3 id="실증분석-예시">
+  실증분석 예시
+  <a class="anchor" href="#%ec%8b%a4%ec%a6%9d%eb%b6%84%ec%84%9d-%ec%98%88%ec%8b%9c">#</a>
+</h3>
+<h4 id="통화정책의-효과-분석">
+  통화정책의 효과 분석
+  <a class="anchor" href="#%ed%86%b5%ed%99%94%ec%a0%95%ec%b1%85%ec%9d%98-%ed%9a%a8%ea%b3%bc-%eb%b6%84%ec%84%9d">#</a>
+</h4>
+<p>중앙은행의 기준금리 변화가 GDP 성장률에 미치는 영향:</p>
+<p>$$GDP_growth_t = \alpha + \sum_{i=0}^{8} \beta_i Interest_rate_{t-i} + \varepsilon_t$$</p>
+<p><strong>예상 결과</strong>:</p>
+<ul>
+<li>$\beta_0, \beta_1$: 작거나 양수 (즉시효과는 제한적)</li>
+<li>$\beta_2, \beta_3, \beta_4$: 음수 (2-4분기 후 본격적인 효과)</li>
+<li>$\beta_5$ 이후: 점진적으로 0에 수렴</li>
+</ul>
+<h4 id="광고효과-분석">
+  광고효과 분석
+  <a class="anchor" href="#%ea%b4%91%ea%b3%a0%ed%9a%a8%ea%b3%bc-%eb%b6%84%ec%84%9d">#</a>
+</h4>
+<p>광고비 지출이 매출에 미치는 영향:</p>
+<p>$$Sales_t = \alpha + \sum_{i=0}^{12} \beta_i Advertising_{t-i} + \varepsilon_t$$</p>
+<h3 id="동적승수-dynamic-multipliers">
+  동적승수 (Dynamic Multipliers)
+  <a class="anchor" href="#%eb%8f%99%ec%a0%81%ec%8a%b9%ec%88%98-dynamic-multipliers">#</a>
+</h3>
+<p>분산지연모델에서 중요한 개념들:</p>
+<h4 id="1-즉시승수-impact-multiplier">
+  1. 즉시승수 (Impact Multiplier)
+  <a class="anchor" href="#1-%ec%a6%89%ec%8b%9c%ec%8a%b9%ec%88%98-impact-multiplier">#</a>
+</h4>
+<p>$$\frac{\partial Y_t}{\partial X_t} = \beta_0$$</p>
+<h4 id="2-중간승수-interim-multiplier">
+  2. 중간승수 (Interim Multiplier)
+  <a class="anchor" href="#2-%ec%a4%91%ea%b0%84%ec%8a%b9%ec%88%98-interim-multiplier">#</a>
+</h4>
+<p>$$\frac{\partial Y_{t+s}}{\partial X_t} = \beta_s$$</p>
+<h4 id="3-누적승수-cumulative-multiplier">
+  3. 누적승수 (Cumulative Multiplier)
+  <a class="anchor" href="#3-%eb%88%84%ec%a0%81%ec%8a%b9%ec%88%98-cumulative-multiplier">#</a>
+</h4>
+<p>$$\sum_{i=0}^{s} \beta_i$$</p>
+<h4 id="4-장기승수-long-run-multiplier">
+  4. 장기승수 (Long-run Multiplier)
+  <a class="anchor" href="#4-%ec%9e%a5%ea%b8%b0%ec%8a%b9%ec%88%98-long-run-multiplier">#</a>
+</h4>
+<p>$$\sum_{i=0}^{\infty} \beta_i$$</p>
+<h3 id="모델-진단과-검정">
+  모델 진단과 검정
+  <a class="anchor" href="#%eb%aa%a8%eb%8d%b8-%ec%a7%84%eb%8b%a8%ea%b3%bc-%ea%b2%80%ec%a0%95">#</a>
+</h3>
+<h4 id="1-지연기간-선택">
+  1. 지연기간 선택
+  <a class="anchor" href="#1-%ec%a7%80%ec%97%b0%ea%b8%b0%ea%b0%84-%ec%84%a0%ed%83%9d">#</a>
+</h4>
+<ul>
+<li><strong>정보기준</strong>: AIC, BIC, HQ 기준</li>
+<li><strong>F-검정</strong>: 추가 지연변수의 유의성 검정</li>
+<li><strong>잔차분석</strong>: 자기상관 검정</li>
+</ul>
+<h4 id="2-모델-적합도">
+  2. 모델 적합도
+  <a class="anchor" href="#2-%eb%aa%a8%eb%8d%b8-%ec%a0%81%ed%95%a9%eb%8f%84">#</a>
+</h4>
+<ul>
+<li><strong>결정계수</strong>: $R^2$, 수정된 $R^2$</li>
+<li><strong>잔차진단</strong>: 정규성, 등분산성, 독립성 검정</li>
+<li><strong>구조변화 검정</strong>: Chow 검정, CUSUM 검정</li>
+</ul>
+<h3 id="확장모델">
+  확장모델
+  <a class="anchor" href="#%ed%99%95%ec%9e%a5%eb%aa%a8%eb%8d%b8">#</a>
+</h3>
+<h4 id="1-자기회귀분산지연모델-ardl">
+  1. 자기회귀분산지연모델 (ARDL)
+  <a class="anchor" href="#1-%ec%9e%90%ea%b8%b0%ed%9a%8c%ea%b7%80%eb%b6%84%ec%82%b0%ec%a7%80%ec%97%b0%eb%aa%a8%eb%8d%b8-ardl">#</a>
+</h4>
+<p>종속변수의 지연값도 포함하는 모델:</p>
+<p>$$Y_t = \alpha + \sum_{i=1}^{p} \phi_i Y_{t-i} + \sum_{j=0}^{q} \beta_j X_{t-j} + \varepsilon_t$$</p>
+<h4 id="2-벡터자기회귀모델-var">
+  2. 벡터자기회귀모델 (VAR)
+  <a class="anchor" href="#2-%eb%b2%a1%ed%84%b0%ec%9e%90%ea%b8%b0%ed%9a%8c%ea%b7%80%eb%aa%a8%eb%8d%b8-var">#</a>
+</h4>
+<p>여러 변수를 모두 내생변수로 처리:</p>
+<p>$$\mathbf{Y}_t = \mathbf{A}<em>0 + \sum</em>{i=1}^{p} \mathbf{A}<em>i \mathbf{Y}</em>{t-i} + \mathbf{u}_t$$</p>
+<h3 id="실무-적용-시-고려사항">
+  실무 적용 시 고려사항
+  <a class="anchor" href="#%ec%8b%a4%eb%ac%b4-%ec%a0%81%ec%9a%a9-%ec%8b%9c-%ea%b3%a0%eb%a0%a4%ec%82%ac%ed%95%ad">#</a>
+</h3>
+<h4 id="1-데이터-특성">
+  1. 데이터 특성
+  <a class="anchor" href="#1-%eb%8d%b0%ec%9d%b4%ed%84%b0-%ed%8a%b9%ec%84%b1">#</a>
+</h4>
+<ul>
+<li><strong>표본 크기</strong>: 충분한 관측치 확보</li>
+<li><strong>데이터 빈도</strong>: 월별, 분기별, 연별 데이터의 특성 고려</li>
+<li><strong>계절성</strong>: 계절조정 여부 결정</li>
+</ul>
+<h4 id="2-경제적-해석">
+  2. 경제적 해석
+  <a class="anchor" href="#2-%ea%b2%bd%ec%a0%9c%ec%a0%81-%ed%95%b4%ec%84%9d">#</a>
+</h4>
+<ul>
+<li><strong>이론적 근거</strong>: 경제학적 논리와 일치하는지 확인</li>
+<li><strong>정책적 함의</strong>: 정책 수립에 활용 가능한 시사점 도출</li>
+<li><strong>예측 정확도</strong>: 모델의 예측 성능 평가</li>
+</ul>
+<h3 id="소프트웨어-구현">
+  소프트웨어 구현
+  <a class="anchor" href="#%ec%86%8c%ed%94%84%ed%8a%b8%ec%9b%a8%ec%96%b4-%ea%b5%ac%ed%98%84">#</a>
+</h3>
+<p>주요 통계 소프트웨어에서의 분산지연모델 추정:</p>
+<h4 id="r">
+  R
+  <a class="anchor" href="#r">#</a>
+</h4>
+<p>분산지연모형은 R의 <code>dynlm</code> 패키지 또는 <code>lm</code> 함수와 <code>lag()</code> 함수를 활용하여 쉽게 추정할 수 있습니다. 예를 들어, $Y_t$에 대한 $X_t$, $X_{t-1}$, $X_{t-2}$의 분산지연모형을 추정하는 기본 코드는 다음과 같습니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#75715e"># X_t, X_{t-1}, X_{t-2}의 분산지연모형 추정 예시</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(dynlm)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 예시 데이터 생성</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">set.seed</span>(<span style="color:#ae81ff">123</span>)
+</span></span><span style="display:flex;"><span>n <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>X <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rnorm</span>(n)
+</span></span><span style="display:flex;"><span>Y <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">0.5</span><span style="color:#f92672">*</span>X <span style="color:#f92672">+</span> <span style="color:#ae81ff">0.3</span><span style="color:#f92672">*</span>dplyr<span style="color:#f92672">::</span><span style="color:#a6e22e">lag</span>(X, <span style="color:#ae81ff">1</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">0.2</span><span style="color:#f92672">*</span>dplyr<span style="color:#f92672">::</span><span style="color:#a6e22e">lag</span>(X, <span style="color:#ae81ff">2</span>) <span style="color:#f92672">+</span> <span style="color:#a6e22e">rnorm</span>(n)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 시계열 객체로 변환</span>
+</span></span><span style="display:flex;"><span>X_ts <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">ts</span>(X)
+</span></span><span style="display:flex;"><span>Y_ts <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">ts</span>(Y)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 분산지연모형 적합</span>
+</span></span><span style="display:flex;"><span>model <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">dynlm</span>(Y_ts <span style="color:#f92672">~</span> <span style="color:#a6e22e">L</span>(X_ts, <span style="color:#ae81ff">0</span><span style="color:#f92672">:</span><span style="color:#ae81ff">2</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 결과 출력</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">summary</span>(model)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 계수, 유의성, 결정계수 등 확인 가능</span>
+</span></span></code></pre></div><h4 id="python">
+  Python
+  <a class="anchor" href="#python">#</a>
+</h4>
+<p>분산지연모형은 Python의 <code>statsmodels</code> 패키지의 <code>OLS</code>(또는 <code>AutoReg</code>, <code>ARDL</code> 등)로 구현할 수 있습니다. 예를 들어, $Y_t$에 대한 $X_t$, $X_{t-1}$, $X_{t-2}$의 분산지연모형을 추정하려면 다음과 같이 코드를 작성할 수 있습니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> statsmodels.api <span style="color:#66d9ef">as</span> sm
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 예시 데이터 생성</span>
+</span></span><span style="display:flex;"><span>np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>seed(<span style="color:#ae81ff">123</span>)
+</span></span><span style="display:flex;"><span>n <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>X <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randn(n)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># X의 시차 1, 2 생성 (맨 앞은 NaN)</span>
+</span></span><span style="display:flex;"><span>X_lag1 <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>Series(X)<span style="color:#f92672">.</span>shift(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>X_lag2 <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>Series(X)<span style="color:#f92672">.</span>shift(<span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Y 생성: Y_t = 1 + 0.5*X_t + 0.3*X_{t-1} + 0.2*X_{t-2} + 오차</span>
+</span></span><span style="display:flex;"><span>Y <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">0.5</span><span style="color:#f92672">*</span>X <span style="color:#f92672">+</span> <span style="color:#ae81ff">0.3</span><span style="color:#f92672">*</span>X_lag1 <span style="color:#f92672">+</span> <span style="color:#ae81ff">0.2</span><span style="color:#f92672">*</span>X_lag2 <span style="color:#f92672">+</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>randn(n)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 데이터프레임으로 정리</span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Y&#39;</span>: Y,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;X&#39;</span>: X,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;X_lag1&#39;</span>: X_lag1,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;X_lag2&#39;</span>: X_lag2
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 결측치(시차로 인해 앞부분에 생김) 제거</span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>dropna()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 독립변수와 종속변수 지정</span>
+</span></span><span style="display:flex;"><span>X_reg <span style="color:#f92672">=</span> df[[<span style="color:#e6db74">&#39;X&#39;</span>, <span style="color:#e6db74">&#39;X_lag1&#39;</span>, <span style="color:#e6db74">&#39;X_lag2&#39;</span>]]
+</span></span><span style="display:flex;"><span>X_reg <span style="color:#f92672">=</span> sm<span style="color:#f92672">.</span>add_constant(X_reg)  <span style="color:#75715e"># 상수항 추가</span>
+</span></span><span style="display:flex;"><span>y_reg <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;Y&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># OLS(최소제곱법)로 분산지연모형 적합</span>
+</span></span><span style="display:flex;"><span>model <span style="color:#f92672">=</span> sm<span style="color:#f92672">.</span>OLS(y_reg, X_reg)<span style="color:#f92672">.</span>fit()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 결과 출력</span>
+</span></span><span style="display:flex;"><span>print(model<span style="color:#f92672">.</span>summary())
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 계수, 유의성, 결정계수 등 확인 가능</span>
+</span></span></code></pre></div></article>
  
       
 
@@ -1679,7 +2030,22 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#분산지연모델-distributed-lag-model">분산지연모델 (Distributed Lag Model)</a></li>
+    <li><a href="#분산지연모델-distributed-lag-model">분산지연모델 (Distributed Lag Model)</a>
+      <ul>
+        <li><a href="#분산지연모델의-기본-개념">분산지연모델의 기본 개념</a></li>
+        <li><a href="#분산지연모델의-수학적-표현">분산지연모델의 수학적 표현</a></li>
+        <li><a href="#지연가중치의-해석">지연가중치의 해석</a></li>
+        <li><a href="#분산지연모델의-유형">분산지연모델의 유형</a></li>
+        <li><a href="#추정상의-문제점과-해결방법">추정상의 문제점과 해결방법</a></li>
+        <li><a href="#알몬-다항식-지연모델-almon-polynomial-distributed-lag">알몬 다항식 지연모델 (Almon Polynomial Distributed Lag)</a></li>
+        <li><a href="#실증분석-예시">실증분석 예시</a></li>
+        <li><a href="#동적승수-dynamic-multipliers">동적승수 (Dynamic Multipliers)</a></li>
+        <li><a href="#모델-진단과-검정">모델 진단과 검정</a></li>
+        <li><a href="#확장모델">확장모델</a></li>
+        <li><a href="#실무-적용-시-고려사항">실무 적용 시 고려사항</a></li>
+        <li><a href="#소프트웨어-구현">소프트웨어 구현</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 

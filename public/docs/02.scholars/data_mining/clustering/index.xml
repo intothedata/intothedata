@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>군집분석 - Clustering on 인투더데이터 데이터과학</title>
+    <title>군집분석 on 인투더데이터 데이터과학</title>
     <link>https://intothedata.com/docs/02.scholars/data_mining/clustering/</link>
-    <description>Recent content in 군집분석 - Clustering on 인투더데이터 데이터과학</description>
+    <description>Recent content in 군집분석 on 인투더데이터 데이터과학</description>
     <generator>Hugo</generator>
     <language>ko-KR</language>
     <atom:link href="https://intothedata.com/docs/02.scholars/data_mining/clustering/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>K-means - K중심값</title>
+      <title>K중심값</title>
       <link>https://intothedata.com/docs/02.scholars/data_mining/clustering/k-means/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://intothedata.com/docs/02.scholars/data_mining/clustering/k-means/</guid>
-      <description>&lt;h2 id=&#34;정의&#34;&gt;&#xA;  정의&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%a0%95%ec%9d%98&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;K-means는 한국어로 &lt;strong&gt;K중심값&lt;/strong&gt;으로 번역을 하곤한다.  K-means에서 mean이 평균 즉, 중심값을 뜻하기 때문이다.&#xA;평균이 항상 중심값을 뜻하는 것은 아니므로 유의한다. K-means에서 &amp;ldquo;mean&amp;quot;이 뜻하는 것은 더 엄밀히 말하면 중심값이라기 보다는 대푯값을 말하는 것이다. 하지만 대부분 중심값을 대푯값으로 사용하는 경우가 때문에 크게 이상한 것은 아니다.&lt;/p&gt;&#xA;&lt;p&gt;현업에서는 &amp;ldquo;케이민즈&amp;quot;로 원어를 그대로 발음하는 것이 통상적이다.  이 글에서는 현실과의 차이를 만들지 않기 위해서 앞으로 계속 K-means라고 표기한다.&lt;/p&gt;&#xA;&lt;p&gt;K-means의 말을 분리해서 해석하면 다음과 같다.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;K: 분할할 군집의 갯수. 사용하는 사람이 정해줘야 하는 값&lt;/li&gt;&#xA;&lt;li&gt;means: 찾고 싶은 중심값들&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;위에서 말한 것 처럼 K-means에서 K는 사람이 입력을 해주어야 하며 알고리즘에서 자동으로 정해주지 않는다.&lt;br&gt;&#xA;다만 적당히 반복 수행을 통해서 적절한 값을 찾는 방법들이 있긴하지만 활용을 위한 편법일 뿐이며 이 값은 결국 사람이 풀려는 문제와 문제를 풀기 위한 접근 방법에 따라 결정을 해줘야 한다.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;k중심값-k-means&#34;&gt;&#xA;  K중심값 (K-means)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#k%ec%a4%91%ec%8b%ac%ea%b0%92-k-means&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;K-means는 데이터마이닝과 기계학습에서 가장 널리 사용되는 클러스터링(군집화) 알고리즘 중 하나입니다. 영어 원어인 &amp;ldquo;K-means&amp;quot;는 한국어로 &lt;strong&gt;K중심값&lt;/strong&gt; 또는 &lt;strong&gt;K평균&lt;/strong&gt; 등으로 번역되기도 하지만, 현업에서는 주로 &amp;ldquo;케이민즈&amp;quot;라고 원어 그대로 부르는 경우가 많습니다. 본 문서에서도 혼동을 피하기 위해 K-means로 표기합니다.&lt;/p&gt;&#xA;&lt;p&gt;여기서 &amp;ldquo;K&amp;quot;는 사용자가 미리 정하는 군집(클러스터)의 개수를 의미하며, &amp;ldquo;means&amp;quot;는 각 군집의 중심값(평균값, 대푯값)을 의미합니다. 다만, K-means에서의 &amp;ldquo;mean&amp;quot;은 통계적 의미의 평균이라기보다는, 각 군집을 대표하는 중심점(centroid)이라는 개념에 더 가깝습니다.&lt;/p&gt;&#xA;&lt;p&gt;K-means의 핵심은 데이터를 K개의 그룹으로 나누되, 각 그룹 내의 데이터들이 서로 최대한 비슷하도록(즉, 중심점과의 거리가 최소가 되도록) 군집을 형성하는 것입니다. 이 알고리즘은 간단하면서도 효과적이어서, 고객 세분화, 이미지 분할, 이상치 탐지 등 다양한 분야에서 널리 활용됩니다.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

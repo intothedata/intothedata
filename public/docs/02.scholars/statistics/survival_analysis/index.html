@@ -4,24 +4,34 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="
+  생존분석 (Survival Analysis)
+  #
+
+
   개요
   #
 
-의료, 바이오쪽에서 주로 다루는 통계 분석의 갈래. 주로 실험 계획 및 A/B test등과 같이 소수의 두 샘플군의 유의미한 차이를 분석하고 약품이나 시약, 치료법등이 효과가 있는지는 판별하는데 사용된다. 적은 수의 개체를 가진 샘플을 다루는데 특화되고 발달되어 있으며 상당히 많이 사용되고 효과적인 분석 방법이다.
-생존분석이라는 이름 그대로 의사들이나 의약품 개발에서 많이 사용한다고 생각하면 된다.">
+생존분석(Survival Analysis)은 특정 사건이 발생할 때까지의 시간을 분석하는 통계학 분야이다. 영어로는 Survival Analysis라고 하며, 생존시간분석(Survival Time Analysis) 또는 사건시간분석(Event Time Analysis)이라고도 불린다.
+생존분석은 원래 의학 분야에서 환자의 생존 시간을 분석하기 위해 개발되었지만, 현재는 다양한 분야에서 활용되고 있다. &ldquo;생존&quot;이라는 용어가 사용되지만 반드시 생사와 관련된 분석만을 의미하지는 않으며, 관심 있는 사건이 발생할 때까지의 시간을 분석하는 모든 상황에 적용할 수 있다.
+
+  생존분석의 특징
+  #
+
+생존분석이 일반적인 통계 분석과 구별되는 주요 특징은 다음과 같다:">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:url" content="https://intothedata.com/docs/02.scholars/statistics/survival_analysis/">
   <meta property="og:site_name" content="인투더데이터 데이터과학">
-  <meta property="og:title" content="생존분석 - Survival Analysis">
-  <meta property="og:description" content="개요 # 의료, 바이오쪽에서 주로 다루는 통계 분석의 갈래. 주로 실험 계획 및 A/B test등과 같이 소수의 두 샘플군의 유의미한 차이를 분석하고 약품이나 시약, 치료법등이 효과가 있는지는 판별하는데 사용된다. 적은 수의 개체를 가진 샘플을 다루는데 특화되고 발달되어 있으며 상당히 많이 사용되고 효과적인 분석 방법이다.
-생존분석이라는 이름 그대로 의사들이나 의약품 개발에서 많이 사용한다고 생각하면 된다.">
+  <meta property="og:title" content="생존분석">
+  <meta property="og:description" content="생존분석 (Survival Analysis) # 개요 # 생존분석(Survival Analysis)은 특정 사건이 발생할 때까지의 시간을 분석하는 통계학 분야이다. 영어로는 Survival Analysis라고 하며, 생존시간분석(Survival Time Analysis) 또는 사건시간분석(Event Time Analysis)이라고도 불린다.
+생존분석은 원래 의학 분야에서 환자의 생존 시간을 분석하기 위해 개발되었지만, 현재는 다양한 분야에서 활용되고 있다. “생존&#34;이라는 용어가 사용되지만 반드시 생사와 관련된 분석만을 의미하지는 않으며, 관심 있는 사건이 발생할 때까지의 시간을 분석하는 모든 상황에 적용할 수 있다.
+생존분석의 특징 # 생존분석이 일반적인 통계 분석과 구별되는 주요 특징은 다음과 같다:">
   <meta property="og:locale" content="ko_KR">
   <meta property="og:type" content="website">
-<title>생존분석 - Survival Analysis | 인투더데이터 데이터과학</title>
+<title>생존분석 | 인투더데이터 데이터과학</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.465376614827fff60754cc9c34686b524db662a4c314668361de5db45fde6203.css" integrity="sha256-RlN2YUgn//YHVMycNGhrUk22YqTDFGaDYd5dtF/eYgM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.d9e6ba7770f5117e21758da45184f61d5669394aa618ebdfabe1d95519d50bbf.js" integrity="sha256-2ea6d3D1EX4hdY2kUYT2HVZpOUqmGOvfq&#43;HZVRnVC78=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.aeb694d06aa734b17c3853143587303c5781433c23054f5c8701cf28bac53ad1.js" integrity="sha256-rraU0GqnNLF8OFMUNYcwPFeBQzwjBU9chwHPKLrFOtE=" crossorigin="anonymous"></script>
 
 
 <link rel="alternate" type="application/rss+xml" href="https://intothedata.com/docs/02.scholars/statistics/survival_analysis/index.xml" title="인투더데이터 데이터과학" />
@@ -75,7 +85,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/00.about/" class="">인투더데이터 소개 About</a>
+    <a href="https://intothedata.com/docs/00.about/" class="">인투더데이터 소개</a>
   
 
           
@@ -137,7 +147,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/02.scholars/operational_research/" class="">경영과학 - Operational Research</a>
+    <a href="https://intothedata.com/docs/02.scholars/operational_research/" class="">경영과학</a>
   
 
           
@@ -150,7 +160,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/02.scholars/operational_research/demand_forecasting/" class="">수요예측 - Demand Forecasting</a>
+    <a href="https://intothedata.com/docs/02.scholars/operational_research/demand_forecasting/" class="">수요예측</a>
   
 
           
@@ -173,7 +183,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/02.scholars/economics/" class="">계량경제학 - Economics</a>
+    <a href="https://intothedata.com/docs/02.scholars/economics/" class="">계량경제학</a>
   
 
           
@@ -217,7 +227,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/02.scholars/data_mining/clustering/" class="">군집분석 - Clustering</a>
+    <a href="https://intothedata.com/docs/02.scholars/data_mining/clustering/" class="">군집분석</a>
   
 
           
@@ -230,11 +240,29 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/02.scholars/data_mining/clustering/k-means/" class="">K-means - K중심값</a>
+    <a href="https://intothedata.com/docs/02.scholars/data_mining/clustering/k-means/" class="">K중심값</a>
   
 
         </li>
       
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/data_mining/classification/" class="">분류 - Classification</a>
+  
+
+          
+  <ul>
     
   </ul>
 
@@ -253,7 +281,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/02.scholars/modeling/" class="">모델링 - Modeling</a>
+    <a href="https://intothedata.com/docs/02.scholars/modeling/" class="">모델링</a>
   
 
           
@@ -475,7 +503,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/02.scholars/statistics/" class="">통계학 - Statistics</a>
+    <a href="https://intothedata.com/docs/02.scholars/statistics/" class="">통계학</a>
   
 
           
@@ -488,7 +516,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/02.scholars/statistics/central_limit_theorem/" class="">중심극한정리 - CLT; Central Limit Theorem</a>
+    <a href="https://intothedata.com/docs/02.scholars/statistics/central_limit_theorem/" class="">중심극한정리</a>
   
 
         </li>
@@ -501,7 +529,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/02.scholars/statistics/descriptive_statistics/" class="">기술통계 - Descriptive statistics</a>
+    <a href="https://intothedata.com/docs/02.scholars/statistics/descriptive_statistics/" class="">기술통계학 - Descriptive Statistics</a>
   
 
         </li>
@@ -527,12 +555,23 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/02.scholars/statistics/survival_analysis/" class=" active">생존분석 - Survival Analysis</a>
+    <a href="https://intothedata.com/docs/02.scholars/statistics/survival_analysis/" class=" active">생존분석</a>
   
 
           
   <ul>
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/survival_analysis/log_rank_test/" class="">로그랭크검정</a>
+  
+
+        </li>
       
     
   </ul>
@@ -694,7 +733,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/02.scholars/pattern_recognition/" class="">패턴인식 - Pattern Recognition</a>
+    <a href="https://intothedata.com/docs/02.scholars/pattern_recognition/" class="">패턴인식</a>
   
 
           
@@ -707,7 +746,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/02.scholars/pattern_recognition/neural_network/" class="">인공신경망 - Neural Network</a>
+    <a href="https://intothedata.com/docs/02.scholars/pattern_recognition/neural_network/" class="">인공신경망</a>
   
 
           
@@ -1577,7 +1616,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>생존분석 - Survival Analysis</strong>
+  <strong>생존분석</strong>
 
   <label for="toc-control">
     
@@ -1593,7 +1632,16 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#개요">개요</a></li>
+    <li><a href="#생존분석-survival-analysis">생존분석 (Survival Analysis)</a>
+      <ul>
+        <li><a href="#개요">개요</a></li>
+        <li><a href="#생존분석의-특징">생존분석의 특징</a></li>
+        <li><a href="#주요-개념">주요 개념</a></li>
+        <li><a href="#주요-분석-방법">주요 분석 방법</a></li>
+        <li><a href="#응용-분야">응용 분야</a></li>
+        <li><a href="#생존분석의-장점">생존분석의 장점</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -1606,12 +1654,159 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h2 id="개요">
+  <article class="markdown"><h2 id="생존분석-survival-analysis">
+  생존분석 (Survival Analysis)
+  <a class="anchor" href="#%ec%83%9d%ec%a1%b4%eb%b6%84%ec%84%9d-survival-analysis">#</a>
+</h2>
+<h3 id="개요">
   개요
   <a class="anchor" href="#%ea%b0%9c%ec%9a%94">#</a>
-</h2>
-<p>의료, 바이오쪽에서 주로 다루는 통계 분석의 갈래. 주로 실험 계획 및 A/B test등과 같이 소수의 두 샘플군의 유의미한 차이를 분석하고 약품이나 시약, 치료법등이 효과가 있는지는 판별하는데 사용된다. 적은 수의 개체를 가진 샘플을 다루는데 특화되고 발달되어 있으며 상당히 많이 사용되고 효과적인 분석 방법이다.</p>
-<p>생존분석이라는 이름 그대로 의사들이나 의약품 개발에서 많이 사용한다고 생각하면 된다.</p>
+</h3>
+<p>생존분석(Survival Analysis)은 특정 사건이 발생할 때까지의 시간을 분석하는 통계학 분야이다. 영어로는 <strong>Survival Analysis</strong>라고 하며, 생존시간분석(Survival Time Analysis) 또는 사건시간분석(Event Time Analysis)이라고도 불린다.</p>
+<p>생존분석은 원래 의학 분야에서 환자의 생존 시간을 분석하기 위해 개발되었지만, 현재는 다양한 분야에서 활용되고 있다. &ldquo;생존&quot;이라는 용어가 사용되지만 반드시 생사와 관련된 분석만을 의미하지는 않으며, 관심 있는 사건이 발생할 때까지의 시간을 분석하는 모든 상황에 적용할 수 있다.</p>
+<h3 id="생존분석의-특징">
+  생존분석의 특징
+  <a class="anchor" href="#%ec%83%9d%ec%a1%b4%eb%b6%84%ec%84%9d%ec%9d%98-%ed%8a%b9%ec%a7%95">#</a>
+</h3>
+<p>생존분석이 일반적인 통계 분석과 구별되는 주요 특징은 다음과 같다:</p>
+<h4 id="1-시간-사건-데이터-time-to-event-data">
+  1. 시간-사건 데이터 (Time-to-Event Data)
+  <a class="anchor" href="#1-%ec%8b%9c%ea%b0%84-%ec%82%ac%ea%b1%b4-%eb%8d%b0%ec%9d%b4%ed%84%b0-time-to-event-data">#</a>
+</h4>
+<ul>
+<li>관찰 시작점부터 특정 사건 발생까지의 시간을 분석</li>
+<li>시간은 연속형 변수이며 항상 양수값을 가짐</li>
+<li>사건 발생 여부와 발생 시점을 동시에 고려</li>
+</ul>
+<h4 id="2-검열-데이터-censored-data">
+  2. 검열 데이터 (Censored Data)
+  <a class="anchor" href="#2-%ea%b2%80%ec%97%b4-%eb%8d%b0%ec%9d%b4%ed%84%b0-censored-data">#</a>
+</h4>
+<p>생존분석의 가장 중요한 특징으로, 다음과 같은 상황에서 발생한다:</p>
+<ul>
+<li><strong>우측 검열</strong>: 연구 종료 시점까지 사건이 발생하지 않은 경우</li>
+<li><strong>좌측 검열</strong>: 연구 시작 전에 이미 사건이 발생한 경우</li>
+<li><strong>구간 검열</strong>: 사건 발생 시점을 정확히 알 수 없고 특정 구간 내에서만 알 수 있는 경우</li>
+</ul>
+<h4 id="3-비모수적-접근">
+  3. 비모수적 접근
+  <a class="anchor" href="#3-%eb%b9%84%eb%aa%a8%ec%88%98%ec%a0%81-%ec%a0%91%ea%b7%bc">#</a>
+</h4>
+<ul>
+<li>생존시간의 분포에 대한 가정 없이 분석 가능</li>
+<li>카플란-마이어 추정법 등을 통한 생존함수 추정</li>
+</ul>
+<h3 id="주요-개념">
+  주요 개념
+  <a class="anchor" href="#%ec%a3%bc%ec%9a%94-%ea%b0%9c%eb%85%90">#</a>
+</h3>
+<h4 id="생존함수-survival-function">
+  생존함수 (Survival Function)
+  <a class="anchor" href="#%ec%83%9d%ec%a1%b4%ed%95%a8%ec%88%98-survival-function">#</a>
+</h4>
+<p>시간 t까지 사건이 발생하지 않을 확률을 나타내는 함수</p>
+<ul>
+<li>S(t) = P(T &gt; t)</li>
+<li>시간이 증가함에 따라 단조감소하는 특성</li>
+</ul>
+<h4 id="위험함수-hazard-function">
+  위험함수 (Hazard Function)
+  <a class="anchor" href="#%ec%9c%84%ed%97%98%ed%95%a8%ec%88%98-hazard-function">#</a>
+</h4>
+<p>시간 t에서 사건이 발생할 순간적 위험률</p>
+<ul>
+<li>λ(t) = lim(Δt→0) P(t ≤ T &lt; t+Δt | T ≥ t) / Δt</li>
+<li>생존분석에서 가장 중요한 개념 중 하나</li>
+</ul>
+<h4 id="누적위험함수-cumulative-hazard-function">
+  누적위험함수 (Cumulative Hazard Function)
+  <a class="anchor" href="#%eb%88%84%ec%a0%81%ec%9c%84%ed%97%98%ed%95%a8%ec%88%98-cumulative-hazard-function">#</a>
+</h4>
+<p>시간 0부터 t까지의 위험함수의 누적값</p>
+<h3 id="주요-분석-방법">
+  주요 분석 방법
+  <a class="anchor" href="#%ec%a3%bc%ec%9a%94-%eb%b6%84%ec%84%9d-%eb%b0%a9%eb%b2%95">#</a>
+</h3>
+<h4 id="1-카플란-마이어-추정법-kaplan-meier-estimator">
+  1. 카플란-마이어 추정법 (Kaplan-Meier Estimator)
+  <a class="anchor" href="#1-%ec%b9%b4%ed%94%8c%eb%9e%80-%eb%a7%88%ec%9d%b4%ec%96%b4-%ec%b6%94%ec%a0%95%eb%b2%95-kaplan-meier-estimator">#</a>
+</h4>
+<ul>
+<li>비모수적 생존함수 추정 방법</li>
+<li>검열 데이터가 있는 상황에서 생존확률 계산</li>
+<li>생존곡선(Survival Curve) 작성에 사용</li>
+</ul>
+<h4 id="2-로그순위-검정-log-rank-test">
+  2. 로그순위 검정 (Log-rank Test)
+  <a class="anchor" href="#2-%eb%a1%9c%ea%b7%b8%ec%88%9c%ec%9c%84-%ea%b2%80%ec%a0%95-log-rank-test">#</a>
+</h4>
+<ul>
+<li>두 개 이상의 그룹 간 생존시간 분포 비교</li>
+<li>비모수적 검정 방법</li>
+<li>전체 관찰 기간에 걸친 생존함수의 차이 검정</li>
+</ul>
+<h4 id="3-콕스-비례위험모형-cox-proportional-hazards-model">
+  3. 콕스 비례위험모형 (Cox Proportional Hazards Model)
+  <a class="anchor" href="#3-%ec%bd%95%ec%8a%a4-%eb%b9%84%eb%a1%80%ec%9c%84%ed%97%98%eb%aa%a8%ed%98%95-cox-proportional-hazards-model">#</a>
+</h4>
+<ul>
+<li>반모수적 회귀 분석 방법</li>
+<li>공변량이 위험함수에 미치는 영향 분석</li>
+<li>위험비(Hazard Ratio) 계산을 통한 효과 크기 측정</li>
+</ul>
+<h3 id="응용-분야">
+  응용 분야
+  <a class="anchor" href="#%ec%9d%91%ec%9a%a9-%eb%b6%84%ec%95%bc">#</a>
+</h3>
+<p>생존분석은 의료 분야를 넘어 다양한 영역에서 활용된다:</p>
+<h4 id="의학-및-보건학">
+  의학 및 보건학
+  <a class="anchor" href="#%ec%9d%98%ed%95%99-%eb%b0%8f-%eb%b3%b4%ea%b1%b4%ed%95%99">#</a>
+</h4>
+<ul>
+<li>치료법의 효과 평가</li>
+<li>약물의 안전성 및 유효성 분석</li>
+<li>질병의 예후 예측</li>
+<li>임상시험 설계 및 분석</li>
+</ul>
+<h4 id="공학-및-신뢰성-분석">
+  공학 및 신뢰성 분석
+  <a class="anchor" href="#%ea%b3%b5%ed%95%99-%eb%b0%8f-%ec%8b%a0%eb%a2%b0%ec%84%b1-%eb%b6%84%ec%84%9d">#</a>
+</h4>
+<ul>
+<li>제품의 수명 분석</li>
+<li>기계 부품의 고장 시간 예측</li>
+<li>품질 관리 및 유지보수 계획</li>
+</ul>
+<h4 id="경제학-및-사회과학">
+  경제학 및 사회과학
+  <a class="anchor" href="#%ea%b2%bd%ec%a0%9c%ed%95%99-%eb%b0%8f-%ec%82%ac%ed%9a%8c%ea%b3%bc%ed%95%99">#</a>
+</h4>
+<ul>
+<li>실업 기간 분석</li>
+<li>고객 이탈 분석 (Customer Churn)</li>
+<li>마케팅 캠페인 효과 측정</li>
+</ul>
+<h4 id="기타-분야">
+  기타 분야
+  <a class="anchor" href="#%ea%b8%b0%ed%83%80-%eb%b6%84%ec%95%bc">#</a>
+</h4>
+<ul>
+<li>범죄 재범률 분석</li>
+<li>교육 프로그램 효과 평가</li>
+<li>환경 연구에서의 오염물질 영향 분석</li>
+</ul>
+<h3 id="생존분석의-장점">
+  생존분석의 장점
+  <a class="anchor" href="#%ec%83%9d%ec%a1%b4%eb%b6%84%ec%84%9d%ec%9d%98-%ec%9e%a5%ec%a0%90">#</a>
+</h3>
+<ul>
+<li><strong>검열 데이터 처리</strong>: 불완전한 관찰 데이터를 효과적으로 활용</li>
+<li><strong>시간 정보 활용</strong>: 사건 발생 여부뿐만 아니라 발생 시점까지 고려</li>
+<li><strong>유연한 모델링</strong>: 모수적, 비모수적, 반모수적 접근 모두 가능</li>
+<li><strong>실용적 해석</strong>: 생존확률, 위험비 등 직관적으로 이해하기 쉬운 결과 제공</li>
+</ul>
+<p>생존분석은 시간과 사건이라는 두 가지 차원을 동시에 고려하는 강력한 통계 분석 도구로, 현대 데이터 과학에서 중요한 위치를 차지하고 있다.</p>
 </article>
  
       
@@ -1684,7 +1879,16 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#개요">개요</a></li>
+    <li><a href="#생존분석-survival-analysis">생존분석 (Survival Analysis)</a>
+      <ul>
+        <li><a href="#개요">개요</a></li>
+        <li><a href="#생존분석의-특징">생존분석의 특징</a></li>
+        <li><a href="#주요-개념">주요 개념</a></li>
+        <li><a href="#주요-분석-방법">주요 분석 방법</a></li>
+        <li><a href="#응용-분야">응용 분야</a></li>
+        <li><a href="#생존분석의-장점">생존분석의 장점</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 

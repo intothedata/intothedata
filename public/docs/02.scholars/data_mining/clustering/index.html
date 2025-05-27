@@ -4,29 +4,24 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="
-  군집분석 - clustering
+  군집분석(Clustering)이란?
   #
 
-군집분석, 군집화, 클러스터링(Clustering)은 모두 같은 뜻이라고 봐도 무방하다.
-통계학에서는 군집분석이라고 부르며 기계학습에서는 클러스터링이라고 부른다. 그리고 클러스터링을 한국어로 바꾸면 군집화가 된다.  클러스터링은 패턴인식에서는 양자화(Quantization) 또는 코딩(Coding)이라고 부르기도 한다.  설명이 매우 길어지므로 여기서는 자세한 얘기는 생략한다.
-클러스터링은 하면 여러 개체를 묶는 것을 말한다. 어떤 방법을 사용해서든 주어진 개체들을 여러 개의 그룹으로 묶으면 그것을 클러스터링이라고 부를 수 있다.
-보통 컴퓨터공학(computer science)에서의 클러스터링은 여러 서버나 플랫폼을 하나로 묶어 선형확장성 같은 것을 보장하고 대규모 트래픽을 처리하거나
-병렬 연산을 수행할 수 있도록 하는 것을 말하는데 기계학습과 데이터마이닝에서 말하는 클러스터링과는 구분을 할 필요가 있다.">
+군집분석, 군집화, 클러스터링(Clustering)은 모두 본질적으로 같은 의미로 사용됩니다. 통계학에서는 주로 &lsquo;군집분석&rsquo;이라는 용어를, 기계학습(머신러닝)에서는 &lsquo;클러스터링&rsquo;이라는 용어를 사용하며, &lsquo;군집화&rsquo;는 클러스터링의 한국어 번역입니다. 패턴인식 분야에서는 클러스터링을 &lsquo;양자화(Quantization)&rsquo; 또는 &lsquo;코딩(Coding)&lsquo;이라고 부르기도 합니다.
+클러스터링은 주어진 데이터(개체, 객체)들을 유사한 특성을 가진 그룹(군집, 클러스터)으로 자동으로 묶는 비지도학습(Unsupervised Learning) 기법 중 하나입니다. 즉, 사전에 정답(레이블)이 없는 데이터에서 데이터 간의 유사성 또는 거리 등을 기준으로 여러 개의 집단으로 나누는 방법입니다. 이 과정에서 각 군집 내의 데이터는 서로 비슷하고, 군집 간에는 차이가 크도록 그룹화하는 것이 목표입니다.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:url" content="https://intothedata.com/docs/02.scholars/data_mining/clustering/">
   <meta property="og:site_name" content="인투더데이터 데이터과학">
-  <meta property="og:title" content="군집분석 - Clustering">
-  <meta property="og:description" content="군집분석 - clustering # 군집분석, 군집화, 클러스터링(Clustering)은 모두 같은 뜻이라고 봐도 무방하다.
-통계학에서는 군집분석이라고 부르며 기계학습에서는 클러스터링이라고 부른다. 그리고 클러스터링을 한국어로 바꾸면 군집화가 된다. 클러스터링은 패턴인식에서는 양자화(Quantization) 또는 코딩(Coding)이라고 부르기도 한다. 설명이 매우 길어지므로 여기서는 자세한 얘기는 생략한다.
-클러스터링은 하면 여러 개체를 묶는 것을 말한다. 어떤 방법을 사용해서든 주어진 개체들을 여러 개의 그룹으로 묶으면 그것을 클러스터링이라고 부를 수 있다.
-보통 컴퓨터공학(computer science)에서의 클러스터링은 여러 서버나 플랫폼을 하나로 묶어 선형확장성 같은 것을 보장하고 대규모 트래픽을 처리하거나 병렬 연산을 수행할 수 있도록 하는 것을 말하는데 기계학습과 데이터마이닝에서 말하는 클러스터링과는 구분을 할 필요가 있다.">
+  <meta property="og:title" content="군집분석">
+  <meta property="og:description" content="군집분석(Clustering)이란? # 군집분석, 군집화, 클러스터링(Clustering)은 모두 본질적으로 같은 의미로 사용됩니다. 통계학에서는 주로 ‘군집분석’이라는 용어를, 기계학습(머신러닝)에서는 ‘클러스터링’이라는 용어를 사용하며, ‘군집화’는 클러스터링의 한국어 번역입니다. 패턴인식 분야에서는 클러스터링을 ‘양자화(Quantization)’ 또는 ‘코딩(Coding)‘이라고 부르기도 합니다.
+클러스터링은 주어진 데이터(개체, 객체)들을 유사한 특성을 가진 그룹(군집, 클러스터)으로 자동으로 묶는 비지도학습(Unsupervised Learning) 기법 중 하나입니다. 즉, 사전에 정답(레이블)이 없는 데이터에서 데이터 간의 유사성 또는 거리 등을 기준으로 여러 개의 집단으로 나누는 방법입니다. 이 과정에서 각 군집 내의 데이터는 서로 비슷하고, 군집 간에는 차이가 크도록 그룹화하는 것이 목표입니다.">
   <meta property="og:locale" content="ko_KR">
   <meta property="og:type" content="website">
-<title>군집분석 - Clustering | 인투더데이터 데이터과학</title>
+<title>군집분석 | 인투더데이터 데이터과학</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.465376614827fff60754cc9c34686b524db662a4c314668361de5db45fde6203.css" integrity="sha256-RlN2YUgn//YHVMycNGhrUk22YqTDFGaDYd5dtF/eYgM=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.d9e6ba7770f5117e21758da45184f61d5669394aa618ebdfabe1d95519d50bbf.js" integrity="sha256-2ea6d3D1EX4hdY2kUYT2HVZpOUqmGOvfq&#43;HZVRnVC78=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.aeb694d06aa734b17c3853143587303c5781433c23054f5c8701cf28bac53ad1.js" integrity="sha256-rraU0GqnNLF8OFMUNYcwPFeBQzwjBU9chwHPKLrFOtE=" crossorigin="anonymous"></script>
 
 
 <link rel="alternate" type="application/rss+xml" href="https://intothedata.com/docs/02.scholars/data_mining/clustering/index.xml" title="인투더데이터 데이터과학" />
@@ -80,7 +75,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/00.about/" class="">인투더데이터 소개 About</a>
+    <a href="https://intothedata.com/docs/00.about/" class="">인투더데이터 소개</a>
   
 
           
@@ -142,7 +137,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/02.scholars/operational_research/" class="">경영과학 - Operational Research</a>
+    <a href="https://intothedata.com/docs/02.scholars/operational_research/" class="">경영과학</a>
   
 
           
@@ -155,7 +150,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/02.scholars/operational_research/demand_forecasting/" class="">수요예측 - Demand Forecasting</a>
+    <a href="https://intothedata.com/docs/02.scholars/operational_research/demand_forecasting/" class="">수요예측</a>
   
 
           
@@ -178,7 +173,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/02.scholars/economics/" class="">계량경제학 - Economics</a>
+    <a href="https://intothedata.com/docs/02.scholars/economics/" class="">계량경제학</a>
   
 
           
@@ -222,7 +217,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/02.scholars/data_mining/clustering/" class=" active">군집분석 - Clustering</a>
+    <a href="https://intothedata.com/docs/02.scholars/data_mining/clustering/" class=" active">군집분석</a>
   
 
           
@@ -235,11 +230,29 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/02.scholars/data_mining/clustering/k-means/" class="">K-means - K중심값</a>
+    <a href="https://intothedata.com/docs/02.scholars/data_mining/clustering/k-means/" class="">K중심값</a>
   
 
         </li>
       
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/data_mining/classification/" class="">분류 - Classification</a>
+  
+
+          
+  <ul>
     
   </ul>
 
@@ -258,7 +271,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/02.scholars/modeling/" class="">모델링 - Modeling</a>
+    <a href="https://intothedata.com/docs/02.scholars/modeling/" class="">모델링</a>
   
 
           
@@ -480,7 +493,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/02.scholars/statistics/" class="">통계학 - Statistics</a>
+    <a href="https://intothedata.com/docs/02.scholars/statistics/" class="">통계학</a>
   
 
           
@@ -493,7 +506,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/02.scholars/statistics/central_limit_theorem/" class="">중심극한정리 - CLT; Central Limit Theorem</a>
+    <a href="https://intothedata.com/docs/02.scholars/statistics/central_limit_theorem/" class="">중심극한정리</a>
   
 
         </li>
@@ -506,7 +519,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/02.scholars/statistics/descriptive_statistics/" class="">기술통계 - Descriptive statistics</a>
+    <a href="https://intothedata.com/docs/02.scholars/statistics/descriptive_statistics/" class="">기술통계학 - Descriptive Statistics</a>
   
 
         </li>
@@ -532,12 +545,23 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/02.scholars/statistics/survival_analysis/" class="">생존분석 - Survival Analysis</a>
+    <a href="https://intothedata.com/docs/02.scholars/statistics/survival_analysis/" class="">생존분석</a>
   
 
           
   <ul>
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://intothedata.com/docs/02.scholars/statistics/survival_analysis/log_rank_test/" class="">로그랭크검정</a>
+  
+
+        </li>
       
     
   </ul>
@@ -699,7 +723,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/02.scholars/pattern_recognition/" class="">패턴인식 - Pattern Recognition</a>
+    <a href="https://intothedata.com/docs/02.scholars/pattern_recognition/" class="">패턴인식</a>
   
 
           
@@ -712,7 +736,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://intothedata.com/docs/02.scholars/pattern_recognition/neural_network/" class="">인공신경망 - Neural Network</a>
+    <a href="https://intothedata.com/docs/02.scholars/pattern_recognition/neural_network/" class="">인공신경망</a>
   
 
           
@@ -1582,7 +1606,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>군집분석 - Clustering</strong>
+  <strong>군집분석</strong>
 
   <label for="toc-control">
     
@@ -1598,7 +1622,11 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#군집분석---clustering">군집분석 - clustering</a></li>
+    <li><a href="#군집분석clustering이란">군집분석(Clustering)이란?</a>
+      <ul>
+        <li><a href="#클러스터링의-주요-특징">클러스터링의 주요 특징</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -1611,18 +1639,26 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h2 id="군집분석---clustering">
-  군집분석 - clustering
-  <a class="anchor" href="#%ea%b5%b0%ec%a7%91%eb%b6%84%ec%84%9d---clustering">#</a>
+  <article class="markdown"><h2 id="군집분석clustering이란">
+  군집분석(Clustering)이란?
+  <a class="anchor" href="#%ea%b5%b0%ec%a7%91%eb%b6%84%ec%84%9dclustering%ec%9d%b4%eb%9e%80">#</a>
 </h2>
-<p>군집분석, 군집화, 클러스터링(Clustering)은 모두 같은 뜻이라고 봐도 무방하다.</p>
-<p>통계학에서는 군집분석이라고 부르며 기계학습에서는 클러스터링이라고 부른다. 그리고 클러스터링을 한국어로 바꾸면 군집화가 된다.  클러스터링은 패턴인식에서는 양자화(Quantization) 또는 코딩(Coding)이라고 부르기도 한다.  설명이 매우 길어지므로 여기서는 자세한 얘기는 생략한다.</p>
-<p>클러스터링은 하면 여러 개체를 묶는 것을 말한다. 어떤 방법을 사용해서든 주어진 개체들을 여러 개의 그룹으로 묶으면 그것을 클러스터링이라고 부를 수 있다.</p>
-<p>보통 컴퓨터공학(computer science)에서의 클러스터링은 여러 서버나 플랫폼을 하나로 묶어 선형확장성 같은 것을 보장하고 대규모 트래픽을 처리하거나
-병렬 연산을 수행할 수 있도록 하는 것을 말하는데 기계학습과 데이터마이닝에서 말하는 클러스터링과는 구분을 할 필요가 있다.</p>
-<p>데이터 분석 또는 데이터 마이닝에서는 개체를 비슷한 것끼리 묶는 것을 말한다.
-흔히 군집화라고 번역해서 표현하므로 군집화와 클러스터링은 같은 용어로 생각하면 되는데  여기에서는 클러스터링이라고 원어를 그대로 한글로 적는 것을 사용할 것이다.</p>
-<p>클러스터링은 원래 기계학습의 비교사학습(Unsupervisoed Learning)의 기법 중 하나로 분류할 수 있는데 세그멘테이션 기법의 일종이라고도 볼 수 있어 모든 학술 분야에서 두루 다루며 데이터마이닝 분야에서 용도가 더 많아 데이터마이닝으로 분류하였다.</p>
+<p>군집분석, 군집화, 클러스터링(Clustering)은 모두 본질적으로 같은 의미로 사용됩니다. 통계학에서는 주로 &lsquo;군집분석&rsquo;이라는 용어를, 기계학습(머신러닝)에서는 &lsquo;클러스터링&rsquo;이라는 용어를 사용하며, &lsquo;군집화&rsquo;는 클러스터링의 한국어 번역입니다. 패턴인식 분야에서는 클러스터링을 &lsquo;양자화(Quantization)&rsquo; 또는 &lsquo;코딩(Coding)&lsquo;이라고 부르기도 합니다.</p>
+<p>클러스터링은 주어진 데이터(개체, 객체)들을 유사한 특성을 가진 그룹(군집, 클러스터)으로 자동으로 묶는 비지도학습(Unsupervised Learning) 기법 중 하나입니다. 즉, 사전에 정답(레이블)이 없는 데이터에서 데이터 간의 유사성 또는 거리 등을 기준으로 여러 개의 집단으로 나누는 방법입니다. 이 과정에서 각 군집 내의 데이터는 서로 비슷하고, 군집 간에는 차이가 크도록 그룹화하는 것이 목표입니다.</p>
+<p>컴퓨터공학에서 &lsquo;클러스터링&rsquo;이라는 용어가 서버나 플랫폼을 하나로 묶어 확장성이나 병렬처리를 높이는 기술(예: 서버 클러스터링)을 의미하기도 하지만, 데이터마이닝 및 기계학습에서의 클러스터링은 데이터 자체를 유사성에 따라 분류하는 분석 기법임을 구분해야 합니다.</p>
+<p>데이터 분석, 데이터마이닝, 마케팅, 생물정보학, 이미지 처리 등 다양한 분야에서 클러스터링은 널리 활용됩니다. 예를 들어, 고객 세분화, 문서 분류, 이상치 탐지, 이미지 분할 등에서 중요한 역할을 합니다.</p>
+<p>본 문서에서는 &lsquo;클러스터링&rsquo;이라는 용어를 주로 사용하며, 군집분석/군집화와 동의어로 간주합니다. 클러스터링은 세그멘테이션(Segmentation) 기법의 일종으로 볼 수 있으며, 데이터마이닝 분야에서 특히 많이 다루어집니다.</p>
+<h3 id="클러스터링의-주요-특징">
+  클러스터링의 주요 특징
+  <a class="anchor" href="#%ed%81%b4%eb%9f%ac%ec%8a%a4%ed%84%b0%eb%a7%81%ec%9d%98-%ec%a3%bc%ec%9a%94-%ed%8a%b9%ec%a7%95">#</a>
+</h3>
+<ul>
+<li><strong>비지도학습(Unsupervised Learning)</strong>: 정답(레이블) 없이 데이터의 구조를 스스로 발견</li>
+<li><strong>유사성 기반 그룹화</strong>: 거리, 유사도, 밀도 등 다양한 기준으로 그룹을 형성</li>
+<li><strong>다양한 알고리즘</strong>: K-평균(K-means), 계층적 군집화(Hierarchical Clustering), DBSCAN, Gaussian Mixture Model 등 다양한 방법 존재</li>
+<li><strong>응용 분야</strong>: 고객 세분화, 이미지 분할, 문서 분류, 이상 탐지 등</li>
+</ul>
+<p>클러스터링은 데이터의 숨겨진 구조를 발견하고, 데이터의 특성을 이해하는 데 매우 유용한 기법입니다. 이후에는 대표적인 클러스터링 알고리즘과 실제 적용 예시를 다룰 예정입니다.</p>
 </article>
  
       
@@ -1695,7 +1731,11 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#군집분석---clustering">군집분석 - clustering</a></li>
+    <li><a href="#군집분석clustering이란">군집분석(Clustering)이란?</a>
+      <ul>
+        <li><a href="#클러스터링의-주요-특징">클러스터링의 주요 특징</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
