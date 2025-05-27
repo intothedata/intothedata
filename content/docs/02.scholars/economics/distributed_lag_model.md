@@ -24,18 +24,18 @@ tags = ["분산지연모델", "Distributed Lag Model", "시계열분석", "계�
 $$Y_t = \alpha + \beta_0 X_t + \beta_1 X_{t-1} + \beta_2 X_{t-2} + \cdots + \beta_p X_{t-p} + \varepsilon_t$$
 
 여기서:
-- \( Y_t \): 시점 t에서의 종속변수
-- \( X_t, X_{t-1}, \ldots, X_{t-p} \): 독립변수의 현재값과 과거값들
-- \( \beta_0, \beta_1, \ldots, \beta_p \): 각 시점별 회귀계수(지연가중치)
-- \( p \): 최대 지연기간
-- \( \varepsilon_t \): 오차항
+- $Y_t$: 시점 $t$에서의 종속변수
+- $X_t$, $X_{t-1}$, $\ldots$, $X_{t-p}$: 독립변수의 현재값과 과거값들
+- $\beta_0$, $\beta_1$, $\ldots$, $\beta_p$: 각 시점별 회귀계수(지연가중치)
+- $p$: 최대 지연기간
+- $\varepsilon_t$: 오차항
 
 ### 지연가중치의 해석
 
 각 지연가중치 $\beta_i$는 다음과 같이 해석된다:
 
 - **$\beta_0$**: 즉시효과(Impact Effect) - $X$의 변화가 같은 기간 $Y$에 미치는 즉각적 영향
-- **$\beta_i$ (i>0)**: 지연효과(Lag Effect) - $X$의 변화가 i기간 후 $Y$에 미치는 영향
+- **$\beta_i$ ($i>0$)**: 지연효과(Lag Effect) - $X$의 변화가 $i$기간 후 $Y$에 미치는 영향
 - **$\sum_{i=0}^{p} \beta_i$**: 장기승수(Long-run Multiplier) - $X$의 영구적 변화가 $Y$에 미치는 총 효과
 
 ### 분산지연모델의 유형
@@ -45,8 +45,8 @@ $$Y_t = \alpha + \beta_0 X_t + \beta_1 X_{t-1} + \beta_2 X_{t-2} + \cdots + \bet
 
 $$Y_t = \alpha + \sum_{i=0}^{p} \beta_i X_{t-i} + \varepsilon_t$$
 
-**장점**: 해석이 명확하고 추정이 상대적으로 간단
-**단점**: 적절한 지연기간 p를 결정하기 어려움
+**장점**: 해석이 명확하고 추정이 상대적으로 간단  
+**단점**: 적절한 지연기간 $p$를 결정하기 어려움
 
 #### 2. 무한분산지연모델 (Infinite Distributed Lag Model)
 지연기간이 무한한 모델:
@@ -90,13 +90,13 @@ $Y$의 과거값이 $X$의 현재값에 영향을 미치는 경우:
 
 ### 알몬 다항식 지연모델 (Almon Polynomial Distributed Lag)
 
-지연가중치를 k차 다항식으로 제약하는 방법:
+지연가중치를 $k$차 다항식으로 제약하는 방법:
 
 $$\beta_i = \sum_{j=0}^{k} \gamma_j i^j$$
 
 이를 통해 추정해야 할 모수의 수를 크게 줄일 수 있다.
 
-**장점**: 모수 절약, 다중공선성 완화
+**장점**: 모수 절약, 다중공선성 완화  
 **단점**: 다항식 차수 선택의 자의성
 
 ### 실증분석 예시
@@ -107,8 +107,8 @@ $$\beta_i = \sum_{j=0}^{k} \gamma_j i^j$$
 $$GDP\_growth_t = \alpha + \sum_{i=0}^{8} \beta_i Interest\_rate_{t-i} + \varepsilon_t$$
 
 **예상 결과**:
-- $\beta_0, \beta_1$: 작거나 양수 (즉시효과는 제한적)
-- $\beta_2, \beta_3, \beta_4$: 음수 (2-4분기 후 본격적인 효과)
+- $\beta_0$, $\beta_1$: 작거나 양수 (즉시효과는 제한적)
+- $\beta_2$, $\beta_3$, $\beta_4$: 음수 (2-4분기 후 본격적인 효과)
 - $\beta_5$ 이후: 점진적으로 0에 수렴
 
 #### 광고효과 분석
@@ -175,70 +175,3 @@ $$\mathbf{Y}_t = \mathbf{A}_0 + \sum_{i=1}^{p} \mathbf{A}_i \mathbf{Y}_{t-i} + \
 #### R
 
 분산지연모형은 R의 `dynlm` 패키지 또는 `lm` 함수와 `lag()` 함수를 활용하여 쉽게 추정할 수 있습니다. 예를 들어, $Y_t$에 대한 $X_t$, $X_{t-1}$, $X_{t-2}$의 분산지연모형을 추정하는 기본 코드는 다음과 같습니다.
-
-```r
-# X_t, X_{t-1}, X_{t-2}의 분산지연모형 추정 예시
-library(dynlm)
-
-# 예시 데이터 생성
-set.seed(123)
-n <- 100
-X <- rnorm(n)
-Y <- 1 + 0.5*X + 0.3*dplyr::lag(X, 1) + 0.2*dplyr::lag(X, 2) + rnorm(n)
-
-# 시계열 객체로 변환
-X_ts <- ts(X)
-Y_ts <- ts(Y)
-
-# 분산지연모형 적합
-model <- dynlm(Y_ts ~ L(X_ts, 0:2))
-
-# 결과 출력
-summary(model)
-# 계수, 유의성, 결정계수 등 확인 가능
-
-```
-
-#### Python
-
-분산지연모형은 Python의 `statsmodels` 패키지의 `OLS`(또는 `AutoReg`, `ARDL` 등)로 구현할 수 있습니다. 예를 들어, $Y_t$에 대한 $X_t$, $X_{t-1}$, $X_{t-2}$의 분산지연모형을 추정하려면 다음과 같이 코드를 작성할 수 있습니다.
-
-```python
-import numpy as np
-import pandas as pd
-import statsmodels.api as sm
-
-# 예시 데이터 생성
-np.random.seed(123)
-n = 100
-X = np.random.randn(n)
-# X의 시차 1, 2 생성 (맨 앞은 NaN)
-X_lag1 = pd.Series(X).shift(1)
-X_lag2 = pd.Series(X).shift(2)
-# Y 생성: Y_t = 1 + 0.5*X_t + 0.3*X_{t-1} + 0.2*X_{t-2} + 오차
-Y = 1 + 0.5*X + 0.3*X_lag1 + 0.2*X_lag2 + np.random.randn(n)
-
-# 데이터프레임으로 정리
-df = pd.DataFrame({
-    'Y': Y,
-    'X': X,
-    'X_lag1': X_lag1,
-    'X_lag2': X_lag2
-})
-
-# 결측치(시차로 인해 앞부분에 생김) 제거
-df = df.dropna()
-
-# 독립변수와 종속변수 지정
-X_reg = df[['X', 'X_lag1', 'X_lag2']]
-X_reg = sm.add_constant(X_reg)  # 상수항 추가
-y_reg = df['Y']
-
-# OLS(최소제곱법)로 분산지연모형 적합
-model = sm.OLS(y_reg, X_reg).fit()
-
-# 결과 출력
-print(model.summary())
-# 계수, 유의성, 결정계수 등 확인 가능
-
-```
