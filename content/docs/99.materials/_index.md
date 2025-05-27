@@ -1,5 +1,5 @@
 +++
-title = "참고자료 - References"
+title = "참고자료"
 type = "docs"
 weight = 1099
 +++
