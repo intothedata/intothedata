@@ -3,4 +3,4 @@ sftp-config.json
 .vscode/
 .obsidian
 node_modules/
-public
+public/
