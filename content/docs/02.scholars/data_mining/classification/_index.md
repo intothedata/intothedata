@@ -19,13 +19,22 @@ tags = ["분류", "Classification", "Supervised Learning", "지도학습"]
 
 ### 분류의 주요 알고리즘
 
-- **의사결정나무(Decision Tree)**
-- **로지스틱 회귀(Logistic Regression)**
-- **나이브 베이즈(Naive Bayes)**
-- **서포트 벡터 머신(SVM)**
-- **k-최근접 이웃(k-NN)**
-- **신경망(Neural Network)**
-- **랜덤 포레스트(Random Forest), 부스팅(Boosting) 등 앙상블 기법**
+#### 기본 알고리즘
+- **[의사결정나무(Decision Tree)](decision_tree.md)**: 트리 구조로 규칙 기반 분류
+- **[로지스틱 회귀(Logistic Regression)](logistic_regression.md)**: 선형 분류의 기본, 확률적 해석 가능
+- **[나이브 베이즈(Naive Bayes)](naive_bayes.md)**: 베이즈 정리 기반, 텍스트 분류에 효과적
+- **[서포트 벡터 머신(SVM)](svm.md)**: 마진 최대화를 통한 강력한 분류
+- **[k-최근접 이웃(k-NN)](knn.md)**: 거리 기반 인스턴스 학습
+
+#### 고급 알고리즘
+- **[신경망(Neural Networks)](neural_networks.md)**: 복잡한 비선형 패턴 학습
+- **[앙상블 기법(Ensemble Methods)](ensemble_methods.md)**: 여러 모델 결합으로 성능 향상
+- **[랜덤 포레스트(Random Forest)](random_forest.md)**: 의사결정나무 기반 앙상블
+- **[그래디언트 부스팅(Gradient Boosting)](gradient_boosting.md)**: 순차적 오차 보정으로 성능 극대화
+
+#### 통계적 분류 기법
+- **[선형 판별 분석(LDA)](linear_discriminant_analysis.md)**: 차원 축소와 분류를 동시에 수행
+- **[이차 판별 분석(QDA)](quadratic_discriminant_analysis.md)**: 이차 결정 경계를 가진 유연한 분류
 
 ### 분류의 절차
 

@@ -1,6 +1,6 @@
 baseURL = 'https://intothedata.com/'
 languageCode = 'ko-KR'
-title = '인투더데이터 데이터과학'
+title = '인투더데이터 데이터 사이언스 위키'
 theme = 'book'
 defaultContentLanguage = "ko"
 multilingual = true
@@ -44,7 +44,7 @@ expiryDate = ["expiryDate"]
 
 [params]
   math = true
-  subtitle = "데이터사이언스 위키"
+  subtitle = "데이터 사이언스 위키"
   author = "IntoTheData"
   
   # Book theme specific settings
