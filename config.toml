@@ -17,6 +17,10 @@ googleAnalytics = "G-L822Z5JJRH"
 # lastmod를 활성화
 enableGitInfo = true
 
+[services]
+  [services.googleAnalytics]
+    id = "G-L822Z5JJRH"
+
 [frontmatter]
 date = ["date", "publishDate", "lastmod"]
 lastmod = ["lastmod", ":git", "date", "publishDate"]
