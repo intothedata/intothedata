@@ -12,8 +12,6 @@ hasCJKLanguage = true
 publishDir = "public"
 pygmentsStyle = "monokai"
 
-googleAnalytics = "G-L822Z5JJRH"
-
 # lastmod를 활성화
 enableGitInfo = true
 
