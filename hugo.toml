@@ -5,6 +5,20 @@ theme = 'book'
 defaultContentLanguage = "ko"
 multilingual = true
 
+# Google Analytics 설정
+[services]
+  [services.googleAnalytics]
+    id = "G-L822Z5JJRH"
+
+# lastmod를 활성화
+enableGitInfo = true
+
+[frontmatter]
+date = ["date", "publishDate", "lastmod"]
+lastmod = ["lastmod", ":git", "date", "publishDate"]
+publishDate = ["publishDate", "date"]
+expiryDate = ["expiryDate"]
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
@@ -15,6 +29,8 @@ multilingual = true
         [markup.goldmark.extensions.passthrough.delimiters]
           block = [['\[', '\]'], ['$$', '$$']]
           inline = [['\(', '\)']]
+  [markup.tableOfContents]
+    startLevel = 1
 
 [outputs]
     home = [ "HTML"]
@@ -28,3 +44,27 @@ multilingual = true
 
 [params]
   math = true
+  subtitle = "데이터사이언스 위키"
+  author = "IntoTheData"
+  
+  # Book theme specific settings
+  BookTheme = "light"
+  BookToC = true
+  BookSection = "/"  # Using root for all sections
+  BookSearch = true
+  BookComments = false
+  
+  custom_css = ["css/intothedata.css"]
+
+[[menu.shortcuts]]
+pre = "<h3>More</h3>"
+name = "<i class='fa fa-bookmark'></i> 색인"
+identifier = "tag-list"
+url = "/taglist"
+weight = 1
+
+[[menu.shortcuts]]
+name = "<i class='fa fa-envelope'></i> Contact"
+identifier = "contact"
+url = "mailto: intothedata@gmail.com"
+weight = 2
