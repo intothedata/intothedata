@@ -4,7 +4,7 @@ type = "docs"
 tags = ["Ad tech","애드테크"]
 +++
 
-## 온라인 광고 용어 )Online Ad Terminology)
+## 온라인 광고 용어 (Online Ad Terminology)
 
 ## 디지털 광고 산업 용어
 
