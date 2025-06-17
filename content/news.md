@@ -3,6 +3,6 @@ title = "뉴스"
 type = "docs"
 +++
 
-## 뉴스
+## 뉴스 및 참고 자료
 
-이제는 ‘광고분석2.0’ 시대 - http://www.hbrkorea.com/magazine/article/view/3_1/page/1/article_no/114
+현재는 내용 없음

@@ -1,3 +1,10 @@
+---
+title: "RMN - Retail Media Network"
+type: "docs"
+weight: 2001
+tags: [RMN, RMP]
+---
+
 # RMN (Retail Media Network)
 
 RMN(Retail Media Network)은 리테일러가 보유한 방대한 고객 데이터와 미디어 채널을 활용하여 광고주에게 마케팅 솔루션을 제공하는 새로운 광고 생태계를 의미한다. 이는 이커머스 플랫폼 내 검색 결과, 상품 페이지, 결제 페이지 등 다양한 접점에서 소비자에게 맞춤형 광고를 노출하여 구매 전환을 극대화하는 것을 목표로 한다.
