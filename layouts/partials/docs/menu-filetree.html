@@ -1,0 +1,90 @@
+{{/*
+  ── 인투더데이터 책 메뉴 (hugo-book 의 menu-filetree.html 을 덮어씀) ──
+  data/books.yaml 의 책 목록을 기준으로:
+    - 지금 페이지가 어떤 책 안에 있으면 → 그 책의 목차만 보여준다 (짧게 읽도록)
+    - 책 안의 '하위 책' 은 펼치지 않고 링크(📘)로만 보여준다
+    - 책 밖의 페이지(첫 화면·뉴스 등)면 → 책장 전체 목록을 보여준다
+*/}}
+{{ $cur := . }}
+
+{{/* ── 책 경로 / 주소 / 아이콘 모으기 ── */}}
+{{ $bookURLs := slice }}
+{{ $icons := dict }}
+{{ range site.Data.books.shelves }}
+  {{ range .books }}
+    {{ $icon := .icon }}
+    {{ with site.GetPage .path }}
+      {{ $bookURLs = $bookURLs | append .RelPermalink }}
+      {{ $icons = merge $icons (dict .RelPermalink $icon) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* ── 현재 페이지가 속한 책 = 가장 깊은(주소가 가장 긴) 조상 책 ── */}}
+{{ $book := false }}
+{{ $bestLen := 0 }}
+{{ range site.Data.books.shelves }}
+  {{ range .books }}
+    {{ with site.GetPage .path }}
+      {{ if or (eq . $cur) (.IsAncestor $cur) }}
+        {{ if gt (len .RelPermalink) $bestLen }}
+          {{ $book = . }}
+          {{ $bestLen = len .RelPermalink }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ if $book }}
+  {{/* ── 책 목차 모드 ── */}}
+  <a class="itd-back" href="{{ site.Home.RelPermalink }}">← 전체 책장</a>
+  <a class="itd-book-cover {{ if eq $book $cur }}active{{ end }}" href="{{ $book.RelPermalink }}">
+    <span class="itd-book-icon">{{ index $icons $book.RelPermalink }}</span>
+    <span>{{ partial "docs/title" $book }}</span>
+  </a>
+  {{ template "itd-children" (dict "Section" $book "CurrentPage" $cur "BookURLs" $bookURLs "Icons" $icons) }}
+{{ else }}
+  {{/* ── 책장 모드 ── */}}
+  <div class="itd-shelf-menu">
+  {{ range site.Data.books.shelves }}
+    <h4>{{ .title }}</h4>
+    <ul>
+    {{ range .books }}
+      {{ $icon := .icon }}
+      {{ with site.GetPage .path }}
+        <li><a href="{{ .RelPermalink }}" class="{{ if eq . $cur }}active{{ end }}">{{ $icon }} {{ partial "docs/title" . }}</a></li>
+      {{ end }}
+    {{ end }}
+    </ul>
+  {{ end }}
+  </div>
+{{ end }}
+
+{{ define "itd-children" }}{{/* (dict "Section" "CurrentPage" "BookURLs" "Icons") */}}
+  <ul>
+    {{ range (where .Section.Pages "Params.bookhidden" "ne" true) }}
+      {{ if .IsSection }}
+        {{ if in $.BookURLs .RelPermalink }}
+          {{/* 하위 책: 펼치지 않고 링크만 */}}
+          <li><a class="itd-subbook" href="{{ .RelPermalink }}">{{ index $.Icons .RelPermalink | default "📘" }} {{ partial "docs/title" . }} →</a></li>
+        {{ else }}
+          <li>
+            {{ template "itd-link" (dict "Page" . "CurrentPage" $.CurrentPage) }}
+            {{ template "itd-children" (dict "Section" . "CurrentPage" $.CurrentPage "BookURLs" $.BookURLs "Icons" $.Icons) }}
+          </li>
+        {{ end }}
+      {{ else if and .IsPage .Content }}
+        <li>{{ template "itd-link" (dict "Page" . "CurrentPage" $.CurrentPage) }}</li>
+      {{ end }}
+    {{ end }}
+  </ul>
+{{ end }}
+
+{{ define "itd-link" }}{{/* (dict "Page" "CurrentPage") */}}
+  {{ if .Page.Content }}
+    <a href="{{ .Page.RelPermalink }}" class="{{ if eq .CurrentPage .Page }}active{{ end }}">{{ partial "docs/title" .Page }}</a>
+  {{ else }}
+    <span>{{ partial "docs/title" .Page }}</span>
+  {{ end }}
+{{ end }}

@@ -1,0 +1,56 @@
+{{/*
+  ── 인투더데이터 첫 화면: 책장 ──
+  content/_index.md 의 본문(소개글)을 위에 보여주고, 그 아래에
+  data/books.yaml 의 책장(shelves)마다 책 카드를 그린다.
+  카드를 누르면 그 책으로 들어가고, 왼쪽 메뉴는 그 책의 목차만 보인다.
+*/}}
+{{ define "main" }}
+{{/* 첫 화면은 오른쪽 목차(TOC) 영역이 필요 없으므로 숨김 */}}
+<style>.book-toc { display: none; }</style>
+
+{{/* ── 숫자 모으기: 책 수 / 문서 수 ── */}}
+{{ $nBooks := 0 }}
+{{ range site.Data.books.shelves }}{{ $nBooks = add $nBooks (len .books) }}{{ end }}
+{{/* 문서 수 = docs 아래 모든 페이지(책 표지·섹션 소개 포함) */}}
+{{ $nDocs := len (where site.Pages "Section" "docs") }}
+
+<article class="markdown itd-home">
+  <header class="itd-hero">
+    <img class="itd-logo" src="{{ "images/intothedata_logo.png" | relURL }}" alt="IntoTheData">
+    <h1>{{ site.Title }}</h1>
+    <p class="itd-tagline">{{ .Params.tagline | default site.Params.subtitle }}</p>
+    <div class="itd-stats">
+      <span><b>{{ len site.Data.books.shelves }}</b> 책장</span>
+      <span><b>{{ $nBooks }}</b> 권</span>
+      <span><b>{{ $nDocs }}</b> 문서</span>
+    </div>
+  </header>
+
+  <section class="itd-intro">
+    {{ .Content }}
+  </section>
+
+  {{ range site.Data.books.shelves }}
+  <section class="itd-shelf">
+    <h2>{{ .title }} <small>{{ .desc }}</small></h2>
+    <div class="itd-cards">
+      {{ range .books }}
+        {{ $b := . }}
+        {{ with site.GetPage .path }}
+          {{/* 이 책에 들어 있는 문서 수 (하위 책 포함, 표지 제외) */}}
+          {{ $n := len .RegularPagesRecursive }}
+          <a class="itd-card" href="{{ .RelPermalink }}">
+            <span class="itd-card-icon">{{ $b.icon }}</span>
+            <span class="itd-card-title">{{ partial "docs/title" . }}</span>
+            <span class="itd-card-desc">{{ $b.desc }}</span>
+            {{ if gt $n 0 }}<span class="itd-card-count">{{ $n }}개 문서</span>{{ end }}
+          </a>
+        {{ end }}
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+</article>
+{{ end }}
+
+{{ define "toc" }}{{ end }}

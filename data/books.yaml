@@ -1,0 +1,88 @@
+# ── 인투더데이터 책장 정의 ──
+# 첫 페이지(책장)와 왼쪽 메뉴(책 목차)가 이 파일 하나를 기준으로 만들어진다.
+#   shelves[].books[].path : content/ 기준 섹션 경로 (그 폴더의 _index.md 가 책 표지)
+#   shelves[].books[].icon : 카드에 보일 이모지
+#   shelves[].books[].desc : 카드 한 줄 소개 (짧게! 20자 안팎)
+# 책 안에 또 다른 책(예: 데이터마이닝 → 분류)이 있으면, 바깥 책 목차에는 링크로만 나오고
+# 안쪽 책은 따로 펼쳐진다. 문서를 옮기지 않으므로 기존 주소(URL)는 그대로 유지된다.
+
+shelves:
+  - title: 데이터과학 입문
+    desc: 처음 오셨다면 여기서부터
+    books:
+      - { path: docs/00.about, icon: "👋", desc: 인투더데이터는 어떤 곳인가요 }
+      - { path: docs/01.data_science, icon: "🧭", desc: 데이터과학이 뭔지 한눈에 }
+      - { path: docs/70.practical_data_science, icon: "🛠️", desc: 현업에서 쓰는 데이터과학 }
+      - { path: docs/08.reproducible_research, icon: "🔁", desc: 다시 해도 같은 결과 나오게 }
+
+  - title: 통계학
+    desc: 모든 분석의 바탕
+    books:
+      - { path: docs/02.scholars/statistics, icon: "📊", desc: 평균·분산·추론의 기본기 }
+      - { path: docs/02.scholars/statistics/sampling, icon: "🎯", desc: 일부만 보고 전체 맞히기 }
+      - { path: docs/02.scholars/statistics/stochastic_process, icon: "🎲", desc: 시간에 따라 변하는 확률 }
+      - { path: docs/02.scholars/statistics/survival_analysis, icon: "⏳", desc: 언제 일어날지 예측하기 }
+
+  - title: 데이터마이닝 · 머신러닝
+    desc: 데이터에서 패턴 캐내기
+    books:
+      - { path: docs/02.scholars/data_mining, icon: "⛏️", desc: 데이터 채굴의 큰 그림 }
+      - { path: docs/02.scholars/data_mining/classification, icon: "🏷️", desc: 무엇인지 맞히는 알고리즘 10종 }
+      - { path: docs/02.scholars/data_mining/clustering, icon: "🫧", desc: 비슷한 것끼리 묶기 10종 }
+      - { path: docs/02.scholars/anomaly_detection, icon: "🚨", desc: 튀는 데이터 찾아내기 }
+      - { path: docs/02.scholars/pattern_recognition, icon: "🧩", desc: 규칙성 알아보는 기술 }
+      - { path: docs/02.scholars/artificial_intelligence, icon: "🧠", desc: 인공지능 이론과 퍼지 추론 }
+      - { path: docs/02.scholars/text_mining, icon: "📝", desc: 글에서 의미 뽑아내기 }
+      - { path: docs/02.scholars/information_retrieval, icon: "🔎", desc: 검색엔진의 원리 }
+
+  - title: 분석 방법론
+    desc: 문제를 숫자로 푸는 법
+    books:
+      - { path: docs/02.scholars/modeling, icon: "📐", desc: 현실을 수식으로 옮기기 }
+      - { path: docs/02.scholars/timeseries_analysis, icon: "📈", desc: 시간 순서 데이터 다루기 }
+      - { path: docs/02.scholars/economics, icon: "💹", desc: 경제를 데이터로 읽는 계량경제학 }
+      - { path: docs/02.scholars/operational_research, icon: "🏭", desc: 최적의 결정 내리기 }
+      - { path: docs/02.scholars/business_analysis, icon: "💼", desc: 비즈니스 데이터 분석 }
+
+  - title: 산업별 데이터사이언스
+    desc: 실제 업계에서는 이렇게 씁니다
+    books:
+      - { path: docs/03.business/digital_marketing, icon: "📣", desc: 마케팅은 이제 데이터 싸움 }
+      - { path: docs/03.business/ad_tech, icon: "🎯", desc: 온라인 광고가 돌아가는 구조 }
+      - { path: docs/03.business/online, icon: "🛒", desc: 온라인 비즈니스와 데이터 }
+      - { path: docs/03.business/automobile, icon: "🚗", desc: 자동차 산업의 데이터 }
+      - { path: docs/03.business/iron_mill, icon: "🏗️", desc: 철강 산업의 데이터 }
+      - { path: docs/03.business/groups, icon: "🏢", desc: 기업 그룹 사례 }
+
+  - title: 데이터 수집 · 플랫폼
+    desc: 데이터를 모으고 쌓는 법
+    books:
+      - { path: docs/06.data_collection, icon: "🪣", desc: API·크롤링·IoT 수집 가이드 }
+      - { path: docs/06.data_platform, icon: "🏛️", desc: 데이터 플랫폼 기초 }
+      - { path: docs/20.data_platform, icon: "🗄️", desc: 빅데이터 플랫폼 }
+      - { path: docs/07.data_hub, icon: "🔗", desc: 데이터를 한곳에 잇기 }
+      - { path: docs/30.bigdata, icon: "🌊", desc: 빅데이터란 무엇인가 }
+      - { path: docs/60.pracactical_data_processing, icon: "⚙️", desc: 실무 데이터 처리 }
+
+  - title: 분석 · 시각화
+    desc: 보여줘야 설득된다
+    books:
+      - { path: docs/04.data_analysis, icon: "🔬", desc: 데이터 분석 기본 }
+      - { path: docs/05.data_visualization, icon: "🎨", desc: 차트 13종, 언제 뭘 쓸까 }
+      - { path: docs/36.time_series_analysis, icon: "🕒", desc: 시계열 분석 실전 }
+      - { path: docs/90.metrics, icon: "🎚️", desc: 성과를 재는 지표 }
+
+  - title: 인공지능
+    desc: LLM부터 AI 에이전트까지
+    books:
+      - { path: docs/37.artificial_intelligence, icon: "🤖", desc: LLM·벡터검색·AI 에이전트 }
+      - { path: docs/38.natural_languge_processing, icon: "💬", desc: 한국어 형태소 분석 }
+
+  - title: 기초 지식 · 도구
+    desc: 알아두면 두고두고 쓰는 것들
+    books:
+      - { path: docs/80.mathematics, icon: "➗", desc: 선형대수·미분방정식 }
+      - { path: docs/50.computer_science, icon: "💻", desc: 바이브 코딩·에이전틱 코딩 }
+      - { path: docs/40.r_language, icon: "🅡", desc: 통계 언어 R }
+      - { path: docs/09.datascience_tools, icon: "🧰", desc: 데이터사이언스 도구 모음 }
+      - { path: docs/99.materials, icon: "📚", desc: 추천 사이트와 인물 }
