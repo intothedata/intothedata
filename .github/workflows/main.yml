@@ -1,56 +1,63 @@
-# This is a basic workflow to help you get started with Actions
+# intothedata.com 자동 배포 (GitHub Pages)
+#  - master 에 push 하면 GitHub 호스팅 러너가 Hugo 로 빌드해 GitHub Pages 에 올린다
+#  - 커스텀 도메인(intothedata.com)은 저장소 Settings → Pages 에 설정되어 있다 (CNAME 파일 불필요)
+#  - 예전에는 Contabo 서버(self-hosted runner)에서 빌드했으나, 정적 사이트라 서버 자원이 필요 없어 Pages 로 옮김 (2026-11-04)
 
-name: CI
+name: Deploy intothedata.com
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
-  # Allows you to run this workflow manually from the Actions tab
+  # Actions 탭에서 수동 실행
   workflow_dispatch:
-    inputs:
-      logLevel:
-        description: 'Log level'     
-        required: true
-        default: 'warning'
-      tags:
-        description: 'Main push tags'
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+# Pages 배포에 필요한 권한
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 배포가 겹치지 않게 한 번에 하나씩 (진행 중인 배포는 끝까지 둔다)
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
-    # runs-on: ubuntu-latest
-    runs-on: intothedata-runner
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    runs-on: ubuntu-latest
+    env:
+      # 서버에서 쓰던 버전과 같게 고정 (테마 hugo-book 호환)
+      HUGO_VERSION: 0.123.8
+      TZ: Asia/Seoul
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-
-      - name: Checking current hostname
-        run: hostname
-      
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: Install Hugo (extended)
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          wget -q -O ${{ runner.temp }}/hugo.deb \
+            https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
+          sudo dpkg -i ${{ runner.temp }}/hugo.deb
 
-      - name: Pull source from the Repository
-        run: |
-          cd /srv/sites/intothedata && git pull
+      # 테마(hugo-book)가 submodule 이라 함께 받는다. enableGitInfo(lastmod) 때문에 전체 이력도 받는다.
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
 
-      - name: Build Hugo content
-        run: |
-          cd /srv/sites/intothedata && hugo
+      - id: pages
+        uses: actions/configure-pages@v5
 
+      - name: Build
+        run: hugo --gc --minify --baseURL "https://intothedata.com/"
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
