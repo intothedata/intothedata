@@ -1,14 +1,24 @@
 +++
 title = "LLM"
 type = "docs"
-tags = [ "faiss", "vectorsearch", "vectrosearchengine", "벡터검색", "벡터검색엔진" ]
+weight = 1031
+tags = [ "LLM", "Large Language Model", "초거대언어모델", "대규모 언어 모델", "Transformer" ]
 alwaysopen = true
 +++
 
 ## LLM (Large Language Model)
 
-초거대언어모델이라고 할 수 있다. 언어모델은 원래 다른 모델에 비해서 용량이 크다. 초거대언어모델은 Large Lnaguage Model이 원어이지만 초거대언어모델이라고 하는 것이 맞다.
+초거대언어모델이라고 할 수 있다. 언어모델은 원래 다른 모델에 비해서 용량이 크다. 초거대언어모델은 Large Language Model이 원어이지만 초거대언어모델이라고 하는 것이 맞다.
 그 규모가 매우 크기 때문이다.
+
+쉽게 말하면 LLM은 **"지금까지 나온 글을 보고 다음에 올 단어를 맞히는 모델"**을 엄청나게 큰 규모로 학습시킨 것이다. "대한민국의 수도는"이라는 글이 들어오면 "서울"이 올 확률이 가장 높다고 계산하는 식이다. 이 단순한 작업을 인터넷 규모의 글로 반복하다 보면 문법, 상식, 추론, 코딩 능력까지 함께 익히게 된다.
+
+### LLM의 작동 원리
+
+- **토큰 (Token)**: 글을 모델이 다루는 작은 단위로 자른 것이다. 한국어는 보통 한 글자~몇 글자가 토큰 하나가 된다.
+- **트랜스포머 (Transformer)**: 2017년 발표된 신경망 구조로, 문장 안 모든 단어가 서로 얼마나 관련 있는지를 한꺼번에 계산한다(어텐션, Attention). 거의 모든 LLM이 이 구조를 쓴다.
+- **컨텍스트 윈도우 (Context Window)**: 모델이 한 번에 읽을 수 있는 토큰 수다. 초기 수천 토큰에서 지금은 수십만~백만 토큰까지 늘어나 책 한 권을 통째로 넣을 수 있다.
+- **자기회귀 생성 (Autoregressive Generation)**: 다음 토큰 하나를 만들고, 그것을 다시 입력에 붙여 그다음 토큰을 만드는 과정을 반복해 긴 글을 쓴다.
 
 ### LLM의 특징
 
@@ -20,31 +30,26 @@ LLM은 수십억 개에서 수조 개의 매개변수를 가진 대규모 신경
 
 ### 주요 LLM 모델들
 
-#### GPT 시리즈
-- **GPT-3**: 1750억 개의 매개변수를 가진 OpenAI의 대표적인 LLM
-- **GPT-4**: GPT-3의 후속 모델로 멀티모달 기능을 포함
-- **GPT-4.1**: GPT-4의 후속 모델로 멀티모달 기능을 포함
-- **ChatGPT**: GPT 모델을 대화형 인터페이스로 구현한 서비스
+모델 버전은 몇 달 단위로 바뀌므로, 여기서는 개발사별 계열(패밀리)로 정리한다.
 
-#### Claude 시리즈
-- **Claude**: Anthropic에서 개발한 헌법적 AI(Constitutional AI) 기반의 안전성 중심 모델
-- **Claude 2**: 향상된 성능과 더 긴 컨텍스트 윈도우를 제공하는 후속 모델
-- **Claude 3**: Haiku, Sonnet, Opus 세 가지 버전으로 출시된 최신 시리즈
-  - **Claude 3 Haiku**: 빠른 응답 속도에 최적화된 경량 모델
-  - **Claude 3 Sonnet**: 성능과 속도의 균형을 맞춘 중간 모델  
-  - **Claude 3 Opus**: 가장 강력한 성능을 제공하는 플래그십 모델
-- **Claude 3.5**: Claude 3의 개선된 버전으로 더욱 향상된 추론 능력과 코딩 성능을 제공
-  - **Claude 3.5 Sonnet**: 기존 Claude 3 Opus와 비슷한 성능을 더 빠른 속도로 제공하는 모델
-  - **Claude 3.5 Haiku**: 경량화된 모델의 성능을 크게 향상시킨 버전
-- **Claude 4**: Claude 4
-- **Claude 4**: 2024년 후반에 출시 예정인 Anthropic의 차세대 모델로, 더욱 향상된 추론 능력과 안전성을 목표로 개발 중이다. 멀티모달 기능의 확장과 더 긴 컨텍스트 처리 능력이 기대되고 있다.
+#### 상용 모델
+- **GPT 시리즈 (OpenAI)**: GPT-3(2020, 1750억 매개변수)로 LLM 시대를 열었고, ChatGPT(2022)로 대중화를 이끌었다. 자세한 내용은 [GPT]({{< relref "/docs/37.artificial_intelligence/GPT" >}}) 문서 참고.
+- **Claude 시리즈 (Anthropic)**: 헌법적 AI(Constitutional AI, 원칙 목록을 기준으로 스스로 답을 고치게 하는 학습법) 기반의 안전성 중심 모델이다. 보통 크기별로 Haiku(빠르고 가벼움), Sonnet(균형), Opus(최고 성능) 세 가지로 나온다. 긴 문서 처리와 코딩, 에이전트 작업에 강점이 있다.
+- **Gemini 시리즈 (Google)**: 처음부터 글·이미지·음성·영상을 함께 학습한 네이티브 멀티모달 모델이다. 이전의 PaLM, LaMDA를 잇는다.
 
-#### 기타 주요 모델들
-- **BERT**: Google에서 개발한 양방향 인코더 기반 모델
-- **T5**: Text-to-Text Transfer Transformer
-- **PaLM**: Google의 5400억 매개변수 모델
-- **LaMDA**: Google의 대화 전용 언어모델
-- **Claude**: Anthropic에서 개발한 안전성에 중점을 둔 모델
+#### 공개 가중치 모델 (Open-weight)
+모델 파일을 내려받아 직접 서버에서 돌릴 수 있는 모델이다. 데이터를 외부로 보내기 어려운 기업에서 많이 쓴다.
+- **Llama (Meta)**, **Gemma (Google)**, **Mistral (Mistral AI)**
+- **Qwen (Alibaba)**, **DeepSeek (DeepSeek)**: 중국 모델로, 낮은 학습 비용으로 높은 성능을 보여 주목받았다.
+- **국내 모델**: HyperCLOVA X(네이버), EXAONE(LG AI연구원) 등 한국어에 강한 모델도 있다.
+
+#### LLM 이전의 언어모델
+- **BERT (Google, 2018)**: 양방향 인코더 기반 모델. 문장 생성보다 분류·검색 같은 이해 작업에 강하다.
+- **T5 (Google, 2019)**: 모든 작업을 "글 → 글" 변환으로 통일한 Text-to-Text Transfer Transformer.
+
+### 추론 모델 (Reasoning Model)
+
+2024년 이후에는 답을 바로 내지 않고 **속으로 단계별로 생각한 뒤 답하는** 추론 모델이 등장했다(OpenAI o1, DeepSeek-R1 등). 수학 문제를 풀 때 풀이 과정을 길게 적은 뒤 답을 쓰는 것과 비슷하다. 생각하는 데 토큰을 더 쓰는 대신 수학, 코딩, 복잡한 분석에서 정확도가 크게 오른다. 지금은 대부분의 주요 모델이 "생각하기" 기능을 켜고 끌 수 있다.
 
 ### LLM의 훈련 과정
 
@@ -100,3 +105,10 @@ LLM 기술은 계속해서 발전하고 있으며, 다음과 같은 방향으로
 - **안전성 강화**: 편향성 제거와 악용 방지를 위한 기술 개발
 
 LLM은 인공지능 분야의 혁신적인 발전을 이끌고 있으며, 앞으로도 다양한 분야에서 인간의 언어 능력을 보완하고 확장하는 역할을 할 것으로 기대된다.
+
+### 관련 문서
+
+- [VLM]({{< relref "/docs/37.artificial_intelligence/41.vision_language_model" >}}) — LLM에 "눈"을 단 비전-언어 모델
+- [VLA]({{< relref "/docs/37.artificial_intelligence/42.vision_language_action" >}}) — 보고 이해한 것을 로봇 동작으로 바꾸는 모델
+- [피지컬 AI]({{< relref "/docs/37.artificial_intelligence/43.physical_ai" >}}) — 현실 세계에서 보고 움직이는 AI
+- [벡터 검색 엔진]({{< relref "/docs/37.artificial_intelligence/vector_search_engine" >}}) — LLM에 외부 지식을 붙이는 RAG의 기반
