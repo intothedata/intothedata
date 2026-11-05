@@ -13,7 +13,7 @@ tags = ["Physical AI", "피지컬 AI", "Embodied AI", "체화된 AI", "World Mod
 
 ### 용어의 배경
 
-비슷한 개념은 오래전부터 **체화된 AI (Embodied AI)**라는 이름으로 연구되어 왔다. "피지컬 AI"라는 말은 2024~2025년 NVIDIA가 [LLM]({{< relref "/docs/37.artificial_intelligence/39.large_language_model" >}}) 다음 단계의 AI로 강조하면서 산업계에 널리 퍼졌다. 생성형 AI가 "디지털 세계의 지능"이라면, 피지컬 AI는 "현실 세계의 지능"이라는 구분이다.
+비슷한 개념은 오래전부터 **체화된 AI**(Embodied AI)라는 이름으로 연구되어 왔다. "피지컬 AI"라는 말은 2024~2025년 NVIDIA가 [LLM]({{< relref "/docs/37.artificial_intelligence/39.large_language_model" >}}) 다음 단계의 AI로 강조하면서 산업계에 널리 퍼졌다. 생성형 AI가 "디지털 세계의 지능"이라면, 피지컬 AI는 "현실 세계의 지능"이라는 구분이다.
 
 ## 생성형 AI와 무엇이 다른가
 
