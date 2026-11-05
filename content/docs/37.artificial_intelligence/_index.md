@@ -58,6 +58,15 @@ tags = ["Big data","빅데이터"]
 - 다층 신경망을 이용한 복잡한 패턴 학습
 - 이미지, 음성, 텍스트 처리에서 혁신적 성과
 
+### 생성형 AI에서 피지컬 AI까지
+
+최근 인공지능은 "글 → 이미지 → 행동 → 현실 세계" 순서로 할 수 있는 일이 넓어지고 있다.
+
+1. **[LLM]({{< relref "/docs/37.artificial_intelligence/39.large_language_model" >}})** — 글을 이해하고 글로 답하는 초거대언어모델
+2. **[VLM]({{< relref "/docs/37.artificial_intelligence/41.vision_language_model" >}})** — 이미지를 보고 글로 답하는 비전-언어 모델
+3. **[VLA]({{< relref "/docs/37.artificial_intelligence/42.vision_language_action" >}})** — 보고 듣고 로봇 동작으로 답하는 비전-언어-행동 모델
+4. **[피지컬 AI]({{< relref "/docs/37.artificial_intelligence/43.physical_ai" >}})** — 로봇·자율주행처럼 현실 세계에서 보고 움직이는 AI
+
 ### 자연어 처리 (Natural Language Processing)
 - 인간의 언어를 이해하고 생성하는 기술
 - ChatGPT, GPT-4 등 대화형 AI의 기반 기술

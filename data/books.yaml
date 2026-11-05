@@ -73,9 +73,9 @@ shelves:
       - { path: docs/90.metrics, icon: "🎚️", desc: 성과를 재는 지표 }
 
   - title: 인공지능
-    desc: LLM부터 AI 에이전트까지
+    desc: LLM부터 피지컬 AI까지
     books:
-      - { path: docs/37.artificial_intelligence, icon: "🤖", desc: LLM·벡터검색·AI 에이전트 }
+      - { path: docs/37.artificial_intelligence, icon: "🤖", desc: LLM·VLM·VLA·피지컬 AI }
       - { path: docs/38.natural_languge_processing, icon: "💬", desc: 한국어 형태소 분석 }
 
   - title: 기초 지식 · 도구
