@@ -1,6 +1,6 @@
 baseURL = 'https://intothedata.com/'
 languageCode = 'ko-KR'
-title = 'AI시대의 데이터과학 - 인투더데이터'
+title = '인투더데이터 - AI 데이터과학 위키'
 theme = 'book'
 defaultContentLanguage = "ko"
 multilingual = true
